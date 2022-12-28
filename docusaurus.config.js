@@ -9,7 +9,7 @@ const config = {
   title: 'Babylon Blockchain',
   tagline: 'Bringing Bitcoin Security to Cosmos & Beyond',
   url: 'https://babylonchain.github.io',
-  baseUrl: '/',
+  baseUrl: '/babylonchain.github.io/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'https://drive.google.com/uc?export=view&id=1LXiSzeRGG1Ij-YLozx9GcYmpmrOVBzBE',
