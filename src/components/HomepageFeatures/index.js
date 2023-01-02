@@ -6,38 +6,38 @@ const FeatureList = [
   {
     title: 'Experienced Team',
     Svg: require('@site/static/img/Group-1.svg').default,
-    description: (
-      <>
-        Our team consists of consensus protocol researchers from Stanford and experienced layer 1 developers from all over the world.
-      </>
-    ),
+    // description: (
+    //   // <>
+    //   //   Our team consists of consensus protocol researchers from Stanford and experienced layer 1 developers from all over the world.
+    //   // </>
+    // ),
   },
   {
     title: 'Our Work',
     Svg: require('@site/static/img/Group-3.svg').default,
-    description: (
-      <>
-        Our work includes basic research and collaboration with industry projects on improving the security of Cosmos zones and other PoS chains.
-      </>
-    ),
+    // description: (
+    //   // <>
+    //   //   Our work includes basic research and collaboration with industry projects on improving the security of Cosmos zones and other PoS chains.
+    //   // </>
+    // ),
   },
   {
     title: 'What We Do',
     Svg: require('@site/static/img/Group-4.svg').default,
-    description: (
-      <>
-        We design optimal protocols to achieve the objectives of PoS Ethereum.
-      </>
-    ),
+    // description: (
+    //   // <>
+    //   //   We design optimal protocols to achieve the objectives of PoS Ethereum.
+    //   // </>
+    // ),
   },
   {
     title: 'Our Mission',
     Svg: require('@site/static/img/Group-2.svg').default,
-    description: (
-      <>
-        Our mission is to bring Bitcoin’s unparalleled security to all PoS blockchains without extra energy costs.
-      </>
-    ),
+    // description: (
+    //   // <>
+    //   //   Our mission is to bring Bitcoin’s unparalleled security to all PoS blockchains without extra energy costs.
+    //   // </>
+    // ),
   },
 ];
 
