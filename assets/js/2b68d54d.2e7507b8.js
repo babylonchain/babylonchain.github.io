@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocument_sample=self.webpackChunkdocument_sample||[]).push([[163],{2424:a=>{a.exports=JSON.parse('{"label":"hola","permalink":"/babylonchain.github.io/blog/tags/hola","allTagsPath":"/babylonchain.github.io/blog/tags","count":1}')}}]);
