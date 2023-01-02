@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocument_sample=self.webpackChunkdocument_sample||[]).push([[5155],{942:e=>{e.exports=JSON.parse('{"permalink":"/babylonchain.github.io/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
