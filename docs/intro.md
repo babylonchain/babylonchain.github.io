@@ -53,7 +53,7 @@ This attack is called the long-range attack, which renders PoS chains not slasha
 
 ### 2.2 Secure PoS using BTC timestamping <a id="time"></a>
 
-![Secure PoS](https://drive.google.com/uc?export=view&id=12Bcn2XNMl23sP8Lr2nCf3tmt2Dy4aRrM)
+![Secure PoS](https://drive.google.com/uc?export=view&id=1CRKDJS8uv4Ba88BiJObsxI5CViXRyPxx)
 
 To protect the PoS chain from long-range attacks, we can checkpoint the PoS chain blocks to BTC, and implement a fork choice rule for the fork with an earlier BTC timestamp. This way, either
 

@@ -131,6 +131,62 @@ const sidebars = {
       ]
     },
     'videoguides',
+    {
+      type: 'category',
+      label: 'gRPC Gateway (REST API)',
+      link: {
+        type: 'doc',
+        id: 'grpc/grpcgateway',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'BTC Checkpoint',
+          link: {
+            type: 'doc',
+            id: 'grpc/btccheckpointgrpc',
+          },
+          items: [
+            'grpc/grpcparams',
+            'grpc/epochnum',
+            'grpc/submissions',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'BTCLightClient',
+          link: {
+            type: 'doc',
+            id: 'grpc/btclightclient/lightclient1',
+          },
+          items: [
+            'grpc/btclightclient/lightheader',
+            'grpc/btclightclient/lightcontains',
+            'grpc/btclightclient/lightcontainsbytes',
+            'grpc/btclightclient/lighthashes',
+            'grpc/btclightclient/lightmainchain',
+            'grpc/btclightclient/lightparams',
+            'grpc/btclightclient/lighttip',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Epoching',
+          link: {
+            type: 'doc',
+            id: 'grpc/epoching/currentepoch',
+          },
+          items: [
+            'grpc/epoching/currentepoch',
+            'grpc/epoching/delegationlifecycle',
+            'grpc/epoching/epoch',
+            'grpc/epoching/latepochmsgs',
+            'grpc/epoching/paramsmod',
+            'grpc/epoching/validatorlifecycle',
+          ],
+        },
+      ],
+    },
     'error'
   ],
 };
