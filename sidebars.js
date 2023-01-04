@@ -460,9 +460,417 @@ const sidebars = {
               ],
               
             },
-          ],
-          
+            {
+              type: 'category',
+              label: 'Babylond_query_ibc',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/BabylondQuery/Babylond_query_ibc',
+              },
+              items: [
+                {
+                  type: 'category',
+                  label: 'Babylond_query_ibc_channel',
+                  link: {
+                    type: 'doc',
+                    id: 'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel',
+                  },
+                  items: [
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_channels',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_client-state',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_connections',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_end',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_next-sequence-receive',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_packet-ack',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_packet-commitment',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_packet-commitments',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_packet-receipt',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_unreceived-acks',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_unreceived-packets',
+                  ],
+                  
+                },
+                {
+                  type: 'category',
+                  label: 'Babylond_query_ibc_client',
+                  link: {
+                    type: 'doc',
+                    id: 'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client',
+                  },
+                  items: [
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client/Babylond_query_ibc_client_consensus-state',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client/Babylond_query_ibc_client_consensus-state-heights',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client/Babylond_query_ibc_client_consensus-states',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client/Babylond_query_ibc_client_header',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client/Babylond_query_ibc_client_params',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client/Babylond_query_ibc_client_self-consensus-state',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client/Babylond_query_ibc_client_state',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client/Babylond_query_ibc_client_states',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client/Babylond_query_ibc_client_status',
+                  ],
+                  
+                },
+                {
+                  type: 'category',
+                  label: 'Babylond_query_ibc_connection',
+                  link: {
+                    type: 'doc',
+                    id: 'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_connection',
+                  },
+                  items: [
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_connection/Babylond_query_ibc_connection_connections',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_connection/Babylond_query_ibc_connection_end',
+                    'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_connection/Babylond_query_ibc_connection_path',
+                  ],
+                  
+                },
+              ], 
+            },
+            {
+              type: 'category',
+              label: 'Babylond_query_ibc-transfer',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_transfer',
+              },
+              items: [
+                'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_transfer_denom-hash',
+                'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_transfer_denom-trace',
+                'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_transfer_denom-traces',
+                'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_transfer_escrow-address',
+                'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_transfer_params',
+              ],
+              
+            },
+            {
+              type: 'category',
+              label: 'Babylond_query_mint',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/BabylondQuery/babylond_query_mint',
+              },
+              items: [
+                'cli/babylond/BabylondQuery/Babylond_query_mint/babylond_query_mint_annual-provisions',
+                'cli/babylond/BabylondQuery/Babylond_query_mint/babylond_query_mint_inflation',
+                'cli/babylond/BabylondQuery/Babylond_query_mint/babylond_query_mint_params',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_query_params',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/BabylondQuery/babylond_query_params',
+              },
+              items: [
+                'cli/babylond/BabylondQuery/Babylond_query_params/babylond_query_params_subspace',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_query_slashing',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/BabylondQuery/babylond_query_slashing',
+              },
+              items: [
+                'cli/babylond/BabylondQuery/Babylond_query_slashing/babylond_query_slashing_params',
+                'cli/babylond/BabylondQuery/Babylond_query_slashing/babylond_query_slashing_signing-info',
+                'cli/babylond/BabylondQuery/Babylond_query_slashing/babylond_query_slashing_signing-infos',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_query_staking',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/BabylondQuery/babylond_query_staking',
+              },
+              items: [
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_delegation',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_delegations',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_delegations-to',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_historical-info',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_params',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_pool',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_redelegation',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_redelegations',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_redelegation-from',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_unbounding-delegation',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_unbounding-delegations',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_unbounding-delegations-from',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_validator',
+                'cli/babylond/BabylondQuery/Babylond_query_staking/babylond_query_staking_validators',
+              ]
+            },
+            'cli/babylond/BabylondQuery/babylond_query_tendermint-validator-set',
+            'cli/babylond/BabylondQuery/babylond_query_tx',
+            'cli/babylond/BabylondQuery/babylond_query_txs',
+            {
+              type: 'category',
+              label: 'Babylond_query_upgrade',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/BabylondQuery/babylond_query_upgrade',
+              },
+              items: [
+                'cli/babylond/BabylondQuery/Babylond_query_upgrade/babylond_query_upgrade_applied',
+                'cli/babylond/BabylondQuery/Babylond_query_upgrade/babylond_query_upgrade_module_versions',
+                'cli/babylond/BabylondQuery/Babylond_query_upgrade/babylond_query_upgrade_plan',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_query_zoneconcierge',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/BabylondQuery/babylond_query_zoneconcierge',
+              },
+              items: [
+                'cli/babylond/BabylondQuery/Babylond_query_zoneconcierge/babylond_query_zoneconcierge_params',
+              ]
+            },
+          ], 
         },
+        'cli/babylond/babylond_rollback',
+        'cli/babylond/babylond_rosetta',
+        'cli/babylond/babylond_start',
+        'cli/babylond/babylond_status',
+        {
+          type: 'category',
+          label: 'Babylon_tendermint',
+          link: {
+            type: 'doc',
+            id: 'cli/babylond/babylond_tendermint',
+          },
+          items: [
+            'cli/babylond/Babylond_tendermint/babylond_tendermint_reset-state',
+            'cli/babylond/Babylond_tendermint/babylond_tendermint_show-address',
+            'cli/babylond/Babylond_tendermint/babylond_tendermint_show-node-id',
+            'cli/babylond/Babylond_tendermint/babylond_tendermint_show-validator',
+            'cli/babylond/Babylond_tendermint/babylond_tendermint_unsafe-reset-all(unsafe)',
+            'cli/babylond/Babylond_tendermint/babylond_tendermint_version',
+          ],
+        },
+        'cli/babylond/babylond_testnet',
+        {
+          type: 'category',
+          label: 'Babylon_tx',
+          link: {
+            type: 'doc',
+            id: 'cli/babylond/babylond_tx',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Babylond_tx_authz',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_authz',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_authz/babylond_tx_authz_exec',
+                'cli/babylond/Babylond_tx/Babylond_tx_authz/babylond_tx_authz_grant',
+                'cli/babylond/Babylond_tx/Babylond_tx_authz/babylond_tx_authz_revoke',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_tx_bank',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_bank',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_bank/babylond_tx_bank_multi-send',
+                'cli/babylond/Babylond_tx/Babylond_tx_bank/babylond_tx_bank_send',
+              ]
+            },
+            'cli/babylond/Babylond_tx/babylond_tx_broadcast',
+            'cli/babylond/Babylond_tx/babylond_tx_btccheckpoint',
+            {
+              type: 'category',
+              label: 'Babylond_tx_btclightclient',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_btclightclient',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_btclightclient/babylond_tx_btclightclient_insert-header',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_tx_checkpointing',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_checkpointing',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_checkpointing/babylond_tx_checkpointing_create-validator',
+                'cli/babylond/Babylond_tx/Babylond_tx_checkpointing/babylond_tx_checkpointing_submit',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_tx_crisis',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_crisis',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_crisis/babylond_tx_crisis_invariant-broken',
+              ]
+            },
+            'cli/babylond/Babylond_tx/babylond_tx_decode',
+            {
+              type: 'category',
+              label: 'Babylond_tx_distribution',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_distribution',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_distribution/babylond_tx_distribution_fund-community-pool',
+                'cli/babylond/Babylond_tx/Babylond_tx_distribution/babylond_tx_distribution_set-withdraw-addr',
+                'cli/babylond/Babylond_tx/Babylond_tx_distribution/babylond_tx_distribution_withdraw-rewards',
+                'cli/babylond/Babylond_tx/Babylond_tx_distribution/babylond_tx_distribution_withdraw-all-rewards',
+              ]
+            },
+            'cli/babylond/Babylond_tx/babylond_tx_encode',
+            {
+              type: 'category',
+              label: 'Babylond_tx_epoching',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_epoching',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_epoching/babylond_tx_epoching_delegate',
+                'cli/babylond/Babylond_tx/Babylond_tx_epoching/babylond_tx_epoching_redelegate',
+                'cli/babylond/Babylond_tx/Babylond_tx_epoching/babylond_tx_epoching_unbond',
+              ]
+            },
+            'cli/babylond/Babylond_tx/babylond_tx_evidence',
+            {
+              type: 'category',
+              label: 'Babylond_tx_feegrant',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_feegrant',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_feegrant/babylond_tx_feegrant_grant',
+                'cli/babylond/Babylond_tx/Babylond_tx_feegrant/babylond_tx_feegrant_revoke',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_tx_gov',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_gov',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_deposit',
+                'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_draft-proposal',
+                'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_submit-legacy-proposal',
+                'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_submit-proposal',
+                'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_vote',
+                'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_weighted-vote',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_tx_ibc',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_ibc',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_ibc/babylond_tx_ibc_channel',
+                'cli/babylond/Babylond_tx/Babylond_tx_ibc/babylond_tx_ibc_client',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_tx_ibc-transfer',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_ibc-transfer',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_ibc-transfer/babylond_tx_ibc-transfer_transfer',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_tx_multi-sign',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_multi-sign',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_multi-sign/babylond_tx_multi-sign-batch',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_tx_sign',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_sign',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_sign/babylond_tx_sign-batch',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_tx_slashing',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_slashing',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_slashing/babylond_tx_slashing_unjail',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Babylond_tx_staking',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_staking',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_staking/babylond_tx_staking_cancel-unbond',
+                'cli/babylond/Babylond_tx/Babylond_tx_staking/babylond_tx_staking_create-validator',
+                'cli/babylond/Babylond_tx/Babylond_tx_staking/babylond_tx_staking_delegate',
+                'cli/babylond/Babylond_tx/Babylond_tx_staking/babylond_tx_staking_edit-validator',
+                'cli/babylond/Babylond_tx/Babylond_tx_staking/babylond_tx_staking_redelegate',
+                'cli/babylond/Babylond_tx/Babylond_tx_staking/babylond_tx_staking_unbond',
+              ]
+            },
+            'cli/babylond/Babylond_tx/babylond_tx_validate-signatures',
+            {
+              type: 'category',
+              label: 'Babylond_tx_vesting',
+              link: {
+                type: 'doc',
+                id: 'cli/babylond/Babylond_tx/babylond_tx_vesting',
+              },
+              items: [
+                'cli/babylond/Babylond_tx/Babylond_tx_vesting/babylond_tx_vesting_create-periodic-vesting-account',
+                'cli/babylond/Babylond_tx/Babylond_tx_vesting/babylond_tx_vesting_create-permanent-locked-account',
+                'cli/babylond/Babylond_tx/Babylond_tx_vesting/babylond_tx_vesting_create-vesting-account',
+              ]
+            },
+            'cli/babylond/Babylond_tx/babylond_tx_zoneconcierge',
+          ],
+        },
+        'cli/babylond/babylond_validate-genesis',
+        'cli/babylond/babylond_version',
       ],
     },
   ],
