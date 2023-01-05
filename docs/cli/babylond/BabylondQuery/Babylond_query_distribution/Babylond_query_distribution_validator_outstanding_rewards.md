@@ -1,6 +1,7 @@
 ---
 id: babylond_query_distribution_validator-outstanding-rewards
 sidebar_label: Babylond_query_distribution_validator-outstanding-rewards
+hide_table_of_contents: true
 
 ---
 

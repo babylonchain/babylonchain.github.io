@@ -1,6 +1,7 @@
 ---
 id: babylond_tx_distribution
 sidebar_label: Babylond_tx_distribution
+hide_table_of_contents: true
 
 ---
 

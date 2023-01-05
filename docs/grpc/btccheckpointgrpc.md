@@ -1,6 +1,7 @@
 ---
 id: btccheckpointgrpc
 sidebar_label: BTC Checkpoint
+hide_table_of_contents: true
 
 ---
 
