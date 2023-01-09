@@ -1,11 +1,22 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import one from '../../../static/img/firstgif.gif';
+import two from '../../../static/img/installationgif.gif';
+import three from '../../../static/img/settingnode.gif';
+import four from '../../../static/img/modules.gif';
+import five from '../../../static/img/node.gif';
+import six from '../../../static/img/resources.gif';
+import seven from '../../../static/img/videoguides.gif';
+import eight from '../../../static/img/grpc.gif';
+import nine from '../../../static/img/support.gif';
+import ten from '../../../static/img/error.gif';
+import eleven from '../../../static/img/cli.gif';
 
 const FeatureList = [
   {
     title: 'Introduction',
-    Svg: require('@site/static/img/1.svg').default,
+    image: one,
     description: (
       <> 
         Uncover the secrets of how Babylon operates.
@@ -15,7 +26,7 @@ const FeatureList = [
   },
   {
     title: 'Installation Guide',
-    Svg: require('@site/static/img/2.svg').default,
+    image: two,
     description: (
       <>
         Find out how to kick off your Babylon journey here.
@@ -25,7 +36,7 @@ const FeatureList = [
   },
   {
     title: 'Setting Up a Full Node',
-    Svg: require('@site/static/img/3.svg').default,
+    image: three,
     description: (
       <>
         Learn how to create a fully functioning node for Babylon.
@@ -35,7 +46,7 @@ const FeatureList = [
   },
   {
     title: 'Modules',
-    Svg: require('@site/static/img/4.svg').default,
+    image: four,
     description: (
       <>
         Discover the modules we offer.
@@ -45,7 +56,7 @@ const FeatureList = [
   },
   {
     title: 'Node Operators',
-    Svg: require('@site/static/img/5.svg').default,
+    image: five,
     description: (
       <>
         Master the skills of managing and configuring nodes!
@@ -55,7 +66,7 @@ const FeatureList = [
   },
   {
     title: 'Resources',
-    Svg: require('@site/static/img/6.svg').default,
+    image: six,
     description: (
       <>
         Use these resources to enhance your understanding.
@@ -65,7 +76,7 @@ const FeatureList = [
   },
   {
     title: 'Video Guides',
-    Svg: require('@site/static/img/7.svg').default,
+    image: seven,
     description: (
       <>
         Benefit from our easy-to-follow video guides.
@@ -74,7 +85,7 @@ const FeatureList = [
   },
   {
     title: 'gRPC Gateway (REST API)',
-    Svg: require('@site/static/img/8.svg').default,
+    image: eight,
     description: (
       <>
         Have a look at our Rest API components!
@@ -84,7 +95,7 @@ const FeatureList = [
   },
   {
     title: 'Support',
-    Svg: require('@site/static/img/9.svg').default,
+    image: nine,
     description: (
       <>
         Get the support you need to succeed with our dedicated team of experts!
@@ -93,7 +104,7 @@ const FeatureList = [
   },
   {
     title: 'Error Handling',
-    Svg: require('@site/static/img/10.svg').default,
+    image: ten,
     description: (
       <>
         Streamline your workflow with our error handling guide.
@@ -102,7 +113,7 @@ const FeatureList = [
   },
   {
     title: 'CLI Command',
-    Svg: require('@site/static/img/11.svg').default,
+    image: eleven,
     description: (
       <>
         A detailed guide on CLI commands.
@@ -112,11 +123,12 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({image, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {/* <Svg className={styles.featureSvg} role="img" /> */}
+        <img src={image}/>
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>

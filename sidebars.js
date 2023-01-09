@@ -14,7 +14,19 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   docs: [
-    'intro', 
+    {
+      type: 'category',
+      label: 'Introduction',
+      link: {
+        type: 'doc',
+        id: 'intro',
+      },
+      items: [
+        'introduction/overview',
+        'introduction/usecase',
+        'introduction/keycomponent',
+      ]
+    }, 
     'installation', 
     'setnode', 
     {
@@ -221,6 +233,7 @@ const sidebars = {
         id: 'cli/babylond/cli',
       },
       items: [
+        'cli/babylond/babylond',
         'cli/babylond/babylondaddgenesisaccount',
         'cli/babylond/babylondaddgenesisbls',
         'cli/babylond/babylondcollectgentxs',
@@ -275,6 +288,7 @@ const sidebars = {
             id: 'cli/babylond/babylond_query',
           },
           items: [
+            'cli/babylond/BabylondQuery/babylond_query_account',
             {
               type: 'category',
               label: 'Babylond_query_auth',
@@ -430,6 +444,7 @@ const sidebars = {
                 id: 'cli/babylond/BabylondQuery/babylond_query_freegrant',
               },
               items: [
+                'cli/babylond/BabylondQuery/Babylond_query_freegrant/babylond_query_freegrant_grant',
                 'cli/babylond/BabylondQuery/Babylond_query_freegrant/babylond_query_freegrant_grants-by-grantee',
                 'cli/babylond/BabylondQuery/Babylond_query_freegrant/babylond_query_freegrant_grants-by-granter',
              
