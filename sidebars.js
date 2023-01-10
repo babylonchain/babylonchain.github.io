@@ -663,7 +663,7 @@ const sidebars = {
             'cli/babylond/Babylond_tendermint/babylond_tendermint_show-address',
             'cli/babylond/Babylond_tendermint/babylond_tendermint_show-node-id',
             'cli/babylond/Babylond_tendermint/babylond_tendermint_show-validator',
-            'cli/babylond/Babylond_tendermint/babylond_tendermint_unsafe-reset-all(unsafe)',
+            'cli/babylond/Babylond_tendermint/babylond_tendermint_unsafe-reset-all',
             'cli/babylond/Babylond_tendermint/babylond_tendermint_version',
           ],
         },
