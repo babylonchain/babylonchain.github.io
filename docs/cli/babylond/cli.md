@@ -411,6 +411,14 @@ hide_table_of_contents: true
 
             - [submit-legacy-proposal](docs\cli\babylond\Babylond_tx\Babylond_tx_gov\Babylond_tx_gov_submit-legacy-proposal.md) - Submit a legacy proposal along with an initial deposit
 
+                - [cancel-software-upgrade](docs\cli\babylond\Babylond_tx\Babylond_tx_gov\submit-legacy\Babylond_tx_gov_submit-legacy-proposal_cancel.md) - Cancel the current software upgrade proposal
+
+                - [community-pool-spend](docs\cli\babylond\Babylond_tx\Babylond_tx_gov\submit-legacy\Babylond_tx_gov_submit-legacy-proposal_community.md) - Submit a community pool spend proposal
+
+                - [param-change](docs\cli\babylond\Babylond_tx\Babylond_tx_gov\submit-legacy\Babylond_tx_gov_submit-legacy-proposal_param.md) - Submit a parameter change proposal
+
+                - [software-upgrade](docs\cli\babylond\Babylond_tx\Babylond_tx_gov\submit-legacy\Babylond_tx_gov_submit-legacy-proposal_software-upgrade.md) - Submit a software upgrade proposal
+
             - [submit-proposal](docs\cli\babylond\Babylond_tx\Babylond_tx_gov\Babylond_tx_gov_submit-proposal.md) - Submit a proposal along with some messages, metadata and deposit
 
             - [vote](docs\cli\babylond\Babylond_tx\Babylond_tx_gov\Babylond_tx_gov_vote.md) - Vote for an active proposal, options: yes/no/no_with_veto/abstain
@@ -422,6 +430,14 @@ hide_table_of_contents: true
             - [channel](docs\cli\babylond\Babylond_tx\Babylond_tx_ibc\Babylond_tx_ibc_channel.md) - IBC channel transaction subcommands
 
             - [client](docs\cli\babylond\Babylond_tx\Babylond_tx_ibc\Babylond_tx_ibc_client.md) - IBC client transaction subcommands
+
+                - [create](docs\cli\babylond\Babylond_tx\Babylond_tx_ibc\client\Babylond_tx_ibc_client_create.md) - create new IBC client
+
+                - [misbehaviour](docs\cli\babylond\Babylond_tx\Babylond_tx_ibc\client\Babylond_tx_ibc_client_misbehaviour.md) - submit a client misbehaviour
+
+                - [update](docs\cli\babylond\Babylond_tx\Babylond_tx_ibc\client\Babylond_tx_ibc_client_update.md) - update existing client with a header
+
+                - [upgrade](docs\cli\babylond\Babylond_tx\Babylond_tx_ibc\client\Babylond_tx_ibc_client_upgrade.md) - upgrade an IBC client
 
         - [ibc-transfer](docs\cli\babylond\Babylond_tx\Babylond_tx_ibc-transfer.md) - This is a Cosmos Native CLI, it queries the subcommands for IBC fungible token transfer 
 

@@ -789,7 +789,20 @@ const sidebars = {
               items: [
                 'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_deposit',
                 'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_draft-proposal',
-                'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_submit-legacy-proposal',
+                {
+                  type: 'category',
+                  label: 'Babylond_tx_gov_submit-legacy-proposal',
+                  link: {
+                    type: 'doc',
+                    id: 'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_submit-legacy-proposal',
+                  },
+                  items: [
+                    'cli/babylond/Babylond_tx/Babylond_tx_gov/submit-legacy/babylond_tx_gov_submit-legacy-proposal_cancel',
+                    'cli/babylond/Babylond_tx/Babylond_tx_gov/submit-legacy/babylond_tx_gov_submit-legacy-proposal_community',
+                    'cli/babylond/Babylond_tx/Babylond_tx_gov/submit-legacy/babylond_tx_gov_submit-legacy-proposal_param',
+                    'cli/babylond/Babylond_tx/Babylond_tx_gov/submit-legacy/babylond_tx_gov_submit-legacy-proposal_software',
+                  ]
+                },
                 'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_submit-proposal',
                 'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_vote',
                 'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_weighted-vote',
@@ -804,7 +817,20 @@ const sidebars = {
               },
               items: [
                 'cli/babylond/Babylond_tx/Babylond_tx_ibc/babylond_tx_ibc_channel',
-                'cli/babylond/Babylond_tx/Babylond_tx_ibc/babylond_tx_ibc_client',
+                {
+                  type: 'category',
+                  label: 'Babylond_tx_ibc_client',
+                  link: {
+                    type: 'doc',
+                    id: 'cli/babylond/Babylond_tx/Babylond_tx_ibc/babylond_tx_ibc_client',
+                  },
+                  items: [
+                    'cli/babylond/Babylond_tx/Babylond_tx_ibc/client/babylond_tx_ibc_client_create',
+                    'cli/babylond/Babylond_tx/Babylond_tx_ibc/client/babylond_tx_ibc_client_misbehaviour',
+                    'cli/babylond/Babylond_tx/Babylond_tx_ibc/client/babylond_tx_ibc_client_update',
+                    'cli/babylond/Babylond_tx/Babylond_tx_ibc/client/babylond_tx_ibc_client_upgrade',
+                  ]
+                },
               ]
             },
             {

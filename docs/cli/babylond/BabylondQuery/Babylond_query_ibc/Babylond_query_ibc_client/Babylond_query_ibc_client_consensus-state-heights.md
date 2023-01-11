@@ -5,7 +5,7 @@ hide_table_of_contents: true
 
 ---
 # Babylond Query ibc client consensus-state-heights
-Querying the consensus state of a client by the specified height.
+Querying all the consensus state of a client by the specified height.
 ## query ibc client consensus-state-heights command
 ```
 babylond query ibc client consensus-state-heights [client-id] [flags]
