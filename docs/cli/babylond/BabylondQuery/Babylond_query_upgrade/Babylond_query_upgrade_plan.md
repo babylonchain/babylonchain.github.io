@@ -1,11 +1,11 @@
 ---
 id: babylond_query_upgrade_plan
-sidebar_label: Babylond_query_upgrade_plan
+sidebar_label: babylond query upgrade upgrade plan
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query upgrade upgrade plan
+# babylond query upgrade upgrade plan
 Get the currently available upgrade plan.
 ## query upgrade upgrade plan command
 ```

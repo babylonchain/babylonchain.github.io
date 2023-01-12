@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_gov_draft-proposal
-sidebar_label: Babylond_tx_gov_draft-proposal
+sidebar_label: babylond tx gov draft-proposal
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx gov draft-proposal
+# babylond tx gov draft-proposal
 Generate a draft proposal in a JSON file. The JSON contains only one message (skeleton).
 ## tx gov draft-proposal command
 ```

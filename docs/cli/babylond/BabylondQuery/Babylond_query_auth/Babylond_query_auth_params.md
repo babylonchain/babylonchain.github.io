@@ -1,11 +1,11 @@
 ---
 id: babylond_query_auth_params
-sidebar_label: Babylond_query_auth_params
+sidebar_label: babylond query auth params
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query auth params
+# babylond query auth params
 Querying the current auth parameters.
 ## query auth params command
 ```

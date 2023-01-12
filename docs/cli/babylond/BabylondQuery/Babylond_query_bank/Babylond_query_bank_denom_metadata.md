@@ -1,11 +1,11 @@
 ---
 id: babylond_query_bank_denom_metadata
-sidebar_label: Babylond_query_bank_denom_metadata
+sidebar_label: babylond query bank denom-metadata
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query bank denom-metadata
+# babylond query bank denom-metadata
 Querying the client metadata for the coin denominations.
 ## query bank denom-metadata command
 ```

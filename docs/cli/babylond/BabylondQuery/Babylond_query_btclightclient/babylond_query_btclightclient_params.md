@@ -1,11 +1,11 @@
 ---
 id: babylond_query_btclightclient_params
-sidebar_label: Babylond_query_btclightclient_params
+sidebar_label: babylond query btclightclient params
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query btclightclient params
+# babylond query btclightclient params
 Show the parameters of the btclightclient module.
 ## query btclightclient params command
 ```

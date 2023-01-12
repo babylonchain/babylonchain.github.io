@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_channel_connections
-sidebar_label: Babylond_query_ibc_channel_connections
+sidebar_label: babylond query ibc channel connections
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc channel connections
+# babylond query ibc channel connections
 Querying all channels associated with a connection.
 ## query ibc channel connections command
 ```

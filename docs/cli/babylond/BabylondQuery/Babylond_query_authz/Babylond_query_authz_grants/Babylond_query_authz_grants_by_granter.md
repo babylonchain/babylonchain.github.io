@@ -1,11 +1,11 @@
 ---
 id: babylond_query_authz_grants_by_granter
-sidebar_label: Babylond_query_authz_grants_by_granter
+sidebar_label: babylond query authz grants-by-granter
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query authz grants-by-granter
+# babylond query authz grants-by-granter
 Querying authorization grants granted by the granter.
 ## query authz grants-by-granter command
 ```

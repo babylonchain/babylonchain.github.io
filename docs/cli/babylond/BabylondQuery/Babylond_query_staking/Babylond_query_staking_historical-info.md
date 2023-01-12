@@ -1,11 +1,11 @@
 ---
 id: babylond_query_staking_historical-info
-sidebar_label: Babylond_query_staking_historical-info
+sidebar_label: babylond query staking historical-info
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query staking historical-info
+# babylond query staking historical-info
 Querying historical info by the specified height.
 ## query staking historical-info command
 ```

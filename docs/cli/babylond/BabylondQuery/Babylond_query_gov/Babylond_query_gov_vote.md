@@ -1,11 +1,11 @@
 ---
 id: babylond_query_gov_vote
-sidebar_label: Babylond_query_gov_vote
+sidebar_label: babylond query gov vote
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query gov vote
+# babylond query gov vote
 Querying details of a single vote on the governance module by the given identifier.
 ## query gov vote command
 ```

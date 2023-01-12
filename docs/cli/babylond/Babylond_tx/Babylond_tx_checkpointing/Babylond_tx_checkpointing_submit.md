@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_checkpointing_submit
-sidebar_label: Babylond_tx_checkpointing_submit
+sidebar_label: babylond tx checkpointing submit
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx checkpointing submit
+# babylond tx checkpointing submit
 Submit a BLS signature.
 ## tx checkpointing submit command
 ```

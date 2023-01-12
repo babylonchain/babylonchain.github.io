@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_staking_edit-validator
-sidebar_label: Babylond_tx_staking_edit-validator
+sidebar_label: babylond tx staking edit-validator
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx staking edit-validator
+# babylond tx staking edit-validator
 Edit an existing validator account.
 ## tx staking edit-validator command
 ```

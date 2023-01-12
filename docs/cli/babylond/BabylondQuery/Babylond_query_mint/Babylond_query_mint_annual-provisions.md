@@ -1,11 +1,11 @@
 ---
 id: babylond_query_mint_annual-provisions
-sidebar_label: Babylond_query_mint_annual-provisions
+sidebar_label: babylond query mint annual-provisions
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query mint annual-provisions
+# babylond query mint annual-provisions
 Querying the current minting annual provisions value.
 ## query mint annual-provisions command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylonddebug
-sidebar_label: Babylond_debug
+sidebar_label: babylond debug
 hide_table_of_contents: true
 
 ---
 
-# Babylond_debug
+# babylond debug
 Tool for helping with debugging your application.
 ## debug commands
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query_bank_balances
-sidebar_label: Babylond_query_bank_balances
+sidebar_label: babylond query bank balances
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query bank balances
+# babylond query bank balances
 Querying commands for the account balances by the specified address.
 ## query bank balances command
 ```

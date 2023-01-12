@@ -1,11 +1,11 @@
 ---
 id: babylond_query_slashing
-sidebar_label: Babylond_query_slashing
+sidebar_label: babylond query slashing
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query slashing
+# babylond query slashing
 Querying commands for the slashing module.
 ## query slashing commands
 ```

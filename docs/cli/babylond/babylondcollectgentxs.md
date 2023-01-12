@@ -1,11 +1,11 @@
 ---
 id: babylondcollectgentxs
-sidebar_label: Babylond_collect-gentxs
+sidebar_label: babylond collect-gentxs
 hide_table_of_contents: true
 
 ---
 
-# Babylond_collect-gentxs
+# babylond collect-gentxs
 Collect genesis txs and output a genesis.json file.
 ## collect-gentxs command
 ```

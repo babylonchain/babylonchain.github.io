@@ -1,11 +1,11 @@
 ---
 id: babylondkeysimport
-sidebar_label: Babylond_keys_import
+sidebar_label: babylond keys import
 hide_table_of_contents: true
 
 ---
 
-# Babylond_keys_import
+# babylond keys import
 Import private keys into the local key base.
 ## keys import command
 ```

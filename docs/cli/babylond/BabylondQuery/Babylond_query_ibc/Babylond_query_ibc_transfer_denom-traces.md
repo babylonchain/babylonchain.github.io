@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_transfer_denom-traces
-sidebar_label: Babylond_query_ibc_transfer_denom-traces
+sidebar_label: babylond query ibc-transfer denom-traces
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc-transfer denom-traces
+# babylond query ibc-transfer denom-traces
 Query the trace info for all token denominations.
 ## query ibc-transfer denom-traces command
 ```

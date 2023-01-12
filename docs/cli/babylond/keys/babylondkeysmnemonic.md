@@ -1,11 +1,11 @@
 ---
 id: babylondkeysmnemonic
-sidebar_label: Babylond_keys_mnemonic
+sidebar_label: babylond keys mnemonic
 hide_table_of_contents: true
 
 ---
 
-# Babylond_keys_mnemonic
+# babylond keys mnemonic
 The system entropy can create the bip39 mnemonic, also known as a seed phrase.
 ## keys mnemonic command
 ```

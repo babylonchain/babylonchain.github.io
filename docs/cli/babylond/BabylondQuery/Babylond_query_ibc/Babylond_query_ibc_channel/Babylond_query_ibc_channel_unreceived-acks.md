@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_channel_unreceived-acks
-sidebar_label: Babylond_query_ibc_channel_unreceived-acks
+sidebar_label: babylond query ibc channel unreceived-acks
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc channel unreceived-acks
+# babylond query ibc channel unreceived-acks
 Querying all the unreceived acks associated with the given channel.
 ## query ibc channel unreceived-acks command
 ```

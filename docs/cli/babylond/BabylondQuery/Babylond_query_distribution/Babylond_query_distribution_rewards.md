@@ -1,11 +1,11 @@
 ---
 id: babylond_query_distribution_rewards
-sidebar_label: Babylond_query_distribution_rewards
+sidebar_label: babylond query distribution rewards
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query distribution rewards
+# babylond query distribution rewards
 Querying all distribution delegator rewards or rewards from a particular validator.
 ## query distribution rewards command
 ```

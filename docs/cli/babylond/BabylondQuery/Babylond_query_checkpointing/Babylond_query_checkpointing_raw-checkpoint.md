@@ -1,11 +1,11 @@
 ---
 id: babylond_query_checkpointing_raw_checkpoint
-sidebar_label: Babylond_query_checkpointing_raw_checkpoint
+sidebar_label: babylond query checkpointing raw-checkpoint
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query checkpointing raw-checkpoint
+# babylond query checkpointing raw-checkpoint
 Retrieve the checkpoint by the given epoch number.
 ## query checkpointing raw-checkpoint command
 ```

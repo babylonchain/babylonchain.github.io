@@ -1,11 +1,11 @@
 ---
 id: babylondcreategenesiskey
-sidebar_label: Babylond_create-genesis-key
+sidebar_label: babylond create-genesis-key
 hide_table_of_contents: true
 
 ---
 
-# Babylond_create-genesis-key
+# babylond create-genesis-key
 Create a genesis BLS key file for the validator.
 ## create-genesis-key command
 ```

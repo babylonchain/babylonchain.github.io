@@ -1,11 +1,11 @@
 ---
 id: babylond_tendermint_show-address
-sidebar_label: Babylond_tendermint_show-address
+sidebar_label: babylond tendermint show-address
 hide_table_of_contents: true
 
 ---
 
-# Babylond tendermint show-address
+# babylond tendermint show-address
 Show this node’s tendermint validator consensus address.
 ## tendermint show-address command
 ```

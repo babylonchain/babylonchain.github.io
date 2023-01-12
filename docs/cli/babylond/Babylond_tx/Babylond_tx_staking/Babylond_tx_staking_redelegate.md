@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_staking_redelegate
-sidebar_label: Babylond_tx_staking_redelegate
+sidebar_label: babylond tx staking redelegate
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx staking redelegate
+# babylond tx staking redelegate
 Redelegate liquids tokens from a validator to another.
 ## tx staking redelegate command
 ```

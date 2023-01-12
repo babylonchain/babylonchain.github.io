@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_ibc_client_misbehaviour
-sidebar_label: Babylond_tx_ibc_client_misbehaviour
+sidebar_label: babylond tx ibc client misbehaviour
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx ibc client misbehaviour
+# babylond tx ibc client misbehaviour
 Submit a client misbehaviour.
 ## tx ibc client misbehaviour command
 ```

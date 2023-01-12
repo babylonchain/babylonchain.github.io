@@ -1,11 +1,11 @@
 ---
 id: babylondconfig
-sidebar_label: Babylond_config
+sidebar_label: babylond config
 hide_table_of_contents: true
 
 ---
 
-# Babylond_config
+# babylond config
 Create or query an application CLI configuration file.
 ## config command
 ```

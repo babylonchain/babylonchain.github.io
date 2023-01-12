@@ -1,11 +1,11 @@
 ---
 id: babylond_query_checkpointing_params
-sidebar_label: Babylond_query_checkpointing_params
+sidebar_label: babylond query checkpointing params
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query checkpointing params
+# babylond query checkpointing params
 Show the parameters of the checkpointing module.
 ## query checkpointing params command
 ```

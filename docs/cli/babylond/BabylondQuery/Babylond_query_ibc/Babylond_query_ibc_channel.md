@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_channel
-sidebar_label: Babylond_query_ibc_channel
+sidebar_label: babylond query ibc channel
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc channel
+# babylond query ibc channel
 Querying commands for the ibc channel module.
 ## query ibc channel commands
 ```

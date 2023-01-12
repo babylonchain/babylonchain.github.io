@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_distribution_set-withdraw-addr
-sidebar_label: Babylond_tx_distribution_set-withdraw-addr
+sidebar_label: babylond tx distribution set-withdraw-addr
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx distribution set-withdraw-addr
+# babylond tx distribution set-withdraw-addr
 Change the default withdraw address for rewards associated with an address.
 ## tx distribution set-withdraw-addr command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_authz
-sidebar_label: Babylond_tx_authz
+sidebar_label: babylond tx authz
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx authz
+# babylond tx authz
 Querying subcommands for the authorization transactions.
 ## tx authz commands
 ```

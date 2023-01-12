@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_ibc_client_update
-sidebar_label: Babylond_tx_ibc_client_update
+sidebar_label: babylond tx ibc client update
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx ibc client update
+# babylond tx ibc client update
 Update existing client with a header.
 ## tx ibc client update command
 ```

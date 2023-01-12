@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_gov_deposit
-sidebar_label: Babylond_tx_gov_deposit
+sidebar_label: babylond tx gov deposit
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx gov deposit
+# babylond tx gov deposit
 Submit a deposit for an active proposal.
 ## tx gov deposit command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_vesting_create-periodic-vesting-account
-sidebar_label: Babylond_tx_vesting_create-periodic-vesting-account
+sidebar_label: babylond tx vesting create-periodic-vesting-account
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx vesting create-periodic-vesting-account
+# babylond tx vesting create-periodic-vesting-account
 Create a new vesting account funded with an allocation of tokens.
 ## tx vesting create-periodic-vesting-account command
 ```

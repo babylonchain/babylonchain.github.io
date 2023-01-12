@@ -1,11 +1,11 @@
 ---
 id: babylond_query_gov_proposal
-sidebar_label: Babylond_query_gov_proposal
+sidebar_label: babylond query gov proposal
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query gov proposal
+# babylond query gov proposal
 Querying a detail for a proposal.
 ## query gov proposal command
 ```

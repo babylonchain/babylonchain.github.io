@@ -1,11 +1,11 @@
 ---
 id: babylond_query_freegrant_grant
-sidebar_label: Babylond_query_freegrant_grant
+sidebar_label: babylond query feegrant grant
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query feegrant grant
+# babylond query feegrant grant
 Query details for a grant that contains a fee-grant of the grant and grantee.
 ## query feegrant grant command
 ```

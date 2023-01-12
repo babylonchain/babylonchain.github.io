@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_ibc-transfer_transfer
-sidebar_label: Babylond_tx_ibc-transfer_transfer
+sidebar_label: babylond tx ibc-transfer transfer
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx ibc-transfer transfer
+# babylond tx ibc-transfer transfer
 Transfer a fungible token through the IBC.
 ## tx ibc-transfer transfer command
 ```

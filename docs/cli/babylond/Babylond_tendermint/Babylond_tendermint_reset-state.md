@@ -1,11 +1,11 @@
 ---
 id: babylond_tendermint_reset-state
-sidebar_label: Babylond_tendermint_reset-state
+sidebar_label: babylond tendermint reset-state
 hide_table_of_contents: true
 
 ---
 
-# Babylond tendermint reset-state
+# babylond tendermint reset-state
 Remove all the tendermint data and WAL.
 ## tendermint reset-state command
 ```

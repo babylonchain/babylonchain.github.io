@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_client_params
-sidebar_label: Babylond_query_ibc_client_params
+sidebar_label: babylond query ibc client params
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc client params
+# babylond query ibc client params
 Querying the current IBC client parameters.
 ## query ibc client params command
 ```

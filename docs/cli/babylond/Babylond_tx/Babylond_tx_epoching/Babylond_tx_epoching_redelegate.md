@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_epoching_redelegate
-sidebar_label: Babylond_tx_epoching_redelegate
+sidebar_label: babylond tx epoching redelegate
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx epoching redelegate
+# babylond tx epoching redelegate
 Redelegate liquid tokens from one validator to another.
 ## tx epoching redelegate command
 ```

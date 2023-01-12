@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_encode
-sidebar_label: Babylond_tx_encode
+sidebar_label: babylond tx encode
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx encode
+# babylond tx encode
 Encode the transactions generated offline.
 ## tx encode commands
 ```

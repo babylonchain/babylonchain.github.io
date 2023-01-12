@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_distribution_withdraw-all-rewards
-sidebar_label: Babylond_tx_distribution_withdraw-all-rewards
+sidebar_label: babylond tx distribution withdraw-all-rewards
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx distribution withdraw-all-rewards
+# babylond tx distribution withdraw-all-rewards
 Withdraw all delegations rewards for a delegator.
 ## tx distribution withdraw-all-rewards command
 ```

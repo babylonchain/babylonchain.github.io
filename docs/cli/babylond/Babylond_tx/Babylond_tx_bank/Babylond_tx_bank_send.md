@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_bank_send
-sidebar_label: Babylond_tx_bank_send
+sidebar_label: babylond tx bank send
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx bank send
+# babylond tx bank send
 Send funds from one account to another account.
 ## tx bank send command
 ```

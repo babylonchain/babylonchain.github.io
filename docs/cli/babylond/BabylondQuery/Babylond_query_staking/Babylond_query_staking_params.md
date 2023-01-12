@@ -1,11 +1,11 @@
 ---
 id: babylond_query_staking_params
-sidebar_label: Babylond_query_staking_params
+sidebar_label: babylond query staking params
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query staking params
+# babylond query staking params
 Querying the current staking parameters information.
 ## query staking params command
 ```

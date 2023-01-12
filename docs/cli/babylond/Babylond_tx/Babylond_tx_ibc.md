@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_ibc
-sidebar_label: Babylond_tx_ibc
+sidebar_label: babylond tx ibc
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx ibc
+# babylond tx ibc
 Querying subcommands for IBC transactions.
 ## tx ibc commands
 ```

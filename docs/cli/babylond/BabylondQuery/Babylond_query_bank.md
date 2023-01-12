@@ -1,11 +1,11 @@
 ---
 id: babylond_query_bank
-sidebar_label: Babylond_query_bank
+sidebar_label: babylond query bank
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query bank
+# babylond query bank
 Querying commands for the bank module.
 ## query bank commands
 ```

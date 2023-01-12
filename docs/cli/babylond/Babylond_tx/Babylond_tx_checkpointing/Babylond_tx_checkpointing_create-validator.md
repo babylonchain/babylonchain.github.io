@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_checkpointing_create-validator
-sidebar_label: Babylond_tx_checkpointing_create-validator
+sidebar_label: babylond tx checkpointing create-validator
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx checkpointing create-validator
+# babylond tx checkpointing create-validator
 Create a new validator that initialized with a self-delegation.
 ## tx checkpointing create-validator command
 ```

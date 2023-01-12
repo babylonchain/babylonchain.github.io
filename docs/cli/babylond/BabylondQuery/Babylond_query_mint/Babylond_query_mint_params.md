@@ -1,11 +1,11 @@
 ---
 id: babylond_query_mint_params
-sidebar_label: Babylond_query_mint_params
+sidebar_label: babylond query mint params
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query mint params
+# babylond query mint params
 Querying the current minting parameters.
 ## query mint params command
 ```

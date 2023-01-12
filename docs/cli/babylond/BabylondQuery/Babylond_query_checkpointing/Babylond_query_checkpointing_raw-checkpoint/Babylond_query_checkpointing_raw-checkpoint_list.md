@@ -1,11 +1,11 @@
 ---
 id: babylond_query_checkpointing_raw-checkpoint_list
-sidebar_label: Babylond_query_checkpointing_raw-checkpoint_list
+sidebar_label: babylond query checkpointing raw-checkpoint list
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query checkpointing raw-checkpoint list
+# babylond query checkpointing raw-checkpoint list
 Retrieve the checkpoint by the given status.
 ## query checkpointing raw-checkpointing-list command
 ```

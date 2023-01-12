@@ -1,11 +1,11 @@
 ---
 id: babylond_query_checkpointing
-sidebar_label: Babylond_query_checkpointing
+sidebar_label: babylond query checkpointing
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query checkpointing
+# babylond query checkpointing
 Querying commands for the checkpointing module.
 ## query checkpointing commands
 ```

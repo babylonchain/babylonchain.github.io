@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_decode
-sidebar_label: Babylond_tx_decode
+sidebar_label: babylond tx decode
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx decode
+# babylond tx decode
 Decode a binary encoded transaction string.
 ## tx decode command
 ```

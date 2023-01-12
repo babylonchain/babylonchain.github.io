@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_client_header
-sidebar_label: Babylond_query_ibc_client_header
+sidebar_label: babylond query ibc client header
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc client header
+# babylond query ibc client header
 Querying the latest header of the running chain.
 ## query ibc client header command
 ```

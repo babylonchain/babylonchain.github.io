@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_channel_packet-commitments
-sidebar_label: Babylond_query_ibc_channel_packet-commitments
+sidebar_label: babylond query ibc channel packet-commitments
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc channel packet-commitments
+# babylond query ibc channel packet-commitments
 Query all packet commitments associated with the specified channel.
 ## query ibc channel packet-commitments command
 ```

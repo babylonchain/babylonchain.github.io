@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_ibc-transfer
-sidebar_label: Babylond_tx_ibc-transfer
+sidebar_label: babylond tx ibc-transfer
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx ibc-transfer
+# babylond tx ibc-transfer
 Querying subcommands for IBC fungible token transfer transactions.
 ## tx ibc-transfer commands
 ```

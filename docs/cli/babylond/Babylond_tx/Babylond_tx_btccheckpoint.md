@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_btccheckpoint
-sidebar_label: Babylond_tx_btccheckpoint
+sidebar_label: babylond tx btccheckpoint
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx btccheckpoint
+# babylond tx btccheckpoint
 Querying subcommands for btccheckpoint transactions.
 ## tx btccheckpoint command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query_gov
-sidebar_label: Babylond_query_gov
+sidebar_label: babylond query gov
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query gov
+# babylond query gov
 Querying commands for the governance module.
 ## query gov commands
 ```

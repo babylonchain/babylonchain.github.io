@@ -1,11 +1,11 @@
 ---
 id: babylondgentx
-sidebar_label: Babylond_gentx
+sidebar_label: babylond gentx
 hide_table_of_contents: true
 
 ---
 
-# Babylond_gentx
+# babylond gentx
 Generate a genesis transaction by a specified key name, an amount that establishes a validator with a self-delegation signed by the reference key on the keyring. The genesis transaction is retrieved from the priv _validator.json file.
 ## gentx command
 ```

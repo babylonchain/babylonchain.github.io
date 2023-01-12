@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_vesting_create-permanent-locked-account
-sidebar_label: Babylond_tx_vesting_create-permanent-locked-account
+sidebar_label: babylond tx vesting create-permanent-locked-account
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx vesting create-permanent-locked-account
+# babylond tx vesting create-permanent-locked-account
 Create a new permanently locked account funded with an allocation of tokens.
 ## tx vesting create-permanent-locked-account command
 ```

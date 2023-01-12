@@ -1,11 +1,11 @@
 ---
 id: babylond_query_auth
-sidebar_label: Babylond_query_auth
+sidebar_label: babylond query auth
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query auth
+# babylond query auth
 Querying commands for the authentication module.
 ## query auth commands
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query_block
-sidebar_label: Babylond_query_block
+sidebar_label: babylond query block
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query block
+# babylond query block
 Get verified data for the block at the given height.
 ## query block command
 ```

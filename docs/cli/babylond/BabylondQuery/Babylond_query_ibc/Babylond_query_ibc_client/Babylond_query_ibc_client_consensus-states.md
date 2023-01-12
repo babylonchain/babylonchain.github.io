@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_client_consensus-states
-sidebar_label: Babylond_query_ibc_client_consensus-states
+sidebar_label: babylond query ibc client consensus-states
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc client consensus-states
+# babylond query ibc client consensus-states
 Querying all the consensus states of a client.
 ## query ibc client consensus-states command
 ```

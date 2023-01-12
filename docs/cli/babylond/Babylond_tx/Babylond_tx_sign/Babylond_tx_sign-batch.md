@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_sign-batch
-sidebar_label: Babylond_tx_sign-batch
+sidebar_label: babylond tx sign-batch
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx sign-batch
+# babylond tx sign-batch
 Sign the generated offline transaction in batch.
 ## tx sign-batch command
 ```

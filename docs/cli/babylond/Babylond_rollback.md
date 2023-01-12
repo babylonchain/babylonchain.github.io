@@ -1,10 +1,10 @@
 ---
 id: babylond_rollback
-sidebar_label: Babylond_rollback
+sidebar_label: babylond rollback
 hide_table_of_contents: true
 ---
 
-# Babylond rollback
+# babylond rollback
 Roll back the cosmos-sdk and tendermint state by one height.
 ## rollback command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylondaddgenesisaccount
-sidebar_label: Babylond_add-genesis-account
+sidebar_label: babylond add-genesis-account
 hide_table_of_contents: true
 
 ---
 
-# Babylond_add-genesis-account
+# babylond add-genesis-account
 This command adds an account to the genesis.json file. The account's address, key name, and coins must be specified. If the key name is supplied, it will be retrieved from the local key base. The coins or tokens must include valid denominations.
 ## add-genesis-account command
 ```

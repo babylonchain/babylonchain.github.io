@@ -1,11 +1,11 @@
 ---
 id: babylond_tendermint_unsafe-reset-all
-sidebar_label: Babylond_tendermint_unsafe-reset-all
+sidebar_label: babylond tendermint unsafe-reset-all(unsafe)
 hide_table_of_contents: true
 
 ---
 
-# Babylond tendermint unsafe-reset-all(unsafe)
+# babylond tendermint unsafe-reset-all(unsafe)
 Remove all the data, WAL, and reset the node’s validator to the genesis state.
 :::info Note
 

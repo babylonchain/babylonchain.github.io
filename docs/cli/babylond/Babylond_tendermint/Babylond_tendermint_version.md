@@ -1,11 +1,11 @@
 ---
 id: babylond_tendermint_version
-sidebar_label: Babylond_tendermint_version
+sidebar_label: babylond tendermint version
 hide_table_of_contents: true
 
 ---
 
-# Babylond tendermint version
+# babylond tendermint version
 Print the tendermint libraries' version.
 ## tendermint version command
 ```

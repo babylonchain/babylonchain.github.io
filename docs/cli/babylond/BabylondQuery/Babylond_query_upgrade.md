@@ -1,11 +1,11 @@
 ---
 id: babylond_query_upgrade
-sidebar_label: Babylond_query_upgrade
+sidebar_label: babylond query upgrade
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query upgrade
+# babylond query upgrade
 Querying commands for the upgrade module.
 ## query upgrade command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_zoneconcierge
-sidebar_label: Babylond_tx_zoneconcierge
+sidebar_label: babylond tx zoneconcierge
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx zoneconcierge
+# babylond tx zoneconcierge
 Querying subcommands for zoneconcierge transactions.
 ## tx zoneconcierge command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_crisis
-sidebar_label: Babylond_tx_crisis
+sidebar_label: babylond tx crisis
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx crisis
+# babylond tx crisis
 Querying subcommands for crisis transactions.
 ## tx crisis command
 ```

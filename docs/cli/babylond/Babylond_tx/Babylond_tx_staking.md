@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_staking
-sidebar_label: Babylond_tx_staking
+sidebar_label: babylond tx staking
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx staking
+# babylond tx staking
 Querying subcommands for staking transactions.
 ## tx staking commands
 ```

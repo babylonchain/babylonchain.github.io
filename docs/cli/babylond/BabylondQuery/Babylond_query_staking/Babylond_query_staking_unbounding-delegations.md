@@ -1,11 +1,11 @@
 ---
 id: babylond_query_staking_unbounding-delegations
-sidebar_label: Babylond_query_staking_unbounding-delegations
+sidebar_label: babylond query staking unbonding-delegations
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query staking unbonding-delegations
+# babylond query staking unbonding-delegations
 Querying all unbonding-delegations records for one delegator.
 ## query staking unbonding-delegations command
 ```

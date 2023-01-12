@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_gov_submit-legacy-proposal_community
-sidebar_label: Babylond_tx_gov_submit-legacy-proposal_community-pool-spend
+sidebar_label: babylond tx gov submit-legacy-proposal community-pool-spend
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx gov submit-legacy-proposal community-pool-spend
+# babylond tx gov submit-legacy-proposal community-pool-spend
 Submit a community pool spend proposal.
 ## tx gov submit-legacy-proposal  community-pool-spend command
 ```

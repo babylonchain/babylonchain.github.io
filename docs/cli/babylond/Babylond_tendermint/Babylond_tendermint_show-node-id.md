@@ -1,11 +1,11 @@
 ---
 id: babylond_tendermint_show-node-id
-sidebar_label: Babylond_tendermint_show-node-id
+sidebar_label: babylond tendermint show-node-id
 hide_table_of_contents: true
 
 ---
 
-# Babylond tendermint show-node-id
+# babylond tendermint show-node-id
 Show the node’s identifier.
 ## tendermint show-node-id command
 ```

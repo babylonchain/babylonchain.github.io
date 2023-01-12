@@ -1,11 +1,11 @@
 ---
 id: babylond_query_staking_redelegation
-sidebar_label: Babylond_query_staking_redelegation
+sidebar_label: babylond query staking redelegation
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query staking redelegation
+# babylond query staking redelegation
 Querying a redelegation record based on the delegator, a source, and a destination validator address.
 ## query staking redelegation command
 ```

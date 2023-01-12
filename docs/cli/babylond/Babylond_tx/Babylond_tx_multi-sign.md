@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_multi-sign
-sidebar_label: Babylond_tx_multi-sign
+sidebar_label: babylond tx multi-sign
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx multi-sign
+# babylond tx multi-sign
 Generate mutisig signatures for transactions.
 ## tx multi-sign command
 ```

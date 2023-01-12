@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_client_status
-sidebar_label: Babylond_query_ibc_client_status
+sidebar_label: babylond query ibc client status
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc client status
+# babylond query ibc client status
 Querying the activity of the currently active client by the specified client identifier.
 ## query ibc client status command
 ```

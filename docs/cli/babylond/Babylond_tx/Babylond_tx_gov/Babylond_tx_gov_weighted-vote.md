@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_gov_weighted-vote
-sidebar_label: Babylond_tx_gov_weighted-vote
+sidebar_label: babylond tx gov weighted-vote
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx gov weighted-vote
+# babylond tx gov weighted-vote
 Vote for an active proposal, options: yes/no/no_with_veto/abstain
 ## tx gov weighted-vote command
 ```

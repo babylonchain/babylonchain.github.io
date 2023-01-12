@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_transfer_escrow-address
-sidebar_label: Babylond_query_ibc_transfer_escrow-address
+sidebar_label: babylond query ibc-transfer escrow-address
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc-transfer escrow-address
+# babylond query ibc-transfer escrow-address
 Get the escrow address for a channel.
 ## query ibc-transfer escrow-address command
 ```

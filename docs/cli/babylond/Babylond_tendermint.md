@@ -1,11 +1,11 @@
 ---
 id: babylond_tendermint
-sidebar_label: Babylond_tendermint
+sidebar_label: babylond tendermint
 hide_table_of_contents: true
 
 ---
 
-# Babylond tendermint
+# babylond tendermint
 Querying subcommands for tendermint module.
 ## tendermint command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylondkeys
-sidebar_label: Babylond_keys
+sidebar_label: babylond keys
 hide_table_of_contents: true
 
 ---
 
-# Babylond_keys
+# babylond keys
 Manage the application's keyring. Light clients, full nodes, or any other application that requires a private key can use these keys in any format supported by the Tendermint crypto library.
 ## keys command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query_mint_inflation
-sidebar_label: Babylond_query_mint_inflation
+sidebar_label: babylond query mint inflation
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query mint inflation
+# babylond query mint inflation
 Querying the current minting inflation value.
 ## query mint inflation command
 ```

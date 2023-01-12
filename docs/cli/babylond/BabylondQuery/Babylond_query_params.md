@@ -1,11 +1,11 @@
 ---
 id: babylond_query_params
-sidebar_label: Babylond_query_params
+sidebar_label: babylond query params
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query params
+# babylond query params
 Querying commands for the params module.
 ## query params commands
 ```

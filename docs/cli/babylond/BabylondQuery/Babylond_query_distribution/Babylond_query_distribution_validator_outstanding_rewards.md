@@ -1,11 +1,11 @@
 ---
 id: babylond_query_distribution_validator-outstanding-rewards
-sidebar_label: Babylond_query_distribution_validator-outstanding-rewards
+sidebar_label: babylond query distribution validator-outstanding-rewards
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query distribution validator-outstanding-rewards
+# babylond query distribution validator-outstanding-rewards
 Querying distribution of outstanding (un-withdrawn) rewards for validator and all their delegations.
 ## query distribution validator-outstanding-rewards command
 ```

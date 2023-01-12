@@ -1,11 +1,11 @@
 ---
 id: babylond_query_tx
-sidebar_label: Babylond_query_tx
+sidebar_label: babylond query tx
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query tx
+# babylond query tx
 Querying a transaction by hash (addr/seq) combination or comma-separated signatures in a committed block.
 ## query tx command
 ```

@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_channel_packet-ack
-sidebar_label: Babylond_query_ibc_channel_packet-ack
+sidebar_label: babylond query ibc channel packet-ack
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc channel packet-ack
+# babylond query ibc channel packet-ack
 Querying a packet acknowledgment.
 ## query ibc channel packet-ack command
 ```

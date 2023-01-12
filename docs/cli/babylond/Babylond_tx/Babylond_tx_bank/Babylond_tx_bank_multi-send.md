@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_bank_multi-send
-sidebar_label: Babylond_tx_bank_multi-send
+sidebar_label: babylond tx bank multi-send
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx bank multi-send
+# babylond tx bank multi-send
 Send funds from one account to two or more accounts.
 ## tx bank multi-send command
 ```

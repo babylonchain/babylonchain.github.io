@@ -1,10 +1,10 @@
 ---
 id: Babylond_query_ibc_client
-sidebar_label: Babylond_query_ibc_client
+sidebar_label: babylond query ibc client
 hide_table_of_contents: true
 
 ---
-# Babylond Query ibc client
+# babylond query ibc client
 Querying subcommands for the IBC client module.
 ## query ibc client commands
 ```

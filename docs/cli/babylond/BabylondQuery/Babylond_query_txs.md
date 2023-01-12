@@ -1,11 +1,11 @@
 ---
 id: babylond_query_txs
-sidebar_label: Babylond_query_txs
+sidebar_label: babylond query txs
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query txs
+# babylond query txs
 Querying for paginated transactions that match a set of events.
 ## query txs command
 ```

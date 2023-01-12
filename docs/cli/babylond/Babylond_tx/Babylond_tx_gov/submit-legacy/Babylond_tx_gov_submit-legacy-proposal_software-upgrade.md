@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_gov_submit-legacy-proposal_software
-sidebar_label: Babylond_tx_gov_submit-legacy-proposal_software-upgrade
+sidebar_label: babylond tx gov submit-legacy-proposal software-upgrade
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx gov submit-legacy-proposal software-upgrade
+# babylond tx gov submit-legacy-proposal software-upgrade
 Submit a software upgrade proposal.
 ## tx gov submit-legacy-proposal software-upgrade command
 ```

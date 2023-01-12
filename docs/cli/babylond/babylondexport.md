@@ -1,11 +1,11 @@
 ---
 id: babylondexport
-sidebar_label: Babylond_export
+sidebar_label: babylond export
 hide_table_of_contents: true
 
 ---
 
-# Babylond_export
+# babylond export
 Export state format to JSON format.
 ## export command
 ```

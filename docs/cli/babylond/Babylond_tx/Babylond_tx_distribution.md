@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_distribution
-sidebar_label: Babylond_tx_distribution
+sidebar_label: babylond tx distribution
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx distribution
+# babylond tx distribution
 Querying subcommands for distribution transactions.
 ## tx distribution commands
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_btclightclient
-sidebar_label: Babylond_tx_btclightclient
+sidebar_label: babylond tx btclightclient
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx btclightclient
+# babylond tx btclightclient
 Querying subcommands for the btclightclient transactions.
 ## tx btclightclient commands
 ```

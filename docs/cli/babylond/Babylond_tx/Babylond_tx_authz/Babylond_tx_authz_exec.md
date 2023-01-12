@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_authz_exec
-sidebar_label: Babylond_tx_authz_exec
+sidebar_label: babylond tx authz exec
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx authz exec
+# babylond tx authz exec
 Execute the tx on behalf of the granter account.
 ## tx authz exec command
 ```

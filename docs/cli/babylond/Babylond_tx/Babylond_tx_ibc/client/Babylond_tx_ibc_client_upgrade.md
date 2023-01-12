@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_ibc_client_upgrade
-sidebar_label: Babylond_tx_ibc_client_upgrade
+sidebar_label: babylond tx ibc client upgrade
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx ibc client upgrade
+# babylond tx ibc client upgrade
 Upgrade an IBC client.
 ## tx ibc client upgrade command
 ```

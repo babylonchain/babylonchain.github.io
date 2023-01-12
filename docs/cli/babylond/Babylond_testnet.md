@@ -1,11 +1,11 @@
 ---
 id: babylond_testnet
-sidebar_label: Babylond_testnet
+sidebar_label: babylond testnet
 hide_table_of_contents: true
 
 ---
 
-# Babylond testnet
+# babylond testnet
 Initialize the files for a Babylon testnet.
 ## testnet command
 ```

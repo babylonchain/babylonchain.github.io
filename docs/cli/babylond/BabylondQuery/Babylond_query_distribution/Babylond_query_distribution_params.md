@@ -1,11 +1,11 @@
 ---
 id: babylond_query_distribution_params
-sidebar_label: Babylond_query_distribution_params
+sidebar_label: babylond query distribution params
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query distribution params
+# babylond query distribution params
 Show the parameters of the distribution module.
 ## query distribution params command
 ```

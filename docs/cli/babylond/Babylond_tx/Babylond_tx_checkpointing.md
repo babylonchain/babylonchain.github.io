@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_checkpointing
-sidebar_label: Babylond_tx_checkpointing
+sidebar_label: babylond tx checkpointing
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx checkpointing
+# babylond tx checkpointing
 Querying subcommands for the checkpointing transactions.
 ## tx checkpointing commands
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_evidence
-sidebar_label: Babylond_tx_evidence
+sidebar_label: babylond tx evidence
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx evidence
+# babylond tx evidence
 Querying subcommands for evidence transactions.
 ## tx evidence command
 ```

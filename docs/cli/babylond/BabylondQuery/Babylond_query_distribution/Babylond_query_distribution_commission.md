@@ -1,11 +1,11 @@
 ---
 id: babylond_query_distribution_commission
-sidebar_label: Babylond_query_distribution_commission
+sidebar_label: babylond query distribution commission
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query distribution commission
+# babylond query distribution commission
 Querying distribution validator commission.
 ## query distribution commission command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylondkeysrename
-sidebar_label: Babylond_keys_rename
+sidebar_label: babylond keys rename
 hide_table_of_contents: true
 
 ---
 
-# Babylond_keys_rename
+# babylond keys rename
 Rename an existing key name that is stored on the local keybase.
 ## keys rename command
 ```

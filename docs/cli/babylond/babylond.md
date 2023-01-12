@@ -1,11 +1,11 @@
 ---
 id: babylond
-sidebar_label: Babylond App
+sidebar_label: babylond app
 hide_table_of_contents: true
 
 ---
 
-# Babylond App
+# babylond app
 
 Babylon Application
 

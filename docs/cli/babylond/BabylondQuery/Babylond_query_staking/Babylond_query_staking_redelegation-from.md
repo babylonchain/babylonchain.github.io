@@ -1,11 +1,11 @@
 ---
 id: babylond_query_staking_redelegation-from
-sidebar_label: Babylond_query_staking_redelegation-from
+sidebar_label: babylond query staking redelegation-from
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query staking redelegation-from
+# babylond query staking redelegation-from
 Query all outgoing redelegations from a validator.
 ## query staking redelegation-from command
 ```

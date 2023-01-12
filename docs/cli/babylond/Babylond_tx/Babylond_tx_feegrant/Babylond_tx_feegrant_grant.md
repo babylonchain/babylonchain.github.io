@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_feegrant_grant
-sidebar_label: Babylond_tx_feegrant_grant
+sidebar_label: babylond tx feegrant grant
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx feegrant grant
+# babylond tx feegrant grant
 Grant authorization for fee allowance to an address.
 ## tx feegrant grant command
 ```

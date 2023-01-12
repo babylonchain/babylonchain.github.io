@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_gov_submit-legacy-proposal
-sidebar_label: Babylond_tx_gov_submit-legacy-proposal
+sidebar_label: babylond tx gov submit-legacy-proposal
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx gov submit-legacy-proposal
+# babylond tx gov submit-legacy-proposal
 Submit a legacy proposal along with an initial deposit.
 ## tx gov submit-legacy-proposal commands
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query_distribution_community-pool
-sidebar_label: Babylond_query_distribution_community-pool
+sidebar_label: babylond query distribution community-pool
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query distribution community-pool
+# babylond query distribution community-pool
 Querying the amount of coins in the community pool.
 ## query distribution community-pool command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query_gov_deposit
-sidebar_label: Babylond_query_gov_deposit
+sidebar_label: babylond query gov deposit
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query gov deposit
+# babylond query gov deposit
 Querying details for a deposit on a proposal by the specified identifier.
 ## query gov deposit command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query_auth_account
-sidebar_label: Babylond_query_auth_account
+sidebar_label: babylond query auth account
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query Auth Account
+# babylond query auth account
 Querying an account authentication by the specified address.
 ## query auth account command
 ```

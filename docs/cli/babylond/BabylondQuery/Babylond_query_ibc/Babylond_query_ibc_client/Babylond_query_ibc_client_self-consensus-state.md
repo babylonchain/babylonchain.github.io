@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_client_self-consensus-state
-sidebar_label: Babylond_query_ibc_client_self-consensus-state
+sidebar_label: babylond query ibc client self-consensus-state
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc client self-consensus-state
+# babylond query ibc client self-consensus-state
 Query the self-consensus state for this chain.
 ## query ibc client self-consensus-state command
 ```

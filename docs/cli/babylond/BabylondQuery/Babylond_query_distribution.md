@@ -1,11 +1,11 @@
 ---
 id: babylond_query_distribution
-sidebar_label: Babylond_query_distribution
+sidebar_label: babylond query distribution
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query distribution
+# babylond query distribution
 Querying commands for the distribution module.
 ## query distribution commands
 ```

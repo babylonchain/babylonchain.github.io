@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_epoching_delegate
-sidebar_label: Babylond_tx_epoching_delegate
+sidebar_label: babylond tx epoching delegate
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx epoching delegate
+# babylond tx epoching delegate
 Delegate liquid tokens to a validator.
 ## tx epoching delegate command
 ```

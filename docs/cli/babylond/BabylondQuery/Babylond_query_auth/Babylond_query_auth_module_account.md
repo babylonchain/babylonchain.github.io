@@ -1,11 +1,11 @@
 ---
 id: babylond_query_auth_module_account
-sidebar_label: Babylond_query_auth_module_account
+sidebar_label: babylond query auth module-account
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query auth module-account
+# babylond query auth module-account
 Querying an account’s module info by the specified module name.
 ## query auth module-account command
 ```

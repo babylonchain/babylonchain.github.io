@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_staking_delegate
-sidebar_label: Babylond_tx_staking_delegate
+sidebar_label: babylond tx staking delegate
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx staking delegate
+# babylond tx staking delegate
 Delegate liquids tokens to a validator.
 ## tx staking delegate command
 ```

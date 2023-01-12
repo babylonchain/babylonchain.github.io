@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_transfer
-sidebar_label: Babylond_query_ibc_transfer
+sidebar_label: babylond query ibc-transfer
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc-transfer
+# babylond query ibc-transfer
 Querying subcommand for the IBC tangible token transfer module.
 ## query ibc-transfer command
 ```

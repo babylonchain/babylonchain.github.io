@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_connection
-sidebar_label: Babylond_query_ibc_connection
+sidebar_label: babylond query ibc connection
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc connection
+# babylond query ibc connection
 Querying subcommands for the IBC connection module.
 ## query ibc connection command
 ```

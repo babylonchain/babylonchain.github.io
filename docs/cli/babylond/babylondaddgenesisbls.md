@@ -1,11 +1,11 @@
 ---
 id: babylondaddgenesisbls
-sidebar_label: Babylond_add-genesis-bls
+sidebar_label: babylond add-genesis-bls
 hide_table_of_contents: true
 
 ---
 
-# Babylond_add-genesis-bls
+# babylond add-genesis-bls
 This command adds a BLS key to the genesis.json file.
 ## add-genesis-bls command
 ```

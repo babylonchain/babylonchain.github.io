@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_connection_end
-sidebar_label: Babylond_query_ibc_connection_end
+sidebar_label: babylond query ibc connection end
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc connection end
+# babylond query ibc connection end
 Querying stored connection end.
 ## query ibc connection end command
 ```

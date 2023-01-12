@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_feegrant
-sidebar_label: Babylond_tx_feegrant
+sidebar_label: babylond tx feegrant
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx feegrant
+# babylond tx feegrant
 Grant and revoke fee allowance for a grantee by a granter
 ## tx feegrant commands
 ```

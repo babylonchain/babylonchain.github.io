@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_crisis_invariant-broken
-sidebar_label: Babylond_tx_crisis_invariant-broken
+sidebar_label: babylond tx crisis invariant-broken
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx crisis invariant-broken
+# babylond tx crisis invariant-broken
 Submit proof that an invariant broken to halt the chain.
 ## tx crisis invariant-broken command
 ```

@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_transfer_denom-trace
-sidebar_label: Babylond_query_ibc_transfer_denom-trace
+sidebar_label: babylond query ibc-transfer denom-trace
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc-transfer denom-trace
+# babylond query ibc-transfer denom-trace
 Querying the denom trace info by the given trace hash or ibc denom.
 ## query ibc-transfer denom-trace command
 ```

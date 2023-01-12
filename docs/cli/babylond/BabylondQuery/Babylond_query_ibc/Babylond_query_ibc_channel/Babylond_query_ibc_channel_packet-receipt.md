@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_channel_packet-receipt
-sidebar_label: Babylond_query_ibc_channel_packet-receipt
+sidebar_label: babylond query ibc channel packet-receipt
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc channel packet-receipt
+# babylond query ibc channel packet-receipt
 Querying a packet receipt.
 ## query ibc channel packet-receipt command
 ```

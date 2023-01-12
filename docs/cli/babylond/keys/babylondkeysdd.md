@@ -1,11 +1,11 @@
 ---
 id: babylondkeysdd
-sidebar_label: Babylond_keys_dd
+sidebar_label: babylond keys add
 hide_table_of_contents: true
 
 ---
 
-# Babylond_keys_dd
+# babylond keys add
 Add an encrypted private key (either newly generated or recovered), encrypt it, and save it to your file name.
 ## keys add command
 ```

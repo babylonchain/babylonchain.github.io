@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_channel_end
-sidebar_label: Babylond_query_ibc_channel_end
+sidebar_label: babylond query ibc channel end
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc channel end
+# babylond query ibc channel end
 Query an IBC channel end by the specified port and channel identifiers.
 ## query ibc channel end command
 ```

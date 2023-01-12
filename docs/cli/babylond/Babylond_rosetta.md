@@ -1,11 +1,11 @@
 ---
 id: babylond_rosetta
-sidebar_label: Babylond_rosetta
+sidebar_label: babylond rosetta
 hide_table_of_contents: true
 
 ---
 
-# Babylond rosetta
+# babylond rosetta
 Spin up a rosetta server.
 ## rosetta command
 ```

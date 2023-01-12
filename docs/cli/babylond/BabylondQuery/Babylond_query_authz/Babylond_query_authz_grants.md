@@ -1,11 +1,11 @@
 ---
 id: babylond_query_authz_grants
-sidebar_label: Babylond_query_authz_grants
+sidebar_label: babylond query auth params authz grants
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query authz grants
+# babylond query auth params authz grants
 Querying grans for a granter-grantee pair and optionally a msg-type-url.
 ## query authz grants command
 ```

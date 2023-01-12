@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_broadcast
-sidebar_label: Babylond_tx_broadcast
+sidebar_label: babylond tx broadcast
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx broadcast
+# babylond tx broadcast
 Broadcast transactions created with the --generate-only flag and signed with the sign command.
 ## tx authz broadcast command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_gov
-sidebar_label: Babylond_tx_gov
+sidebar_label: babylond tx gov
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx gov
+# babylond tx gov
 Querying subcommands for governance transactions.
 ## tx gov commands
 ```

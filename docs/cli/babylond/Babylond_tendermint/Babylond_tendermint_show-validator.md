@@ -1,11 +1,11 @@
 ---
 id: babylond_tendermint_show-validator
-sidebar_label: Babylond_tendermint_show-validator
+sidebar_label: babylond tendermint show-validator
 hide_table_of_contents: true
 
 ---
 
-# Babylond tendermint show-validator
+# babylond tendermint show-validator
 Show the node’s tendermint validator information.
 ## tendermint show-validator command
 ```

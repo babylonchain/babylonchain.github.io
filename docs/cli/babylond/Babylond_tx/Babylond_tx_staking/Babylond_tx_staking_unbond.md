@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_staking_unbond
-sidebar_label: Babylond_tx_staking_unbond
+sidebar_label: babylond tx staking unbond
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx staking unbond
+# babylond tx staking unbond
 Unbond an amount of shares from a validator.
 ## tx staking unbond command
 ```

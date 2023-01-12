@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_authz_grant
-sidebar_label: Babylond_tx_authz_grant
+sidebar_label: babylond tx authz grant
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx authz grant
+# babylond tx authz grant
 Grant the authorization to the address.
 ## tx authz grant command
 ```

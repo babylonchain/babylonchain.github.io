@@ -1,11 +1,11 @@
 ---
 id: preparegenesis
-sidebar_label: Babylond_prepare-genesis
+sidebar_label: babylond prepare-genesis
 hide_table_of_contents: true
 
 ---
 
-# Babylond_prepare-genesis
+# babylond prepare-genesis
 Create and prepare a genesis file.
 ## prepare-genesis command
 ```

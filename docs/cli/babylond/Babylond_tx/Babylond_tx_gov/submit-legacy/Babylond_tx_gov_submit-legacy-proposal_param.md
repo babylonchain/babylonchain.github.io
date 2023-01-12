@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_gov_submit-legacy-proposal_param
-sidebar_label: Babylond_tx_gov_submit-legacy-proposal_param-change
+sidebar_label: babylond tx gov submit-legacy-proposal param-change
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx gov submit-legacy-proposal param-change
+# babylond tx gov submit-legacy-proposal param-change
 Submit a parameters change proposal.
 ## tx gov submit-legacy-proposal param-change command
 ```

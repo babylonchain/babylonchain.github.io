@@ -1,11 +1,11 @@
 ---
 id: babylond_query_freegrant
-sidebar_label: Babylond_query_freegrant
+sidebar_label: babylond query feegrant
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query feegrant
+# babylond query feegrant
 Querying commands for the feegrant module.
 ## query feegrant commands
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query_btclightclient_base-header
-sidebar_label: Babylond_query_btclightclient_base-header
+sidebar_label: babylond query btclightclient base-header
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query btclightclient base-header
+# babylond query btclightclient base-header
 Retrieve the base header of the bitcoin blockchain.
 ## query btclightclient base-header command
 ```

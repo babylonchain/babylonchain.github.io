@@ -1,11 +1,11 @@
 ---
 id: babylond_query_mint
-sidebar_label: Babylond_query_mint
+sidebar_label: babylond query mint
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query mint
+# babylond query mint
 Querying commands for the minting module.
 ## query mint commands
 ```

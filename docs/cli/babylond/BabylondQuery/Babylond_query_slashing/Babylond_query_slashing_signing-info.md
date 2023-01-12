@@ -1,11 +1,11 @@
 ---
 id: babylond_query_slashing_signing-info
-sidebar_label: Babylond_query_slashing_signing-info
+sidebar_label: babylond query slashing signing-info
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query slashing signing-info
+# babylond query slashing signing-info
 Querying a validator’s signing information by the specified consensus key.
 ## query slashing params signing-info command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_validate-genesis
-sidebar_label: Babylond_validate-genesis
+sidebar_label: babylond validate-genesis
 hide_table_of_contents: true
 
 ---
 
-# Babylond validate-genesis
+# babylond validate-genesis
 Validates the genesis file in the default location or the location specified by the argument.
 ## validate-genesis command
 ```

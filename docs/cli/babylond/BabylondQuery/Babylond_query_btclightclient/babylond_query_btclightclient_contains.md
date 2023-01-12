@@ -1,11 +1,11 @@
 ---
 id: babylond_query_btclightclient_contains
-sidebar_label: Babylond_query_btclightclient_contains
+sidebar_label: babylond query btclightclient contains
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query btclightclient contains
+# babylond query btclightclient contains
 Check whether the module maintains a hash.
 ## query btclightclient contains command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylondinit
-sidebar_label: Babylond_init
+sidebar_label: babylond init
 hide_table_of_contents: true
 
 ---
 
-# Babylond_init
+# babylond init
 Initialize private validator, p2p, genesis, and application configuration files.
 ## init command
 ```

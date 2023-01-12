@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_channel_next-sequence-receive
-sidebar_label: Babylond_query_ibc_channel_next-sequence-receive
+sidebar_label: babylond query ibc channel next-sequence-receive
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc channel next-sequence-receive
+# babylond query ibc channel next-sequence-receive
 Query the next receive sequence for the specified channel.
 ## query ibc channel next-sequence-receive command
 ```

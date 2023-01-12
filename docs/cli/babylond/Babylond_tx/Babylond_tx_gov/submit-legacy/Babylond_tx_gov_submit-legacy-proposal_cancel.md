@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_gov_submit-legacy-proposal_cancel
-sidebar_label: Babylond_tx_gov_submit-legacy-proposal_cancel-software-upgrade
+sidebar_label: babylond tx gov submit-legacy-proposal cancel-software-upgrade
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx gov submit-legacy-proposal cancel-software-upgrade
+# babylond tx gov submit-legacy-proposal cancel-software-upgrade
 Cancel the current software upgrade proposal.
 ## tx gov submit-legacy-proposal  cancel-software-upgrade command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_start
-sidebar_label: Babylond_start
+sidebar_label: babylond start
 hide_table_of_contents: true
 
 ---
 
-# Babylond start
+# babylond start
 Tendermint can be run in the foreground or behind the scenes with the full-node application. By default, the application will run with Tendermint in process.
 ## start command
 ```

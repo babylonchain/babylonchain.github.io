@@ -1,11 +1,11 @@
 ---
 id: babylond_query_epoching_params
-sidebar_label: Babylond_query_epoching_params
+sidebar_label: babylond query  epoching params
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query epoching params
+# babylond query  epoching params
 Show the parameters of the epoching module.
 ## query epoching params command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query
-sidebar_label: Babylond_prepare_query
+sidebar_label: babylond Query
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query
+# babylond Query
 Querying Subcommands.
 ## query commands
 ```

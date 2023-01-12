@@ -1,11 +1,11 @@
 ---
 id: babylond_query_gov_tally
-sidebar_label: Babylond_query_gov_tally
+sidebar_label: babylond query gov tally
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query gov tally
+# babylond query gov tally
 Get the tally of a proposal vote.
 ## query gov tally command
 ```

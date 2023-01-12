@@ -1,11 +1,11 @@
 ---
 id: babylonddebugpubkey
-sidebar_label: Babylond_debug_pubkey
+sidebar_label: babylond debug pubkey
 hide_table_of_contents: true
 
 ---
 
-# Babylond_debug_pubkey
+# babylond debug pubkey
 Decode a pubkey from proto JSON.
 ## debug pubkey command
 ```

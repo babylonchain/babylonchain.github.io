@@ -1,11 +1,11 @@
 ---
 id: babylond_query_staking_redelegations
-sidebar_label: Babylond_query_staking_redelegations
+sidebar_label: babylond query staking redelegations
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query staking redelegations
+# babylond query staking redelegations
 Query all redelegation records for one delegator.
 ## query staking redelegations command
 ```

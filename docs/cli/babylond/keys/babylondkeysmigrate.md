@@ -1,11 +1,11 @@
 ---
 id: babylondkeysmigrate
-sidebar_label: Babylond_keys_migrate
+sidebar_label: babylond keys migrate
 hide_table_of_contents: true
 
 ---
 
-# Babylond_keys_migrate
+# babylond keys migrate
 Migrate keys from amino to proto serialization format.
 ## keys migrate command
 ```

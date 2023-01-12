@@ -1,11 +1,11 @@
 ---
 id: babylondkeysparse
-sidebar_label: Babylond_keys_parse
+sidebar_label: babylond keys parse
 hide_table_of_contents: true
 
 ---
 
-# Babylond_keys_parse
+# babylond keys parse
 Parse key addresses and fingerprints from hexadecimal to bech32 and vice versa.
 ## keys parse command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylonddebugaddr
-sidebar_label: Babylond_debug_addr
+sidebar_label: babylond debug addr
 hide_table_of_contents: true
 
 ---
 
-# Babylond_debug_addr
+# babylond debug addr
 Convert an address between hex and bech32.
 ## debug addr command
 ```

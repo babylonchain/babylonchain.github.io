@@ -1,11 +1,11 @@
 ---
 id: migrate
-sidebar_label: Babylond_migrate
+sidebar_label: babylond migrate
 hide_table_of_contents: true
 
 ---
 
-# Babylond_migrate
+# babylond migrate
 Migrate the source genesis file into the specified target version and print to STDOUT.
 ## migrate command
 ```

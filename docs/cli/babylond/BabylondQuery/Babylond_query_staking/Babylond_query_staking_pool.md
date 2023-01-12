@@ -1,11 +1,11 @@
 ---
 id: babylond_query_staking_pool
-sidebar_label: Babylond_query_staking_pool
+sidebar_label: babylond query staking pool
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query staking pool
+# babylond query staking pool
 Querying the current value stored on the staking pool.
 ## query staking pool command
 ```

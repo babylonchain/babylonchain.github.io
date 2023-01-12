@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_authz_revoke
-sidebar_label: Babylond_tx_authz_revoke
+sidebar_label: babylond tx authz revoke
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx authz revoke
+# babylond tx authz revoke
 Revoke the authorization for an address.
 ## tx authz revoke command
 ```

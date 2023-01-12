@@ -1,11 +1,11 @@
 ---
 id: babylond_query_btccheckpoint_btc-height
-sidebar_label: Babylond_query_btccheckpoint_btc-height
+sidebar_label: babylond query btccheckpoint btc-height
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query btccheckpoint btc-height
+# babylond query btccheckpoint btc-height
 Retrieve the earliest btc height for the given epoch.
 ## query btccheckpoint btc-height command
 ```

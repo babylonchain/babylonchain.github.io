@@ -1,11 +1,11 @@
 ---
 id: babylonddebugpubkeyraw
-sidebar_label: Babylond_debug_pubkey-raw
+sidebar_label: babylond debug pubkey-raw
 hide_table_of_contents: true
 
 ---
 
-# Babylond_debug_pubkey-raw
+# babylond debug pubkey-raw
 Decode an ED25519 or secp256k1 pubkey from hex, base64, or bech32.
 ## debug pubkey-raw command
 ```

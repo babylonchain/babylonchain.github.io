@@ -1,11 +1,11 @@
 ---
 id: babylond_query_gov_votes
-sidebar_label: Babylond_query_gov_votes
+sidebar_label: babylond query gov votes
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query gov votes
+# babylond query gov votes
 Querying details of all votes of a single proposal by the specified identifier.
 ## query gov votes command
 ```

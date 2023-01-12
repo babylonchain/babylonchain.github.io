@@ -1,11 +1,11 @@
 ---
 id: babylondkeysexport
-sidebar_label: Babylond_keys_export
+sidebar_label: babylond keys export
 hide_table_of_contents: true
 
 ---
 
-# Babylond_keys_export
+# babylond keys export
 Export a private key in encrypted ASCII format from the local keyring. Advanced users should only use this feature if they are comfortable handling private keys and fully aware of their risks.
 ## keys export command
 ```

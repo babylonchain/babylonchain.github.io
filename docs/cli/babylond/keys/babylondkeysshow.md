@@ -1,11 +1,11 @@
 ---
 id: babylondkeysshow
-sidebar_label: Babylond_keys_show
+sidebar_label: babylond keys show
 hide_table_of_contents: true
 
 ---
 
-# Babylond_keys_show
+# babylond keys show
 Display the key details by the given key’s name or address. Multisig key will be generated if multiple addresses or names are specified.
 ## keys show command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query_upgrade_module_versions
-sidebar_label: Babylond_query_upgrade_module_versions
+sidebar_label: babylond query upgrade module-versions
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query upgrade module_versions
+# babylond query upgrade module-versions
 Return the list of module names and their respective consensus versions.
 ## query upgrade module_versions command
 ```

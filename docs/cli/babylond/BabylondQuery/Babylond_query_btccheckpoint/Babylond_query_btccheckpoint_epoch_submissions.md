@@ -1,11 +1,11 @@
 ---
 id: babylond_query_btccheckpoint_epoch_submissions
-sidebar_label: Babylond_query_btccheckpoint_epoch-submissions
+sidebar_label: babylond query btccheckpoint epoch-submissions
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query btccheckpoint epoch-submissions
+# babylond query btccheckpoint epoch-submissions
 Checkpoint all the submissions for the given epoch.
 ## query btccheckpoint epoch-submissions command
 ```

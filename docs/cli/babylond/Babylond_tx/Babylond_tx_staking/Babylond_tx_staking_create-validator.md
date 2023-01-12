@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_staking_create-validator
-sidebar_label: Babylond_tx_staking_create-validator
+sidebar_label: babylond tx stking create-validator
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx staking create-validator
+# babylond tx stking create-validator
 Create new validator initialized with a self-delegation to it.
 ## tx staking create-validator command
 ```

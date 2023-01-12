@@ -1,11 +1,11 @@
 ---
 id: babylond_query_zoneconcierge_params
-sidebar_label: Babylond_query_zoneconcierge_params
+sidebar_label: babylond query zoneconcierge params
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query zoneconcierge params
+# babylond query zoneconcierge params
 Show the parameters of the zoneconcierge module.
 ## query zoneconcierge params command
 ```

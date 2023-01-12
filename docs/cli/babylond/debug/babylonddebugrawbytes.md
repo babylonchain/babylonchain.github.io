@@ -1,11 +1,11 @@
 ---
 id: babylonddebugrawbytes
-sidebar_label: Babylond_debug_raw-bytes
+sidebar_label: babylond debug raw-bytes
 hide_table_of_contents: true
 
 ---
 
-# Babylond_debug_raw-bytes
+# babylond debug raw-bytes
 Convert raw bytes output to hex.
 ## debug raw-bytes command
 ```

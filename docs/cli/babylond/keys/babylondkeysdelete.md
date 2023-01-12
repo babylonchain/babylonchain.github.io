@@ -1,11 +1,11 @@
 ---
 id: babylondkeysdelete
-sidebar_label: Babylond_keysdelete
+sidebar_label: babylond keys delete
 hide_table_of_contents: true
 
 ---
 
-# Babylond_keys_delete
+# babylond keys delete
 Delete the given keys from the keyring database record. This command will only remove the public key that is stored locally.
 ## keys delete command
 ```

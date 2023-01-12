@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_ibc_client_create
-sidebar_label: Babylond_tx_ibc_client_create
+sidebar_label: babylond tx ibc client create
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx ibc client create
+# babylond tx ibc client create
 Create new IBC client.
 ## tx ibc client create command
 ```

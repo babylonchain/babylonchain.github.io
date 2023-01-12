@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_gov_submit-proposal
-sidebar_label: Babylond_tx_gov_submit-proposal
+sidebar_label: babylond tx gov submit-proposal
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx gov submit-proposal
+# babylond tx gov submit-proposal
 Submit a proposal along with a message, metadata and deposit.
 ## tx gov submit-proposal command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query_upgrade_applied
-sidebar_label: Babylond_query_upgrade_applied
+sidebar_label: babylond query upgrade applied
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query upgrade applied
+# babylond query upgrade applied
 Return the block header by the height at which the upgrade was applied.
 ## query upgrade applied command
 ```

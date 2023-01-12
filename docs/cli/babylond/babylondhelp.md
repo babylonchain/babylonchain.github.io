@@ -1,11 +1,11 @@
 ---
 id: babylondhelp
-sidebar_label: Babylond_help
+sidebar_label: babylond help
 hide_table_of_contents: true
 
 ---
 
-# Babylond_help
+# babylond help
 Help with any command available in babylond.
 ## help command
 ```

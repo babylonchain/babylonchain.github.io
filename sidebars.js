@@ -27,8 +27,7 @@ const sidebars = {
         'introduction/keycomponent',
       ]
     }, 
-    'installation', 
-    'setnode', 
+    'installation',  
     {
       type: 'category',
       label: 'Modules',
@@ -37,85 +36,11 @@ const sidebars = {
         id: 'modules',
       },
       items: [
-        {
-          type: 'category',
-          label: 'Epoching Module',
-          link: {
-            type: 'doc',
-            id: 'module/epoch/epochingmod',
-          },
-          items: [
-            'module/epoch/paramsmod',
-            'module/epoch/epochinfomod',
-            'module/epoch/currentepoch',
-            'module/epoch/epochmsgs',
-            'module/epoch/latepochmsgs',
-            'module/epoch/validatorlifecycle',
-            'module/epoch/delegationlifecycle',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Checkpointing Module',
-          link: {
-            type: 'doc',
-            id: 'module/checkpointing/checkpointingmod',
-          },
-          items: [
-            'module/checkpointing/rawcheckpointinglist',
-            'module/checkpointing/recentrawcheckpointinglist',
-            'module/checkpointing/rawcheckpoint',
-            'module/checkpointing/latestcheckpoint',
-            'module/checkpointing/blspublickey',
-            'module/checkpointing/epochstatus',
-            'module/checkpointing/recentepochcount',
-            'module/checkpointing/checkpointparams',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'BTC Light Client',
-          link: {
-            type: 'doc',
-            id: 'module/btclightclient/lightclient',
-          },
-          items: [
-            'module/btclightclient/lightparams',
-            'module/btclightclient/lighthashes',
-            'module/btclightclient/lightcontains',
-            'module/btclightclient/lightcontainsbytes',
-            'module/btclightclient/lightmainchain',
-            'module/btclightclient/lighttip',
-            'module/btclightclient/lightbaseheader',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'BTC Checkpoint',
-          link: {
-            type: 'doc',
-            id: 'module/btccheckpoint/btccheckpoint',
-          },
-          items: [
-            'module/btccheckpoint/checkpointparams',
-            'module/btccheckpoint/checkpointheight',
-            'module/btccheckpoint/epochsubmissions',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'CZ Concierge',
-          link: {
-            type: 'doc',
-            id: 'module/czconcierge/czconcierge',
-          },
-          items: [
-            'module/czconcierge/conciergeparams',
-            'module/czconcierge/chainlist',
-            'module/czconcierge/chaininfo',
-            'module/czconcierge/finalizedchaininfo',
-          ],
-        },
+        'module/epoch/epochingmod',
+        'module/checkpointing/checkpointingmod',
+        'module/btclightclient/lightclient',
+        'module/btccheckpoint/btccheckpoint',
+        'module/czconcierge/czconcierge',
       ],
     },
     {
@@ -127,18 +52,17 @@ const sidebars = {
       },
       items: [
         'node/nodeconfig',
-        'node/nodemanage',
+        'setnode',
       ]
     },
     {
       type: 'category',
-      label: 'Resources',
+      label: 'Network Resources',
       link: {
         type: 'doc',
         id: 'resources/resources',
       },
       items: [
-        'resources/mainnet',
         'resources/testnet',
       ]
     },
@@ -224,7 +148,6 @@ const sidebars = {
       ],
     },
     'support',
-    'error',
     {
       type: 'category',
       label: 'CLI Command Docs',
@@ -242,7 +165,7 @@ const sidebars = {
         'cli/babylond/babylondcreategenesiskey',
         {
           type: 'category',
-          label: 'Babylon_debug',
+          label: 'babylon debug',
           link: {
             type: 'doc',
             id: 'cli/babylond/debug/babylonddebug',
@@ -260,7 +183,7 @@ const sidebars = {
         'cli/babylond/babylondinit',
         {
           type: 'category',
-          label: 'Babylon_keys',
+          label: 'babylon keys',
           link: {
             type: 'doc',
             id: 'cli/babylond/keys/babylondkeys',
@@ -282,7 +205,7 @@ const sidebars = {
         'cli/babylond/preparegenesis',
         {
           type: 'category',
-          label: 'Babylond_query',
+          label: 'babylond query',
           link: {
             type: 'doc',
             id: 'cli/babylond/babylond_query',
@@ -291,7 +214,7 @@ const sidebars = {
             'cli/babylond/BabylondQuery/babylond_query_account',
             {
               type: 'category',
-              label: 'Babylond_query_auth',
+              label: 'babylond query auth',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_auth',
@@ -308,7 +231,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_authz',
+              label: 'babylond query authz',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_authz',
@@ -316,7 +239,7 @@ const sidebars = {
               items: [
                 {
                   type: 'category',
-                  label: 'Babylond_query_authz_grants',
+                  label: 'babylond query authz grants',
                   link: {
                     type: 'doc',
                     id: 'cli/babylond/BabylondQuery/Babylond_query_authz/babylond_query_authz_grants',
@@ -332,7 +255,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_bank',
+              label: 'babylond query bank',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_bank',
@@ -348,7 +271,7 @@ const sidebars = {
             'cli/babylond/BabylondQuery/babylond_query_block', 
             {
               type: 'category',
-              label: 'Babylond_query_btccheckpoint',
+              label: 'babylond query btccheckpoint',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_btccheckpoint',
@@ -363,7 +286,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_btclightclient',
+              label: 'babylond query btclightclient',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_btclightclient',
@@ -380,7 +303,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_checkpointing',
+              label: 'babylond query checkpointing',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_checkpointing',
@@ -389,7 +312,7 @@ const sidebars = {
                 'cli/babylond/BabylondQuery/Babylond_query_checkpointing/babylond_query_checkpointing_params',
                 {
                   type: 'category',
-                  label: 'Babylond_query_checkpointing_raw-checkpoint',
+                  label: 'babylond query checkpointing raw-checkpoint',
                   link: {
                     type: 'doc',
                     id: 'cli/babylond/BabylondQuery/Babylond_query_checkpointing/babylond_query_checkpointing_raw_checkpoint',
@@ -405,7 +328,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_distribution',
+              label: 'babylond query distribution',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_distribution',
@@ -423,7 +346,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_epoching',
+              label: 'babylond query epoching',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_epoching',
@@ -438,7 +361,7 @@ const sidebars = {
             'cli/babylond/BabylondQuery/babylond_query_evidence',
             {
               type: 'category',
-              label: 'Babylond_query_feegrant',
+              label: 'babylond query feegrant',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_freegrant',
@@ -454,7 +377,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_gov',
+              label: 'babylond query gov',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_gov',
@@ -477,7 +400,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_ibc',
+              label: 'babylond query ibc',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/Babylond_query_ibc',
@@ -485,7 +408,7 @@ const sidebars = {
               items: [
                 {
                   type: 'category',
-                  label: 'Babylond_query_ibc_channel',
+                  label: 'babylond query ibc channel',
                   link: {
                     type: 'doc',
                     id: 'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel',
@@ -507,7 +430,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Babylond_query_ibc_client',
+                  label: 'babylond query ibc client',
                   link: {
                     type: 'doc',
                     id: 'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client',
@@ -527,7 +450,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Babylond_query_ibc_connection',
+                  label: 'babylond query ibc connection',
                   link: {
                     type: 'doc',
                     id: 'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_connection',
@@ -543,7 +466,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_ibc-transfer',
+              label: 'babylond query ibc-transfer',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_transfer',
@@ -559,7 +482,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_mint',
+              label: 'babylond query mint',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_mint',
@@ -572,7 +495,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_params',
+              label: 'babylond query params',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_params',
@@ -583,7 +506,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_slashing',
+              label: 'babylond query slashing',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_slashing',
@@ -596,7 +519,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_staking',
+              label: 'babylond query staking',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_staking',
@@ -623,7 +546,7 @@ const sidebars = {
             'cli/babylond/BabylondQuery/babylond_query_txs',
             {
               type: 'category',
-              label: 'Babylond_query_upgrade',
+              label: 'babylond query upgrade',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_upgrade',
@@ -636,7 +559,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_query_zoneconcierge',
+              label: 'babylond query zoneconcierge',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/BabylondQuery/babylond_query_zoneconcierge',
@@ -653,7 +576,7 @@ const sidebars = {
         'cli/babylond/babylond_status',
         {
           type: 'category',
-          label: 'Babylon_tendermint',
+          label: 'babylon tendermint',
           link: {
             type: 'doc',
             id: 'cli/babylond/babylond_tendermint',
@@ -670,7 +593,7 @@ const sidebars = {
         'cli/babylond/babylond_testnet',
         {
           type: 'category',
-          label: 'Babylon_tx',
+          label: 'babylon tx',
           link: {
             type: 'doc',
             id: 'cli/babylond/babylond_tx',
@@ -678,7 +601,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Babylond_tx_authz',
+              label: 'babylond tx authz',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_authz',
@@ -691,7 +614,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_tx_bank',
+              label: 'babylond tx bank',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_bank',
@@ -705,7 +628,7 @@ const sidebars = {
             'cli/babylond/Babylond_tx/babylond_tx_btccheckpoint',
             {
               type: 'category',
-              label: 'Babylond_tx_btclightclient',
+              label: 'babylond tx btclightclient',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_btclightclient',
@@ -716,7 +639,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_tx_checkpointing',
+              label: 'babylond tx checkpointing',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_checkpointing',
@@ -728,7 +651,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_tx_crisis',
+              label: 'babylond tx crisis',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_crisis',
@@ -740,7 +663,7 @@ const sidebars = {
             'cli/babylond/Babylond_tx/babylond_tx_decode',
             {
               type: 'category',
-              label: 'Babylond_tx_distribution',
+              label: 'babylond tx distribution',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_distribution',
@@ -755,7 +678,7 @@ const sidebars = {
             'cli/babylond/Babylond_tx/babylond_tx_encode',
             {
               type: 'category',
-              label: 'Babylond_tx_epoching',
+              label: 'babylond tx epoching',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_epoching',
@@ -769,7 +692,7 @@ const sidebars = {
             'cli/babylond/Babylond_tx/babylond_tx_evidence',
             {
               type: 'category',
-              label: 'Babylond_tx_feegrant',
+              label: 'babylond tx feegrant',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_feegrant',
@@ -781,7 +704,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_tx_gov',
+              label: 'babylond tx gov',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_gov',
@@ -791,7 +714,7 @@ const sidebars = {
                 'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_draft-proposal',
                 {
                   type: 'category',
-                  label: 'Babylond_tx_gov_submit-legacy-proposal',
+                  label: 'babylond tx gov submit-legacy-proposal',
                   link: {
                     type: 'doc',
                     id: 'cli/babylond/Babylond_tx/Babylond_tx_gov/babylond_tx_gov_submit-legacy-proposal',
@@ -810,7 +733,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_tx_ibc',
+              label: 'babylond tx ibc',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_ibc',
@@ -819,7 +742,7 @@ const sidebars = {
                 'cli/babylond/Babylond_tx/Babylond_tx_ibc/babylond_tx_ibc_channel',
                 {
                   type: 'category',
-                  label: 'Babylond_tx_ibc_client',
+                  label: 'babylond tx ibc client',
                   link: {
                     type: 'doc',
                     id: 'cli/babylond/Babylond_tx/Babylond_tx_ibc/babylond_tx_ibc_client',
@@ -835,7 +758,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_tx_ibc-transfer',
+              label: 'babylond tx ibc-transfer',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_ibc-transfer',
@@ -846,7 +769,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_tx_multi-sign',
+              label: 'babylond tx multi-sign',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_multi-sign',
@@ -857,7 +780,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_tx_sign',
+              label: 'babylond tx sign',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_sign',
@@ -868,7 +791,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_tx_slashing',
+              label: 'babylond tx slashing',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_slashing',
@@ -879,7 +802,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Babylond_tx_staking',
+              label: 'babylond tx staking',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_staking',
@@ -896,7 +819,7 @@ const sidebars = {
             'cli/babylond/Babylond_tx/babylond_tx_validate-signatures',
             {
               type: 'category',
-              label: 'Babylond_tx_vesting',
+              label: 'babylond tx vesting',
               link: {
                 type: 'doc',
                 id: 'cli/babylond/Babylond_tx/babylond_tx_vesting',

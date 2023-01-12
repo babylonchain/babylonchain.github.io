@@ -1,11 +1,11 @@
 ---
 id: babylond_query_btclightclient_tip
-sidebar_label: Babylond_query_btclightclient_tip
+sidebar_label: babylond query btclightclient tip
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query btclightclient tip
+# babylond query btclightclient tip
 Retrieve the tip of the bitcoin of the blockchain.
 ## query btclightclient tip command
 ```

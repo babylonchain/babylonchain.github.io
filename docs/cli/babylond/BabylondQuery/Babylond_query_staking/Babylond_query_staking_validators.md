@@ -1,11 +1,11 @@
 ---
 id: babylond_query_staking_validators
-sidebar_label: Babylond_query_staking_validators
+sidebar_label: babylond query staking validators
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query staking validators
+# babylond query staking validators
 Querying details for all the validators.
 ## query staking validators command
 ```

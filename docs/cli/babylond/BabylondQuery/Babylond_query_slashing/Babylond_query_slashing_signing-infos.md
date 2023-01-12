@@ -1,11 +1,11 @@
 ---
 id: babylond_query_slashing_signing-infos
-sidebar_label: Babylond_query_slashing_signing-infos
+sidebar_label: babylond query slashing signing-infos
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query slashing signing-infos
+# babylond query slashing signing-infos
 Querying the signing information of all validators.
 ## query slashing params signing-infos command
 ```

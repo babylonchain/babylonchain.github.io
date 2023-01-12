@@ -1,13 +1,13 @@
 ---
 id: babylond_tx_staking_cancel-unbond
-sidebar_label: Babylond_tx_staking_cancel-unbond
+sidebar_label: babylond tx staking cancel-unbond
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx staking
+# babylond tx staking cancel-unbond
 Cancel unbonding delegation and delegate back to the validator.
-## tx staking command
+## tx staking cancel-unbond command
 ```
 babylond tx staking cancel-unbond [validator-addr] [amount] [creation-height] [flags]
 ```

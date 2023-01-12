@@ -1,11 +1,11 @@
 ---
 id: babylond_query_staking_delegation
-sidebar_label: Babylond_query_staking_delegation
+sidebar_label: babylond query staking delegation
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query staking delegation
+# babylond query staking delegation
 Querying for a delegation individual delegator address on the individual validator.
 ## query staking delegation command
 ```

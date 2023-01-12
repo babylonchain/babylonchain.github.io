@@ -1,11 +1,11 @@
 ---
 id: babylond_query_params_subspace
-sidebar_label: Babylond_query_params_subspace
+sidebar_label: babylond query params subspace
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query params subspace
+# babylond query params subspace
 Querying for raw parameters by subspace and key.
 ## query params subspace command
 ```

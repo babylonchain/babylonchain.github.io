@@ -1,11 +1,11 @@
 ---
 id: babylondkeyslist
-sidebar_label: Babylond_keys_list
+sidebar_label: babylond keys list
 hide_table_of_contents: true
 
 ---
 
-# Babylond_keys_list
+# babylond keys list
 List all the available keys on the local key base.
 ## keys list command
 ```

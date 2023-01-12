@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_slashing_unjail
-sidebar_label: Babylond_tx_slashing_unjail
+sidebar_label: babylond tx slashing unjail
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx slashing unjail
+# babylond tx slashing unjail
 Unjail validator pereviously jailed for downtime.
 ## tx slashing unjail command
 ```

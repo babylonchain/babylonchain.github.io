@@ -1,11 +1,11 @@
 ---
 id: babylond_query_bank_total
-sidebar_label: Babylond_query_bank_total
+sidebar_label: babylond query bank total
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query bank total
+# babylond query bank total
 Querying the total supply of the chain’s coin.
 ## query bank total command
 ```

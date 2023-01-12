@@ -1,11 +1,11 @@
 ---
 id: babylond_query_btclightclient_hashes
-sidebar_label: Babylond_query_btclightclient_hashes
+sidebar_label: babylond query btclightclient hashes
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query btclightclient hashes
+# babylond query btclightclient hashes
 Retrieve the hashes maintained by the btclightclient module.
 ## query btclightclient hashes command
 ```

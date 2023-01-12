@@ -1,11 +1,11 @@
 ---
 id: babylond_query_evidence
-sidebar_label: Babylond_query_evidence
+sidebar_label: babylond query evidence
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query evidence
+# babylond query evidence
 Querying for evidence module by the specified hash or for all the (paginated) submitted evidence.
 ## query evidence command
 ```

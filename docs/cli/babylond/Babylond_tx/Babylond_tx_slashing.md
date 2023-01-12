@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_slashing
-sidebar_label: Babylond_tx_slashing
+sidebar_label: babylond tx slashing
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx slashing
+# babylond tx slashing
 Querying subcommands for slashing transactions.
 ## tx slashing commands
 ```

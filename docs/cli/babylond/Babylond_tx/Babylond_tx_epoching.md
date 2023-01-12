@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_epoching
-sidebar_label: Babylond_tx_epoching
+sidebar_label: babylond tx epoching
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx epoching
+# babylond tx epoching
 Querying subcommands for epoching transactions.
 ## tx epoching commands
 ```

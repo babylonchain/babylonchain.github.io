@@ -1,11 +1,11 @@
 ---
 id: babylond_query_staking
-sidebar_label: Babylond_query_staking
+sidebar_label: babylond query staking
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query staking
+# babylond query staking
 Querying commands for the staking module.
 ## query staking commands
 ```

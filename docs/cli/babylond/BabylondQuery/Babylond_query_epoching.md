@@ -1,11 +1,11 @@
 ---
 id: babylond_query_epoching
-sidebar_label: Babylond_query_epoching
+sidebar_label: babylond query epoching
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query epoching
+# babylond query epoching
 Querying commands for the epoching module
 ## query epoching commands
 ```

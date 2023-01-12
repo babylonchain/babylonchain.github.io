@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_channel_unreceived-packets
-sidebar_label: Babylond_query_ibc_channel_unreceived-packets
+sidebar_label: babylond query ibc channel unreceived-packets
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc channel unreceived-packets
+# babylond query ibc channel unreceived-packets
 Querying all the unreceived packets associated with a channel.
 ## query ibc channel unreceived-packets command
 ```

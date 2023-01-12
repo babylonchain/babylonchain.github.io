@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_client_states
-sidebar_label: Babylond_query_ibc_client_states
+sidebar_label: babylond query ibc client states
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc client states
+# babylond query ibc client states
 Querying all the available light clients.
 ## query ibc client states command
 ```

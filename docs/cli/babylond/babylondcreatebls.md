@@ -1,11 +1,11 @@
 ---
 id: babylondcreatebls
-sidebar_label: Babylond_create-bls-key
+sidebar_label: babylond create-bls-key
 hide_table_of_contents: true
 
 ---
 
-# Babylond_create-bls-key
+# babylond create-bls-key
 Create a pair of BLS keys for a validator.
 ## create-bls-key command
 ```

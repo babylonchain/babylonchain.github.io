@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_distribution_fund-community-pool
-sidebar_label: Babylond_tx_distribution_fund-community-pool
+sidebar_label: babylond tx distribution fund-community-pool
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx distribution fund-community-pool
+# babylond tx distribution fund-community-pool
 Funds the  community pool with a specified amount.
 ## tx distribution fund-community-pool command
 ```

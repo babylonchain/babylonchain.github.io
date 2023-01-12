@@ -1,11 +1,11 @@
 ---
 id: babylond_query_distribution_slashes
-sidebar_label: Babylond_query_distribution_slashes
+sidebar_label: babylond query distribution slashes
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query distribution slashes
+# babylond query distribution slashes
 Querying all slashes of a validator for the given block height.
 ## query distribution slashes command
 ```

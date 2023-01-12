@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_distribution_withdraw-rewards
-sidebar_label: Babylond_tx_distribution_withdraw-rewards
+sidebar_label: babylond tx distribution withdraw-rewards
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx distribution withdraw-rewards
+# babylond tx distribution withdraw-rewards
 Withdraw rewards from a given delegation address and optionally withdraw validator commission if the delegation address given is a validator operator.
 ## tx distribution withdraw-rewards command
 ```

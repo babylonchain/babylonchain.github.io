@@ -1,11 +1,11 @@
 ---
 id: babylond_query_auth_address_by_acc_num
-sidebar_label: Babylond_query_auth_address_by_acc_num
+sidebar_label: babylond query auth address by-acc-num
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query Auth address by-acc-num
+# babylond query auth address by-acc-num
 Querying for an address by the specified account number.
 ## query auth accounts command
 ```

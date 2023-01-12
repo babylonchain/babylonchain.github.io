@@ -1,11 +1,11 @@
 ---
 id: babylond_status
-sidebar_label: Babylond_status
+sidebar_label: babylond status
 hide_table_of_contents: true
 
 ---
 
-# Babylond status
+# babylond status
 Querying the remote node for status.
 ## status command
 ```

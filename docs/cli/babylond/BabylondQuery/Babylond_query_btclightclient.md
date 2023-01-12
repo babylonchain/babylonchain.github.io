@@ -1,11 +1,11 @@
 ---
 id: babylond_query_btclightclient
-sidebar_label: Babylond_query_btclightclient
+sidebar_label: babylond query btclightclient
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query btclightclient
+# babylond query btclightclient
 Querying commands for the btclightclient module.
 ## query btclightclient commands
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_vesting
-sidebar_label: Babylond_tx_vesting
+sidebar_label: babylond tx vesting
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx vesting
+# babylond tx vesting
 Querying subcommands for vesting transactions.
 ## tx vesting commands
 ```

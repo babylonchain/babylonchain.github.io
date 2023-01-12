@@ -1,11 +1,11 @@
 ---
 id: babylond_query_account
-sidebar_label: Babylond_query_account
+sidebar_label: babylond query account
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query Account
+# babylond query account
 Querying for an account by the specified address.
 ## query account command
 ```

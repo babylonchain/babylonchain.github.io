@@ -1,11 +1,11 @@
 ---
 id: babylond_query_freegrant_grants-by-granter
-sidebar_label: Babylond_query_freegrant_grants-by-granter
+sidebar_label: babylond query feegrant grants-by-granter
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query feegrant grants-by-granter
+# babylond query feegrant grants-by-granter
 Querying all the grants for the granter address.
 ## query feegrant grants-by-granter command
 ```

@@ -1,11 +1,11 @@
 ---
 id: babylond_query_btccheckpoint
-sidebar_label: Babylond_query_btccheckpoint
+sidebar_label: babylond query btccheckpoint
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query btccheckpoint
+# babylond query btccheckpoint
 Querying commands for the btccheckpoint module.
 ## query btccheckpoint commands
 ```

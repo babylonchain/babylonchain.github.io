@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_transfer_params
-sidebar_label: Babylond_query_ibc_params
+sidebar_label: babylond query ibc-transfer params
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc-transfer params
+# babylond query ibc-transfer params
 Querying the current ibc-transfer parameters.
 ## query ibc-transfer params command
 ```

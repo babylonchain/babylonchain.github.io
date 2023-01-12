@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_btclightclient_insert-header
-sidebar_label: Babylond_tx_btclightclient_insert-header
+sidebar_label: babylond tx btclightclient insert-header
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx btclightclient insert-header
+# babylond tx btclightclient insert-header
 Submit the BTC header in bytes format.
 ## tx btclightclient insert-header command
 ```

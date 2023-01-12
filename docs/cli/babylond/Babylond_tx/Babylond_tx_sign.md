@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_sign
-sidebar_label: Babylond_tx_sign
+sidebar_label: babylond tx sign
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx sign
+# babylond tx sign
 Sign the generated offline transaction.
 ## tx sign command
 ```

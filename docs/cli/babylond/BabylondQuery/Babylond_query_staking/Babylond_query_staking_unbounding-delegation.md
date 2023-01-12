@@ -1,11 +1,11 @@
 ---
 id: babylond_query_staking_unbounding-delegation
-sidebar_label: Babylond_query_staking_unbounding-delegation
+sidebar_label: babylond query staking unbonding-delegation
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query staking unbonding-delegation
+# babylond query staking unbonding-delegation
 Querying an unbounding-delegation record based on the delegator and validator address.
 ## query staking unbonding-delegation command
 ```

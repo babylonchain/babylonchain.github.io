@@ -1,11 +1,11 @@
 ---
 id: babylond_tx_epoching_unbond
-sidebar_label: Babylond_tx_epoching_unbond
+sidebar_label: babylond tx epoching unbond
 hide_table_of_contents: true
 
 ---
 
-# Babylond tx epoching unbond
+# babylond tx epoching unbond
 Unbond shares form a validator.
 ## tx epoching unbond command
 ```

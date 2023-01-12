@@ -1,11 +1,11 @@
 ---
 id: babylond_query_btclightclient_main-chain
-sidebar_label: Babylond_query_btclightclient_main-chain
+sidebar_label: babylond query btclightclient main-chain
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query btclightclient main-chain
+# babylond query btclightclient main-chain
 Retrieve the canonical chain.
 ## query btclightclient main-chain command
 ```

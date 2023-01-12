@@ -1,11 +1,11 @@
 ---
 id: Babylond_query_ibc_channel_client-state
-sidebar_label: Babylond_query_ibc_channel_client-state
+sidebar_label: babylond query ibc channel client-state
 hide_table_of_contents: true
 
 ---
 
-# Babylond Query ibc channel client-state
+# babylond query ibc channel client-state
 Querying the client state associated with a channel by the specified port and channel identifier.
 ## query ibc channel client-state command
 ```

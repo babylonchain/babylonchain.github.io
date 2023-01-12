@@ -1,11 +1,11 @@
 ---
 id: babylond_version
-sidebar_label: Babylond_version
+sidebar_label: babylond version
 hide_table_of_contents: true
 
 ---
 
-# Babylond version
+# babylond version
 Print the application binary version information.
 ## version command
 ```
