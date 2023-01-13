@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Babylon Blockchain',
   tagline: 'Bringing Bitcoin Security to Cosmos & Beyond',
-  url: 'https://babylonchain.github.io',
+  url: 'https://docs.babylonchain.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -75,7 +75,7 @@ const config = {
           {
             type: 'doc',
             position: 'left',
-            docId: 'intro',
+            docId: 'introduction/overview',
             label: 'Docs',
           },
           //{to: '/blog', label: 'Blog', position: 'left'},
@@ -104,7 +104,7 @@ const config = {
             items: [
               {
                 label: 'Documentation',
-                to: '/docs/intro',
+                to: '/docs/introduction/overview',
               },
             ],
           },

@@ -19,12 +19,12 @@ const sidebars = {
       label: 'Introduction',
       link: {
         type: 'doc',
-        id: 'intro',
+        id: 'introduction/overview',
       },
       items: [
-        'introduction/overview',
-        'introduction/usecase',
-        'introduction/keycomponent',
+        'introduction/babylon-overview',
+        'introduction/use-case',
+        'introduction/key-components',
       ]
     }, 
     'installation',  
@@ -33,46 +33,35 @@ const sidebars = {
       label: 'Modules',
       link: {
         type: 'doc',
-        id: 'modules',
+        id: 'modules/overview',
       },
       items: [
-        'module/epoch/epochingmod',
-        'module/checkpointing/checkpointingmod',
-        'module/btclightclient/lightclient',
-        'module/btccheckpoint/btccheckpoint',
-        'module/czconcierge/czconcierge',
+        'modules/epoching',
+        'modules/checkpointing',
+        'modules/btclightclient',
+        'modules/btccheckpoint',
+        'modules/czconcierge',
       ],
     },
     {
       type: 'category',
-      label: 'Node Operators',
+      label: 'Testnet',
       link: {
         type: 'doc',
-        id: 'node/nodeoperator',
+        id: 'testnet/overview',
       },
       items: [
-        'node/nodeconfig',
-        'setnode',
+        'testnet/network-information',
+        'testnet/setup-node',
+        'testnet/become-validator',
       ]
     },
     {
       type: 'category',
-      label: 'Network Resources',
+      label: 'RPC Gateway (REST API)',
       link: {
         type: 'doc',
-        id: 'resources/resources',
-      },
-      items: [
-        'resources/testnet',
-      ]
-    },
-    'videoguides',
-    {
-      type: 'category',
-      label: 'gRPC Gateway (REST API)',
-      link: {
-        type: 'doc',
-        id: 'grpc/grpcgateway',
+        id: 'rpc-gateway/overview',
       },
       items: [
         {
@@ -80,12 +69,12 @@ const sidebars = {
           label: 'BTC Checkpoint',
           link: {
             type: 'doc',
-            id: 'grpc/btccheckpointgrpc',
+            id: 'rpc-gateway/btccheckpoint/overview',
           },
           items: [
-            'grpc/grpcparams',
-            'grpc/epochnum',
-            'grpc/submissions',
+            'rpc-gateway/btccheckpoint/params',
+            'rpc-gateway/btccheckpoint/epochnum',
+            'rpc-gateway/btccheckpoint/submissions',
           ],
         },
         {
@@ -93,16 +82,16 @@ const sidebars = {
           label: 'BTCLightClient',
           link: {
             type: 'doc',
-            id: 'grpc/btclightclient/lightclient1',
+            id: 'rpc-gateway/btclightclient/overview',
           },
           items: [
-            'grpc/btclightclient/lightheader',
-            'grpc/btclightclient/lightcontains',
-            'grpc/btclightclient/lightcontainsbytes',
-            'grpc/btclightclient/lighthashes',
-            'grpc/btclightclient/lightmainchain',
-            'grpc/btclightclient/lightparams',
-            'grpc/btclightclient/lighttip',
+            'rpc-gateway/btclightclient/header',
+            'rpc-gateway/btclightclient/contains',
+            'rpc-gateway/btclightclient/containsbytes',
+            'rpc-gateway/btclightclient/hashes',
+            'rpc-gateway/btclightclient/mainchain',
+            'rpc-gateway/btclightclient/params',
+            'rpc-gateway/btclightclient/tip',
           ],
         },
         {
@@ -110,15 +99,15 @@ const sidebars = {
           label: 'Epoching',
           link: {
             type: 'doc',
-            id: 'grpc/epoching/currentepoch',
+            id: 'rpc-gateway/epoching/overview',
           },
           items: [
-            'grpc/epoching/currentepoch',
-            'grpc/epoching/delegationlifecycle',
-            'grpc/epoching/epoch',
-            'grpc/epoching/latepochmsgs',
-            'grpc/epoching/paramsmod',
-            'grpc/epoching/validatorlifecycle',
+            'rpc-gateway/epoching/currentepoch',
+            'rpc-gateway/epoching/delegationlifecycle',
+            'rpc-gateway/epoching/epoch',
+            'rpc-gateway/epoching/latestepochmsgs',
+            'rpc-gateway/epoching/params',
+            'rpc-gateway/epoching/validatorlifecycle',
           ],
         },
         {
@@ -126,12 +115,12 @@ const sidebars = {
           label: 'Checkpointing',
           link: {
             type: 'doc',
-            id: 'grpc/checkpointing/checkpointmod',
+            id: 'rpc-gateway/checkpointing/overview',
           },
           items: [
-            'grpc/checkpointing/rawcheckpoint',
-            'grpc/checkpointing/rawcheckpointliststatus',
-            'grpc/checkpointing/rawcheckpointlistepochnum',
+            'rpc-gateway/checkpointing/rawcheckpoint',
+            'rpc-gateway/checkpointing/rawcheckpointliststatus',
+            'rpc-gateway/checkpointing/rawcheckpointlistepochnum',
           ],
         },
         {
@@ -139,10 +128,10 @@ const sidebars = {
           label: 'ZoneConcierge',
           link: {
             type: 'doc',
-            id: 'grpc/concierge/zoneconcierge',
+            id: 'rpc-gateway/zcconcierge/overview',
           },
           items: [
-            'grpc/concierge/conciergeparams',
+            'rpc-gateway/zcconcierge/params',
           ],
         },
       ],
@@ -150,7 +139,7 @@ const sidebars = {
     'support',
     {
       type: 'category',
-      label: 'CLI Command Docs',
+      label: 'CLI Reference',
       link: {
         type: 'doc',
         id: 'cli/babylond/cli',

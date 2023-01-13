@@ -1,15 +1,15 @@
 ---
 id: overview
-sidebar_label: 1. Babylon Overview
+sidebar_label: Introduction
+sidebar_position: 0
 hide_table_of_contents: true
-
+pagination_prev: null
+custom_edit_url: null
 ---
 
-# 1. Babylon Overview <a id="overview"></a>
-Babylon is a PoS (proof-of-stake) blockchain that provides secure Bitcoin timestamps to its transactions. Babylon is built using the Tendermint consensus engine and Cosmos SDK. It leverages cutting-edge cryptographic technologies and advanced Cosmos SDK features to send succinct, verifiable, and adversary-slashing checkpoints of the Babylon chain to BTC as BTC transactions. The BTC timestamps of Babylon checkpoints provide BTC-level security to all Babylon transactions.
+# Introduction
+These articles provide an overview of what Babylon is and how Babylon works on the Proof of Stake chains.
 
-Below is a high-level architecture of the Babylon system. Babylon can be viewed as a checkpoint verifier and aggregator. It verifies and aggregates the checkpoints submitted by its users into ones that BTC can securely timestamp.
+import DocCardList from '@theme/DocCardList';
 
-![Alt text](https://drive.google.com/uc?export=view&id=1vbtoSy1ytLvchNTNlZ9E_uCpCYX8otwL)
-
-This primitive enables enormous security-related use cases for the decentralized world. One motivating and primary use case is to bring BTC security to PoS chains.
+<DocCardList />
