@@ -1,6 +1,6 @@
 ---
 id: checkpointing
-sidebar_label: Checkpointing Module
+sidebar_label: Checkpointing
 hide_table_of_contents: true
 ---
 

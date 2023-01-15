@@ -1,10 +1,10 @@
 ---
-id: key-components
-sidebar_label: 3. Key Components of Babylon
+id: architecture
+sidebar_label: 3. Architecture
 hide_table_of_contents: true
 ---
 
-# 3. Key Components of Babylon <a id="key"></a>
+# 3. Babylon Architecture <a id="key"></a>
 
 ![Key Components](https://drive.google.com/uc?export=view&id=1VxBWID9K9Q1TASa5fdtnHrCHFBEzNUzr)
 
