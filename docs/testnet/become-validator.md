@@ -45,7 +45,15 @@ This command will create a BLS key and add it to the `~/.babylond/config/priv_va
 This is the same file that stores the private key that the validator uses to sign blocks.
 Please ensure that this file is secured properly.
 
-## Modify the client configuration
+After creating a BLS key, you need to restart your node to load this key into
+memory. If you followed the [setting up a node guide](./setup-node.md), you
+would have to
+```console
+sudo systemctl stop babylon
+sudo systemctl start babylon
+```
+
+## Modify the configuration
 
 A Babylon validator needs to send BLS signature transactions at the end of each epoch.
 This process is done automatically through the Babylon codebase which identifies
@@ -54,6 +62,14 @@ set the keyring backend that you're using.
 In this guide's case:
 ```toml
 keyring-backend = "test"
+```
+
+Furthermore, you need to specify the name of the key that the validator will be
+using to submit BLS signature transactions under the
+`~/.babylond/config/app.toml` file. Edit this file and set the key name to the
+one that holds funds on your keyring:
+```toml
+key-name = "val-key" # replace with your key name
 ```
 
 ## Create the validator
@@ -66,7 +82,7 @@ and has the same parameters as the `babylond tx staking create-validator` comman
 To create the validator (using sample parameters):
 ```console
 babylond tx checkpointing create-validator \
-    --amount="1000000ubbn" \
+    --amount="10000000ubbn" \
     --pubkey=$(babylond tendermint show-validator) \
     --moniker="My Validator" \
     --chain-id=bbn-test-0\
@@ -79,6 +95,14 @@ babylond tx checkpointing create-validator \
     --commission-max-change-rate="0.01" \
     --min-self-delegation="1"
 ```
+
+:::info
+
+Note: In order to become an active validator, you need to have more `ubbn`
+tokens bonded than the last validator ordered by the tokens bonded (or the
+validator set to not be full) as well as have at least `10000000ubbn` bonded.
+
+:::
 
 ## Verify your validator
 
