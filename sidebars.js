@@ -24,10 +24,10 @@ const sidebars = {
       items: [
         'introduction/babylon-overview',
         'introduction/use-case',
-        'introduction/key-components',
+        'introduction/architecture',
       ]
-    }, 
-    'installation',  
+    },
+    'installation',
     {
       type: 'category',
       label: 'Modules',
@@ -216,7 +216,7 @@ const sidebars = {
                 'cli/babylond/BabylondQuery/Babylond_query_auth/babylond_query_auth_module_accounts',
                 'cli/babylond/BabylondQuery/Babylond_query_auth/babylond_query_auth_params',
               ],
-              
+
             },
             {
               type: 'category',
@@ -237,10 +237,10 @@ const sidebars = {
                     'cli/babylond/BabylondQuery/Babylond_query_authz/Babylond_query_authz_grants/babylond_query_authz_grants_by_grantee',
                     'cli/babylond/BabylondQuery/Babylond_query_authz/Babylond_query_authz_grants/babylond_query_authz_grants_by_granter',
                   ],
-                
+
                 },
               ],
-              
+
             },
             {
               type: 'category',
@@ -253,11 +253,11 @@ const sidebars = {
                 'cli/babylond/BabylondQuery/Babylond_query_bank/babylond_query_bank_balances',
                 'cli/babylond/BabylondQuery/Babylond_query_bank/babylond_query_bank_denom_metadata',
                 'cli/babylond/BabylondQuery/Babylond_query_bank/babylond_query_bank_total',
-               
+
               ],
-              
+
             },
-            'cli/babylond/BabylondQuery/babylond_query_block', 
+            'cli/babylond/BabylondQuery/babylond_query_block',
             {
               type: 'category',
               label: 'babylond query btccheckpoint',
@@ -269,9 +269,9 @@ const sidebars = {
                 'cli/babylond/BabylondQuery/Babylond_query_btccheckpoint/babylond_query_btccheckpoint_btc-height',
                 'cli/babylond/BabylondQuery/Babylond_query_btccheckpoint/babylond_query_btccheckpoint_epoch_submissions',
                 'cli/babylond/BabylondQuery/Babylond_query_btccheckpoint/babylond_query_btccheckpoint_params',
-               
+
               ],
-              
+
             },
             {
               type: 'category',
@@ -288,7 +288,7 @@ const sidebars = {
                 'cli/babylond/BabylondQuery/Babylond_query_btclightclient/babylond_query_btclightclient_params',
                 'cli/babylond/BabylondQuery/Babylond_query_btclightclient/babylond_query_btclightclient_tip',
               ],
-              
+
             },
             {
               type: 'category',
@@ -308,12 +308,12 @@ const sidebars = {
                   },
                   items: [
                     'cli/babylond/BabylondQuery/Babylond_query_checkpointing/Babylond_query_checkpointing_raw-checkpoint/babylond_query_checkpointing_raw-checkpoint_list',
-                   
+
                   ],
-                  
+
                 },
               ],
-              
+
             },
             {
               type: 'category',
@@ -329,9 +329,9 @@ const sidebars = {
                 'cli/babylond/BabylondQuery/Babylond_query_distribution/babylond_query_distribution_rewards',
                 'cli/babylond/BabylondQuery/Babylond_query_distribution/babylond_query_distribution_slashes',
                 'cli/babylond/BabylondQuery/Babylond_query_distribution/babylond_query_distribution_validator-outstanding-rewards',
-               
+
               ],
-              
+
             },
             {
               type: 'category',
@@ -342,10 +342,10 @@ const sidebars = {
               },
               items: [
                 'cli/babylond/BabylondQuery/Babylond_query_epoching/babylond_query_epoching_params',
-             
-               
+
+
               ],
-              
+
             },
             'cli/babylond/BabylondQuery/babylond_query_evidence',
             {
@@ -359,10 +359,10 @@ const sidebars = {
                 'cli/babylond/BabylondQuery/Babylond_query_freegrant/babylond_query_freegrant_grant',
                 'cli/babylond/BabylondQuery/Babylond_query_freegrant/babylond_query_freegrant_grants-by-grantee',
                 'cli/babylond/BabylondQuery/Babylond_query_freegrant/babylond_query_freegrant_grants-by-granter',
-             
-               
+
+
               ],
-              
+
             },
             {
               type: 'category',
@@ -382,10 +382,10 @@ const sidebars = {
                 'cli/babylond/BabylondQuery/Babylond_query_gov/babylond_query_gov_tally',
                 'cli/babylond/BabylondQuery/Babylond_query_gov/babylond_query_gov_vote',
                 'cli/babylond/BabylondQuery/Babylond_query_gov/babylond_query_gov_votes',
-             
-               
+
+
               ],
-              
+
             },
             {
               type: 'category',
@@ -415,7 +415,7 @@ const sidebars = {
                     'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_unreceived-acks',
                     'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_channel/Babylond_query_ibc_channel_unreceived-packets',
                   ],
-                  
+
                 },
                 {
                   type: 'category',
@@ -435,7 +435,7 @@ const sidebars = {
                     'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client/Babylond_query_ibc_client_states',
                     'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_client/Babylond_query_ibc_client_status',
                   ],
-                  
+
                 },
                 {
                   type: 'category',
@@ -449,9 +449,9 @@ const sidebars = {
                     'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_connection/Babylond_query_ibc_connection_end',
                     'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_connection/Babylond_query_ibc_connection_path',
                   ],
-                  
+
                 },
-              ], 
+              ],
             },
             {
               type: 'category',
@@ -467,7 +467,7 @@ const sidebars = {
                 'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_transfer_escrow-address',
                 'cli/babylond/BabylondQuery/Babylond_query_ibc/Babylond_query_ibc_transfer_params',
               ],
-              
+
             },
             {
               type: 'category',
@@ -557,7 +557,7 @@ const sidebars = {
                 'cli/babylond/BabylondQuery/Babylond_query_zoneconcierge/babylond_query_zoneconcierge_params',
               ]
             },
-          ], 
+          ],
         },
         'cli/babylond/babylond_rollback',
         'cli/babylond/babylond_rosetta',
