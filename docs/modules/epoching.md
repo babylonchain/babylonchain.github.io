@@ -35,24 +35,40 @@ With the epoching mechanism, all unbonding requests in an epoch will be finished
 Babylon implements the epoching module in order to reduce the frequency of validator set updates, and thus the frequency of checkpointing to Bitcoin.
 Specifically, the epoching module is responsible for the following tasks:
 
-- Disabling some parts of the existing staking module
 - Dividing the blockchain into epochs
-- Wraping the staking transactions
-- Delaying staking-related transactions (thus validator set updates) till the end of the epoch
+- Disabling some functionalities of the staking module
+- Disabling messages of the staking module
+- Delaying staking-related messages (thus validator set updates) till the end of the epoch
 - Releasing the unbonding queue until the corresponding epoch has been checkpointed on Bitcoin.
 
-### Disabling some parts of the existing staking module
-
-TODO
 
 ### Dividing the blockchain into epochs
 
-TODO
+The epoching mechanism introduces the concept of epochs.
+The blockchain is divided into epochs, each consists of a fixed number of consecutive blocks.
+The number of blocks in an epoch is called *epoch interval*, which is a system parameter.
+At the moment, Babylon uses the epoch interval of 900 blocks, which take about 30 minutes.
 
-### Wrapping the staking transactions
+### Disabling functionalities of the staking module
 
-In order to keep the validator set unchanged in the middle of epochs, the epoching module intercepts and rejects staking-related messages that affect validator sets via AnteHandler, but instead defines wrapped versions of them and forwards their unwrapped forms to the staking module upon an epoch ends
+Babylon disables two functionalities of the staking module, namely the validator set update mechanism and the 21-day unbonding mechanism.
 
+In Cosmos SDK, the staking module handles staking-related messages and updates the validator set upon every block.
+Consequently, the staking module updates the validator set upon every block.
+In order to reduce the frequency of validator set updates to once per epoch, Babylon disables the validator set update mechanism of the staking module.
+
+In addition, the staking module enforces the 21-day unbonding rule: an unbonding validator or delegation will become unbonded after 21 days (called *mature validators**).
+Babylon departs from Cosmos SDK by employing Bitcoin-assisted unbonding that leverages Bitcoin security to achieve slashable safety, where a validator has to be slashed if performing a safety attack.
+In order to implement Bitcoin-assisted unbonding, Babylon disables the 21-day unbonding mechanism as well.
+
+In order to disable the two functionalities, Babylon disables staking module's `EndBlocker` function that updates validator sets and unbonds mature validators upon a block ends.
+Instead, upon an epoch has ended, the epoching module will invoke the staking module's function that updates the validator sets.
+In addition, upon an epoch has been checkpointed to Bitcoin, the epoching module will  invoke the staking module's function that unbonds mature validators.
+
+
+### Disabling messages of the staking module
+
+In order to keep the validator set unchanged in the middle of epochs, the epoching module intercepts and rejects staking-related messages that affect validator sets via AnteHandler, but instead defines wrapped versions of them and forwards their unwrapped forms to the staking module upon an epoch ends.
 
 Recall that a Cosmos SDK module contains protobuf files for messages in transactions.
 In the staking module, these messages include 
@@ -77,3 +93,13 @@ To this end, the epoching module maintains a message queue for each epoch.
 Upon each wrapped message, the epoching module performs basic sanity checks, then enqueue the message to the message queue.
 When the epoch ends, the epoching module will unwrap the queued messages and forward them to the staking module.
 Consequently, the staking module receives and handles staking-related messages, thus performs validator set updates, at the end of each epoch.
+
+### Bitcoin-assisted unbonding
+
+Bitcoin-assisted unbonding is the mechanism that an unbonding validator or delegation becomes unbonded only when the block containing the associated unbonding request is checkpointed by Bitcoin.
+The mechanism is necessary for achieving slashable safety where a validator has to be slashed if performing a safety attack.
+
+Babylon implements the Bitcoin-assisted unbonding mechanism by invoking the staking module upon an epoch becomes checkpointed.
+Specifically, the staking module's `ApplyMatureUnbondings` is responsible for identifying and unbonding mature validators and delegations that have been unbonding for 21 days, and is invoked upon every block.
+Babylon has disabled the invocation of `ApplyMatureUnbondings` per block, and implements the state management for epochs.
+Upon an epoch becomes finalized, the epoching module will invoke `ApplyMatureUnbondings` to unbond all unbonding validators and delegations before the end of this epoch.
