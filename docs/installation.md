@@ -44,7 +44,7 @@ git checkout <version_to_install>
 make install
 ```
 
-::: info Note
+:::info Note
 
 The last command first executes `git checkout` in the specific version that you want to install.
 Ensure that you install the same version of the Babylon executable as the one that is running on the network you aim to join.
