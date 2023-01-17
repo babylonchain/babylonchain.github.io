@@ -13,6 +13,10 @@ Prerequisites: Having a full node setup and synced by following this [guide](./s
 
 ## Create a Keyring and Get Funds
 
+Validators are required to have funds for two reasons:
+1. They need to provide a self delegation
+2. They need to pay for transaction fees for submitting BLS signature transactions
+
 :::info Note
 
 Currently, validators can only use the `test` keyring backend. In the future,
@@ -20,15 +24,8 @@ Babylon will support other types of encrypted backends provided by the Cosmos SD
 
 :::
 
-To create the keyring that will hold the validator account:
-```console
-babylond --keyring-backend test keys add val-key
-```
-
-This will generate an address as well as a mnemonic which should be noted for future reference.
-In order to become a validator, you need to have funds that will be bonded.
-Funds can be retrieved either through our [faucet](https://faucet.testnet.babylonchain.io) for the testnet
-or from other sources that have access to testnet Babylon tokens.
+The [Getting Testnet Tokens](./getting-funds.md) page contains detailed instructions
+on how to create a keyring and get funds for it through a faucet.
 
 ## Create a BLS key
 
@@ -81,15 +78,20 @@ and has the same parameters as the `babylond tx staking create-validator` comman
 
 To create the validator (using sample parameters):
 ```console
+# Note the variables
+# - $AMOUNT in ubbn, e.g. 10000000ubbn
+# - $CHAIN_ID the chain ID
+# - $VAL_KEY the name of the key (with a test keyring backend) used for the validator
 babylond tx checkpointing create-validator \
-    --amount="10000000ubbn" \
+    --amount="$AMOUNT" \
     --pubkey=$(babylond tendermint show-validator) \
     --moniker="My Validator" \
-    --chain-id=bbn-test-0\
+    --chain-id=$CHAIN_ID \
     --gas="auto" \
     --gas-adjustment=1.2 \
     --gas-prices="0.0025ubbn" \
-    --from=val-key \
+    --keyring-backend=test \
+    --from=$VAL_KEY \
     --commission-rate="0.10" \
     --commission-max-rate="0.20" \
     --commission-max-change-rate="0.01" \
