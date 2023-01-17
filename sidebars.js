@@ -35,7 +35,6 @@ const sidebars = {
         id: 'modules/overview',
       },
       items: [
-
         'modules/epoching',
         'modules/checkpointing',
         'modules/btccheckpoint',
@@ -57,6 +56,7 @@ const sidebars = {
       items: [
         'testnet/network-information',
         'testnet/setup-node',
+        'testnet/getting-funds',
         'testnet/become-validator',
         'testnet/become-vigilante',
         'testnet/czintegrate',
