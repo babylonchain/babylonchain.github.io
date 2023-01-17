@@ -22,7 +22,7 @@ Babylon nodes need to make decisions based on the state of the Bitcoin chain.
 In order for those to make deterministic and consistent decisions,
 nodes need to have a consistent view of the Bitcoin chain included as a part of their state.
 The BTC light client module accomplishes this by maintaining a chain of Bitcoin headers in its storage.
-It receives such headers as transactions, typically from a [vigilante reporter](./reporter.md),
+It receives such headers as transactions, typically from a [vigilante reporter](./reporter),
 and is responsible for their verification.
 Once headers are added, the BTC light client module can identify the canonical chain
 by calculating the chain that has the most work committed to it.
