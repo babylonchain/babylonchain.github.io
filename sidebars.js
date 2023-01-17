@@ -27,22 +27,26 @@ const sidebars = {
         'introduction/architecture',
       ]
     },
-    'installation',
     {
       type: 'category',
-      label: 'Modules',
+      label: 'Babylon Key Components',
       link: {
         type: 'doc',
         id: 'modules/overview',
       },
       items: [
+
         'modules/epoching',
         'modules/checkpointing',
-        'modules/btclightclient',
         'modules/btccheckpoint',
+        'modules/btclightclient',
         'modules/czconcierge',
+        'modules/submitter',
+        'modules/reporter',
+        'modules/monitor',
       ],
     },
+    'installation',
     {
       type: 'category',
       label: 'Testnet',
@@ -54,6 +58,8 @@ const sidebars = {
         'testnet/network-information',
         'testnet/setup-node',
         'testnet/become-validator',
+        'testnet/become-vigilante',
+        'testnet/czintegrate',
       ]
     },
     {
