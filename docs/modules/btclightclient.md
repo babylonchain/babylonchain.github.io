@@ -12,22 +12,35 @@ This page describes the BTC light client module in Babylon.
 
 The BTC light client module is responsible for maintaining a chain of Bitcoin headers
 and identifying the canonical Bitcoin chain from it, much like a Bitcoin light client.
-It is employed by Babylon nodes to have a consistent view of the Bitcoin chain between them
-and verify that a checkpoint has been included in the Bitcoin chain as well as the checkpoint's position within it.
-New headers are inserted through transactions and verified to ensure that they belong to the Bitcoin chain and adhere by its rules.
+This header chain can then be used to verify the
+inclusion of checkpoints in Bitcoin and to calculate the checkpoint depth. This
+module is critical to Babylon, as it provides a consistent view of time
+among all Babylon nodes.
 
 ## Problem Statement
 
 Babylon nodes need to make decisions based on the state of the Bitcoin chain.
-In order for those to make deterministic and consistent decisions,
-nodes need to have a consistent view of the Bitcoin chain included as a part of their state.
-The BTC light client module accomplishes this by maintaining a chain of Bitcoin headers in its storage.
-It receives such headers as transactions, typically from a [vigilante reporter](./reporter),
+Example decisions are:
+- Has a checkpoint been included in Bitcoin?
+- Is this checkpoint deep enough in Bitcoin to mark it as finalized? If yes,
+  the node will approve the stake unbonding request covered by it.
+
+Each decision must be consistent among all the Babylon nodes
+to make sure their application state is the same after the execution of
+each Babylon block.
+Thus, Babylon nodes must have a consistent view of the Bitcoin chain included as a part of their state.
+
+The BTC light client module accomplishes this by
+receiving Bitcoin headers as Tendermint-ordered Babylon transactions,
+typically from a [vigilante reporter](./reporter),
 and is responsible for their verification.
 Once headers are added, the BTC light client module can identify the canonical chain
 by calculating the chain that has the most work committed to it.
-Other modules can then query the BTC light client to identify which headers are included in the canonical chain
-and their depth.
+Since Tendermint guarantees consistency of
+transaction orders, the BTC light client module of all Babylon nodes will
+maintain the same BTC header chain.
+Other modules can then query the BTC light client for checkpoint related
+decision making.
 
 ## Design
 
@@ -38,14 +51,13 @@ Below we outline the key design decisions for the BTC light client module:
 
 ### Base Bitcoin Header
 
-The base bitcoin header serves as the root of the Bitcoin header chain that Babylon maintains.
-Instead of storing the entire Bitcoin header chain right from Bitcoin's genesis,
-we instead decide on a trusted Bitcoin header that is deep enough inside Bitcoin's ledger
-so that it's reversal is a very unlikely event.
+The base bitcoin header is the first Bitcoin header that Babylon maintains.
+This header is specified in Babylon’s genesis block, and
+is a header that is sufficiently deep.
 For example, for our testnet, we will use a Bitcoin header that is 100-deep inside
 Bitcoin's canonical chain at the time of genesis.
-Reverting such a header would require immense computational power and
-Bitcoin itself uses the `100-deep` as the `COINBASE_MATURITY` value
+Reverting such a header would require immense computational power.
+We choose a 100 because Bitcoin itself uses the `100-deep` as the `COINBASE_MATURITY` value
 to determine whether a coinbase reward is available to be spent.
 
 ### Inserting Bitcoin Blocks
