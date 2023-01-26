@@ -11,7 +11,7 @@ This page describes the epoching module in Babylon.
 ## Summary
 
 The epoching module is responsible for reducing and parameterising the frequency of updating the validator set in Babylon.
-The Babylon blockchian is divided into epochs, and each epoch contains a fixed number of consecutive blocks.
+The Babylon blockchain is divided into epochs, and each epoch contains a fixed number of consecutive blocks.
 All staking-related messages (creating validator, delegating, undelegating, and redelegating) are enqueued to the message queue of the current epoch.
 At the end of each epoch, the epoching module will execute all staking-related messages, then update the validator set w.r.t. the voting power distribution of validators.
 After that, the checkpointing module will generate a checkpoint containing the commitment to the epoch's validator set, then submit the checkpoint to Bitcoin.

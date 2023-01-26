@@ -10,7 +10,7 @@ By PoS chains, we refer to BFT (Byzantine-fault-tolerent) PoS chains that requir
 
 The picture below illustrates a forking attack to a hypothetical PoS chain called **“Rugpull“**.
 
-![Forking Attack](https://drive.google.com/uc?export=view&id=1z8SSZHqa5IDmkCiUaM8iNaIlLQjTJPOo)
+![Forking Attack](https://drive.google.com/uc?export=view&id=1FNGGagrurx10FVEnfsAtAX7UFwo-tisq)
 
 To deter such attacks, most PoS chains only allow accounts who have bonded their tokens (a.k.a staking) to be validators. This way, if a validator is caught double signing, its bonded stake can be slashed by the consensus protocol in both forks, causing total economical loss to this malicious validator.
 
