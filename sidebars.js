@@ -62,86 +62,87 @@ const sidebars = {
         'testnet/czintegrate',
       ]
     },
-    {
-      type: 'category',
-      label: 'RPC Gateway (REST API)',
-      link: {
-        type: 'doc',
-        id: 'rpc-gateway/overview',
-      },
-      items: [
-        {
-          type: 'category',
-          label: 'BTC Checkpoint',
-          link: {
-            type: 'doc',
-            id: 'rpc-gateway/btccheckpoint/overview',
-          },
-          items: [
-            'rpc-gateway/btccheckpoint/params',
-            'rpc-gateway/btccheckpoint/epochnum',
-            'rpc-gateway/btccheckpoint/submissions',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'BTCLightClient',
-          link: {
-            type: 'doc',
-            id: 'rpc-gateway/btclightclient/overview',
-          },
-          items: [
-            'rpc-gateway/btclightclient/header',
-            'rpc-gateway/btclightclient/contains',
-            'rpc-gateway/btclightclient/containsbytes',
-            'rpc-gateway/btclightclient/hashes',
-            'rpc-gateway/btclightclient/mainchain',
-            'rpc-gateway/btclightclient/params',
-            'rpc-gateway/btclightclient/tip',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Epoching',
-          link: {
-            type: 'doc',
-            id: 'rpc-gateway/epoching/overview',
-          },
-          items: [
-            'rpc-gateway/epoching/currentepoch',
-            'rpc-gateway/epoching/delegationlifecycle',
-            'rpc-gateway/epoching/epoch',
-            'rpc-gateway/epoching/latestepochmsgs',
-            'rpc-gateway/epoching/params',
-            'rpc-gateway/epoching/validatorlifecycle',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Checkpointing',
-          link: {
-            type: 'doc',
-            id: 'rpc-gateway/checkpointing/overview',
-          },
-          items: [
-            'rpc-gateway/checkpointing/rawcheckpoint',
-            'rpc-gateway/checkpointing/rawcheckpointliststatus',
-            'rpc-gateway/checkpointing/rawcheckpointlistepochnum',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'ZoneConcierge',
-          link: {
-            type: 'doc',
-            id: 'rpc-gateway/zcconcierge/overview',
-          },
-          items: [
-            'rpc-gateway/zcconcierge/params',
-          ],
-        },
-      ],
-    },
+    'grpcrestapi',
+    // {
+    //   type: 'category',
+    //   label: 'RPC Gateway (REST API)',
+    //   link: {
+    //     type: 'doc',
+    //     id: 'rpc-gateway/overview',
+    //   },
+    //   items: [
+    //     {
+    //       type: 'category',
+    //       label: 'BTC Checkpoint',
+    //       link: {
+    //         type: 'doc',
+    //         id: 'rpc-gateway/btccheckpoint/overview',
+    //       },
+    //       items: [
+    //         'rpc-gateway/btccheckpoint/params',
+    //         'rpc-gateway/btccheckpoint/epochnum',
+    //         'rpc-gateway/btccheckpoint/submissions',
+    //       ],
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'BTCLightClient',
+    //       link: {
+    //         type: 'doc',
+    //         id: 'rpc-gateway/btclightclient/overview',
+    //       },
+    //       items: [
+    //         'rpc-gateway/btclightclient/header',
+    //         'rpc-gateway/btclightclient/contains',
+    //         'rpc-gateway/btclightclient/containsbytes',
+    //         'rpc-gateway/btclightclient/hashes',
+    //         'rpc-gateway/btclightclient/mainchain',
+    //         'rpc-gateway/btclightclient/params',
+    //         'rpc-gateway/btclightclient/tip',
+    //       ],
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'Epoching',
+    //       link: {
+    //         type: 'doc',
+    //         id: 'rpc-gateway/epoching/overview',
+    //       },
+    //       items: [
+    //         'rpc-gateway/epoching/currentepoch',
+    //         'rpc-gateway/epoching/delegationlifecycle',
+    //         'rpc-gateway/epoching/epoch',
+    //         'rpc-gateway/epoching/latestepochmsgs',
+    //         'rpc-gateway/epoching/params',
+    //         'rpc-gateway/epoching/validatorlifecycle',
+    //       ],
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'Checkpointing',
+    //       link: {
+    //         type: 'doc',
+    //         id: 'rpc-gateway/checkpointing/overview',
+    //       },
+    //       items: [
+    //         'rpc-gateway/checkpointing/rawcheckpoint',
+    //         'rpc-gateway/checkpointing/rawcheckpointliststatus',
+    //         'rpc-gateway/checkpointing/rawcheckpointlistepochnum',
+    //       ],
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'ZoneConcierge',
+    //       link: {
+    //         type: 'doc',
+    //         id: 'rpc-gateway/zcconcierge/overview',
+    //       },
+    //       items: [
+    //         'rpc-gateway/zcconcierge/params',
+    //       ],
+    //     },
+    //   ],
+    // },
     'support',
     {
       type: 'category',

@@ -53,6 +53,24 @@ const config = {
         },
       }),
     ],
+    [
+      'redocusaurus',
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          {
+            id: 'grpc',
+            spec: 'swagger.yml',
+            route: 'docs/grpcrestapi',
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: '#1890ff',
+        },
+      },
+    ],
   ],
 
   themeConfig:
@@ -77,6 +95,11 @@ const config = {
             position: 'left',
             docId: 'introduction/overview',
             label: 'Docs',
+          },
+          {
+            to: 'docs/grpcrestapi',
+            position: 'left',
+            label: 'API',
           },
           //{to: '/blog', label: 'Blog', position: 'left'},
           {
