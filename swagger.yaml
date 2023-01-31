@@ -7109,7 +7109,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/finalized_chain_info/qwertydev55667734?prove=true\
+            --url 'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/finalized_chain_info/qwertydev55667734?prove=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -8069,7 +8069,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/finalized_chain_info/qwertydev55667734/height/20?prove=true\
+            --url 'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/finalized_chain_info/qwertydev55667734/height/20?prove=true'\
             --header 'accept: application/json' \
       responses:
         '200':
