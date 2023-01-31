@@ -46,8 +46,8 @@ After creating a BLS key, you need to restart your node to load this key into
 memory. If you followed the [setting up a node guide](./setup-node.md), you
 would have to
 ```console
-sudo systemctl stop babylon
-sudo systemctl start babylon
+sudo systemctl stop babylond
+sudo systemctl start babylond
 ```
 
 ## Modify the configuration
