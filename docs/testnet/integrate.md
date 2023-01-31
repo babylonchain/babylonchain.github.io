@@ -10,7 +10,7 @@ This page provides instructions for a Cosmos zone to integrate with Babylon.
 At the moment, Babylon provides a canonical chain oracle for each integrated Cosmos zone, and allows anyone to query the canonical chains of integrated Cosmos zones and query the fork headers created by a validator set with dishonest majority.
 In the future, integrating Babylon will allows Cosmos zones to raise alarms upon dishonest majority attacks, and reduce the unbonding time.
 
-In order to integrate a Cosmos zone to Babylon, the first option would be sending an email to [the Babylon team](admin@babylonchain.io), then the Babylon team will deploy a relayer for your blockchain.
+In order to integrate a Cosmos zone to Babylon, the first option would be sending an email to [the Babylon team](mailto:admin@babylonchain.io), then the Babylon team will deploy a relayer for your blockchain.
 Alternatively, anyone can integrate any Cosmos zone to Babylon by running an IBC relayer specialized for Babylon.
 The special IBC relayer uses a subset of the IBC protocol, and there is no need to modify the integrated Cosmos zone's code, or have tokens in the integrated Cosmos zone.
 
