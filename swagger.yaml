@@ -4791,7 +4791,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/checkpointing/v1/epochs:12'\
+            --url 'https://docs.babylonchain.io/api/babylon/checkpointing/v1/epochs:status_count?epoch_count=12'\
             --header 'accept: application/json' \
       responses:
         '200':
