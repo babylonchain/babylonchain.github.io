@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   - url: https://docs.babylonchain.io/api
-    description: Production Server
+    description: Test Server
 tags:
   - name: BTCCheckpoint
     description: The REST API for the BTC Checkpoint RPC Gateway module.
@@ -27,6 +27,16 @@ paths:
       operationId: BtcCheckpointsHeightAndHash
       tags:
         - BTCCheckpoint
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/btccheckpoint/v1?start_epoch=babylond12345&end_epoch=babylond6789&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -246,6 +256,16 @@ paths:
       operationId: BtcCheckpointHeightAndHash
       tags:
         - BTCCheckpoint
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/btccheckpoint/v1/127778958'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -299,6 +319,16 @@ paths:
       operationId: EpochSubmissions
       tags:
         - BTCCheckpoint
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/btccheckpoint/v1/127778958/submissions?&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -518,6 +548,16 @@ paths:
       operationId: Contains
       tags:
         - BTCLightClient
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/btclightclient/v1/contains?hash=qwrrasf345df'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -568,6 +608,16 @@ paths:
       operationId: ContainsBytes
       tags:
         - BTCLightClient
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/btclightclient/v1/containsBytes?hash=babylond345d32f'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -614,6 +664,16 @@ paths:
       operationId: Hashes
       tags:
         - BTCLightClient
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/btclightclient/v1/hashes?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -742,6 +802,16 @@ paths:
       operationId: MainChain
       tags:
         - BTCLightClient
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/btclightclient/v1/mainchain?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -1189,6 +1259,16 @@ paths:
       operationId: DelegationLifecycle
       tags:
         - Epoching
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/epoching/v1/delegation_lifecycle/qeewr6778fnjgdth'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -1433,6 +1513,16 @@ paths:
       operationId: EpochsInfo
       tags:
         - Epoching
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/epoching/v1/epochs?start_epoch=babylond12345&end_epoch=babylond6789&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -1926,6 +2016,16 @@ paths:
       operationId: EpochInfo
       tags:
         - Epoching
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/epoching/v1/epochs/127767843567'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -2320,11 +2420,21 @@ paths:
           format: uint64
   /babylon/epoching/v1/epochs/{epoch_num}/messages:
     get:
-      summary: epochMsgs
+      summary: epoch_msgs
       description: EpochMsgs queries the messages of a given epoch
       operationId: EpochMsgs
       tags:
         - Epoching
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/epoching/v1/epochs/127767843567/messages?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -3001,6 +3111,16 @@ paths:
       operationId: EpochValSet
       tags:
         - Epoching
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/epoching/v1/epochs/127767843567/validator_set?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -3307,13 +3427,23 @@ paths:
           type: boolean
   /babylon/epoching/v1/epochs:latest/messages:
     get:
-      summary: latestEpochMsgs
+      summary: latest_epoch_msgs
       description: >-
         LatestEpochMsgs queries the messages within a given number of most
         recent epochs
       operationId: LatestEpochMsgs
       tags:
         - Epoching
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/epoching/v1/epochs:latest/messages?end_epoch=babylond12345&epoch_count=5&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -4231,6 +4361,16 @@ paths:
       operationId: ValidatorLifecycle
       tags:
         - Epoching
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/epoching/v1/validator_lifecycle/babylonddev877876'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -4468,6 +4608,16 @@ paths:
       operationId: BlsPublicKeyList
       tags:
         - Checkpointing
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/checkpointing/v1/bls_public_keys/127767843567?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -4606,6 +4756,16 @@ paths:
       operationId: EpochStatus
       tags:
         - Checkpointing
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/checkpointing/v1/epochs/12777895643/status'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -4671,6 +4831,16 @@ paths:
       operationId: RecentEpochStatusCount
       tags:
         - Checkpointing
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/checkpointing/v1/epochs:12'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -4733,6 +4903,16 @@ paths:
       operationId: LastCheckpointWithStatus
       tags:
         - Checkpointing
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/checkpointing/v1/last_raw_checkpoint/CKPT_STATUS_SUBMITTED'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -4848,6 +5028,16 @@ paths:
       operationId: RawCheckpoint
       tags:
         - Checkpointing
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/checkpointing/v1/raw_checkpoint/12777895643'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -4993,11 +5183,21 @@ paths:
           format: uint64
   /babylon/checkpointing/v1/raw_checkpoints/{status}:
     get:
-      summary: raw_checkpointList
+      summary: raw_checkpoint_list
       description: RawCheckpointList queries all checkpoints that match the given status.
       operationId: RawCheckpointList
       tags:
         - Checkpointing
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/checkpointing/v1/raw_checkpoint/CKPT_STATUS_SUBMITTED?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -5235,6 +5435,16 @@ paths:
       operationId: ChainInfo
       tags:
         - ZoneConcierge
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/chain_info/qwertydev55667734'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -5737,6 +5947,16 @@ paths:
       operationId: EpochChainInfo
       tags:
         - ZoneConcierge
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/chain_info/qwertydev55667734/epochs/12778899564'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -6242,6 +6462,16 @@ paths:
       operationId: Header
       tags:
         - ZoneConcierge
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/chain_info/qwertydev55667734/header/20'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -6939,6 +7169,16 @@ paths:
       operationId: FinalizedChainInfo
       tags:
         - ZoneConcierge
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/finalized_chain_info/qwertydev55667734?prove=true\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -7892,6 +8132,16 @@ paths:
       operationId: FinalizedChainInfoUntilHeight
       tags:
         - ZoneConcierge
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/finalized_chain_info/qwertydev55667734/height/20?prove=true\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -8855,6 +9105,16 @@ paths:
       operationId: ListHeaders
       tags:
         - ZoneConcierge
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/headers/127767843567?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
@@ -9274,6 +9534,16 @@ paths:
       operationId: ListEpochHeaders
       tags:
         - ZoneConcierge
+      x-codeSamples:
+        - lang: cURL
+          label: cURL
+          source: >
+            curl --request GET \
+
+            --url
+            'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/headers/qwertydev55667734/epochs/12778967855'\
+
+            --header 'accept: application/json' \
       responses:
         '200':
           description: A successful response.
