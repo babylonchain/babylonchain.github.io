@@ -1,8 +1,10 @@
+
 // @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -12,7 +14,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'https://drive.google.com/uc?export=view&id=1LXiSzeRGG1Ij-YLozx9GcYmpmrOVBzBE',
+  favicon: 'img/favicon.png',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -60,7 +62,7 @@ const config = {
         specs: [
           {
             id: 'grpc',
-            spec: 'swagger.yml',
+            spec: 'swagger.yaml',
             route: 'docs/grpcrestapi',
           },
         ],
@@ -87,7 +89,7 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: 'My Site Logo',
-          src: 'https://drive.google.com/uc?export=view&id=175ZFizw8OFJMliKTcBkChe_LlBKY5bqh',
+          src: 'img/navbarlogo.png',
         },
         items: [
           {

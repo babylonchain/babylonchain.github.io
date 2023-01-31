@@ -10,19 +10,19 @@ By PoS chains, we refer to BFT (Byzantine-fault-tolerent) PoS chains that requir
 
 The picture below illustrates a forking attack to a hypothetical PoS chain called **“Rugpull“**.
 
-![Forking Attack](https://drive.google.com/uc?export=view&id=1FNGGagrurx10FVEnfsAtAX7UFwo-tisq)
+![Forking Attack](./images/forking.gif)
 
 To deter such attacks, most PoS chains only allow accounts who have bonded their tokens (a.k.a staking) to be validators. This way, if a validator is caught double signing, its bonded stake can be slashed by the consensus protocol in both forks, causing total economical loss to this malicious validator.
 
 This deterrence seems to provide slashable security to PoS chains. However, this requires the remaining validators to perceive both forks while the malicious validators are still bonded. Therefore, to avoid slashing, the malicious validators can first unbond from the first fork and then create the second fork from a block height where they are still validators. This way, the malicious validators will not be slashable in the first fork since they do not have a bonded stake. What’s even worse is that once the attack happens, new users of the PoS chain cannot tell which fork they should follow.
 
-![Long-range Attack](https://drive.google.com/uc?export=view&id=1k5qC4FRSNmMVVyGSstWsN5Gq8db22ah7)
+![Long-range Attack](./images/longrange.gif)
 
 This attack is called the long-range attack, which renders PoS chains not slashable and secure. This attack is fundamental and cannot be solved by modifying the consensus protocol without an extra source of trust. To alleviate this threat, some PoS chains resort to social consensus, where the stakeholders periodically make off-chain decisions on the correct block at the latest height and ignore any other potential forks. However, this approach ties the chain's security to the participating stakeholders' subjective opinions. This approach is also called weak subjectivity, which is against the decentralization principle. In addition, since social consensus takes time, most PoS chains impose a very long stake unbonding time in the order of weeks.
 
 ## 2.2 Secure PoS using BTC timestamping <a id="time"></a>
 
-![Secure PoS](https://drive.google.com/uc?export=view&id=1CRKDJS8uv4Ba88BiJObsxI5CViXRyPxx)
+![Secure PoS](./images/securepos.png)
 
 To protect the PoS chain from long-range attacks, we can checkpoint the PoS chain blocks to BTC, and implement a fork choice rule for the fork with an earlier BTC timestamp. This way, either
 

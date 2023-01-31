@@ -2,14 +2,14 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import one from '../../../static/img/firstgif.gif';
-import two from '../../../static/img/installationgif.gif';
+import two from '../../../static/img/installationguide.gif';
 import three from '../../../static/img/settingnode.gif';
 import four from '../../../static/img/modules.gif';
-import five from '../../../static/img/node.gif';
+import five from '../../../static/img/nodeoperatorsgif.gif';
 import six from '../../../static/img/resources.gif';
 import seven from '../../../static/img/videoguides.gif';
-import eight from '../../../static/img/grpc.gif';
-import nine from '../../../static/img/support.gif';
+import eight from '../../../static/img/restapi.gif';
+import nine from '../../../static/img/supp.gif';
 import ten from '../../../static/img/error.gif';
 import eleven from '../../../static/img/cli.gif';
 
