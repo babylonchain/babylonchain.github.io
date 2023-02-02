@@ -1,7 +1,6 @@
 ---
 id: overview
 sidebar_label: Introduction
-sidebar_position: 0
 hide_table_of_contents: true
 pagination_prev: null
 custom_edit_url: null
