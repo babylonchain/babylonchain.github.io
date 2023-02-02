@@ -4,7 +4,7 @@ info:
   description: A REST interface for state queries
   version: 1.0.0
 servers:
-  - url: https://docs.babylonchain.io/api
+  - url: http://api.testnet.babylonchain.io/
     description: Test Server
 tags:
   - name: BTCCheckpoint
