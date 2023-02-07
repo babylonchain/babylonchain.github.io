@@ -12,7 +12,7 @@ This is a guide for setting up a full node for the Babylon system.
 
 This guide requires having Babylon installed on a Linux System.
 The instructions can be found on the [Installation page](../installation.md)
-The version to install is specified at the [bbn-test-1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-1).
+The version to install is specified at the [bbn-test1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test1).
 
 :::
 
@@ -21,12 +21,12 @@ The version to install is specified at the [bbn-test-1 network info page](https:
 First, initialize a node configuration directory under `~/.babylond`.
 The `$NODENAME` variable specifies the name you aim to give your node.
 ```console
-babylond init $NODENAME --chain-id bbn-test-1
+babylond init $NODENAME --chain-id bbn-test1
 ```
 
 Then, retrieve the genesis file and place it in the node directory:
 ```console
-wget https://github.com/babylonchain/networks/raw/main/bbn-test-1/genesis.tar.bz2
+wget https://github.com/babylonchain/networks/raw/main/bbn-test1/genesis.tar.bz2
 tar -xjf genesis.tar.bz2 && rm genesis.tar.bz2
 mv genesis.json ~/.babylond/config/genesis.json
 ```
@@ -36,11 +36,11 @@ mv genesis.json ~/.babylond/config/genesis.json
 Edit the configuration file at `~/.babylond/config/config.toml` and modify
 the `seeds` and `persistent_peers` attributes to contain appropriate seeds and peers
 of your choice. The full list of Babylon approved seeds and peers can be found under
-the [bbn-test-1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-1).
+the [bbn-test1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test1).
 
 Edit the configuration file at `~/.babylond/config/app.toml` and modify the
 `btc-network` and `btc-tag` attributes to contain the BTC network parameters specified
-in the [bbn-test-1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-1).
+in the [bbn-test1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test1).
 
 ## 3. Setup cosmovisor
 
