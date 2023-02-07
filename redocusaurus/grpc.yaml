@@ -13,6 +13,17 @@ components:
       properties:
         code:
           type: integer
+          example: 3
+        message:
+          type: string
+          example: error message.
+        details:
+          type: array
+    InternalServer:
+      type: object
+      properties:
+        code:
+          type: integer
           example: 2
         message:
           type: string
@@ -21,8 +32,56 @@ components:
           type: array
   examples:
     IncorrectPaginationKey:
-      code: 2
+      code: 3
       message: illegal base64 data at input byte 4
+      details: []
+    MissingValueUint:
+      code: 3
+      message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+      details: []
+    MissingValueBool:
+      code: 3
+      message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+      details: []
+    InvalidEpochNumValueFormat:
+      code: 3
+      message: >-
+        type mismatch, parameter: epoch_num, error: strconv.ParseUint: parsing
+        \"babylondev123\": invalid syntax
+      details: []
+    InvalidStatusValue:
+      code: 3
+      message: 'type mismatch, parameter: status, error: submitted is not valid'
+      details: []
+    InvalidDelAddrLength:
+      code: 3
+      message: 'decoding bech32 failed: invalid separator index 0'
+      details: []
+    InvalidDelAddrValue:
+      code: 3
+      message: 'decoding bech32 failed: invalid incomplete group'
+      details: []
+    InvalidValAddrLength:
+      code: 3
+      message: 'decoding bech32 failed: invalid separator index 0'
+      details: []
+    InvalidValAddrValue:
+      code: 3
+      message: 'decoding bech32 failed: invalid incomplete group'
+      details: []
+    InvalidChainValue:
+      code: 3
+      message: 'codespace zoneconcierge code 1109: no chain info exists at this epoch'
+      details: []
+    InvalidHeightValue:
+      code: 3
+      message: 'codespace zoneconcierge code 1103: no header exists at this height'
+      details: []
+    InvalidHeightValue2:
+      code: 3
+      message: >-
+        chain with ID sandbox does not have a timestamped header before height
+        123
       details: []
 tags:
   - name: BTCCheckpoint
@@ -140,13 +199,23 @@ paths:
                   QueryBtcCheckpointsInfoResponse is response type for the
                   Query/BtcCheckpointsInfo RPC method
         '400':
-          description: Bad Request
+          description: >-
+            Missing one or more of the required parameters:
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
           schema:
             $ref: '#/components/schemas/BadRequest'
           examples:
             IncorrectPaginationKey:
-              code: 2
+              code: 3
               message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
               details: []
         '404':
           description: Not Found - Incorrect base_url parameter.
@@ -559,22 +628,22 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count.total/reverse
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 3
-                  message:
-                    type: string
-                    example: >-
-                      strconv.(ParseUint)/(ParseBool): parsing \"\": invalid
-                      syntax
-                  details:
-                    type: array
+            offset/limit/count_total/reverse.
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+          examples:
+            IncorrectPaginationKey:
+              code: 3
+              message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+              details: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -938,21 +1007,21 @@ paths:
           description: >-
             Missing one or more of the required parameters:
             offset/limit/count_total/reverse.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 3
-                  message:
-                    type: string
-                    example: >-
-                      strconv.(ParseUint)/(ParseBool): parsing \"\": invalid
-                      syntax
-                  details:
-                    type: array
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+          examples:
+            IncorrectPaginationKey:
+              code: 3
+              message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+              details: []
         '404':
           description: Not Found - Incorrect base_url.
           content:
@@ -1111,21 +1180,21 @@ paths:
           description: >-
             Missing one or more of the required parameters:
             offset/limit/count_total/reverse.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 3
-                  message:
-                    type: string
-                    example: >-
-                      strconv.(ParseUint)/(ParseBool): parsing \"\": invalid
-                      syntax
-                  details:
-                    type: array
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+          examples:
+            IncorrectPaginationKey:
+              code: 3
+              message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+              details: []
         '404':
           description: Not Found - Incorrect base_url.
           content:
@@ -1386,22 +1455,18 @@ paths:
                     type: integer
                     example: 404
         '500':
-          description: Incorrect del_addr parameter value/del_addr parameter length value.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 2
-                  message:
-                    type: string
-                    examples: >-
-                      decoding bech32 failed: (invalid incomplete
-                      group)/(invalid separator index 0)
-                  details:
-                    type: array
+          description: Incorrect del_addr value/ del_addr parameter lenght value
+          schema:
+            $ref: '#/components/schemas/InternalServer'
+          examples:
+            InvalidDelAddrLength:
+              code: 3
+              message: 'decoding bech32 failed: invalid separator index 0'
+              details: []
+            InvalidDelAddrValue:
+              code: 3
+              message: 'decoding bech32 failed: invalid incomplete group'
+              details: []
         '501':
           description: Empty del_addr parameter.
           content:
@@ -1681,22 +1746,22 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            start/end/offset/limit/count_total/reverse
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 3
-                  message:
-                    type: string
-                    example: >-
-                      strconv.(ParseUint)/(ParseBool): parsing \"\": invalid
-                      syntax
-                  details:
-                    type: array
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+          examples:
+            IncorrectPaginationKey:
+              code: 3
+              message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+              details: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -2060,7 +2125,7 @@ paths:
                     type: integer
                     example: 404
         '500':
-          description: 'Codespace epoching code 3: the epoch number is not known in DB.'
+          description: Incorrect epoch_num parameter value.
           content:
             application/json:
               schema:
@@ -2538,22 +2603,28 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse/epoch_num
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 3
-                  message:
-                    type: string
-                    example: >-
-                      strconv.(ParseUint)/(ParseBool): parsing \"\": invalid
-                      syntax
-                  details:
-                    type: array
+            offset/limit/count_total/reverse/epoch_num.
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+          examples:
+            IncorrectPaginationKey:
+              code: 3
+              message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+              details: []
+            InvalidEpochNumValueFormat:
+              code: 3
+              message: >-
+                type mismatch, parameter: epoch_num, error: strconv.ParseUint:
+                parsing \"babylondev123\": invalid syntax
+              details: []
         '404':
           description: Not Found - Incorrect base_url.
           content:
@@ -2710,22 +2781,28 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse/epoch_num
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 3
-                  message:
-                    type: string
-                    example: >-
-                      strconv.(ParseUint)/(ParseBool): parsing \"\": invalid
-                      syntax
-                  details:
-                    type: array
+            offset/limit/count_total/reverse/epoch_num.
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+          examples:
+            IncorrectPaginationKey:
+              code: 3
+              message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+              details: []
+            InvalidEpochNumValueFormat:
+              code: 3
+              message: >-
+                type mismatch, parameter: epoch_num, error: strconv.ParseUint:
+                parsing \"babylondev123\": invalid syntax
+              details: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -3266,22 +3343,22 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            end_epoch/epoch_count/offset/limit/count_total/reverse
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 3
-                  message:
-                    type: string
-                    example: >-
-                      strconv.(ParseUint)/(ParseBool): parsing \"\": invalid
-                      syntax
-                  details:
-                    type: array
+            offset/limit/count_total/reverse.
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+          examples:
+            IncorrectPaginationKey:
+              code: 3
+              message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+              details: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -3473,22 +3550,18 @@ paths:
                     type: integer
                     example: 404
         '500':
-          description: Incorrect val_addr parameter value or parameter value length.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 2
-                  message:
-                    type: string
-                    example: >-
-                      decoding bech32 failed: (invalid incomplete
-                      group)/(invalid separator index 0)
-                  details:
-                    type: array
+          description: Incorrect val_addr value/ val_addr parameter lenght value
+          schema:
+            $ref: '#/components/schemas/InternalServer'
+          examples:
+            InvalidValAddrLength:
+              code: 3
+              message: 'decoding bech32 failed: invalid separator index 0'
+              details: []
+            InvalidValAddrValue:
+              code: 3
+              message: 'decoding bech32 failed: invalid incomplete group'
+              details: []
         '501':
           description: Empty val_addr parameter.
           content:
@@ -3563,6 +3636,7 @@ paths:
                       next_key:
                         type: string
                         format: byte
+                        example: null
                         description: >-
                           next_key is the key to be passed to PageRequest.key to
 
@@ -3573,6 +3647,7 @@ paths:
                       total:
                         type: string
                         format: uint64
+                        example: '0'
                         title: >-
                           total is total number of results available if
                           PageRequest.count_total
@@ -3586,22 +3661,28 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse/epoch_num
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 3
-                  message:
-                    type: string
-                    example: >-
-                      strconv.(ParseUint)/(ParseBool): parsing \"\": invalid
-                      syntax
-                  details:
-                    type: array
+            offset/limit/count_total/reverse/epoch_num.
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+          examples:
+            IncorrectPaginationKey:
+              code: 3
+              message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+              details: []
+            InvalidEpochNumValueFormat:
+              code: 3
+              message: >-
+                type mismatch, parameter: epoch_num, error: strconv.ParseUint:
+                parsing \"babylondev123\": invalid syntax
+              details: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -4458,22 +4539,26 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 3
-                  message:
-                    type: string
-                    example: >-
-                      strconv.(ParseUint)/(ParseBool): parsing \"\": invalid
-                      syntax
-                  details:
-                    type: array
+            offset/limit/count_total/reverse/status.
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+          examples:
+            IncorrectPaginationKey:
+              code: 3
+              message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+              details: []
+            InvalidStatusValue:
+              code: 3
+              message: 'type mismatch, parameter: status, error: submitted is not valid'
+              details: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -4602,6 +4687,7 @@ paths:
                       chain_id:
                         type: string
                         title: chain_id is the ID of the chain
+                        example: sandbox
                       latest_header:
                         title: >-
                           latest_header is the latest header in CZ's canonical
@@ -4611,13 +4697,16 @@ paths:
                           chain_id:
                             type: string
                             title: chain_id is the unique ID of the chain
+                            example: sandbox
                           hash:
                             type: string
                             format: byte
                             title: hash is the hash of this header
+                            example: tzGuM/0EV1vICapWG7fgBMfQYoeRPibz0QBNNVF6PYg=
                           height:
                             type: string
                             format: uint64
+                            example: '1213979'
                             title: >-
                               height is the height of this header on CZ ledger
 
@@ -4636,9 +4725,11 @@ paths:
                                   block:
                                     type: string
                                     format: uint64
+                                    example: '11'
                                   app:
                                     type: string
                                     format: uint64
+                                    example: '0'
                                 description: >-
                                   Consensus captures the consensus rules for
                                   processing a block in the blockchain,
@@ -4649,12 +4740,15 @@ paths:
                                   state transition machine.
                               chain_id:
                                 type: string
+                                example: bbn-test2
                               height:
                                 type: string
                                 format: int64
+                                example: '23310'
                               time:
                                 type: string
                                 format: date-time
+                                example: '2023-02-06T07:38:53.204872672Z'
                               last_block_id:
                                 title: prev block info
                                 type: object
@@ -4662,58 +4756,74 @@ paths:
                                   hash:
                                     type: string
                                     format: byte
+                                    example: >-
+                                      WdXzsFDY/FLp0o2OfYMCJ2I1quDRJLA1bDBPaipEe7M=
                                   part_set_header:
                                     type: object
                                     properties:
                                       total:
                                         type: integer
                                         format: int64
+                                        example: 1
                                       hash:
                                         type: string
                                         format: byte
+                                        example: >-
+                                          IIQXBVBpjdONqdfrPbXiosN4CrxsTOPGNAoHK/CS/pE=
                                     title: PartsetHeader
                               last_commit_hash:
                                 type: string
                                 format: byte
                                 title: hashes of block data
+                                example: Scv4hVpKlf6/PE/wCs4xtozSWbD15cuR8kB1/m8y/Dg=
                               data_hash:
                                 type: string
                                 format: byte
+                                example: p7s6cXvOq33X/vgoPWNbNRcvvmpHrrLlK7kJlYubsAk=
                               validators_hash:
                                 type: string
                                 format: byte
                                 title: hashes from the app output from the prev block
+                                example: ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I=
                               next_validators_hash:
                                 type: string
                                 format: byte
+                                example: ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I=
                               consensus_hash:
                                 type: string
                                 format: byte
+                                example: BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8=
                               app_hash:
                                 type: string
                                 format: byte
+                                example: XCpnkVMuz/nWu0jt5E76v2R+yZ6Zf/G66gD4nEoev2o=
                               last_results_hash:
                                 type: string
                                 format: byte
+                                example: X4YmeUenrm1fJ3Lkf6rDNaWJr2j1gIVYL6qEbB9Hd/4=
                               evidence_hash:
                                 type: string
                                 format: byte
                                 title: consensus info
+                                example: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
                               proposer_address:
                                 type: string
                                 format: byte
+                                example: YhsuanV2AACZreJhHL10mVFb6OY=
                             description: >-
                               Header defines the structure of a Tendermint block
                               header.
                           babylon_epoch:
                             type: string
                             format: uint64
+                            example: '117'
                             title: >-
                               epoch is the epoch number of this header on
                               Babylon ledger
                           babylon_tx_hash:
                             type: string
                             format: byte
+                            example: v85CwsB588zNZkvjh64E05jk+RoQwwD7hcuNWLnPbI4=
                             title: >-
                               babylon_tx_hash is the hash of the tx that
                               includes this header
@@ -4884,6 +4994,7 @@ paths:
                       timestamped_headers_count:
                         type: string
                         format: uint64
+                        example: '664'
                         title: >-
                           timestamped_headers_count is the number of timestamped
                           headers in CZ's canonical chain
@@ -4974,6 +5085,7 @@ paths:
                       chain_id:
                         type: string
                         title: chain_id is the ID of the chain
+                        example: sandbox
                       latest_header:
                         title: >-
                           latest_header is the latest header in CZ's canonical
@@ -4983,13 +5095,16 @@ paths:
                           chain_id:
                             type: string
                             title: chain_id is the unique ID of the chain
+                            example: sandbox
                           hash:
                             type: string
                             format: byte
                             title: hash is the hash of this header
+                            example: tzGuM/0EV1vICapWG7fgBMfQYoeRPibz0QBNNVF6PYg=
                           height:
                             type: string
                             format: uint64
+                            example: '1213979'
                             title: >-
                               height is the height of this header on CZ ledger
 
@@ -5008,9 +5123,11 @@ paths:
                                   block:
                                     type: string
                                     format: uint64
+                                    example: '11'
                                   app:
                                     type: string
                                     format: uint64
+                                    example: '0'
                                 description: >-
                                   Consensus captures the consensus rules for
                                   processing a block in the blockchain,
@@ -5021,12 +5138,15 @@ paths:
                                   state transition machine.
                               chain_id:
                                 type: string
+                                example: bbn-test2
                               height:
                                 type: string
                                 format: int64
+                                example: '23310'
                               time:
                                 type: string
                                 format: date-time
+                                example: '2023-02-06T07:38:53.204872672Z'
                               last_block_id:
                                 title: prev block info
                                 type: object
@@ -5034,58 +5154,74 @@ paths:
                                   hash:
                                     type: string
                                     format: byte
+                                    example: >-
+                                      WdXzsFDY/FLp0o2OfYMCJ2I1quDRJLA1bDBPaipEe7M=
                                   part_set_header:
                                     type: object
                                     properties:
                                       total:
                                         type: integer
                                         format: int64
+                                        example: 1
                                       hash:
                                         type: string
                                         format: byte
+                                        example: >-
+                                          IIQXBVBpjdONqdfrPbXiosN4CrxsTOPGNAoHK/CS/pE=
                                     title: PartsetHeader
                               last_commit_hash:
                                 type: string
                                 format: byte
                                 title: hashes of block data
+                                example: Scv4hVpKlf6/PE/wCs4xtozSWbD15cuR8kB1/m8y/Dg=
                               data_hash:
                                 type: string
                                 format: byte
+                                example: p7s6cXvOq33X/vgoPWNbNRcvvmpHrrLlK7kJlYubsAk=
                               validators_hash:
                                 type: string
                                 format: byte
                                 title: hashes from the app output from the prev block
+                                example: ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I=
                               next_validators_hash:
                                 type: string
                                 format: byte
+                                example: ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I=
                               consensus_hash:
                                 type: string
                                 format: byte
+                                example: BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8=
                               app_hash:
                                 type: string
                                 format: byte
+                                example: XCpnkVMuz/nWu0jt5E76v2R+yZ6Zf/G66gD4nEoev2o=
                               last_results_hash:
                                 type: string
                                 format: byte
+                                example: X4YmeUenrm1fJ3Lkf6rDNaWJr2j1gIVYL6qEbB9Hd/4=
                               evidence_hash:
                                 type: string
                                 format: byte
                                 title: consensus info
+                                example: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
                               proposer_address:
                                 type: string
                                 format: byte
+                                example: YhsuanV2AACZreJhHL10mVFb6OY=
                             description: >-
                               Header defines the structure of a Tendermint block
                               header.
                           babylon_epoch:
                             type: string
                             format: uint64
+                            example: '117'
                             title: >-
                               epoch is the epoch number of this header on
                               Babylon ledger
                           babylon_tx_hash:
                             type: string
                             format: byte
+                            example: v85CwsB588zNZkvjh64E05jk+RoQwwD7hcuNWLnPbI4=
                             title: >-
                               babylon_tx_hash is the hash of the tx that
                               includes this header
@@ -5256,12 +5392,13 @@ paths:
                       timestamped_headers_count:
                         type: string
                         format: uint64
+                        example: '665'
                         title: >-
                           timestamped_headers_count is the number of timestamped
                           headers in CZ's canonical chain
                 description: >-
-                  QueryEpochChainInfoResponse is response type for the
-                  Query/EpochChainInfo RPC method.
+                  QueryChainInfoResponse is response type for the
+                  Query/ChainInfo RPC method.
         '400':
           description: Incorrect epoch_num parameter value format.
           content:
@@ -5365,13 +5502,16 @@ paths:
                       chain_id:
                         type: string
                         title: chain_id is the unique ID of the chain
+                        example: sandbox
                       hash:
                         type: string
                         format: byte
                         title: hash is the hash of this header
+                        example: prJrrFy0Q3La0fFJVhVQGPc4q9bhtTi/BRS0QIQC6Xc=
                       height:
                         type: string
                         format: uint64
+                        example: '1213369'
                         title: >-
                           height is the height of this header on CZ ledger
 
@@ -5390,9 +5530,11 @@ paths:
                               block:
                                 type: string
                                 format: uint64
+                                example: '11'
                               app:
                                 type: string
                                 format: uint64
+                                example: '0'
                             description: >-
                               Consensus captures the consensus rules for
                               processing a block in the blockchain,
@@ -5403,12 +5545,15 @@ paths:
                               state transition machine.
                           chain_id:
                             type: string
+                            example: bbn-test2
                           height:
                             type: string
                             format: int64
+                            example: '22996'
                           time:
                             type: string
                             format: date-time
+                            example: '2023-02-06T06:44:51.233287559Z'
                           last_block_id:
                             title: prev block info
                             type: object
@@ -5416,58 +5561,73 @@ paths:
                               hash:
                                 type: string
                                 format: byte
+                                example: A7lPd/YZkULe0ObDe2A/rajydoFo40X0jvYRTZ4AFrw=
                               part_set_header:
                                 type: object
                                 properties:
                                   total:
                                     type: integer
                                     format: int64
+                                    example: 1
                                   hash:
                                     type: string
                                     format: byte
+                                    example: >-
+                                      kPMTYlaz9PvLsUHVWoWLdLB/tcGtItAa13qbC5l13GQ=
                                 title: PartsetHeader
                           last_commit_hash:
                             type: string
                             format: byte
                             title: hashes of block data
+                            example: VmsRvtj7+MmGZif+xwUZ/oDdFSH8oVm2U0QAZNhjnNs=
                           data_hash:
                             type: string
                             format: byte
+                            example: DM//joE6ATqIU+LhoHF4DzMLBCDlM3VbvQZxYCR0XT0=
                           validators_hash:
                             type: string
                             format: byte
                             title: hashes from the app output from the prev block
+                            example: ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I=
                           next_validators_hash:
                             type: string
                             format: byte
+                            example: ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I=
                           consensus_hash:
                             type: string
                             format: byte
+                            example: BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8=
                           app_hash:
                             type: string
                             format: byte
+                            example: tgpbBuP/OV1F3g0Ha+juh39hGXrPl4/W0b5jgKaT3x8=
                           last_results_hash:
                             type: string
                             format: byte
+                            example: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
                           evidence_hash:
                             type: string
                             format: byte
                             title: consensus info
+                            example: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
                           proposer_address:
                             type: string
                             format: byte
+                            example: CVXoIx+yZYjKWNyRm8dyFUlVwGo=
                         description: >-
                           Header defines the structure of a Tendermint block
                           header.
                       babylon_epoch:
                         type: string
                         format: uint64
+                        example: '115'
                         title: >-
                           epoch is the epoch number of this header on Babylon
                           ledger
                       babylon_tx_hash:
                         type: string
                         format: byte
+                        example: JyS7vVs9FVOGMWvxafG1gqyHYgoVWUgizBsSG9KCXRA=
                         title: >-
                           babylon_tx_hash is the hash of the tx that includes
                           this header
@@ -5664,22 +5824,22 @@ paths:
                     type: integer
                     example: 404
         '500':
-          description: 'Incorrect one or all of the required parameters: chain_id/height.'
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 2
-                  message:
-                    type: string
-                    example: >-
-                      codespace zoneconcierge code 1109: no chain info exists at
-                      this epoch
-                  details:
-                    type: array
+          description: Incorrect chain value/ height value.
+          schema:
+            $ref: '#/components/schemas/InternalServer'
+          examples:
+            InvalidChainValue:
+              code: 3
+              message: >-
+                codespace zoneconcierge code 1109: no chain info exists at this
+                epoch
+              details: []
+            InvalidHeightValue:
+              code: 3
+              message: >-
+                codespace zoneconcierge code 1103: no header exists at this
+                height
+              details: []
         '501':
           description: 'Empty one or all of the required parameters: chain_id/height.'
           content:
@@ -5730,22 +5890,22 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: integer
-                    example: 3
-                  message:
-                    type: string
-                    example: >-
-                      strconv.(ParseUint)/(ParseBool): parsing \"\": invalid
-                      syntax
-                  details:
-                    type: array
+            offset/limit/count_total/reverse.
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+          examples:
+            IncorrectPaginationKey:
+              code: 3
+              message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+              details: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -6575,198 +6735,6 @@ paths:
                     example: Not Implemented
                   details:
                     type: array
-        default:
-          description: An unexpected error response.
-          schema:
-            type: object
-            properties:
-              error:
-                type: string
-              code:
-                type: integer
-                format: int32
-              message:
-                type: string
-              details:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    type_url:
-                      type: string
-                      description: >-
-                        A URL/resource name that uniquely identifies the type of
-                        the serialized
-
-                        protocol buffer message. This string must contain at
-                        least
-
-                        one "/" character. The last segment of the URL's path
-                        must represent
-
-                        the fully qualified name of the type (as in
-
-                        `path/google.protobuf.Duration`). The name should be in
-                        a canonical form
-
-                        (e.g., leading "." is not accepted).
-
-
-                        In practice, teams usually precompile into the binary
-                        all types that they
-
-                        expect it to use in the context of Any. However, for
-                        URLs which use the
-
-                        scheme `http`, `https`, or no scheme, one can optionally
-                        set up a type
-
-                        server that maps type URLs to message definitions as
-                        follows:
-
-
-                        * If no scheme is provided, `https` is assumed.
-
-                        * An HTTP GET on the URL must yield a
-                        [google.protobuf.Type][]
-                          value in binary format, or produce an error.
-                        * Applications are allowed to cache lookup results based
-                        on the
-                          URL, or have them precompiled into a binary to avoid any
-                          lookup. Therefore, binary compatibility needs to be preserved
-                          on changes to types. (Use versioned type names to manage
-                          breaking changes.)
-
-                        Note: this functionality is not currently available in
-                        the official
-
-                        protobuf release, and it is not used for type URLs
-                        beginning with
-
-                        type.googleapis.com.
-
-
-                        Schemes other than `http`, `https` (or the empty scheme)
-                        might be
-
-                        used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
-                  description: >-
-                    `Any` contains an arbitrary serialized protocol buffer
-                    message along with a
-
-                    URL that describes the type of the serialized message.
-
-
-                    Protobuf library provides support to pack/unpack Any values
-                    in the form
-
-                    of utility functions or additional generated methods of the
-                    Any type.
-
-
-                    Example 1: Pack and unpack a message in C++.
-
-                        Foo foo = ...;
-                        Any any;
-                        any.PackFrom(foo);
-                        ...
-                        if (any.UnpackTo(&foo)) {
-                          ...
-                        }
-
-                    Example 2: Pack and unpack a message in Java.
-
-                        Foo foo = ...;
-                        Any any = Any.pack(foo);
-                        ...
-                        if (any.is(Foo.class)) {
-                          foo = any.unpack(Foo.class);
-                        }
-
-                     Example 3: Pack and unpack a message in Python.
-
-                        foo = Foo(...)
-                        any = Any()
-                        any.Pack(foo)
-                        ...
-                        if any.Is(Foo.DESCRIPTOR):
-                          any.Unpack(foo)
-                          ...
-
-                     Example 4: Pack and unpack a message in Go
-
-                         foo := &pb.Foo{...}
-                         any, err := anypb.New(foo)
-                         if err != nil {
-                           ...
-                         }
-                         ...
-                         foo := &pb.Foo{}
-                         if err := any.UnmarshalTo(foo); err != nil {
-                           ...
-                         }
-
-                    The pack methods provided by protobuf library will by
-                    default use
-
-                    'type.googleapis.com/full.type.name' as the type URL and the
-                    unpack
-
-                    methods only use the fully qualified type name after the
-                    last '/'
-
-                    in the type URL, for example "foo.bar.com/x/y.z" will yield
-                    type
-
-                    name "y.z".
-
-
-
-                    JSON
-
-                    ====
-
-                    The JSON representation of an `Any` value uses the regular
-
-                    representation of the deserialized, embedded message, with
-                    an
-
-                    additional field `@type` which contains the type URL.
-                    Example:
-
-                        package google.profile;
-                        message Person {
-                          string first_name = 1;
-                          string last_name = 2;
-                        }
-
-                        {
-                          "@type": "type.googleapis.com/google.profile.Person",
-                          "firstName": <string>,
-                          "lastName": <string>
-                        }
-
-                    If the embedded message type is well-known and has a custom
-                    JSON
-
-                    representation, that representation will be embedded adding
-                    a field
-
-                    `value` which holds the custom JSON in addition to the
-                    `@type`
-
-                    field. Example (for message [google.protobuf.Duration][]):
-
-                        {
-                          "@type": "type.googleapis.com/google.protobuf.Duration",
-                          "value": "1.212s"
-                        }
       parameters:
         - name: chain_id
           description: chain_id is the ID of the CZ
@@ -6802,39 +6770,416 @@ paths:
       responses:
         '200':
           description: A successful response.
-          schema:
-            type: object
-            properties:
-              finalized_chain_info:
-                title: finalized_chain_info is the info of the CZ
+          content:
+            application/json:
+              schema:
                 type: object
                 properties:
-                  chain_id:
-                    type: string
-                    title: chain_id is the ID of the chain
-                  latest_header:
-                    title: latest_header is the latest header in CZ's canonical chain
+                  finalized_chain_info:
+                    title: finalized_chain_info is the info of the CZ
                     type: object
                     properties:
                       chain_id:
                         type: string
-                        title: chain_id is the unique ID of the chain
-                      hash:
-                        type: string
-                        format: byte
-                        title: hash is the hash of this header
-                      height:
+                        title: chain_id is the ID of the chain
+                      latest_header:
+                        title: >-
+                          latest_header is the latest header in CZ's canonical
+                          chain
+                        type: object
+                        properties:
+                          chain_id:
+                            type: string
+                            title: chain_id is the unique ID of the chain
+                          hash:
+                            type: string
+                            format: byte
+                            title: hash is the hash of this header
+                          height:
+                            type: string
+                            format: uint64
+                            title: >-
+                              height is the height of this header on CZ ledger
+
+                              (hash, height) jointly provides the position of
+                              the header on CZ ledger
+                          babylon_header:
+                            title: >-
+                              babylon_header is the header of the babylon block
+                              that includes this CZ header
+                            type: object
+                            properties:
+                              version:
+                                title: basic block info
+                                type: object
+                                properties:
+                                  block:
+                                    type: string
+                                    format: uint64
+                                  app:
+                                    type: string
+                                    format: uint64
+                                description: >-
+                                  Consensus captures the consensus rules for
+                                  processing a block in the blockchain,
+
+                                  including all blockchain data structures and
+                                  the rules of the application's
+
+                                  state transition machine.
+                              chain_id:
+                                type: string
+                              height:
+                                type: string
+                                format: int64
+                              time:
+                                type: string
+                                format: date-time
+                              last_block_id:
+                                title: prev block info
+                                type: object
+                                properties:
+                                  hash:
+                                    type: string
+                                    format: byte
+                                  part_set_header:
+                                    type: object
+                                    properties:
+                                      total:
+                                        type: integer
+                                        format: int64
+                                      hash:
+                                        type: string
+                                        format: byte
+                                    title: PartsetHeader
+                              last_commit_hash:
+                                type: string
+                                format: byte
+                                title: hashes of block data
+                              data_hash:
+                                type: string
+                                format: byte
+                              validators_hash:
+                                type: string
+                                format: byte
+                                title: hashes from the app output from the prev block
+                              next_validators_hash:
+                                type: string
+                                format: byte
+                              consensus_hash:
+                                type: string
+                                format: byte
+                              app_hash:
+                                type: string
+                                format: byte
+                              last_results_hash:
+                                type: string
+                                format: byte
+                              evidence_hash:
+                                type: string
+                                format: byte
+                                title: consensus info
+                              proposer_address:
+                                type: string
+                                format: byte
+                            description: >-
+                              Header defines the structure of a Tendermint block
+                              header.
+                          babylon_epoch:
+                            type: string
+                            format: uint64
+                            title: >-
+                              epoch is the epoch number of this header on
+                              Babylon ledger
+                          babylon_tx_hash:
+                            type: string
+                            format: byte
+                            title: >-
+                              babylon_tx_hash is the hash of the tx that
+                              includes this header
+
+                              (babylon_block_height, babylon_tx_hash) jointly
+                              provides the position of the header on Babylon
+                              ledger
+                      latest_forks:
+                        title: >-
+                          latest_forks is the latest forks, formed as a series
+                          of IndexedHeader (from low to high)
+                        type: object
+                        properties:
+                          headers:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                chain_id:
+                                  type: string
+                                  title: chain_id is the unique ID of the chain
+                                hash:
+                                  type: string
+                                  format: byte
+                                  title: hash is the hash of this header
+                                height:
+                                  type: string
+                                  format: uint64
+                                  title: >-
+                                    height is the height of this header on CZ
+                                    ledger
+
+                                    (hash, height) jointly provides the position
+                                    of the header on CZ ledger
+                                babylon_header:
+                                  title: >-
+                                    babylon_header is the header of the babylon
+                                    block that includes this CZ header
+                                  type: object
+                                  properties:
+                                    version:
+                                      title: basic block info
+                                      type: object
+                                      properties:
+                                        block:
+                                          type: string
+                                          format: uint64
+                                        app:
+                                          type: string
+                                          format: uint64
+                                      description: >-
+                                        Consensus captures the consensus rules
+                                        for processing a block in the
+                                        blockchain,
+
+                                        including all blockchain data structures
+                                        and the rules of the application's
+
+                                        state transition machine.
+                                    chain_id:
+                                      type: string
+                                    height:
+                                      type: string
+                                      format: int64
+                                    time:
+                                      type: string
+                                      format: date-time
+                                    last_block_id:
+                                      title: prev block info
+                                      type: object
+                                      properties:
+                                        hash:
+                                          type: string
+                                          format: byte
+                                        part_set_header:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: integer
+                                              format: int64
+                                            hash:
+                                              type: string
+                                              format: byte
+                                          title: PartsetHeader
+                                    last_commit_hash:
+                                      type: string
+                                      format: byte
+                                      title: hashes of block data
+                                    data_hash:
+                                      type: string
+                                      format: byte
+                                    validators_hash:
+                                      type: string
+                                      format: byte
+                                      title: >-
+                                        hashes from the app output from the prev
+                                        block
+                                    next_validators_hash:
+                                      type: string
+                                      format: byte
+                                    consensus_hash:
+                                      type: string
+                                      format: byte
+                                    app_hash:
+                                      type: string
+                                      format: byte
+                                    last_results_hash:
+                                      type: string
+                                      format: byte
+                                    evidence_hash:
+                                      type: string
+                                      format: byte
+                                      title: consensus info
+                                    proposer_address:
+                                      type: string
+                                      format: byte
+                                  description: >-
+                                    Header defines the structure of a Tendermint
+                                    block header.
+                                babylon_epoch:
+                                  type: string
+                                  format: uint64
+                                  title: >-
+                                    epoch is the epoch number of this header on
+                                    Babylon ledger
+                                babylon_tx_hash:
+                                  type: string
+                                  format: byte
+                                  title: >-
+                                    babylon_tx_hash is the hash of the tx that
+                                    includes this header
+
+                                    (babylon_block_height, babylon_tx_hash)
+                                    jointly provides the position of the header
+                                    on Babylon ledger
+                              title: IndexedHeader is the metadata of a CZ header
+                            title: >-
+                              blocks is the list of non-canonical indexed
+                              headers at the same height
+                        description: >-
+                          Forks is a list of non-canonical `IndexedHeader`s at
+                          the same height.
+
+                          For example, assuming the following blockchain
+
+                          ```
+
+                          A <- B <- C <- D <- E
+                                    \ -- D1
+                                    \ -- D2
+                          ```
+
+                          Then the fork will be {[D1, D2]} where each item is in
+                          struct `IndexedBlock`.
+
+
+                          Note that each `IndexedHeader` in the fork should have
+                          a valid quorum certificate. 
+
+                          Such forks exist since Babylon considers CZs might
+                          have dishonest majority.
+
+                          Also note that the IBC-Go implementation will only
+                          consider the first header in a fork valid, since
+
+                          the subsequent headers cannot be verified without
+                          knowing the validator set in the previous header.
+                      timestamped_headers_count:
                         type: string
                         format: uint64
                         title: >-
-                          height is the height of this header on CZ ledger
+                          timestamped_headers_count is the number of timestamped
+                          headers in CZ's canonical chain
+                  epoch_info:
+                    title: epoch_info is the metadata of the last BTC-finalised epoch
+                    type: object
+                    properties:
+                      epoch_number:
+                        type: string
+                        format: uint64
+                      current_epoch_interval:
+                        type: string
+                        format: uint64
+                      first_block_height:
+                        type: string
+                        format: uint64
+                      last_block_header:
+                        description: >-
+                          last_block_header is the header of the last block in
+                          this epoch.
 
-                          (hash, height) jointly provides the position of the
-                          header on CZ ledger
-                      babylon_header:
+                          Babylon needs to remember the last header of each
+                          epoch to complete unbonding validators/delegations
+                          when a previous epoch's checkpoint is finalised.
+
+                          The last_block_header field is nil in the epoch's
+                          beginning, and is set upon the end of this epoch.
+                        type: object
+                        properties:
+                          version:
+                            title: basic block info
+                            type: object
+                            properties:
+                              block:
+                                type: string
+                                format: uint64
+                              app:
+                                type: string
+                                format: uint64
+                            description: >-
+                              Consensus captures the consensus rules for
+                              processing a block in the blockchain,
+
+                              including all blockchain data structures and the
+                              rules of the application's
+
+                              state transition machine.
+                          chain_id:
+                            type: string
+                          height:
+                            type: string
+                            format: int64
+                          time:
+                            type: string
+                            format: date-time
+                          last_block_id:
+                            title: prev block info
+                            type: object
+                            properties:
+                              hash:
+                                type: string
+                                format: byte
+                              part_set_header:
+                                type: object
+                                properties:
+                                  total:
+                                    type: integer
+                                    format: int64
+                                  hash:
+                                    type: string
+                                    format: byte
+                                title: PartsetHeader
+                          last_commit_hash:
+                            type: string
+                            format: byte
+                            title: hashes of block data
+                          data_hash:
+                            type: string
+                            format: byte
+                          validators_hash:
+                            type: string
+                            format: byte
+                            title: hashes from the app output from the prev block
+                          next_validators_hash:
+                            type: string
+                            format: byte
+                          consensus_hash:
+                            type: string
+                            format: byte
+                          app_hash:
+                            type: string
+                            format: byte
+                          last_results_hash:
+                            type: string
+                            format: byte
+                          evidence_hash:
+                            type: string
+                            format: byte
+                            title: consensus info
+                          proposer_address:
+                            type: string
+                            format: byte
+                      app_hash_root:
+                        type: string
+                        format: byte
                         title: >-
-                          babylon_header is the header of the babylon block that
-                          includes this CZ header
+                          app_hash_root is the Merkle root of all AppHashs in
+                          this epoch
+
+                          It will be used for proving a block is in an epoch
+                      sealer_header:
+                        title: >-
+                          sealer_header is the 2nd header of the next epoch
+
+                          This validator set has generated a BLS multisig on
+                          `last_commit_hash` of the sealer header
                         type: object
                         properties:
                           version:
@@ -6913,442 +7258,94 @@ paths:
                         description: >-
                           Header defines the structure of a Tendermint block
                           header.
-                      babylon_epoch:
+                  raw_checkpoint:
+                    title: raw_checkpoint is the raw checkpoint of this epoch
+                    type: object
+                    properties:
+                      epoch_num:
                         type: string
                         format: uint64
                         title: >-
-                          epoch is the epoch number of this header on Babylon
-                          ledger
-                      babylon_tx_hash:
+                          epoch_num defines the epoch number the raw checkpoint
+                          is for
+                      last_commit_hash:
                         type: string
                         format: byte
                         title: >-
-                          babylon_tx_hash is the hash of the tx that includes
-                          this header
-
-                          (babylon_block_height, babylon_tx_hash) jointly
-                          provides the position of the header on Babylon ledger
-                  latest_forks:
+                          last_commit_hash defines the 'LastCommitHash' that
+                          individual BLS sigs are signed on
+                      bitmap:
+                        type: string
+                        format: byte
+                        title: >-
+                          bitmap defines the bitmap that indicates the signers
+                          of the BLS multi sig
+                      bls_multi_sig:
+                        type: string
+                        format: byte
+                        title: >-
+                          bls_multi_sig defines the multi sig that is aggregated
+                          from individual BLS sigs
+                  btc_submission_key:
                     title: >-
-                      latest_forks is the latest forks, formed as a series of
-                      IndexedHeader (from low to high)
+                      btc_submission_key is position of two BTC txs that include
+                      the raw checkpoint of this epoch
                     type: object
                     properties:
-                      headers:
+                      key:
                         type: array
                         items:
                           type: object
                           properties:
-                            chain_id:
-                              type: string
-                              title: chain_id is the unique ID of the chain
+                            index:
+                              type: integer
+                              format: int64
                             hash:
                               type: string
                               format: byte
-                              title: hash is the hash of this header
-                            height:
-                              type: string
-                              format: uint64
-                              title: >-
-                                height is the height of this header on CZ ledger
+                          title: >-
+                            Each provided OP_RETURN transaction can be
+                            idendtified by hash of block in
 
-                                (hash, height) jointly provides the position of
-                                the header on CZ ledger
-                            babylon_header:
-                              title: >-
-                                babylon_header is the header of the babylon
-                                block that includes this CZ header
-                              type: object
-                              properties:
-                                version:
-                                  title: basic block info
-                                  type: object
-                                  properties:
-                                    block:
-                                      type: string
-                                      format: uint64
-                                    app:
-                                      type: string
-                                      format: uint64
-                                  description: >-
-                                    Consensus captures the consensus rules for
-                                    processing a block in the blockchain,
-
-                                    including all blockchain data structures and
-                                    the rules of the application's
-
-                                    state transition machine.
-                                chain_id:
-                                  type: string
-                                height:
-                                  type: string
-                                  format: int64
-                                time:
-                                  type: string
-                                  format: date-time
-                                last_block_id:
-                                  title: prev block info
-                                  type: object
-                                  properties:
-                                    hash:
-                                      type: string
-                                      format: byte
-                                    part_set_header:
-                                      type: object
-                                      properties:
-                                        total:
-                                          type: integer
-                                          format: int64
-                                        hash:
-                                          type: string
-                                          format: byte
-                                      title: PartsetHeader
-                                last_commit_hash:
-                                  type: string
-                                  format: byte
-                                  title: hashes of block data
-                                data_hash:
-                                  type: string
-                                  format: byte
-                                validators_hash:
-                                  type: string
-                                  format: byte
-                                  title: >-
-                                    hashes from the app output from the prev
-                                    block
-                                next_validators_hash:
-                                  type: string
-                                  format: byte
-                                consensus_hash:
-                                  type: string
-                                  format: byte
-                                app_hash:
-                                  type: string
-                                  format: byte
-                                last_results_hash:
-                                  type: string
-                                  format: byte
-                                evidence_hash:
-                                  type: string
-                                  format: byte
-                                  title: consensus info
-                                proposer_address:
-                                  type: string
-                                  format: byte
-                              description: >-
-                                Header defines the structure of a Tendermint
-                                block header.
-                            babylon_epoch:
-                              type: string
-                              format: uint64
-                              title: >-
-                                epoch is the epoch number of this header on
-                                Babylon ledger
-                            babylon_tx_hash:
-                              type: string
-                              format: byte
-                              title: >-
-                                babylon_tx_hash is the hash of the tx that
-                                includes this header
-
-                                (babylon_block_height, babylon_tx_hash) jointly
-                                provides the position of the header on Babylon
-                                ledger
-                          title: IndexedHeader is the metadata of a CZ header
+                            which transaction was included and transaction index
+                            in the block
+                  proof:
+                    title: proof is the proof that the chain info is finalized
+                    type: object
+                    properties:
+                      proof_tx_in_block:
                         title: >-
-                          blocks is the list of non-canonical indexed headers at
-                          the same height
-                    description: >-
-                      Forks is a list of non-canonical `IndexedHeader`s at the
-                      same height.
-
-                      For example, assuming the following blockchain
-
-                      ```
-
-                      A <- B <- C <- D <- E
-                                 \ -- D1
-                                 \ -- D2
-                      ```
-
-                      Then the fork will be {[D1, D2]} where each item is in
-                      struct `IndexedBlock`.
-
-
-                      Note that each `IndexedHeader` in the fork should have a
-                      valid quorum certificate. 
-
-                      Such forks exist since Babylon considers CZs might have
-                      dishonest majority.
-
-                      Also note that the IBC-Go implementation will only
-                      consider the first header in a fork valid, since
-
-                      the subsequent headers cannot be verified without knowing
-                      the validator set in the previous header.
-                  timestamped_headers_count:
-                    type: string
-                    format: uint64
-                    title: >-
-                      timestamped_headers_count is the number of timestamped
-                      headers in CZ's canonical chain
-              epoch_info:
-                title: epoch_info is the metadata of the last BTC-finalised epoch
-                type: object
-                properties:
-                  epoch_number:
-                    type: string
-                    format: uint64
-                  current_epoch_interval:
-                    type: string
-                    format: uint64
-                  first_block_height:
-                    type: string
-                    format: uint64
-                  last_block_header:
-                    description: >-
-                      last_block_header is the header of the last block in this
-                      epoch.
-
-                      Babylon needs to remember the last header of each epoch to
-                      complete unbonding validators/delegations when a previous
-                      epoch's checkpoint is finalised.
-
-                      The last_block_header field is nil in the epoch's
-                      beginning, and is set upon the end of this epoch.
-                    type: object
-                    properties:
-                      version:
-                        title: basic block info
+                          proof_tx_in_block is the proof that tx that carries
+                          the header is included in a certain Babylon block
                         type: object
                         properties:
-                          block:
-                            type: string
-                            format: uint64
-                          app:
-                            type: string
-                            format: uint64
-                        description: >-
-                          Consensus captures the consensus rules for processing
-                          a block in the blockchain,
-
-                          including all blockchain data structures and the rules
-                          of the application's
-
-                          state transition machine.
-                      chain_id:
-                        type: string
-                      height:
-                        type: string
-                        format: int64
-                      time:
-                        type: string
-                        format: date-time
-                      last_block_id:
-                        title: prev block info
-                        type: object
-                        properties:
-                          hash:
+                          root_hash:
                             type: string
                             format: byte
-                          part_set_header:
+                          data:
+                            type: string
+                            format: byte
+                          proof:
                             type: object
                             properties:
                               total:
-                                type: integer
+                                type: string
                                 format: int64
-                              hash:
+                              index:
+                                type: string
+                                format: int64
+                              leaf_hash:
                                 type: string
                                 format: byte
-                            title: PartsetHeader
-                      last_commit_hash:
-                        type: string
-                        format: byte
-                        title: hashes of block data
-                      data_hash:
-                        type: string
-                        format: byte
-                      validators_hash:
-                        type: string
-                        format: byte
-                        title: hashes from the app output from the prev block
-                      next_validators_hash:
-                        type: string
-                        format: byte
-                      consensus_hash:
-                        type: string
-                        format: byte
-                      app_hash:
-                        type: string
-                        format: byte
-                      last_results_hash:
-                        type: string
-                        format: byte
-                      evidence_hash:
-                        type: string
-                        format: byte
-                        title: consensus info
-                      proposer_address:
-                        type: string
-                        format: byte
-                  app_hash_root:
-                    type: string
-                    format: byte
-                    title: >-
-                      app_hash_root is the Merkle root of all AppHashs in this
-                      epoch
-
-                      It will be used for proving a block is in an epoch
-                  sealer_header:
-                    title: >-
-                      sealer_header is the 2nd header of the next epoch
-
-                      This validator set has generated a BLS multisig on
-                      `last_commit_hash` of the sealer header
-                    type: object
-                    properties:
-                      version:
-                        title: basic block info
-                        type: object
-                        properties:
-                          block:
-                            type: string
-                            format: uint64
-                          app:
-                            type: string
-                            format: uint64
+                              aunts:
+                                type: array
+                                items:
+                                  type: string
+                                  format: byte
                         description: >-
-                          Consensus captures the consensus rules for processing
-                          a block in the blockchain,
-
-                          including all blockchain data structures and the rules
-                          of the application's
-
-                          state transition machine.
-                      chain_id:
-                        type: string
-                      height:
-                        type: string
-                        format: int64
-                      time:
-                        type: string
-                        format: date-time
-                      last_block_id:
-                        title: prev block info
-                        type: object
-                        properties:
-                          hash:
-                            type: string
-                            format: byte
-                          part_set_header:
-                            type: object
-                            properties:
-                              total:
-                                type: integer
-                                format: int64
-                              hash:
-                                type: string
-                                format: byte
-                            title: PartsetHeader
-                      last_commit_hash:
-                        type: string
-                        format: byte
-                        title: hashes of block data
-                      data_hash:
-                        type: string
-                        format: byte
-                      validators_hash:
-                        type: string
-                        format: byte
-                        title: hashes from the app output from the prev block
-                      next_validators_hash:
-                        type: string
-                        format: byte
-                      consensus_hash:
-                        type: string
-                        format: byte
-                      app_hash:
-                        type: string
-                        format: byte
-                      last_results_hash:
-                        type: string
-                        format: byte
-                      evidence_hash:
-                        type: string
-                        format: byte
-                        title: consensus info
-                      proposer_address:
-                        type: string
-                        format: byte
-                    description: Header defines the structure of a Tendermint block header.
-              raw_checkpoint:
-                title: raw_checkpoint is the raw checkpoint of this epoch
-                type: object
-                properties:
-                  epoch_num:
-                    type: string
-                    format: uint64
-                    title: >-
-                      epoch_num defines the epoch number the raw checkpoint is
-                      for
-                  last_commit_hash:
-                    type: string
-                    format: byte
-                    title: >-
-                      last_commit_hash defines the 'LastCommitHash' that
-                      individual BLS sigs are signed on
-                  bitmap:
-                    type: string
-                    format: byte
-                    title: >-
-                      bitmap defines the bitmap that indicates the signers of
-                      the BLS multi sig
-                  bls_multi_sig:
-                    type: string
-                    format: byte
-                    title: >-
-                      bls_multi_sig defines the multi sig that is aggregated
-                      from individual BLS sigs
-              btc_submission_key:
-                title: >-
-                  btc_submission_key is position of two BTC txs that include the
-                  raw checkpoint of this epoch
-                type: object
-                properties:
-                  key:
-                    type: array
-                    items:
-                      type: object
-                      properties:
-                        index:
-                          type: integer
-                          format: int64
-                        hash:
-                          type: string
-                          format: byte
-                      title: >-
-                        Each provided OP_RETURN transaction can be idendtified
-                        by hash of block in
-
-                        which transaction was included and transaction index in
-                        the block
-              proof:
-                title: proof is the proof that the chain info is finalized
-                type: object
-                properties:
-                  proof_tx_in_block:
-                    title: >-
-                      proof_tx_in_block is the proof that tx that carries the
-                      header is included in a certain Babylon block
-                    type: object
-                    properties:
-                      root_hash:
-                        type: string
-                        format: byte
-                      data:
-                        type: string
-                        format: byte
-                      proof:
+                          TxProof represents a Merkle proof of the presence of a
+                          transaction in the Merkle tree.
+                      proof_header_in_epoch:
                         type: object
                         properties:
                           total:
@@ -7365,371 +7362,225 @@ paths:
                             items:
                               type: string
                               format: byte
-                    description: >-
-                      TxProof represents a Merkle proof of the presence of a
-                      transaction in the Merkle tree.
-                  proof_header_in_epoch:
-                    type: object
-                    properties:
-                      total:
-                        type: string
-                        format: int64
-                      index:
-                        type: string
-                        format: int64
-                      leaf_hash:
-                        type: string
-                        format: byte
-                      aunts:
-                        type: array
-                        items:
-                          type: string
-                          format: byte
-                    title: >-
-                      proof_header_in_epoch is the proof that the Babylon header
-                      is in a certain epoch
-                  proof_epoch_sealed:
-                    title: proof_epoch_sealed is the proof that the epoch is sealed
-                    type: object
-                    properties:
-                      validator_set:
+                        title: >-
+                          proof_header_in_epoch is the proof that the Babylon
+                          header is in a certain epoch
+                      proof_epoch_sealed:
+                        title: >-
+                          proof_epoch_sealed is the proof that the epoch is
+                          sealed
+                        type: object
+                        properties:
+                          validator_set:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                validator_address:
+                                  type: string
+                                bls_pub_key:
+                                  type: string
+                                  format: byte
+                                voting_power:
+                                  type: string
+                                  format: uint64
+                              title: >-
+                                ValidatorWithBlsKey couples validator address,
+                                voting power, and its bls public key
+                            title: >-
+                              validator_set is the validator set of the sealed
+                              epoch
+
+                              This validator set has generated a BLS multisig on
+                              `last_commit_hash` of the sealer header
+                          proof_epoch_info:
+                            title: >-
+                              proof_epoch_info is the Merkle proof that the
+                              epoch's metadata is committed to `app_hash` of the
+                              sealer header
+                            type: object
+                            properties:
+                              ops:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    type:
+                                      type: string
+                                    key:
+                                      type: string
+                                      format: byte
+                                    data:
+                                      type: string
+                                      format: byte
+                                  title: >-
+                                    ProofOp defines an operation used for
+                                    calculating Merkle root
+
+                                    The data could be arbitrary format,
+                                    providing nessecary data
+
+                                    for example neighbouring node hash
+                          proof_epoch_val_set:
+                            title: >-
+                              proof_epoch_info is the Merkle proof that the
+                              epoch's validator set is committed to `app_hash`
+                              of the sealer header
+                            type: object
+                            properties:
+                              ops:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    type:
+                                      type: string
+                                    key:
+                                      type: string
+                                      format: byte
+                                    data:
+                                      type: string
+                                      format: byte
+                                  title: >-
+                                    ProofOp defines an operation used for
+                                    calculating Merkle root
+
+                                    The data could be arbitrary format,
+                                    providing nessecary data
+
+                                    for example neighbouring node hash
+                      proof_epoch_submitted:
                         type: array
                         items:
                           type: object
                           properties:
-                            validator_address:
-                              type: string
-                            bls_pub_key:
+                            key:
+                              type: object
+                              properties:
+                                index:
+                                  type: integer
+                                  format: int64
+                                hash:
+                                  type: string
+                                  format: byte
+                              title: >-
+                                Each provided OP_RETURN transaction can be
+                                idendtified by hash of block in
+
+                                which transaction was included and transaction
+                                index in the block
+                              description: >-
+                                key is the position (txIdx, blockHash) of this
+                                tx on BTC blockchain
+
+                                Although it is already a part of SubmissionKey,
+                                we store it here again
+
+                                to make TransactionInfo self-contained.
+
+                                For example, storing the key allows
+                                TransactionInfo to not relay on
+
+                                the fact that TransactionInfo will be ordered in
+                                the same order as
+
+                                TransactionKeys in SubmissionKey.
+                            transaction:
                               type: string
                               format: byte
-                            voting_power:
+                              title: transaction is the full transaction in bytes
+                            proof:
                               type: string
-                              format: uint64
+                              format: byte
+                              title: >-
+                                proof is the Merkle proof that this tx is
+                                included in the position in `key`
+
+                                TODO: maybe it could use here better format as
+                                we already processed and
+
+                                valideated the proof?
                           title: >-
-                            ValidatorWithBlsKey couples validator address,
-                            voting power, and its bls public key
+                            TransactionInfo is the info of a tx that contains
+                            Babylon checkpoint, including
+
+                            - the position of the tx on BTC blockchain
+
+                            - the full tx content
+
+                            - the Merkle proof that this tx is on the above
+                            position
                         title: >-
-                          validator_set is the validator set of the sealed epoch
+                          proof_epoch_submitted is the proof that the epoch's
+                          checkpoint is included in BTC ledger
 
-                          This validator set has generated a BLS multisig on
-                          `last_commit_hash` of the sealer header
-                      proof_epoch_info:
-                        title: >-
-                          proof_epoch_info is the Merkle proof that the epoch's
-                          metadata is committed to `app_hash` of the sealer
-                          header
-                        type: object
-                        properties:
-                          ops:
-                            type: array
-                            items:
-                              type: object
-                              properties:
-                                type:
-                                  type: string
-                                key:
-                                  type: string
-                                  format: byte
-                                data:
-                                  type: string
-                                  format: byte
-                              title: >-
-                                ProofOp defines an operation used for
-                                calculating Merkle root
-
-                                The data could be arbitrary format, providing
-                                nessecary data
-
-                                for example neighbouring node hash
-                      proof_epoch_val_set:
-                        title: >-
-                          proof_epoch_info is the Merkle proof that the epoch's
-                          validator set is committed to `app_hash` of the sealer
-                          header
-                        type: object
-                        properties:
-                          ops:
-                            type: array
-                            items:
-                              type: object
-                              properties:
-                                type:
-                                  type: string
-                                key:
-                                  type: string
-                                  format: byte
-                                data:
-                                  type: string
-                                  format: byte
-                              title: >-
-                                ProofOp defines an operation used for
-                                calculating Merkle root
-
-                                The data could be arbitrary format, providing
-                                nessecary data
-
-                                for example neighbouring node hash
-                  proof_epoch_submitted:
+                          It is the two TransactionInfo in the best (i.e.,
+                          earliest) checkpoint submission
+                description: >-
+                  QueryFinalizedChainInfoUntilHeightResponse is response type
+                  for the Query/FinalizedChainInfoUntilHeight RPC method.
+        '400':
+          description: Incorrect height parameter value format.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: >-
+                      type mismatch, parameter: height, error:
+                      strconv.ParseUint: parsing \"bbntest\": invalid syntax
+                  details:
                     type: array
-                    items:
-                      type: object
-                      properties:
-                        key:
-                          type: object
-                          properties:
-                            index:
-                              type: integer
-                              format: int64
-                            hash:
-                              type: string
-                              format: byte
-                          title: >-
-                            Each provided OP_RETURN transaction can be
-                            idendtified by hash of block in
-
-                            which transaction was included and transaction index
-                            in the block
-                          description: >-
-                            key is the position (txIdx, blockHash) of this tx on
-                            BTC blockchain
-
-                            Although it is already a part of SubmissionKey, we
-                            store it here again
-
-                            to make TransactionInfo self-contained.
-
-                            For example, storing the key allows TransactionInfo
-                            to not relay on
-
-                            the fact that TransactionInfo will be ordered in the
-                            same order as
-
-                            TransactionKeys in SubmissionKey.
-                        transaction:
-                          type: string
-                          format: byte
-                          title: transaction is the full transaction in bytes
-                        proof:
-                          type: string
-                          format: byte
-                          title: >-
-                            proof is the Merkle proof that this tx is included
-                            in the position in `key`
-
-                            TODO: maybe it could use here better format as we
-                            already processed and
-
-                            valideated the proof?
-                      title: >-
-                        TransactionInfo is the info of a tx that contains
-                        Babylon checkpoint, including
-
-                        - the position of the tx on BTC blockchain
-
-                        - the full tx content
-
-                        - the Merkle proof that this tx is on the above position
-                    title: >-
-                      proof_epoch_submitted is the proof that the epoch's
-                      checkpoint is included in BTC ledger
-
-                      It is the two TransactionInfo in the best (i.e., earliest)
-                      checkpoint submission
-            description: >-
-              QueryFinalizedChainInfoUntilHeightResponse is response type for
-              the Query/FinalizedChainInfoUntilHeight RPC method.
-        default:
-          description: An unexpected error response.
+        '404':
+          description: Not Found - Incorrect base_url parameter.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Not Found
+                  status:
+                    type: integer
+                    example: 404
+        '500':
+          description: Incorrect chain value/ height value.
           schema:
-            type: object
-            properties:
-              error:
-                type: string
-              code:
-                type: integer
-                format: int32
-              message:
-                type: string
-              details:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    type_url:
-                      type: string
-                      description: >-
-                        A URL/resource name that uniquely identifies the type of
-                        the serialized
-
-                        protocol buffer message. This string must contain at
-                        least
-
-                        one "/" character. The last segment of the URL's path
-                        must represent
-
-                        the fully qualified name of the type (as in
-
-                        `path/google.protobuf.Duration`). The name should be in
-                        a canonical form
-
-                        (e.g., leading "." is not accepted).
-
-
-                        In practice, teams usually precompile into the binary
-                        all types that they
-
-                        expect it to use in the context of Any. However, for
-                        URLs which use the
-
-                        scheme `http`, `https`, or no scheme, one can optionally
-                        set up a type
-
-                        server that maps type URLs to message definitions as
-                        follows:
-
-
-                        * If no scheme is provided, `https` is assumed.
-
-                        * An HTTP GET on the URL must yield a
-                        [google.protobuf.Type][]
-                          value in binary format, or produce an error.
-                        * Applications are allowed to cache lookup results based
-                        on the
-                          URL, or have them precompiled into a binary to avoid any
-                          lookup. Therefore, binary compatibility needs to be preserved
-                          on changes to types. (Use versioned type names to manage
-                          breaking changes.)
-
-                        Note: this functionality is not currently available in
-                        the official
-
-                        protobuf release, and it is not used for type URLs
-                        beginning with
-
-                        type.googleapis.com.
-
-
-                        Schemes other than `http`, `https` (or the empty scheme)
-                        might be
-
-                        used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
-                  description: >-
-                    `Any` contains an arbitrary serialized protocol buffer
-                    message along with a
-
-                    URL that describes the type of the serialized message.
-
-
-                    Protobuf library provides support to pack/unpack Any values
-                    in the form
-
-                    of utility functions or additional generated methods of the
-                    Any type.
-
-
-                    Example 1: Pack and unpack a message in C++.
-
-                        Foo foo = ...;
-                        Any any;
-                        any.PackFrom(foo);
-                        ...
-                        if (any.UnpackTo(&foo)) {
-                          ...
-                        }
-
-                    Example 2: Pack and unpack a message in Java.
-
-                        Foo foo = ...;
-                        Any any = Any.pack(foo);
-                        ...
-                        if (any.is(Foo.class)) {
-                          foo = any.unpack(Foo.class);
-                        }
-
-                     Example 3: Pack and unpack a message in Python.
-
-                        foo = Foo(...)
-                        any = Any()
-                        any.Pack(foo)
-                        ...
-                        if any.Is(Foo.DESCRIPTOR):
-                          any.Unpack(foo)
-                          ...
-
-                     Example 4: Pack and unpack a message in Go
-
-                         foo := &pb.Foo{...}
-                         any, err := anypb.New(foo)
-                         if err != nil {
-                           ...
-                         }
-                         ...
-                         foo := &pb.Foo{}
-                         if err := any.UnmarshalTo(foo); err != nil {
-                           ...
-                         }
-
-                    The pack methods provided by protobuf library will by
-                    default use
-
-                    'type.googleapis.com/full.type.name' as the type URL and the
-                    unpack
-
-                    methods only use the fully qualified type name after the
-                    last '/'
-
-                    in the type URL, for example "foo.bar.com/x/y.z" will yield
-                    type
-
-                    name "y.z".
-
-
-
-                    JSON
-
-                    ====
-
-                    The JSON representation of an `Any` value uses the regular
-
-                    representation of the deserialized, embedded message, with
-                    an
-
-                    additional field `@type` which contains the type URL.
-                    Example:
-
-                        package google.profile;
-                        message Person {
-                          string first_name = 1;
-                          string last_name = 2;
-                        }
-
-                        {
-                          "@type": "type.googleapis.com/google.profile.Person",
-                          "firstName": <string>,
-                          "lastName": <string>
-                        }
-
-                    If the embedded message type is well-known and has a custom
-                    JSON
-
-                    representation, that representation will be embedded adding
-                    a field
-
-                    `value` which holds the custom JSON in addition to the
-                    `@type`
-
-                    field. Example (for message [google.protobuf.Duration][]):
-
-                        {
-                          "@type": "type.googleapis.com/google.protobuf.Duration",
-                          "value": "1.212s"
-                        }
+            $ref: '#/components/schemas/InternalServer'
+          examples:
+            InvalidChainValue:
+              code: 3
+              message: >-
+                codespace zoneconcierge code 1109: no chain info exists at this
+                epoch
+              details: []
+            InvalidHeightValue:
+              code: 3
+              message: >-
+                chain with ID sandbox does not have a timestamped header before
+                height 123
+              details: []
+        '501':
+          description: 'Empty one or all of the required parameters: chain_id/height.'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 12
+                  message:
+                    type: string
+                    example: Not Implemented
+                  details:
+                    type: array
       parameters:
         - name: chain_id
           description: chain_id is the ID of the CZ
@@ -7775,352 +7626,253 @@ paths:
       responses:
         '200':
           description: A successful response.
-          schema:
-            type: object
-            properties:
-              headers:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    chain_id:
-                      type: string
-                      title: chain_id is the unique ID of the chain
-                    hash:
-                      type: string
-                      format: byte
-                      title: hash is the hash of this header
-                    height:
-                      type: string
-                      format: uint64
-                      title: >-
-                        height is the height of this header on CZ ledger
-
-                        (hash, height) jointly provides the position of the
-                        header on CZ ledger
-                    babylon_header:
-                      title: >-
-                        babylon_header is the header of the babylon block that
-                        includes this CZ header
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  headers:
+                    type: array
+                    items:
                       type: object
                       properties:
-                        version:
-                          title: basic block info
-                          type: object
-                          properties:
-                            block:
-                              type: string
-                              format: uint64
-                            app:
-                              type: string
-                              format: uint64
-                          description: >-
-                            Consensus captures the consensus rules for
-                            processing a block in the blockchain,
-
-                            including all blockchain data structures and the
-                            rules of the application's
-
-                            state transition machine.
                         chain_id:
                           type: string
+                          title: chain_id is the unique ID of the chain
+                          example: sandbox
+                        hash:
+                          type: string
+                          format: byte
+                          title: hash is the hash of this header
+                          example: prJrrFy0Q3La0fFJVhVQGPc4q9bhtTi/BRS0QIQC6Xc=
                         height:
                           type: string
-                          format: int64
-                        time:
-                          type: string
-                          format: date-time
-                        last_block_id:
-                          title: prev block info
+                          format: uint64
+                          example: '1213369'
+                          title: >-
+                            height is the height of this header on CZ ledger
+
+                            (hash, height) jointly provides the position of the
+                            header on CZ ledger
+                        babylon_header:
+                          title: >-
+                            babylon_header is the header of the babylon block
+                            that includes this CZ header
                           type: object
                           properties:
-                            hash:
-                              type: string
-                              format: byte
-                            part_set_header:
+                            version:
+                              title: basic block info
                               type: object
                               properties:
-                                total:
-                                  type: integer
-                                  format: int64
+                                block:
+                                  type: string
+                                  format: uint64
+                                  example: '11'
+                                app:
+                                  type: string
+                                  format: uint64
+                                  example: '0'
+                              description: >-
+                                Consensus captures the consensus rules for
+                                processing a block in the blockchain,
+
+                                including all blockchain data structures and the
+                                rules of the application's
+
+                                state transition machine.
+                            chain_id:
+                              type: string
+                              example: bbn-test2
+                            height:
+                              type: string
+                              format: int64
+                              example: '22996'
+                            time:
+                              type: string
+                              format: date-time
+                              example: '2023-02-06T06:44:51.233287559Z'
+                            last_block_id:
+                              title: prev block info
+                              type: object
+                              properties:
                                 hash:
                                   type: string
                                   format: byte
-                              title: PartsetHeader
-                        last_commit_hash:
+                                  example: A7lPd/YZkULe0ObDe2A/rajydoFo40X0jvYRTZ4AFrw=
+                                part_set_header:
+                                  type: object
+                                  properties:
+                                    total:
+                                      type: integer
+                                      format: int64
+                                      example: 1
+                                    hash:
+                                      type: string
+                                      format: byte
+                                      example: >-
+                                        kPMTYlaz9PvLsUHVWoWLdLB/tcGtItAa13qbC5l13GQ=
+                                  title: PartsetHeader
+                            last_commit_hash:
+                              type: string
+                              format: byte
+                              title: hashes of block data
+                              example: VmsRvtj7+MmGZif+xwUZ/oDdFSH8oVm2U0QAZNhjnNs=
+                            data_hash:
+                              type: string
+                              format: byte
+                              example: DM//joE6ATqIU+LhoHF4DzMLBCDlM3VbvQZxYCR0XT0=
+                            validators_hash:
+                              type: string
+                              format: byte
+                              title: hashes from the app output from the prev block
+                              example: ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I=
+                            next_validators_hash:
+                              type: string
+                              format: byte
+                              example: ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I=
+                            consensus_hash:
+                              type: string
+                              format: byte
+                              example: BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8=
+                            app_hash:
+                              type: string
+                              format: byte
+                              example: tgpbBuP/OV1F3g0Ha+juh39hGXrPl4/W0b5jgKaT3x8=
+                            last_results_hash:
+                              type: string
+                              format: byte
+                              example: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+                            evidence_hash:
+                              type: string
+                              format: byte
+                              title: consensus info
+                              example: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+                            proposer_address:
+                              type: string
+                              format: byte
+                              example: CVXoIx+yZYjKWNyRm8dyFUlVwGo=
+                          description: >-
+                            Header defines the structure of a Tendermint block
+                            header.
+                        babylon_epoch:
+                          type: string
+                          format: uint64
+                          example: '115'
+                          title: >-
+                            epoch is the epoch number of this header on Babylon
+                            ledger
+                        babylon_tx_hash:
                           type: string
                           format: byte
-                          title: hashes of block data
-                        data_hash:
-                          type: string
-                          format: byte
-                        validators_hash:
-                          type: string
-                          format: byte
-                          title: hashes from the app output from the prev block
-                        next_validators_hash:
-                          type: string
-                          format: byte
-                        consensus_hash:
-                          type: string
-                          format: byte
-                        app_hash:
-                          type: string
-                          format: byte
-                        last_results_hash:
-                          type: string
-                          format: byte
-                        evidence_hash:
-                          type: string
-                          format: byte
-                          title: consensus info
-                        proposer_address:
-                          type: string
-                          format: byte
-                      description: >-
-                        Header defines the structure of a Tendermint block
-                        header.
-                    babylon_epoch:
-                      type: string
-                      format: uint64
-                      title: >-
-                        epoch is the epoch number of this header on Babylon
-                        ledger
-                    babylon_tx_hash:
-                      type: string
-                      format: byte
-                      title: >-
-                        babylon_tx_hash is the hash of the tx that includes this
-                        header
+                          example: JyS7vVs9FVOGMWvxafG1gqyHYgoVWUgizBsSG9KCXRA=
+                          title: >-
+                            babylon_tx_hash is the hash of the tx that includes
+                            this header
 
-                        (babylon_block_height, babylon_tx_hash) jointly provides
-                        the position of the header on Babylon ledger
-                  title: IndexedHeader is the metadata of a CZ header
-                title: headers is the list of headers
-              pagination:
-                title: pagination defines the pagination in the response
+                            (babylon_block_height, babylon_tx_hash) jointly
+                            provides the position of the header on Babylon
+                            ledger
+                        title: IndexedHeader is the metadata of a CZ header
+                    title: headers is the list of headers
+                  pagination:
+                    title: pagination defines the pagination in the response
+                    type: object
+                    properties:
+                      next_key:
+                        type: string
+                        format: byte
+                        description: >-
+                          next_key is the key to be passed to PageRequest.key to
+
+                          query the next page most efficiently. It will be empty
+                          if
+
+                          there are no more results.
+                      total:
+                        type: string
+                        format: uint64
+                        title: >-
+                          total is total number of results available if
+                          PageRequest.count_total
+
+                          was set, its value is undefined otherwise
+                    description: >-
+                      PageResponse is to be embedded in gRPC response messages
+                      where the
+
+                      corresponding request message has used PageRequest.
+
+                      message SomeResponse {
+                              repeated Bar results = 1;
+                              PageResponse page = 2;
+                      }
+                description: >-
+                  QueryListHeadersResponse is response type for the
+                  Query/ListHeaders RPC method.
+        '400':
+          description: >-
+            Missing one or more of the required parameters:
+            offset/limit/count_total/reverse.
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+          examples:
+            IncorrectPaginationKey:
+              code: 3
+              message: illegal base64 data at input byte 4
+              details: []
+            MissingValueUint:
+              code: 3
+              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
+              details: []
+            MissingValueBool:
+              code: 3
+              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
+              details: []
+        '404':
+          description: Not Found - Incorrect base_url parameter.
+          content:
+            application/json:
+              schema:
                 type: object
                 properties:
-                  next_key:
+                  error:
                     type: string
-                    format: byte
-                    description: |-
-                      next_key is the key to be passed to PageRequest.key to
-                      query the next page most efficiently. It will be empty if
-                      there are no more results.
-                  total:
+                    example: Not Found
+                  status:
+                    type: integer
+                    example: 404
+        '500':
+          description: Incorrect chain_id parameter value.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 2
+                  message:
                     type: string
-                    format: uint64
-                    title: >-
-                      total is total number of results available if
-                      PageRequest.count_total
-
-                      was set, its value is undefined otherwise
-                description: >-
-                  PageResponse is to be embedded in gRPC response messages where
-                  the
-
-                  corresponding request message has used PageRequest.
-
-                   message SomeResponse {
-                           repeated Bar results = 1;
-                           PageResponse page = 2;
-                   }
-            description: >-
-              QueryListHeadersResponse is response type for the
-              Query/ListHeaders RPC method.
-        default:
-          description: An unexpected error response.
-          schema:
-            type: object
-            properties:
-              error:
-                type: string
-              code:
-                type: integer
-                format: int32
-              message:
-                type: string
-              details:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    type_url:
-                      type: string
-                      description: >-
-                        A URL/resource name that uniquely identifies the type of
-                        the serialized
-
-                        protocol buffer message. This string must contain at
-                        least
-
-                        one "/" character. The last segment of the URL's path
-                        must represent
-
-                        the fully qualified name of the type (as in
-
-                        `path/google.protobuf.Duration`). The name should be in
-                        a canonical form
-
-                        (e.g., leading "." is not accepted).
-
-
-                        In practice, teams usually precompile into the binary
-                        all types that they
-
-                        expect it to use in the context of Any. However, for
-                        URLs which use the
-
-                        scheme `http`, `https`, or no scheme, one can optionally
-                        set up a type
-
-                        server that maps type URLs to message definitions as
-                        follows:
-
-
-                        * If no scheme is provided, `https` is assumed.
-
-                        * An HTTP GET on the URL must yield a
-                        [google.protobuf.Type][]
-                          value in binary format, or produce an error.
-                        * Applications are allowed to cache lookup results based
-                        on the
-                          URL, or have them precompiled into a binary to avoid any
-                          lookup. Therefore, binary compatibility needs to be preserved
-                          on changes to types. (Use versioned type names to manage
-                          breaking changes.)
-
-                        Note: this functionality is not currently available in
-                        the official
-
-                        protobuf release, and it is not used for type URLs
-                        beginning with
-
-                        type.googleapis.com.
-
-
-                        Schemes other than `http`, `https` (or the empty scheme)
-                        might be
-
-                        used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
-                  description: >-
-                    `Any` contains an arbitrary serialized protocol buffer
-                    message along with a
-
-                    URL that describes the type of the serialized message.
-
-
-                    Protobuf library provides support to pack/unpack Any values
-                    in the form
-
-                    of utility functions or additional generated methods of the
-                    Any type.
-
-
-                    Example 1: Pack and unpack a message in C++.
-
-                        Foo foo = ...;
-                        Any any;
-                        any.PackFrom(foo);
-                        ...
-                        if (any.UnpackTo(&foo)) {
-                          ...
-                        }
-
-                    Example 2: Pack and unpack a message in Java.
-
-                        Foo foo = ...;
-                        Any any = Any.pack(foo);
-                        ...
-                        if (any.is(Foo.class)) {
-                          foo = any.unpack(Foo.class);
-                        }
-
-                     Example 3: Pack and unpack a message in Python.
-
-                        foo = Foo(...)
-                        any = Any()
-                        any.Pack(foo)
-                        ...
-                        if any.Is(Foo.DESCRIPTOR):
-                          any.Unpack(foo)
-                          ...
-
-                     Example 4: Pack and unpack a message in Go
-
-                         foo := &pb.Foo{...}
-                         any, err := anypb.New(foo)
-                         if err != nil {
-                           ...
-                         }
-                         ...
-                         foo := &pb.Foo{}
-                         if err := any.UnmarshalTo(foo); err != nil {
-                           ...
-                         }
-
-                    The pack methods provided by protobuf library will by
-                    default use
-
-                    'type.googleapis.com/full.type.name' as the type URL and the
-                    unpack
-
-                    methods only use the fully qualified type name after the
-                    last '/'
-
-                    in the type URL, for example "foo.bar.com/x/y.z" will yield
-                    type
-
-                    name "y.z".
-
-
-
-                    JSON
-
-                    ====
-
-                    The JSON representation of an `Any` value uses the regular
-
-                    representation of the deserialized, embedded message, with
-                    an
-
-                    additional field `@type` which contains the type URL.
-                    Example:
-
-                        package google.profile;
-                        message Person {
-                          string first_name = 1;
-                          string last_name = 2;
-                        }
-
-                        {
-                          "@type": "type.googleapis.com/google.profile.Person",
-                          "firstName": <string>,
-                          "lastName": <string>
-                        }
-
-                    If the embedded message type is well-known and has a custom
-                    JSON
-
-                    representation, that representation will be embedded adding
-                    a field
-
-                    `value` which holds the custom JSON in addition to the
-                    `@type`
-
-                    field. Example (for message [google.protobuf.Duration][]):
-
-                        {
-                          "@type": "type.googleapis.com/google.protobuf.Duration",
-                          "value": "1.212s"
-                        }
+                    example: >-
+                      codespace zoneconcierge code 1109: no chain info exists at
+                      this epoch
+                  details:
+                    type: array
+        '501':
+          description: Empty chain_id parameter value.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 12
+                  message:
+                    type: string
+                    example: Not Implemented
+                  details:
+                    type: array
       parameters:
         - name: chain_id
           in: path
@@ -8204,323 +7956,196 @@ paths:
       responses:
         '200':
           description: A successful response.
-          schema:
-            type: object
-            properties:
-              headers:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    chain_id:
-                      type: string
-                      title: chain_id is the unique ID of the chain
-                    hash:
-                      type: string
-                      format: byte
-                      title: hash is the hash of this header
-                    height:
-                      type: string
-                      format: uint64
-                      title: >-
-                        height is the height of this header on CZ ledger
-
-                        (hash, height) jointly provides the position of the
-                        header on CZ ledger
-                    babylon_header:
-                      title: >-
-                        babylon_header is the header of the babylon block that
-                        includes this CZ header
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  headers:
+                    type: array
+                    items:
                       type: object
                       properties:
-                        version:
-                          title: basic block info
-                          type: object
-                          properties:
-                            block:
-                              type: string
-                              format: uint64
-                            app:
-                              type: string
-                              format: uint64
-                          description: >-
-                            Consensus captures the consensus rules for
-                            processing a block in the blockchain,
-
-                            including all blockchain data structures and the
-                            rules of the application's
-
-                            state transition machine.
                         chain_id:
                           type: string
+                          title: chain_id is the unique ID of the chain
+                        hash:
+                          type: string
+                          format: byte
+                          title: hash is the hash of this header
                         height:
                           type: string
-                          format: int64
-                        time:
-                          type: string
-                          format: date-time
-                        last_block_id:
-                          title: prev block info
+                          format: uint64
+                          title: >-
+                            height is the height of this header on CZ ledger
+
+                            (hash, height) jointly provides the position of the
+                            header on CZ ledger
+                        babylon_header:
+                          title: >-
+                            babylon_header is the header of the babylon block
+                            that includes this CZ header
                           type: object
                           properties:
-                            hash:
-                              type: string
-                              format: byte
-                            part_set_header:
+                            version:
+                              title: basic block info
                               type: object
                               properties:
-                                total:
-                                  type: integer
-                                  format: int64
+                                block:
+                                  type: string
+                                  format: uint64
+                                app:
+                                  type: string
+                                  format: uint64
+                              description: >-
+                                Consensus captures the consensus rules for
+                                processing a block in the blockchain,
+
+                                including all blockchain data structures and the
+                                rules of the application's
+
+                                state transition machine.
+                            chain_id:
+                              type: string
+                            height:
+                              type: string
+                              format: int64
+                            time:
+                              type: string
+                              format: date-time
+                            last_block_id:
+                              title: prev block info
+                              type: object
+                              properties:
                                 hash:
                                   type: string
                                   format: byte
-                              title: PartsetHeader
-                        last_commit_hash:
+                                part_set_header:
+                                  type: object
+                                  properties:
+                                    total:
+                                      type: integer
+                                      format: int64
+                                    hash:
+                                      type: string
+                                      format: byte
+                                  title: PartsetHeader
+                            last_commit_hash:
+                              type: string
+                              format: byte
+                              title: hashes of block data
+                            data_hash:
+                              type: string
+                              format: byte
+                            validators_hash:
+                              type: string
+                              format: byte
+                              title: hashes from the app output from the prev block
+                            next_validators_hash:
+                              type: string
+                              format: byte
+                            consensus_hash:
+                              type: string
+                              format: byte
+                            app_hash:
+                              type: string
+                              format: byte
+                            last_results_hash:
+                              type: string
+                              format: byte
+                            evidence_hash:
+                              type: string
+                              format: byte
+                              title: consensus info
+                            proposer_address:
+                              type: string
+                              format: byte
+                          description: >-
+                            Header defines the structure of a Tendermint block
+                            header.
+                        babylon_epoch:
+                          type: string
+                          format: uint64
+                          title: >-
+                            epoch is the epoch number of this header on Babylon
+                            ledger
+                        babylon_tx_hash:
                           type: string
                           format: byte
-                          title: hashes of block data
-                        data_hash:
-                          type: string
-                          format: byte
-                        validators_hash:
-                          type: string
-                          format: byte
-                          title: hashes from the app output from the prev block
-                        next_validators_hash:
-                          type: string
-                          format: byte
-                        consensus_hash:
-                          type: string
-                          format: byte
-                        app_hash:
-                          type: string
-                          format: byte
-                        last_results_hash:
-                          type: string
-                          format: byte
-                        evidence_hash:
-                          type: string
-                          format: byte
-                          title: consensus info
-                        proposer_address:
-                          type: string
-                          format: byte
-                      description: >-
-                        Header defines the structure of a Tendermint block
-                        header.
-                    babylon_epoch:
-                      type: string
-                      format: uint64
-                      title: >-
-                        epoch is the epoch number of this header on Babylon
-                        ledger
-                    babylon_tx_hash:
-                      type: string
-                      format: byte
-                      title: >-
-                        babylon_tx_hash is the hash of the tx that includes this
-                        header
+                          title: >-
+                            babylon_tx_hash is the hash of the tx that includes
+                            this header
 
-                        (babylon_block_height, babylon_tx_hash) jointly provides
-                        the position of the header on Babylon ledger
-                  title: IndexedHeader is the metadata of a CZ header
-                title: headers is the list of headers
-            description: >-
-              QueryListEpochHeadersResponse is response type for the
-              Query/ListEpochHeaders RPC method.
-        default:
-          description: An unexpected error response.
-          schema:
-            type: object
-            properties:
-              error:
-                type: string
-              code:
-                type: integer
-                format: int32
-              message:
-                type: string
-              details:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    type_url:
-                      type: string
-                      description: >-
-                        A URL/resource name that uniquely identifies the type of
-                        the serialized
-
-                        protocol buffer message. This string must contain at
-                        least
-
-                        one "/" character. The last segment of the URL's path
-                        must represent
-
-                        the fully qualified name of the type (as in
-
-                        `path/google.protobuf.Duration`). The name should be in
-                        a canonical form
-
-                        (e.g., leading "." is not accepted).
-
-
-                        In practice, teams usually precompile into the binary
-                        all types that they
-
-                        expect it to use in the context of Any. However, for
-                        URLs which use the
-
-                        scheme `http`, `https`, or no scheme, one can optionally
-                        set up a type
-
-                        server that maps type URLs to message definitions as
-                        follows:
-
-
-                        * If no scheme is provided, `https` is assumed.
-
-                        * An HTTP GET on the URL must yield a
-                        [google.protobuf.Type][]
-                          value in binary format, or produce an error.
-                        * Applications are allowed to cache lookup results based
-                        on the
-                          URL, or have them precompiled into a binary to avoid any
-                          lookup. Therefore, binary compatibility needs to be preserved
-                          on changes to types. (Use versioned type names to manage
-                          breaking changes.)
-
-                        Note: this functionality is not currently available in
-                        the official
-
-                        protobuf release, and it is not used for type URLs
-                        beginning with
-
-                        type.googleapis.com.
-
-
-                        Schemes other than `http`, `https` (or the empty scheme)
-                        might be
-
-                        used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
-                  description: >-
-                    `Any` contains an arbitrary serialized protocol buffer
-                    message along with a
-
-                    URL that describes the type of the serialized message.
-
-
-                    Protobuf library provides support to pack/unpack Any values
-                    in the form
-
-                    of utility functions or additional generated methods of the
-                    Any type.
-
-
-                    Example 1: Pack and unpack a message in C++.
-
-                        Foo foo = ...;
-                        Any any;
-                        any.PackFrom(foo);
-                        ...
-                        if (any.UnpackTo(&foo)) {
-                          ...
-                        }
-
-                    Example 2: Pack and unpack a message in Java.
-
-                        Foo foo = ...;
-                        Any any = Any.pack(foo);
-                        ...
-                        if (any.is(Foo.class)) {
-                          foo = any.unpack(Foo.class);
-                        }
-
-                     Example 3: Pack and unpack a message in Python.
-
-                        foo = Foo(...)
-                        any = Any()
-                        any.Pack(foo)
-                        ...
-                        if any.Is(Foo.DESCRIPTOR):
-                          any.Unpack(foo)
-                          ...
-
-                     Example 4: Pack and unpack a message in Go
-
-                         foo := &pb.Foo{...}
-                         any, err := anypb.New(foo)
-                         if err != nil {
-                           ...
-                         }
-                         ...
-                         foo := &pb.Foo{}
-                         if err := any.UnmarshalTo(foo); err != nil {
-                           ...
-                         }
-
-                    The pack methods provided by protobuf library will by
-                    default use
-
-                    'type.googleapis.com/full.type.name' as the type URL and the
-                    unpack
-
-                    methods only use the fully qualified type name after the
-                    last '/'
-
-                    in the type URL, for example "foo.bar.com/x/y.z" will yield
-                    type
-
-                    name "y.z".
-
-
-
-                    JSON
-
-                    ====
-
-                    The JSON representation of an `Any` value uses the regular
-
-                    representation of the deserialized, embedded message, with
-                    an
-
-                    additional field `@type` which contains the type URL.
-                    Example:
-
-                        package google.profile;
-                        message Person {
-                          string first_name = 1;
-                          string last_name = 2;
-                        }
-
-                        {
-                          "@type": "type.googleapis.com/google.profile.Person",
-                          "firstName": <string>,
-                          "lastName": <string>
-                        }
-
-                    If the embedded message type is well-known and has a custom
-                    JSON
-
-                    representation, that representation will be embedded adding
-                    a field
-
-                    `value` which holds the custom JSON in addition to the
-                    `@type`
-
-                    field. Example (for message [google.protobuf.Duration][]):
-
-                        {
-                          "@type": "type.googleapis.com/google.protobuf.Duration",
-                          "value": "1.212s"
-                        }
+                            (babylon_block_height, babylon_tx_hash) jointly
+                            provides the position of the header on Babylon
+                            ledger
+                      title: IndexedHeader is the metadata of a CZ header
+                    title: headers is the list of headers
+                description: >-
+                  QueryListEpochHeadersResponse is response type for the
+                  Query/ListEpochHeaders RPC method.
+        '400':
+          description: Incorrect epoch_num parameter value format.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: >-
+                      type mismatch, parameter: epoch_num, error:
+                      strconv.ParseUint: parsing \"bbntest\": invalid syntax
+                  details:
+                    type: array
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Not Found
+                  status:
+                    type: integer
+                    example: 404
+        '500':
+          description: Incorrect chain_id parameter value.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 2
+                  message:
+                    type: string
+                    examples: >-
+                      codespace zoneconcierge code 1109: no chain info exists at
+                      this epoch
+                  details:
+                    type: array
+        '501':
+          description: Empty chain_id/epoch_num parameter value.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 12
+                  message:
+                    type: string
+                    example: Not Implemented
+                  details:
+                    type: array
       parameters:
         - name: chain_id
           in: path
@@ -8541,207 +8166,30 @@ paths:
       responses:
         '200':
           description: A successful response.
-          schema:
-            type: object
-            properties:
-              params:
-                description: params holds all the parameters of this module.
+          content:
+            application/json:
+              schema:
                 type: object
-            description: >-
-              QueryParamsResponse is response type for the Query/Params RPC
-              method.
-        default:
-          description: An unexpected error response.
-          schema:
-            type: object
-            properties:
-              error:
-                type: string
-              code:
-                type: integer
-                format: int32
-              message:
-                type: string
-              details:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    type_url:
-                      type: string
-                      description: >-
-                        A URL/resource name that uniquely identifies the type of
-                        the serialized
-
-                        protocol buffer message. This string must contain at
-                        least
-
-                        one "/" character. The last segment of the URL's path
-                        must represent
-
-                        the fully qualified name of the type (as in
-
-                        `path/google.protobuf.Duration`). The name should be in
-                        a canonical form
-
-                        (e.g., leading "." is not accepted).
-
-
-                        In practice, teams usually precompile into the binary
-                        all types that they
-
-                        expect it to use in the context of Any. However, for
-                        URLs which use the
-
-                        scheme `http`, `https`, or no scheme, one can optionally
-                        set up a type
-
-                        server that maps type URLs to message definitions as
-                        follows:
-
-
-                        * If no scheme is provided, `https` is assumed.
-
-                        * An HTTP GET on the URL must yield a
-                        [google.protobuf.Type][]
-                          value in binary format, or produce an error.
-                        * Applications are allowed to cache lookup results based
-                        on the
-                          URL, or have them precompiled into a binary to avoid any
-                          lookup. Therefore, binary compatibility needs to be preserved
-                          on changes to types. (Use versioned type names to manage
-                          breaking changes.)
-
-                        Note: this functionality is not currently available in
-                        the official
-
-                        protobuf release, and it is not used for type URLs
-                        beginning with
-
-                        type.googleapis.com.
-
-
-                        Schemes other than `http`, `https` (or the empty scheme)
-                        might be
-
-                        used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
-                  description: >-
-                    `Any` contains an arbitrary serialized protocol buffer
-                    message along with a
-
-                    URL that describes the type of the serialized message.
-
-
-                    Protobuf library provides support to pack/unpack Any values
-                    in the form
-
-                    of utility functions or additional generated methods of the
-                    Any type.
-
-
-                    Example 1: Pack and unpack a message in C++.
-
-                        Foo foo = ...;
-                        Any any;
-                        any.PackFrom(foo);
-                        ...
-                        if (any.UnpackTo(&foo)) {
-                          ...
-                        }
-
-                    Example 2: Pack and unpack a message in Java.
-
-                        Foo foo = ...;
-                        Any any = Any.pack(foo);
-                        ...
-                        if (any.is(Foo.class)) {
-                          foo = any.unpack(Foo.class);
-                        }
-
-                     Example 3: Pack and unpack a message in Python.
-
-                        foo = Foo(...)
-                        any = Any()
-                        any.Pack(foo)
-                        ...
-                        if any.Is(Foo.DESCRIPTOR):
-                          any.Unpack(foo)
-                          ...
-
-                     Example 4: Pack and unpack a message in Go
-
-                         foo := &pb.Foo{...}
-                         any, err := anypb.New(foo)
-                         if err != nil {
-                           ...
-                         }
-                         ...
-                         foo := &pb.Foo{}
-                         if err := any.UnmarshalTo(foo); err != nil {
-                           ...
-                         }
-
-                    The pack methods provided by protobuf library will by
-                    default use
-
-                    'type.googleapis.com/full.type.name' as the type URL and the
-                    unpack
-
-                    methods only use the fully qualified type name after the
-                    last '/'
-
-                    in the type URL, for example "foo.bar.com/x/y.z" will yield
-                    type
-
-                    name "y.z".
-
-
-
-                    JSON
-
-                    ====
-
-                    The JSON representation of an `Any` value uses the regular
-
-                    representation of the deserialized, embedded message, with
-                    an
-
-                    additional field `@type` which contains the type URL.
-                    Example:
-
-                        package google.profile;
-                        message Person {
-                          string first_name = 1;
-                          string last_name = 2;
-                        }
-
-                        {
-                          "@type": "type.googleapis.com/google.profile.Person",
-                          "firstName": <string>,
-                          "lastName": <string>
-                        }
-
-                    If the embedded message type is well-known and has a custom
-                    JSON
-
-                    representation, that representation will be embedded adding
-                    a field
-
-                    `value` which holds the custom JSON in addition to the
-                    `@type`
-
-                    field. Example (for message [google.protobuf.Duration][]):
-
-                        {
-                          "@type": "type.googleapis.com/google.protobuf.Duration",
-                          "value": "1.212s"
-                        }
+                properties:
+                  params:
+                    description: params holds all the parameters of this module.
+                    type: object
+                description: >-
+                  QueryParamsResponse is response type for the Query/Params RPC
+                  method.
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Not Found
+                  status:
+                    type: integer
+                    example: 404
 definitions:
   babylon.btccheckpoint.v1.Params:
     type: object
