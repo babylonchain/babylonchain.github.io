@@ -7,11 +7,11 @@ hide_table_of_contents: true
 
 Vigilante programs are standalone programs that are run along-side with Babylon nodes.
 People run a vigilante program in three modes, `reporter`, `submitter`, and `monitor`, each responsible to different aspects to the security of the Babylon network.
-This page provides instructions on how to become a vigilante.
+This page provides instructions on how to run a vigilante program.
 
 ## Prerequisites
 
-To run a Vigilante, we need to have the access to a synced Babylon full node and a synced BTC full node.
+First we need to have the access to a synced Babylon full node and a synced BTC full node.
 To run a BTC full node, please follow the [instructions of running a `bitcoind` full node](https://bitcoin.org/en/full-node) or the [instructions of running a `btcd` full node](https://github.com/btcsuite/btcd) (an alternative full node bitcoin implementation written in Golang).
 We support the connections to both.
 To run a Babylon full node, please follow this [guide](./setup-node.md).
@@ -45,11 +45,11 @@ nano $VIGILANTE_PATH/vigilante.yml # edit the config file to replace $TESTNET in
 
 ### Reporter
 
-Run the Vigilante reporter
+Run the vigilante reporter
 
 ```shell
 go run $VIGILANTE_PATH/cmd/main.go reporter \
-         --config $TESTNET_PATH/vigilante/vigilante.yml \
+         --config $VIGILANTE_PATH/vigilante.yml \
          --babylon-key $BABYLON_KEY_DIR
 ```
 
@@ -57,7 +57,7 @@ where `$BABYLON_KEY_DIR` stores the keyring that will be used to submit BTC head
 
 ### Submitter
 
-Similarly, run the Vigilante submitter
+Similarly, run the vigilante submitter
 
 ```shell
 go run $VIGILANTE_PATH/cmd/main.go submitter \
@@ -67,7 +67,7 @@ go run $VIGILANTE_PATH/cmd/main.go submitter \
 ### Monitor
 
 The monitor mode requires the genesis file of Babylon as an additional parameter, which is stored under `$BABYLON_NODE_PATH/config/genesis.json`.
-So, run the Vigilante monitor
+So, run the vigilante monitor
 
 ```shell
 go run $VIGILANTE_PATH/cmd/main.go monitor \
@@ -91,8 +91,8 @@ that contain the configuration for Babylon, Bitcoin, and the vigilante.
 ```shell
 docker run --rm \
          -v $TESTNET_PATH/bitcoin:/bitcoin \
-         -v $TESTNET_PATH/node0/babylond:/babylon \
-         -v $TESTNET_PATH/vigilante:/vigilante \
+         -v $BABYLON_NODE_PATH:/babylon \
+         -v $VIGILANTE_PATH:/vigilante \
          babylonchain/vigilante-reporter
 ```
 
@@ -102,8 +102,8 @@ Follow the same steps as above, but with the `babylonchain/vigilante-submitter` 
 ```shell
 docker run --rm \
          -v $TESTNET_PATH/bitcoin:/bitcoin \
-         -v $TESTNET_PATH/node0/babylond:/babylon \
-         -v $TESTNET_PATH/vigilante:/vigilante \
+         -v $BABYLON_NODE_PATH:/babylon \
+         -v $VIGILANTE_PATH:/vigilante \
          babylonchain/vigilante-submitter
 ```
 
@@ -113,8 +113,8 @@ Follow the same steps as above, but with the `babylonchain/vigilante-monitor` Do
 ```shell
 docker run --rm \
          -v $TESTNET_PATH/bitcoin:/bitcoin \
-         -v $TESTNET_PATH/node0/babylond:/babylon \
-         -v $TESTNET_PATH/vigilante:/vigilante \
+         -v $BABYLON_NODE_PATH:/babylon \
+         -v $VIGILANTE_PATH:/vigilante \
          babylonchain/vigilante-monitor
 ```
 
