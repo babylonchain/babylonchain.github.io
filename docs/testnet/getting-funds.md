@@ -6,7 +6,10 @@ hide_table_of_contents: true
 
 # Getting Testnet Tokens
 
-To be able to interact with the testnet you need to get testnet tokens.
+🔎 Learn how to get testnet tokens for Babylon.
+
+---
+
 In this guide we will go through how you can create a keyring and request for tokens
 through the Babylon testnet faucet.
 

@@ -7,7 +7,9 @@ custom_edit_url: null
 ---
 
 # Introduction
-These articles provide an overview of what Babylon is and how Babylon works on the Proof of Stake chains.
+💡 Get to know Babylon and how Babylon securing the PoS chains.
+
+---
 
 import DocCardList from '@theme/DocCardList';
 

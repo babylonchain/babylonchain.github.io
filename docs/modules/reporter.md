@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 # Vigilante Reporter
 
-This page describes the vigilante reporter program.
+🎤 Learn what the Babylon Vigilante Reporter program is and how it operates.
+
+---
 
 ## Summary
 

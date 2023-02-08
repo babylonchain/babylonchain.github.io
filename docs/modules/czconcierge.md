@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 # CZ Concierge Module
 
-This page describes the zone concierge module in Babylon.
+📔 Learn what the Babylon Zone Concierge Module is and how it operates.
+
+---
 
 ## Summary
 

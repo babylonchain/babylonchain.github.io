@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 # Checkpointing Module
 
-This page describes the Checkpointing module in Babylon.
+📕 Learn what the Babylon Checkpointing Module is and how it operates.
+
+---
 
 ## Summary
 

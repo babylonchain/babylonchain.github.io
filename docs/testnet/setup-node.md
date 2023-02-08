@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 # Setting Up a Full Node
 
-This is a guide for setting up a full node for the Babylon system.
+👀 Learn how to set up the full node for the Babylon system.
+
+---
 
 :::info Note
 

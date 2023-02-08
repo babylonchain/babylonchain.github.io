@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 # BTC Checkpoint Module
 
-This page describes the `btccheckpoint` module
+📙 Learn what the Babylon BTC Checkpoint Module is and how it operates.
+
+---
 
 ## Summary
 

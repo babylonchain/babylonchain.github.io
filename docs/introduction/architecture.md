@@ -1,10 +1,14 @@
 ---
 id: architecture
-sidebar_label: 3. Architecture
+sidebar_label: Architecture
 hide_table_of_contents: true
 ---
 
-# 3. Babylon Architecture <a id="key"></a>
+# Babylon Architecture <a id="key"></a>
+
+🔎 Examine the components and modules that construct Babylon.
+
+---
 
 ![Architecture](./images/architecture.png)
 

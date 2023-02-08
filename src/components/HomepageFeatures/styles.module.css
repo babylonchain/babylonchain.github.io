@@ -1,6 +1,7 @@
 .features {
   display: flex;
   align-items: center;
+  text-align: center;
   padding: 2rem 0;
   width: 100%;
 }
@@ -9,6 +10,7 @@
   height: 200px;
   width: 200px;
 }
+
 
 [data-theme='dark'] .hero_title {
   color: rgb(255, 255, 255);

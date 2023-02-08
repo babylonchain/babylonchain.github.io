@@ -1,11 +1,15 @@
 ---
 id: use-case
-sidebar_label: 2. A Primary Usecase - Securing PoS Chains
+sidebar_label: A Primary Usecase - Securing PoS Chains
 hide_table_of_contents: true
 ---
 
-# 2. A Primary Usecase: Securing PoS Chains <a id="usecase"></a>
-## 2.1 Long-Range Attack: A Fundanmental Threat to PoS Chains <a id="long"></a>
+#  Primary Usecase: Securing PoS Chains <a id="usecase"></a>
+🛠 Learn about Babylon's use case for securing PoS chain transactions with Bitcoin timestamps.
+
+---
+
+## Long-Range Attack: A Fundanmental Threat to PoS Chains <a id="long"></a>
 By PoS chains, we refer to BFT (Byzantine-fault-tolerent) PoS chains that require a 2/3 majority vote from their validators to confirm a block. PoS chains are not supposed to fork, and when forking happens, the chain is attacked: To have 2/3 majority vote for both forks, at least 1/3 of the validators have double-voted by signing both forks, which is a prohibited behavior by the consensus protocol.
 
 The picture below illustrates a forking attack to a hypothetical PoS chain called **“Rugpull“**.
@@ -20,7 +24,7 @@ This deterrence seems to provide slashable security to PoS chains. However, this
 
 This attack is called the long-range attack, which renders PoS chains not slashable and secure. This attack is fundamental and cannot be solved by modifying the consensus protocol without an extra source of trust. To alleviate this threat, some PoS chains resort to social consensus, where the stakeholders periodically make off-chain decisions on the correct block at the latest height and ignore any other potential forks. However, this approach ties the chain's security to the participating stakeholders' subjective opinions. This approach is also called weak subjectivity, which is against the decentralization principle. In addition, since social consensus takes time, most PoS chains impose a very long stake unbonding time in the order of weeks.
 
-## 2.2 Secure PoS using BTC timestamping <a id="time"></a>
+## Secure PoS using BTC timestamping <a id="time"></a>
 
 ![Secure PoS](./images/securepos.png)
 

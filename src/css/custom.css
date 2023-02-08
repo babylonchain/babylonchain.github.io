@@ -45,13 +45,6 @@
 .items label {
   color: #fff
 }
-button {
-  background-color: blue;
-  border-radius: 20px;
-  color: #fff;
-  padding: 5px;
-  cursor: pointer;
-}
 [data-theme='dark'] .navbar {
   background-color: #242526;
   color: #fff;
@@ -60,6 +53,12 @@ button {
   color: #fff;
 }
 [data-theme='dark'] .navbar__link {
+  color: #fff;
+}
+[data-theme='dark'] .urlstyle {
+  color: #fff;
+}
+[data-theme='dark'] .urlstyle:hover {
   color: #fff;
 }
 .doc_title {
@@ -115,4 +114,27 @@ button {
   .title_container {
     margin-top: 3rem;
   }
+}
+
+.urlstyle {
+  text-decoration: none;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  width: 400px;
+  height: 400px;
+  padding: 1rem;
+  margin: 1rem;
+  transition: ease-in-out 0.5s;
+}
+
+.urlstyle:hover {
+  text-decoration: none;
+  color: black;
+  box-shadow: 5px 5px 23px -5px blue;
+  -webkit-box-shadow: 5px 5px 23px -5px blue;
+  -moz-box-shadow: 5px 5px 23px -5px blue;
+}
+.row {
+  justify-content: center;
 }

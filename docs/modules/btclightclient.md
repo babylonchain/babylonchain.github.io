@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 # BTC Light Client Module
 
-This page describes the BTC light client module in Babylon.
+📗 Learn what the Babylon BTC Light Client Module is and how it operates.
+
+---
 
 ## Summary
 

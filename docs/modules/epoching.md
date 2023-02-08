@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 # Epoching Module
 
-This page describes the epoching module in Babylon.
+📘 Learn what the Babylon Epoching Module is and how it operates.
+
+---
 
 ## Summary
 

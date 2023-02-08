@@ -7,7 +7,9 @@ hide_table_of_contents: true
 
 # Testnet
 
-This page contains the relevant information for participating in the Babylon testnet.
+🙋‍♂️ Let's participate in the Babylon testnet!
+
+---
 
 import DocCardList from '@theme/DocCardList';
 

@@ -9,7 +9,9 @@ custom_edit_url: null
 
 # Installation Guide
 
-This article provides an overview of installing and initializing the Babylon chain on your system.
+💻 Learn how to install and initialize the Babylon chain on your system.
+
+---
 
 In this article:
 - [Step 1: Install Golang](#step1)

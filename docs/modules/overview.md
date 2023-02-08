@@ -5,7 +5,9 @@ hide_table_of_contents: true
 ---
 
 # Babylon Modules
-These articles provide an overview of the Babylon modules and how they operate.
+🕵️‍♂️ Find out about the Babylon modules and how they function.
+
+---
 
 The chart below illustrates a general overview of Babylon's modules.
 ![Architecture](./images/architecture.png)

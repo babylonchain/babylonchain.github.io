@@ -6,6 +6,10 @@ hide_table_of_contents: true
 
 # Becoming a Validator
 
+👨‍🏫 Learn how to become a Validator for Babylon.
+
+---
+
 In this guide we are going to go through the steps for someone
 to become a validator.
 

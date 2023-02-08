@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 # Vigilante Submitter
 
-This page describes the vigilante submitter program.
+📡 Learn what the Babylon Vigilante Submitter program is and how it operates.
+
+---
 
 ## Summary
 
