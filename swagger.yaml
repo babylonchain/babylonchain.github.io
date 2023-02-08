@@ -142,15 +142,18 @@ paths:
                           type: string
                           format: uint64
                           title: epoch number of this checkpoint
+                          example: '115'
                         earliest_btc_block_number:
                           type: string
                           format: uint64
+                          example: '775253'
                           title: >-
                             height of earliest BTC block that includes this
                             checkpoint
                         earliest_btc_block_hash:
                           type: string
                           format: byte
+                          example: 'fPDeiqchjmGLeDW2sWZVAUsAUJkx0AEAAAAAAAAAAAA='
                           title: hash of earliest BTC block that includes this checkpoint
                         vigilante_address_list:
                           type: array
@@ -160,6 +163,7 @@ paths:
                               submitter:
                                 type: string
                                 format: byte
+                                example: 'Zq3rFgfbY2UXHCj5PsILBQXev+E='
                                 description: >-
                                   TODO: this could probably be better typed
 
@@ -168,6 +172,7 @@ paths:
                               reporter:
                                 type: string
                                 format: byte
+                                example: 'NzTm1XLg234H6RTTQiqAx2Auxq8='
                                 title: >-
                                   Address of the reporter which reported the
                                   submissions, calculated from
@@ -547,6 +552,7 @@ paths:
                               hash:
                                 type: string
                                 format: byte
+                                example: '00000000000000000002f03a87a968d5acb5dcba6a6fc30f88b4ff0a606067ff'
                             title: >-
                               Each provided OP_RETURN transaction can be idendtified
                               by hash of block in
@@ -1434,195 +1440,231 @@ paths:
               schema:
                 type: object
                 properties:
-                  epochs:
-                    type: array
-                    items:
-                      type: object
-                      properties:
-                        epoch_number:
-                          type: string
-                          format: uint64
-                        current_epoch_interval:
-                          type: string
-                          format: uint64
-                        first_block_height:
-                          type: string
-                          format: uint64
-                        last_block_header:
-                          description: >-
-                            last_block_header is the header of the last block in
-                            this epoch.
+                  epoch:
+                    type: object
+                    properties:
+                      epoch_number:
+                        type: string
+                        format: uint64
+                        example: '115'
+                      current_epoch_interval:
+                        type: string
+                        format: uint64
+                        example: '200'
+                      first_block_height:
+                        type: string
+                        format: uint64
+                        example: '22801'
+                      last_block_header:
+                        description: >-
+                          last_block_header is the header of the last block in this
+                          epoch.
 
-                            Babylon needs to remember the last header of each epoch
-                            to complete unbonding validators/delegations when a
-                            previous epoch's checkpoint is finalised.
+                          Babylon needs to remember the last header of each epoch to
+                          complete unbonding validators/delegations when a previous
+                          epoch's checkpoint is finalised.
 
-                            The last_block_header field is nil in the epoch's
-                            beginning, and is set upon the end of this epoch.
-                          type: object
-                          properties:
-                            version:
-                              title: basic block info
-                              type: object
-                              properties:
-                                block:
-                                  type: string
-                                  format: uint64
-                                app:
-                                  type: string
-                                  format: uint64
-                              description: >-
-                                Consensus captures the consensus rules for
-                                processing a block in the blockchain,
+                          The last_block_header field is nil in the epoch's
+                          beginning, and is set upon the end of this epoch.
+                        type: object
+                        properties:
+                          version:
+                            title: basic block info
+                            type: object
+                            properties:
+                              block:
+                                type: string
+                                format: uint64
+                                example: '11'
+                              app:
+                                type: string
+                                format: uint64
+                                example: '0'
+                            description: >-
+                              Consensus captures the consensus rules for processing
+                              a block in the blockchain,
 
-                                including all blockchain data structures and the
-                                rules of the application's
+                              including all blockchain data structures and the rules
+                              of the application's
 
-                                state transition machine.
-                            chain_id:
-                              type: string
-                            height:
-                              type: string
-                              format: int64
-                            time:
-                              type: string
-                              format: date-time
-                            last_block_id:
-                              title: prev block info
-                              type: object
-                              properties:
-                                hash:
-                                  type: string
-                                  format: byte
-                                part_set_header:
-                                  type: object
-                                  properties:
-                                    total:
-                                      type: integer
-                                      format: int64
-                                    hash:
-                                      type: string
-                                      format: byte
-                                  title: PartsetHeader
-                            last_commit_hash:
-                              type: string
-                              format: byte
-                              title: hashes of block data
-                            data_hash:
-                              type: string
-                              format: byte
-                            validators_hash:
-                              type: string
-                              format: byte
-                              title: hashes from the app output from the prev block
-                            next_validators_hash:
-                              type: string
-                              format: byte
-                            consensus_hash:
-                              type: string
-                              format: byte
-                            app_hash:
-                              type: string
-                              format: byte
-                            last_results_hash:
-                              type: string
-                              format: byte
-                            evidence_hash:
-                              type: string
-                              format: byte
-                              title: consensus info
-                            proposer_address:
-                              type: string
-                              format: byte
-                        app_hash_root:
-                          type: string
-                          format: byte
-                          title: >-
-                            app_hash_root is the Merkle root of all AppHashs in this
-                            epoch
+                              state transition machine.
+                          chain_id:
+                            type: string
+                            example: bbn-test2
+                          height:
+                            type: string
+                            format: int64
+                            example: '23000'
+                          time:
+                            type: string
+                            format: date-time
+                            example: '2023-02-06T06:45:32.498348802Z'
+                          last_block_id:
+                            title: prev block info
+                            type: object
+                            properties:
+                              hash:
+                                type: string
+                                format: byte
+                                example: '86DDETe2pi0bn/mc45dTHIYvDzGzHbA0pwTFKvVYEMs='
+                              part_set_header:
+                                type: object
+                                properties:
+                                  total:
+                                    type: integer
+                                    format: int64
+                                    example: 1
+                                  hash:
+                                    type: string
+                                    format: byte
+                                    example: '6115O5mNjo+4fxew/8V7SEOA3UukNz09j3X5CDvuNpA='
+                                title: PartsetHeader
+                          last_commit_hash:
+                            type: string
+                            format: byte
+                            title: hashes of block data
+                            example: 'N9WEnMPRR9cD4TF9zl08NvzVwARCV1Q7mME0Fj5QU+w='
+                          data_hash:
+                            type: string
+                            format: byte
+                            example: '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
+                          validators_hash:
+                            type: string
+                            format: byte
+                            title: hashes from the app output from the prev block
+                            example: 'ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I='
+                          next_validators_hash:
+                            type: string
+                            format: byte
+                            example: 'ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I='
+                          consensus_hash:
+                            type: string
+                            format: byte
+                            example: 'BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8='
+                          app_hash:
+                            type: string
+                            format: byte
+                            example: 'LlADBIcvO47i8MkZucvY3gn9H/piyhyxlWkhXjrnnpI='
+                          last_results_hash:
+                            type: string
+                            format: byte
+                            example: 'TAzoev4wAFfHvFnXAOmfZ4QNJ5Izt3Jr5+OSHQdHYkU='
+                          evidence_hash:
+                            type: string
+                            format: byte
+                            title: consensus info
+                            example: '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
+                          proposer_address:
+                            type: string
+                            format: byte
+                            example: 'YhsuanV2AACZreJhHL10mVFb6OY='
+                      app_hash_root:
+                        type: string
+                        format: byte
+                        example: '+IuK0VhAV5gAGC3K5anc0Eu3CENK09EAmfqr8jwayvQ='
+                        title: >-
+                          app_hash_root is the Merkle root of all AppHashs in this
+                          epoch
 
-                            It will be used for proving a block is in an epoch
-                        sealer_header:
-                          title: >-
-                            sealer_header is the 2nd header of the next epoch
+                          It will be used for proving a block is in an epoch
+                      sealer_header:
+                        title: >-
+                          sealer_header is the 2nd header of the next epoch
 
-                            This validator set has generated a BLS multisig on
-                            `last_commit_hash` of the sealer header
-                          type: object
-                          properties:
-                            version:
-                              title: basic block info
-                              type: object
-                              properties:
-                                block:
-                                  type: string
-                                  format: uint64
-                                app:
-                                  type: string
-                                  format: uint64
-                              description: >-
-                                Consensus captures the consensus rules for
-                                processing a block in the blockchain,
+                          This validator set has generated a BLS multisig on
+                          `last_commit_hash` of the sealer header
+                        type: object
+                        properties:
+                          version:
+                            title: basic block info
+                            type: object
+                            properties:
+                              block:
+                                type: string
+                                format: uint64
+                                example: '11'
+                              app:
+                                type: string
+                                format: uint64
+                                example: '0'
+                            description: >-
+                              Consensus captures the consensus rules for processing
+                              a block in the blockchain,
 
-                                including all blockchain data structures and the
-                                rules of the application's
+                              including all blockchain data structures and the rules
+                              of the application's
 
-                                state transition machine.
-                            chain_id:
-                              type: string
-                            height:
-                              type: string
-                              format: int64
-                            time:
-                              type: string
-                              format: date-time
-                            last_block_id:
-                              title: prev block info
-                              type: object
-                              properties:
-                                hash:
-                                  type: string
-                                  format: byte
-                                part_set_header:
-                                  type: object
-                                  properties:
-                                    total:
-                                      type: integer
-                                      format: int64
-                                    hash:
-                                      type: string
-                                      format: byte
-                                  title: PartsetHeader
-                            last_commit_hash:
-                              type: string
-                              format: byte
-                              title: hashes of block data
-                            data_hash:
-                              type: string
-                              format: byte
-                            validators_hash:
-                              type: string
-                              format: byte
-                              title: hashes from the app output from the prev block
-                            next_validators_hash:
-                              type: string
-                              format: byte
-                            consensus_hash:
-                              type: string
-                              format: byte
-                            app_hash:
-                              type: string
-                              format: byte
-                            last_results_hash:
-                              type: string
-                              format: byte
-                            evidence_hash:
-                              type: string
-                              format: byte
-                              title: consensus info
-                            proposer_address:
-                              type: string
-                              format: byte
+                              state transition machine.
+                          chain_id:
+                            type: string
+                            example: bbn-test2
+                          height:
+                            type: string
+                            format: int64
+                            example: '23000'
+                          time:
+                            type: string
+                            format: date-time
+                            example: '2023-02-06T06:45:32.498348802Z'
+                          last_block_id:
+                            title: prev block info
+                            type: object
+                            properties:
+                              hash:
+                                type: string
+                                format: byte
+                                example: '86DDETe2pi0bn/mc45dTHIYvDzGzHbA0pwTFKvVYEMs='
+                              part_set_header:
+                                type: object
+                                properties:
+                                  total:
+                                    type: integer
+                                    format: int64
+                                    example: 1
+                                  hash:
+                                    type: string
+                                    format: byte
+                                    example: '6115O5mNjo+4fxew/8V7SEOA3UukNz09j3X5CDvuNpA='
+                                title: PartsetHeader
+                          last_commit_hash:
+                            type: string
+                            format: byte
+                            title: hashes of block data
+                            example: 'N9WEnMPRR9cD4TF9zl08NvzVwARCV1Q7mME0Fj5QU+w='
+                          data_hash:
+                            type: string
+                            format: byte
+                            example: '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
+                          validators_hash:
+                            type: string
+                            format: byte
+                            title: hashes from the app output from the prev block
+                            example: 'ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I='
+                          next_validators_hash:
+                            type: string
+                            format: byte
+                            example: 'ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I='
+                          consensus_hash:
+                            type: string
+                            format: byte
+                            example: 'BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8='
+                          app_hash:
+                            type: string
+                            format: byte
+                            example: 'LlADBIcvO47i8MkZucvY3gn9H/piyhyxlWkhXjrnnpI='
+                          last_results_hash:
+                            type: string
+                            format: byte
+                            example: 'TAzoev4wAFfHvFnXAOmfZ4QNJ5Izt3Jr5+OSHQdHYkU='
+                          evidence_hash:
+                            type: string
+                            format: byte
+                            title: consensus info
+                            example: '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
+                          proposer_address:
+                            type: string
+                            format: byte
+                            example: 'YhsuanV2AACZreJhHL10mVFb6OY='
                           description: >-
                             Header defines the structure of a Tendermint block
                             header.
@@ -4137,24 +4179,28 @@ paths:
                             epoch_num:
                               type: string
                               format: uint64
+                              example: '85'
                               title: >-
                                 epoch_num defines the epoch number the raw
                                 checkpoint is for
                             last_commit_hash:
                               type: string
                               format: byte
+                              example: 'uXt+PS7dVt9Up/qtZKdP2nuc67MEFVFt1y6joNmPcYU='
                               title: >-
                                 last_commit_hash defines the 'LastCommitHash' that
                                 individual BLS sigs are signed on
                             bitmap:
                               type: string
                               format: byte
+                              example: 'DAAAAAAAAAAAAAAAAA=='
                               title: >-
                                 bitmap defines the bitmap that indicates the signers
                                 of the BLS multi sig
                             bls_multi_sig:
                               type: string
                               format: byte
+                              example: 'pwJ/bS2tG275DLsK3iizJel/U8gYLyjtOww+2Sjs7Uz/BZ5IIcZcH4JO7aXYiJFf'
                               title: >-
                                 bls_multi_sig defines the multi sig that is
                                 aggregated from individual BLS sigs
@@ -4180,10 +4226,12 @@ paths:
                         bls_aggr_pk:
                           type: string
                           format: byte
+                          example: 'kaWkBH7n7+E33r6RqtJUFITzlthN0EW9eKW78cKKP4MvprojzSrS1LuMua/N3HETBKG6yPbwB5ydbqAjV0xkLvSNtwi3wVjRPsEz7vpEfKkOpBV3qKvhsf/btZzav12Q'
                           title: bls_aggr_pk defines the aggregated BLS public key
                         power_sum:
                           type: string
                           format: uint64
+                          example: '200'
                           title: >-
                             power_sum defines the accumulated voting power for the
                             checkpoint
@@ -4215,12 +4263,14 @@ paths:
                               block_height:
                                 type: string
                                 format: uint64
+                                example: '23002'
                                 title: >-
                                   block_height is the height of the Babylon block
                                   that triggers the state update
                               block_time:
                                 type: string
                                 format: date-time
+                                example: '2023-02-06T06:45:53.122665404Z'
                                 title: >-
                                   block_time is the timestamp in the Babylon block
                                   that triggers the state update
@@ -5610,6 +5660,7 @@ paths:
                       chain_id:
                         type: string
                         title: chain_id is the ID of the chain
+                        example: 'sandbox'
                       latest_header:
                         title: latest_header is the latest header in CZ's canonical chain
                         type: object
@@ -5617,13 +5668,16 @@ paths:
                           chain_id:
                             type: string
                             title: chain_id is the unique ID of the chain
+                            example: 'sandbox'
                           hash:
                             type: string
                             format: byte
                             title: hash is the hash of this header
+                            example: '6KtLHW1bz1acBR0qiP8GMJ3x1fIq7NkYnOeMkpOZtW0='
                           height:
                             type: string
                             format: uint64
+                            example: '1201712'
                             title: >-
                               height is the height of this header on CZ ledger
 
@@ -5642,9 +5696,11 @@ paths:
                                   block:
                                     type: string
                                     format: uint64
+                                    example: '11'
                                   app:
                                     type: string
                                     format: uint64
+                                    example: '0'
                                 description: >-
                                   Consensus captures the consensus rules for
                                   processing a block in the blockchain,
@@ -5655,12 +5711,15 @@ paths:
                                   state transition machine.
                               chain_id:
                                 type: string
+                                example: 'bbn-test2'
                               height:
                                 type: string
                                 format: int64
+                                example: '16997'
                               time:
                                 type: string
                                 format: date-time
+                                example: '2023-02-05T13:32:50.811668819Z'
                               last_block_id:
                                 title: prev block info
                                 type: object
@@ -5668,58 +5727,72 @@ paths:
                                   hash:
                                     type: string
                                     format: byte
+                                    example: 'wO3hGzNB+Wjq8PCNTYEbGBHf1B/jgwUMC2SORyYk4oU='
                                   part_set_header:
                                     type: object
                                     properties:
                                       total:
                                         type: integer
                                         format: int64
+                                        example: '1'
                                       hash:
                                         type: string
                                         format: byte
+                                        example: 'TM4uJY5pBhWt/lEqzKYgOXeoVQUzRx5Fd4LDucqzyzU='
                                     title: PartsetHeader
                               last_commit_hash:
                                 type: string
                                 format: byte
+                                example: 'Q8C8ELDk7QLwdzgTUo8zhplHMj+jhAO9yqPCmbTFVu0='
                                 title: hashes of block data
                               data_hash:
                                 type: string
                                 format: byte
+                                example: 'thIF+6Qb1ou0zMx4pGV+thXoVe6FWudxRpWJ1unseZA='
                               validators_hash:
                                 type: string
                                 format: byte
+                                example: 'ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I='
                                 title: hashes from the app output from the prev block
                               next_validators_hash:
                                 type: string
                                 format: byte
+                                example: 'ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I='
                               consensus_hash:
                                 type: string
                                 format: byte
+                                example: 'BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8='
                               app_hash:
                                 type: string
                                 format: byte
+                                example: 'j39BHZpssp/suNEgAAX+905d2JMGFV8fG/ESAa0ZYFA='
                               last_results_hash:
                                 type: string
                                 format: byte
+                                example: '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
                               evidence_hash:
                                 type: string
                                 format: byte
                                 title: consensus info
+                                example: '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
                               proposer_address:
                                 type: string
                                 format: byte
+                                example: 'NRi6kxEiG4x+YyXtkbgfk016Ijo='
                             description: >-
                               Header defines the structure of a Tendermint block
                               header.
                           babylon_epoch:
                             type: string
                             format: uint64
+                            example: '85'
                             title: >-
                               epoch is the epoch number of this header on Babylon
                               ledger
                           babylon_tx_hash:
                             type: string
                             format: byte
+                            example: '8npYFEzROQX5sIZlahdSq4Uu0TSoEtlEyqMzQ+LeDXU='
                             title: >-
                               babylon_tx_hash is the hash of the tx that includes
                               this header
@@ -5887,6 +5960,7 @@ paths:
                       timestamped_headers_count:
                         type: string
                         format: uint64
+                        example: '483'
                         title: >-
                           timestamped_headers_count is the number of timestamped
                           headers in CZ's canonical chain
@@ -5897,12 +5971,15 @@ paths:
                       epoch_number:
                         type: string
                         format: uint64
+                        example: '85'
                       current_epoch_interval:
                         type: string
                         format: uint64
+                        example: '200'
                       first_block_height:
                         type: string
                         format: uint64
+                        example: '16801'
                       last_block_header:
                         description: >-
                           last_block_header is the header of the last block in this
@@ -5923,9 +6000,11 @@ paths:
                               block:
                                 type: string
                                 format: uint64
+                                example: '11'
                               app:
                                 type: string
                                 format: uint64
+                                example: '0'
                             description: >-
                               Consensus captures the consensus rules for processing
                               a block in the blockchain,
@@ -6086,24 +6165,28 @@ paths:
                       epoch_num:
                         type: string
                         format: uint64
+                        example: '85'
                         title: >-
                           epoch_num defines the epoch number the raw checkpoint is
                           for
                       last_commit_hash:
                         type: string
                         format: byte
+                        example: '5iUfPaCyRrXeeT85KeM7XGx3rIwNwGpsOEpIR3madC0='
                         title: >-
                           last_commit_hash defines the 'LastCommitHash' that
                           individual BLS sigs are signed on
                       bitmap:
                         type: string
                         format: byte
+                        example: 'BQAAAAAAAAAAAAAAAA=='
                         title: >-
                           bitmap defines the bitmap that indicates the signers of
                           the BLS multi sig
                       bls_multi_sig:
                         type: string
                         format: byte
+                        example: 'lUNfobCpWZ/Fr7FcKf3H9e4L8DT0cQOe6vwH+gblXVIROMKt42/Gml4E49lv8Brz'
                         title: >-
                           bls_multi_sig defines the multi sig that is aggregated
                           from individual BLS sigs
@@ -6121,9 +6204,11 @@ paths:
                             index:
                               type: integer
                               format: int64
+                              example: '588'
                             hash:
                               type: string
                               format: byte
+                              example: '000000000000000000063bf7d4784b651f47492dc1c9a8053f4ab66e7aa04209'
                           title: >-
                             Each provided OP_RETURN transaction can be idendtified
                             by hash of block in
@@ -6143,21 +6228,26 @@ paths:
                           root_hash:
                             type: string
                             format: byte
+                            example: 'thIF+6Qb1ou0zMx4pGV+thXoVe6FWudxRpWJ1unseZA='
                           data:
                             type: string
                             format: byte
+                            example: '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'
                           proof:
                             type: object
                             properties:
                               total:
                                 type: string
                                 format: int64
+                                example: '1'
                               index:
                                 type: string
                                 format: int64
+                                example: '0'
                               leaf_hash:
                                 type: string
                                 format: byte
+                                example: 'thIF+6Qb1ou0zMx4pGV+thXoVe6FWudxRpWJ1unseZA='
                               aunts:
                                 type: array
                                 items:
@@ -6172,17 +6262,21 @@ paths:
                           total:
                             type: string
                             format: int64
+                            example: '200'
                           index:
                             type: string
                             format: int64
+                            example: '196'
                           leaf_hash:
                             type: string
                             format: byte
+                            example: 'L5aUfxN9bq4fdpp/NxeZBZ1x93cGK/IEiIzb29y86eY='
                           aunts:
                             type: array
                             items:
                               type: string
                               format: byte
+                              example: gTFClU35zEjokxwUKKrlFCvCAl6BtT0xtBOvS9uAxew= 
                         title: >-
                           proof_header_in_epoch is the proof that the Babylon header
                           is in a certain epoch
@@ -6197,12 +6291,15 @@ paths:
                               properties:
                                 validator_address:
                                   type: string
+                                  example: 'bbnvaloper19phgelwxxh9qr8y60fln5xymcrwcprzqupcjan'
                                 bls_pub_key:
                                   type: string
                                   format: byte
+                                  example: 'rwxaQLgWzc95IbeM6yJ3GyjgCzTN1zFCADddHH31ZGMbs3YyTTMDkNcxUOVE9bXJFp9/mHTaq/h6hHgynXR9doqKV1XDN7fJRRPsnue5fMgToiRY0pGThc1Zk+qQn+TJ'
                                 voting_power:
                                   type: string
                                   format: uint64
+                                  example: '100'
                               title: >-
                                 ValidatorWithBlsKey couples validator address,
                                 voting power, and its bls public key
@@ -6334,8 +6431,8 @@ paths:
                           It is the two TransactionInfo in the best (i.e., earliest)
                           checkpoint submission
                 description: >-
-                  QueryFinalizedChainInfoResponse is response type for the
-                  Query/FinalizedChainInfo RPC method.
+                  QueryFinalizedChainInfoUntilHeightResponse is response type for
+                  the Query/FinalizedChainInfoUntilHeight RPC method.
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -6423,6 +6520,7 @@ paths:
                       chain_id:
                         type: string
                         title: chain_id is the ID of the chain
+                        example: 'sandbox'
                       latest_header:
                         title: latest_header is the latest header in CZ's canonical chain
                         type: object
@@ -6430,13 +6528,16 @@ paths:
                           chain_id:
                             type: string
                             title: chain_id is the unique ID of the chain
+                            example: 'sandbox'
                           hash:
                             type: string
                             format: byte
                             title: hash is the hash of this header
+                            example: '6KtLHW1bz1acBR0qiP8GMJ3x1fIq7NkYnOeMkpOZtW0='
                           height:
                             type: string
                             format: uint64
+                            example: '1201712'
                             title: >-
                               height is the height of this header on CZ ledger
 
@@ -6455,9 +6556,11 @@ paths:
                                   block:
                                     type: string
                                     format: uint64
+                                    example: '11'
                                   app:
                                     type: string
                                     format: uint64
+                                    example: '0'
                                 description: >-
                                   Consensus captures the consensus rules for
                                   processing a block in the blockchain,
@@ -6468,12 +6571,15 @@ paths:
                                   state transition machine.
                               chain_id:
                                 type: string
+                                example: 'bbn-test2'
                               height:
                                 type: string
                                 format: int64
+                                example: '16997'
                               time:
                                 type: string
                                 format: date-time
+                                example: '2023-02-05T13:32:50.811668819Z'
                               last_block_id:
                                 title: prev block info
                                 type: object
@@ -6481,58 +6587,72 @@ paths:
                                   hash:
                                     type: string
                                     format: byte
+                                    example: 'wO3hGzNB+Wjq8PCNTYEbGBHf1B/jgwUMC2SORyYk4oU='
                                   part_set_header:
                                     type: object
                                     properties:
                                       total:
                                         type: integer
                                         format: int64
+                                        example: '1'
                                       hash:
                                         type: string
                                         format: byte
+                                        example: 'TM4uJY5pBhWt/lEqzKYgOXeoVQUzRx5Fd4LDucqzyzU='
                                     title: PartsetHeader
                               last_commit_hash:
                                 type: string
                                 format: byte
+                                example: 'Q8C8ELDk7QLwdzgTUo8zhplHMj+jhAO9yqPCmbTFVu0='
                                 title: hashes of block data
                               data_hash:
                                 type: string
                                 format: byte
+                                example: 'thIF+6Qb1ou0zMx4pGV+thXoVe6FWudxRpWJ1unseZA='
                               validators_hash:
                                 type: string
                                 format: byte
+                                example: 'ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I='
                                 title: hashes from the app output from the prev block
                               next_validators_hash:
                                 type: string
                                 format: byte
+                                example: 'ZSNW89DreulvecG6RUnLdtD/H6wt/aXryxaBY0/Yh0I='
                               consensus_hash:
                                 type: string
                                 format: byte
+                                example: 'BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8='
                               app_hash:
                                 type: string
                                 format: byte
+                                example: 'j39BHZpssp/suNEgAAX+905d2JMGFV8fG/ESAa0ZYFA='
                               last_results_hash:
                                 type: string
                                 format: byte
+                                example: '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
                               evidence_hash:
                                 type: string
                                 format: byte
                                 title: consensus info
+                                example: '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
                               proposer_address:
                                 type: string
                                 format: byte
+                                example: 'NRi6kxEiG4x+YyXtkbgfk016Ijo='
                             description: >-
                               Header defines the structure of a Tendermint block
                               header.
                           babylon_epoch:
                             type: string
                             format: uint64
+                            example: '85'
                             title: >-
                               epoch is the epoch number of this header on Babylon
                               ledger
                           babylon_tx_hash:
                             type: string
                             format: byte
+                            example: '8npYFEzROQX5sIZlahdSq4Uu0TSoEtlEyqMzQ+LeDXU='
                             title: >-
                               babylon_tx_hash is the hash of the tx that includes
                               this header
@@ -6700,6 +6820,7 @@ paths:
                       timestamped_headers_count:
                         type: string
                         format: uint64
+                        example: '483'
                         title: >-
                           timestamped_headers_count is the number of timestamped
                           headers in CZ's canonical chain
@@ -6710,12 +6831,15 @@ paths:
                       epoch_number:
                         type: string
                         format: uint64
+                        example: '85'
                       current_epoch_interval:
                         type: string
                         format: uint64
+                        example: '200'
                       first_block_height:
                         type: string
                         format: uint64
+                        example: '16801'
                       last_block_header:
                         description: >-
                           last_block_header is the header of the last block in this
@@ -6736,9 +6860,11 @@ paths:
                               block:
                                 type: string
                                 format: uint64
+                                example: '11'
                               app:
                                 type: string
                                 format: uint64
+                                example: '0'
                             description: >-
                               Consensus captures the consensus rules for processing
                               a block in the blockchain,
@@ -6899,24 +7025,28 @@ paths:
                       epoch_num:
                         type: string
                         format: uint64
+                        example: '85'
                         title: >-
                           epoch_num defines the epoch number the raw checkpoint is
                           for
                       last_commit_hash:
                         type: string
                         format: byte
+                        example: '5iUfPaCyRrXeeT85KeM7XGx3rIwNwGpsOEpIR3madC0='
                         title: >-
                           last_commit_hash defines the 'LastCommitHash' that
                           individual BLS sigs are signed on
                       bitmap:
                         type: string
                         format: byte
+                        example: 'BQAAAAAAAAAAAAAAAA=='
                         title: >-
                           bitmap defines the bitmap that indicates the signers of
                           the BLS multi sig
                       bls_multi_sig:
                         type: string
                         format: byte
+                        example: 'lUNfobCpWZ/Fr7FcKf3H9e4L8DT0cQOe6vwH+gblXVIROMKt42/Gml4E49lv8Brz'
                         title: >-
                           bls_multi_sig defines the multi sig that is aggregated
                           from individual BLS sigs
@@ -6934,9 +7064,11 @@ paths:
                             index:
                               type: integer
                               format: int64
+                              example: '588'
                             hash:
                               type: string
                               format: byte
+                              example: '000000000000000000063bf7d4784b651f47492dc1c9a8053f4ab66e7aa04209'
                           title: >-
                             Each provided OP_RETURN transaction can be idendtified
                             by hash of block in
@@ -6956,21 +7088,26 @@ paths:
                           root_hash:
                             type: string
                             format: byte
+                            example: 'thIF+6Qb1ou0zMx4pGV+thXoVe6FWudxRpWJ1unseZA='
                           data:
                             type: string
                             format: byte
+                            example: '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'
                           proof:
                             type: object
                             properties:
                               total:
                                 type: string
                                 format: int64
+                                example: '1'
                               index:
                                 type: string
                                 format: int64
+                                example: '0'
                               leaf_hash:
                                 type: string
                                 format: byte
+                                example: 'thIF+6Qb1ou0zMx4pGV+thXoVe6FWudxRpWJ1unseZA='
                               aunts:
                                 type: array
                                 items:
@@ -6985,17 +7122,21 @@ paths:
                           total:
                             type: string
                             format: int64
+                            example: '200'
                           index:
                             type: string
                             format: int64
+                            example: '196'
                           leaf_hash:
                             type: string
                             format: byte
+                            example: 'L5aUfxN9bq4fdpp/NxeZBZ1x93cGK/IEiIzb29y86eY='
                           aunts:
                             type: array
                             items:
                               type: string
                               format: byte
+                              example: gTFClU35zEjokxwUKKrlFCvCAl6BtT0xtBOvS9uAxew= 
                         title: >-
                           proof_header_in_epoch is the proof that the Babylon header
                           is in a certain epoch
@@ -7010,12 +7151,15 @@ paths:
                               properties:
                                 validator_address:
                                   type: string
+                                  example: 'bbnvaloper19phgelwxxh9qr8y60fln5xymcrwcprzqupcjan'
                                 bls_pub_key:
                                   type: string
                                   format: byte
+                                  example: 'rwxaQLgWzc95IbeM6yJ3GyjgCzTN1zFCADddHH31ZGMbs3YyTTMDkNcxUOVE9bXJFp9/mHTaq/h6hHgynXR9doqKV1XDN7fJRRPsnue5fMgToiRY0pGThc1Zk+qQn+TJ'
                                 voting_power:
                                   type: string
                                   format: uint64
+                                  example: '100'
                               title: >-
                                 ValidatorWithBlsKey couples validator address,
                                 voting power, and its bls public key
@@ -7564,13 +7708,16 @@ paths:
                         chain_id:
                           type: string
                           title: chain_id is the unique ID of the chain
+                          example: sandbox
                         hash:
                           type: string
                           format: byte
                           title: hash is the hash of this header
+                          example: 'nwbmL+O9naKWlcXPF/ydfidWolnDTtdrTHpauJszR0Q='
                         height:
                           type: string
                           format: uint64
+                          example: '1214966'
                           title: >-
                             height is the height of this header on CZ ledger
 
@@ -7589,9 +7736,11 @@ paths:
                                 block:
                                   type: string
                                   format: uint64
+                                  example: '11'
                                 app:
                                   type: string
                                   format: uint64
+                                  example: '0'
                               description: >-
                                 Consensus captures the consensus rules for
                                 processing a block in the blockchain,
@@ -7602,12 +7751,15 @@ paths:
                                 state transition machine.
                             chain_id:
                               type: string
+                              example: 'bbn-test2'
                             height:
                               type: string
                               format: int64
+                              example: '47'
                             time:
                               type: string
                               format: date-time
+                              example: '2023-02-06T09:06:55.265087672Z'
                             last_block_id:
                               title: prev block info
                               type: object
@@ -7615,58 +7767,72 @@ paths:
                                 hash:
                                   type: string
                                   format: byte
+                                  example: '7X371fiUPmi7CJAn8mn0o0jZW/gSHYW1FDr72hBJmCo='
                                 part_set_header:
                                   type: object
                                   properties:
                                     total:
                                       type: integer
                                       format: int64
+                                      example: '1'
                                     hash:
                                       type: string
                                       format: byte
+                                      example: 'T0U/P/ytKEtrED92o/P99NeYrETfHxPnVipdjXe11D0='
                                   title: PartsetHeader
                             last_commit_hash:
                               type: string
                               format: byte
                               title: hashes of block data
+                              example: 'VDr+2Sv74IpnFUZdNed1GQesT+fKmObQD+JLfMWKjGk='
                             data_hash:
                               type: string
                               format: byte
+                              example: 'VAsoaSNOik8BToJxRrGT+juYVfowMsKgB8iH4Ye1Gxw='
                             validators_hash:
                               type: string
                               format: byte
                               title: hashes from the app output from the prev block
+                              example: 'xp7fUgT7a3NGAowzc2YMlx3smaxcw+b/+UDN0bf1FWQ='
                             next_validators_hash:
                               type: string
                               format: byte
+                              example: 'xp7fUgT7a3NGAowzc2YMlx3smaxcw+b/+UDN0bf1FWQ='
                             consensus_hash:
                               type: string
                               format: byte
+                              example: 'BICRvH3cKD93v7+R1zxE2ljD34qcvIZ0Bdi389qtoi8='
                             app_hash:
                               type: string
                               format: byte
+                              example: '84/hCGj7As1EQHkNWPoKbltTgI4ygC9DMUTR7h5Cs7M='
                             last_results_hash:
                               type: string
                               format: byte
+                              example: 'BwHP9RZ9QBG+AGyekgyk4QypbzCw/LPGkUNL4Af/eIc='
                             evidence_hash:
                               type: string
                               format: byte
                               title: consensus info
+                              example: '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
                             proposer_address:
                               type: string
                               format: byte
+                              example: 'WLEoPJImsAOqoq9N2DNs/F3Iag0='
                           description: >-
                             Header defines the structure of a Tendermint block
                             header.
                         babylon_epoch:
                           type: string
                           format: uint64
+                          example: '1'
                           title: >-
                             epoch is the epoch number of this header on Babylon
                             ledger
                         babylon_tx_hash:
                           type: string
                           format: byte
+                          example: 'ZQQkMMnDn8xMHOjjtUeuyPVB9l6AgXAA5X+BDKzvucI='
                           title: >-
                             babylon_tx_hash is the hash of the tx that includes this
                             header
