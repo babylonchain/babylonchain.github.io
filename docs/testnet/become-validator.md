@@ -90,6 +90,16 @@ the `babylond tx checkpointing create-validator` command.
 This command expects that a BLS validator key exists under the `~/.babylond/config/priv_validator_key.json`
 and has the same parameters as the `babylond tx staking create-validator` command.
 
+:::info
+
+Note: Babylon validators are required to submit a BLS signature transaction
+every epoch (with current parameters every ~30mins). Those transactions
+currently cost a static gas fee of `100ubbn`. Therefore, it is important
+that validators maintain enough unbonded funds in their keyring to pay
+for those transaction fees.
+
+:::
+
 To create the validator (using sample parameters):
 ```console
 # Note the variables
