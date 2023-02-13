@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 # Checkpointing Module
 
-📕 Learn what the Babylon Checkpointing Module is and how it operates.
+Learn what the Babylon Checkpointing Module is and how it operates.
 
 ---
 

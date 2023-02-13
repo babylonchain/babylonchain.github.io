@@ -1,12 +1,12 @@
 ---
 id: btclightclient
-sidebar_label: BTC Light Client
+sidebar_label: BTC Light Client Module
 hide_table_of_contents: true
 ---
 
 # BTC Light Client Module
 
-📗 Learn what the Babylon BTC Light Client Module is and how it operates.
+Learn what the Babylon BTC Light Client Module is and how it operates.
 
 ---
 

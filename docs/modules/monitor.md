@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 # Vigilante Monitor
 
-📺 Learn what the Babylon Vigilante Monitor program is and how it operates.
+Learn what the Babylon Vigilante Monitor program is and how it operates.
 
 ---
 

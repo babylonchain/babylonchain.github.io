@@ -6,14 +6,15 @@ hide_table_of_contents: true
 
 # Setting Up a Full Node
 
-👀 Learn how to set up the full node for the Babylon system.
+Learn how to set up the full node for the Babylon system.
 
 ---
+![SetNode](./images/SetNode.png)
 
 :::info Note
 
 This guide requires having Babylon installed on a Linux System.
-The instructions can be found on the [Installation page](../installation.md)
+The instructions can be found on the [Installation page](/docs/Installation/installation.md)
 The version to install is specified at the [bbn-test-1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-1).
 
 :::

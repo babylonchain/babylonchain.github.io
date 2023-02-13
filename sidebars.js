@@ -45,7 +45,7 @@ const sidebars = {
         'modules/monitor',
       ],
     },
-    'installation',
+    'Installation/installation',
     {
       type: 'category',
       label: 'Testnet',

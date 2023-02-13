@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 # Integrating with Babylon
 
-🔐 Learn how to integrate a Cosmos Zone with Babylon.
+Learn how to integrate a Cosmos Zone with Babylon.
 
 ---
 
@@ -32,14 +32,16 @@ It gives us the following advantages:
 
 ## Running a Babylon IBC relayer
 
-Running a Babylon IBC relayer consists of the following steps
+![SetNode](./images/integrating.png)
 
-1. Create a Babylon account
-2. Obtain Babylon tokens
-3. Install the Babylon relayer
-5. Configure the Babylon relayer
-6. Restore the Babylon account to the Babylon relayer
-7. Start the Babylon relayer
+Running a Babylon IBC relayer consists of the following steps:
+
+1. Create a Babylon Account
+2. Obtain Babylon Tokens
+3. Install the Babylon Relayer
+5. Configure the Babylon Relayer
+6. Restore the Babylon Account to the Babylon Relayer
+7. Start the Babylon Relayer
 
 ### Create a Babylon Account
 

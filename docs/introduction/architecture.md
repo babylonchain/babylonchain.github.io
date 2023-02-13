@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 # Babylon Architecture <a id="key"></a>
 
-🔎 Examine the components and modules that construct Babylon.
+Examine the components and modules that construct Babylon.
 
 ---
 

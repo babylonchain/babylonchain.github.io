@@ -3813,7 +3813,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'http://api.testnet.babylonchain.io/babylon/checkpointing/v1/last_raw_checkpoint/CKPT_STATUS_SUBMITTED'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/checkpointing/v1/last_raw_checkpoint/CKPT_STATUS_SUBMITTED'\
             --header 'accept: application/json' \
       responses:
         '200':

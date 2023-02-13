@@ -6,16 +6,19 @@ hide_table_of_contents: true
 
 # Becoming a Validator
 
-👨‍🏫 Learn how to become a Validator for Babylon.
+Learn how to become a Validator for Babylon.
 
 ---
 
 In this guide we are going to go through the steps for someone
 to become a validator.
 
-Prerequisites: Having a full node setup and synced by following this [guide](./setup-node.md)
+![validator](./images/validator.png)
 
-## Create a Keyring and Get Funds
+## Prerequisites
+Having a full node setup and synced by following this [guide](./setup-node.md)
+
+## 1. Create a Keyring and Get Funds
 
 Validators are required to have funds for two reasons:
 1. They need to provide a self delegation
@@ -31,7 +34,7 @@ Babylon will support other types of encrypted backends provided by the Cosmos SD
 The [Getting Testnet Tokens](./getting-funds.md) page contains detailed instructions
 on how to create a keyring and get funds for it through a faucet.
 
-## Create a BLS key
+## 2. Create a BLS key
 
 Validators are expected to submit a BLS signature at the end of each epoch.
 To do that, a validator needs to have a BLS key pair to sign information with.
@@ -54,7 +57,7 @@ sudo systemctl stop babylond
 sudo systemctl start babylond
 ```
 
-## Modify the Configuration
+## 3. Modify the Configuration
 
 A Babylon validator needs to send BLS signature transactions at the end of each epoch.
 This process is done automatically through the Babylon codebase which identifies
@@ -83,7 +86,7 @@ to:
 timeout_commit = "10s"
 ```
 
-## Create the Validator
+## 4. Create the Validator
 
 Contrary to a vanilla Cosmos SDK chain, a validator for Babylon is created through
 the `babylond tx checkpointing create-validator` command.
@@ -130,7 +133,7 @@ validator set to not be full) as well as have at least `10000000ubbn` bonded.
 
 :::
 
-## Verify your Validator
+## 5. Verify your Validator
 
 On the Babylon system,
 one can become a validator only after an epoch ends.

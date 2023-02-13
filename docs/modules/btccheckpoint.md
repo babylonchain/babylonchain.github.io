@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 # BTC Checkpoint Module
 
-📙 Learn what the Babylon BTC Checkpoint Module is and how it operates.
+Learn what the Babylon BTC Checkpoint Module is and how it operates.
 
 ---
 
@@ -41,7 +41,7 @@ lead to (if submitters and reporters do not coordinate):
 and deciding which submission is first on Bitcoin ledger.
 
 
-### Submission identification
+### Submission Identification
 
 Each submitted transaction is identified by `TransactionKey`  which is composed from
 Bitcoin block header hash and transaction index in the block, and each submission
@@ -51,7 +51,7 @@ submissions.
 This layout makes it easy to not accept submissions if it was already reported and recorded
 in Babylon ledger.
 
-### Submission Validation rules
+### Submission Validation Rules
 
 Each submission is inserted into Babylon ledger by sending transaction which contains
 `MsgInsertBTCSpvProof` [msg](https://github.com/babylonchain/babylon/blob/dev/proto/babylon/btccheckpoint/tx.proto#L15).

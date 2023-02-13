@@ -5,7 +5,7 @@ hide_table_of_contents: true
 ---
 
 #  Primary Usecase: Securing PoS Chains <a id="usecase"></a>
-🛠 Learn about Babylon's use case for securing PoS chain transactions with Bitcoin timestamps.
+Learn about Babylon's use case for securing PoS chain transactions with Bitcoin timestamps.
 
 ---
 

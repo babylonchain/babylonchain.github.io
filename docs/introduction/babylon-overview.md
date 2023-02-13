@@ -7,7 +7,7 @@ hide_table_of_contents: true
 
 # Babylon Overview <a id="overview"></a>
 
-📖 Get to know what is Babylon and how it works.
+Get to know what is Babylon and how it works.
 
 ---
 
