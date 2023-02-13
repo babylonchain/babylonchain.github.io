@@ -54,7 +54,7 @@ sudo systemctl stop babylond
 sudo systemctl start babylond
 ```
 
-## Modify the configuration
+## Modify the Configuration
 
 A Babylon validator needs to send BLS signature transactions at the end of each epoch.
 This process is done automatically through the Babylon codebase which identifies
@@ -83,7 +83,7 @@ to:
 timeout_commit = "10s"
 ```
 
-## Create the validator
+## Create the Validator
 
 Contrary to a vanilla Cosmos SDK chain, a validator for Babylon is created through
 the `babylond tx checkpointing create-validator` command.
@@ -130,7 +130,7 @@ validator set to not be full) as well as have at least `10000000ubbn` bonded.
 
 :::
 
-## Verify your validator
+## Verify your Validator
 
 On the Babylon system,
 one can become a validator only after an epoch ends.

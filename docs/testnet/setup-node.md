@@ -18,7 +18,7 @@ The version to install is specified at the [bbn-test-1 network info page](https:
 
 :::
 
-## 1. Initialize the node directory
+## 1. Initialize the Node Directory
 
 First, initialize a node configuration directory under `~/.babylond`.
 The `$NODENAME` variable specifies the name you aim to give your node.
@@ -33,7 +33,7 @@ tar -xjf genesis.tar.bz2 && rm genesis.tar.bz2
 mv genesis.json ~/.babylond/config/genesis.json
 ```
 
-## 2. Add seed nodes and persistent peers
+## 2. Add Seed Nodes and Persistent Peers
 
 Edit the configuration file at `~/.babylond/config/config.toml` and modify
 the `seeds` and `persistent_peers` attributes to contain appropriate seeds and peers
@@ -44,7 +44,7 @@ Edit the configuration file at `~/.babylond/config/app.toml` and modify the
 `btc-network` and `btc-tag` attributes to contain the BTC network parameters specified
 in the [bbn-test-1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-1).
 
-## 3. Setup cosmovisor
+## 3. Setup Cosmovisor
 
 To install the latest version of Cosmovisor
 ```console
@@ -89,7 +89,7 @@ WantedBy=multi-user.target
 EOF
 ```
 
-## 4. Start the node
+## 4. Start the Node
 
 ```console
 sudo -S systemctl daemon-reload

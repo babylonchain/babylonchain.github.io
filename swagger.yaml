@@ -123,7 +123,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/btccheckpoint/v1?start_epoch=babylond12345&end_epoch=babylond6789&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/btccheckpoint/v1?start_epoch=babylond12345&end_epoch=babylond6789&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -393,7 +393,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/btccheckpoint/v1/127778958'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/btccheckpoint/v1/127778958'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -526,7 +526,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/btccheckpoint/v1/127778958/submissions?&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/btccheckpoint/v1/127778958/submissions?&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -754,7 +754,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/btclightclient/v1/contains?hash=qwrrasf345df'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/btclightclient/v1/contains?hash=qwrrasf345df'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -835,7 +835,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/btclightclient/v1/containsBytes?hash=babylond345d32f'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/btclightclient/v1/containsBytes?hash=babylond345d32f'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -911,7 +911,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/btclightclient/v1/hashes?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/btclightclient/v1/hashes?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -1053,7 +1053,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/btclightclient/v1/mainchain?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/btclightclient/v1/mainchain?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -1332,7 +1332,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/epoching/v1/delegation_lifecycle/qeewr6778fnjgdth'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/epoching/v1/delegation_lifecycle/qeewr6778fnjgdth'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -1430,7 +1430,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/epoching/v1/epochs?start_epoch=babylond12345&end_epoch=babylond6789&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/epoching/v1/epochs?start_epoch=babylond12345&end_epoch=babylond6789&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -1800,7 +1800,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/epoching/v1/epochs/127767843567'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/epoching/v1/epochs/127767843567'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -2111,7 +2111,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/epoching/v1/epochs/127767843567/messages?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/epoching/v1/epochs/127767843567/messages?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -2631,7 +2631,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/epoching/v1/epochs/127767843567/validator_set?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/epoching/v1/epochs/127767843567/validator_set?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -2792,7 +2792,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/epoching/v1/epochs:latest/messages?end_epoch=babylond12345&epoch_count=5&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/epoching/v1/epochs:latest/messages?end_epoch=babylond12345&epoch_count=5&pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -3374,7 +3374,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/epoching/v1/validator_lifecycle/babylonddev877876'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/epoching/v1/validator_lifecycle/babylonddev877876'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -3468,7 +3468,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/checkpointing/v1/bls_public_keys/127767843567?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/checkpointing/v1/bls_public_keys/127767843567?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -3624,7 +3624,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/checkpointing/v1/epochs/12777895643/status'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/checkpointing/v1/epochs/12777895643/status'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -3734,7 +3734,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/checkpointing/v1/epochs:status_count?epoch_count=12'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/checkpointing/v1/epochs:status_count?epoch_count=12'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -3813,7 +3813,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/checkpointing/v1/last_raw_checkpoint/CKPT_STATUS_SUBMITTED'\
+            --url 'http://api.testnet.babylonchain.io/babylon/checkpointing/v1/last_raw_checkpoint/CKPT_STATUS_SUBMITTED'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -3955,7 +3955,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/checkpointing/v1/raw_checkpoint/12777895643'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/checkpointing/v1/raw_checkpoint/12777895643'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -4158,7 +4158,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/checkpointing/v1/raw_checkpoint/CKPT_STATUS_SUBMITTED?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/checkpointing/v1/raw_checkpoint/CKPT_STATUS_SUBMITTED?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -4431,7 +4431,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/chain_info/qwertydev55667734'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/zoneconcierge/v1/chain_info/qwertydev55667734'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -4817,7 +4817,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/chain_info/qwertydev55667734/epochs/12778899564'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/zoneconcierge/v1/chain_info/qwertydev55667734/epochs/12778899564'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -5221,7 +5221,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/chain_info/qwertydev55667734/header/20'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/zoneconcierge/v1/chain_info/qwertydev55667734/header/20'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -5643,7 +5643,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/finalized_chain_info/qwertydev55667734?prove=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/zoneconcierge/v1/finalized_chain_info/qwertydev55667734?prove=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -6503,7 +6503,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/finalized_chain_info/qwertydev55667734/height/20?prove=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/zoneconcierge/v1/finalized_chain_info/qwertydev55667734/height/20?prove=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -7382,7 +7382,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/headers/127767843567?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/zoneconcierge/v1/headers/127767843567?pagination.key=2&pagination.offset=1&pagination.limit=10&pagination.count_total=true&pagination.reverse=true'\
             --header 'accept: application/json' \
       responses:
         '200':
@@ -7690,7 +7690,7 @@ paths:
           label: 'cURL'
           source: |
             curl --request GET \
-            --url 'https://docs.babylonchain.io/api/babylon/zoneconcierge/v1/headers/qwertydev55667734/epochs/12778967855'\
+            --url 'http://api.testnet.babylonchain.io/api/babylon/zoneconcierge/v1/headers/qwertydev55667734/epochs/12778967855'\
             --header 'accept: application/json' \
       responses:
         '200':

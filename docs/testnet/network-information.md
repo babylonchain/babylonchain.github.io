@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 # Network Information
 
-🧐 Obtain the network information for the current Babylon Testnet
+🧐 Obtain the network information for the current Babylon Testnet.
 
 ---
 

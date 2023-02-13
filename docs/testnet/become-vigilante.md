@@ -121,7 +121,7 @@ docker run --rm \
          babylonchain/vigilante-monitor
 ```
 
-### buildx
+### Buildx
 
 The above `Dockerfile`s are also compatible with Docker's [buildx feature](https://docs.docker.com/desktop/multi-arch/)
 that allows multi-architectural builds. To have a multi-architectural build,

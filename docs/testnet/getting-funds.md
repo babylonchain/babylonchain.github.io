@@ -13,7 +13,7 @@ hide_table_of_contents: true
 In this guide we will go through how you can create a keyring and request for tokens
 through the Babylon testnet faucet.
 
-## 1. Create a keyring
+## 1. Create a Keyring
 
 :::info Note
 
@@ -35,7 +35,7 @@ babylond --keyring-backend test keys add my-key
 
 This will output an address and a memo. Record the memo as it is the only way to recover your key if it gets lost.
 
-## 2. Request funds from the Babylon testnet faucet
+## 2. Request Funds from the Babylon Testnet Faucet
 
 This can be accomplished by going to the [Babylon testnet faucet](https://faucet.testnet.babylonchain.io) page to 
 request funds by providing the address you created before.

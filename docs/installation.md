@@ -31,7 +31,7 @@ $ go version
 go version go1.19 darwin/amd64
 ```
 
-## Step 2: Build and install Babylon <a id="step2"></a>
+## Step 2: Build and Install Babylon <a id="step2"></a>
 You need to clone Babylon’s GitHub repository to install the `babylond` executable.
 
 1. Install build requirements

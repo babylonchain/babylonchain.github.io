@@ -41,7 +41,7 @@ Running a Babylon IBC relayer consists of the following steps
 6. Restore the Babylon account to the Babylon relayer
 7. Start the Babylon relayer
 
-### Create a Babylon account
+### Create a Babylon Account
 
 To create a Babylon account, 
 
@@ -54,12 +54,12 @@ where `$BABYLON_KEY_NAME` is a name you pick for the Babylon key, `$BABYLON_CHAI
 The command will return the secret key, address and the mnemonics.
 Please keep the secret key in a secret place.
 
-### Obtain Babylon tokens
+### Obtain Babylon Tokens
 
 Then, you need to obtain some Babylon tokens for the address in order to run the relayer.
 The testnet tokens can be obtained from the faucet.
 
-### Install the Babylon relayer
+### Install the Babylon Relayer
 
 The Babylon relayer is located at https://github.com/babylonchain/babylon-relayer.
 Please follow the documentation for installing it.
@@ -69,7 +69,7 @@ To summary, under the `babylon-relayer/` folder,
 $ make build install
 ```
 
-### Configure the Babylon relayer
+### Configure the Babylon Relayer
 
 The default Babylon config file will be located at `~/.relayer/config/config.yaml`.
 An example config file for integrating Osmosis testnet is as follows:
@@ -111,7 +111,7 @@ paths:
             chain-id: osmo-test-4
 ```
 
-### Restore the Babylon account to the Babylon relayer
+### Restore the Babylon Account to the Babylon Relayer
 
 To restore the Babylon account to the Babylon relayer,
 
@@ -121,7 +121,7 @@ $ babylon-relayer keys restore $BABYLON_CHAIN_ID testkey "$MNEMONICS"
 
 where `$BABYLON_CHAIN_ID` is the chain ID of Babylon and `$MNEMONICS` is the mnemonics generated when creating the Babylon account.
 
-### Start the Babylon relayer
+### Start the Babylon Relayer
 
 To start the Babylon relayer,
 
@@ -131,7 +131,7 @@ $ babylon-relayer keep-update-clients --interval $INTERVAL
 
 where `$INTERVAL` is the interval for relaying a header (e.g., `10m` to denote 10 minutes per header).
 
-### Check if the integration is successful
+### Check if the Integration is Successful
 
 After the above steps, the Cosmos zone has been integrated to Babylon.
 You can do the following things to check the status of the integration:
@@ -139,7 +139,7 @@ You can do the following things to check the status of the integration:
 - Check whether BabylonScan shows the information of the Cosmos zone or not.
   - NOTE: one needs to submit a PR to Babylon's chain registry in order to be shown on BabylonScan
 
-## Future integration phases
+## Future Integration Phases
 
 In the future, Babylon will enable further integration phases, such as raising alarms upon dishonest majority attacks and reducing the unbonding time period.
 Such integrations will need IBC packets, thus require using the original IBC relayer rather than the above specialized one.
