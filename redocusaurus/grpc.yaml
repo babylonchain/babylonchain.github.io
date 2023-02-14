@@ -6,83 +6,6 @@ info:
 servers:
   - url: http://api.testnet.babylonchain.io/
     description: Test Server
-components:
-  schemas:
-    BadRequest:
-      type: object
-      properties:
-        code:
-          type: integer
-          example: 3
-        message:
-          type: string
-          example: error message.
-        details:
-          type: array
-    InternalServer:
-      type: object
-      properties:
-        code:
-          type: integer
-          example: 2
-        message:
-          type: string
-          example: error message.
-        details:
-          type: array
-  examples:
-    IncorrectPaginationKey:
-      code: 3
-      message: illegal base64 data at input byte 4
-      details: []
-    MissingValueUint:
-      code: 3
-      message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-      details: []
-    MissingValueBool:
-      code: 3
-      message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-      details: []
-    InvalidEpochNumValueFormat:
-      code: 3
-      message: >-
-        type mismatch, parameter: epoch_num, error: strconv.ParseUint: parsing
-        \"babylondev123\": invalid syntax
-      details: []
-    InvalidStatusValue:
-      code: 3
-      message: 'type mismatch, parameter: status, error: submitted is not valid'
-      details: []
-    InvalidDelAddrLength:
-      code: 3
-      message: 'decoding bech32 failed: invalid separator index 0'
-      details: []
-    InvalidDelAddrValue:
-      code: 3
-      message: 'decoding bech32 failed: invalid incomplete group'
-      details: []
-    InvalidValAddrLength:
-      code: 3
-      message: 'decoding bech32 failed: invalid separator index 0'
-      details: []
-    InvalidValAddrValue:
-      code: 3
-      message: 'decoding bech32 failed: invalid incomplete group'
-      details: []
-    InvalidChainValue:
-      code: 3
-      message: 'codespace zoneconcierge code 1109: no chain info exists at this epoch'
-      details: []
-    InvalidHeightValue:
-      code: 3
-      message: 'codespace zoneconcierge code 1103: no header exists at this height'
-      details: []
-    InvalidHeightValue2:
-      code: 3
-      message: >-
-        chain with ID sandbox does not have a timestamped header before height
-        123
-      details: []
 tags:
   - name: BTCCheckpoint
     description: The REST API for the BTC Checkpoint RPC Gateway module.
@@ -207,21 +130,20 @@ paths:
           description: >-
             Missing one or more of the required parameters:
             start_epoch/end_epoch/offset/limit/count_total/reverse.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -635,22 +557,21 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -1013,22 +934,21 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url.
           content:
@@ -1186,22 +1106,21 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url.
           content:
@@ -1463,17 +1382,20 @@ paths:
                     example: 404
         '500':
           description: Incorrect del_addr value/ del_addr parameter lenght value
-          schema:
-            $ref: '#/components/schemas/InternalServer'
-          examples:
-            InvalidDelAddrLength:
-              code: 3
-              message: 'decoding bech32 failed: invalid separator index 0'
-              details: []
-            InvalidDelAddrValue:
-              code: 3
-              message: 'decoding bech32 failed: invalid incomplete group'
-              details: []
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 2
+                  message:
+                    type: string
+                    example: 'decoding bech32 failed: invalid incomplete group'
+                  details:
+                    type: array
+                    example: []
         '501':
           description: Empty del_addr parameter.
           content:
@@ -1792,21 +1714,20 @@ paths:
           description: >-
             Missing one or more of the required parameters:
             start_epoch/end_epoch/offset/limit/count_total/reverse.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -2181,9 +2102,9 @@ paths:
                     example: 2
                   message:
                     type: string
-                    examples: >-
-                      decoding bech32 failed: (invalid incomplete
-                      group)/(invalid separator index 0)
+                    example: >-
+                      codespace epoching code 3: the epoch number is not known
+                      in DB
                   details:
                     type: array
         '501':
@@ -2648,28 +2569,21 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse/epoch_num.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
-            InvalidEpochNumValueFormat:
-              code: 3
-              message: >-
-                type mismatch, parameter: epoch_num, error: strconv.ParseUint:
-                parsing \"babylondev123\": invalid syntax
-              details: []
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url.
           content:
@@ -2826,28 +2740,21 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse/epoch_num.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
-            InvalidEpochNumValueFormat:
-              code: 3
-              message: >-
-                type mismatch, parameter: epoch_num, error: strconv.ParseUint:
-                parsing \"babylondev123\": invalid syntax
-              details: []
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -3388,22 +3295,21 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -3596,17 +3502,20 @@ paths:
                     example: 404
         '500':
           description: Incorrect val_addr value/ val_addr parameter lenght value
-          schema:
-            $ref: '#/components/schemas/InternalServer'
-          examples:
-            InvalidValAddrLength:
-              code: 3
-              message: 'decoding bech32 failed: invalid separator index 0'
-              details: []
-            InvalidValAddrValue:
-              code: 3
-              message: 'decoding bech32 failed: invalid incomplete group'
-              details: []
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 2
+                  message:
+                    type: string
+                    example: 'decoding bech32 failed: invalid incomplete group'
+                  details:
+                    type: array
+                    example: []
         '501':
           description: Empty val_addr parameter.
           content:
@@ -3706,28 +3615,21 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse/epoch_num.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
-            InvalidEpochNumValueFormat:
-              code: 3
-              message: >-
-                type mismatch, parameter: epoch_num, error: strconv.ParseUint:
-                parsing \"babylondev123\": invalid syntax
-              details: []
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -4594,26 +4496,21 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse/status.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
-            InvalidStatusValue:
-              code: 3
-              message: 'type mismatch, parameter: status, error: submitted is not valid'
-              details: []
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -5880,21 +5777,22 @@ paths:
                     example: 404
         '500':
           description: Incorrect chain value/ height value.
-          schema:
-            $ref: '#/components/schemas/InternalServer'
-          examples:
-            InvalidChainValue:
-              code: 3
-              message: >-
-                codespace zoneconcierge code 1109: no chain info exists at this
-                epoch
-              details: []
-            InvalidHeightValue:
-              code: 3
-              message: >-
-                codespace zoneconcierge code 1103: no header exists at this
-                height
-              details: []
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 2
+                  message:
+                    type: string
+                    example: >-
+                      codespace zoneconcierge code 1103: no header exists at
+                      this height
+                  details:
+                    type: array
+                    example: []
         '501':
           description: 'Empty one or all of the required parameters: chain_id/height.'
           content:
@@ -5945,22 +5843,21 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -7714,21 +7611,22 @@ paths:
                     example: 404
         '500':
           description: Incorrect chain value/ height value.
-          schema:
-            $ref: '#/components/schemas/InternalServer'
-          examples:
-            InvalidChainValue:
-              code: 3
-              message: >-
-                codespace zoneconcierge code 1109: no chain info exists at this
-                epoch
-              details: []
-            InvalidHeightValue:
-              code: 3
-              message: >-
-                chain with ID sandbox does not have a timestamped header before
-                height 123
-              details: []
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 2
+                  message:
+                    type: string
+                    example: >-
+                      chain with ID sandbox does not have a timestamped header
+                      before height 123
+                  details:
+                    type: array
+                    example: []
         '501':
           description: 'Empty one or all of the required parameters: chain_id/height.'
           content:
@@ -7975,22 +7873,21 @@ paths:
         '400':
           description: >-
             Missing one or more of the required parameters:
-            offset/limit/count_total/reverse.
-          schema:
-            $ref: '#/components/schemas/BadRequest'
-          examples:
-            IncorrectPaginationKey:
-              code: 3
-              message: illegal base64 data at input byte 4
-              details: []
-            MissingValueUint:
-              code: 3
-              message: 'strconv.ParseUint: parsing \"\": invalid syntax'
-              details: []
-            MissingValueBool:
-              code: 3
-              message: 'strconv.ParseBool: parsing \"\": invalid syntax'
-              details: []
+            start_epoch/end_epoch/offset/limit/count_total/reverse.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 3
+                  message:
+                    type: string
+                    example: 'strconv.ParseUint: parsing \"\": invalid syntax'
+                  details:
+                    type: array
+                    example: []
         '404':
           description: Not Found - Incorrect base_url parameter.
           content:
@@ -8312,7 +8209,7 @@ paths:
                     example: 2
                   message:
                     type: string
-                    examples: >-
+                    example: >-
                       codespace zoneconcierge code 1109: no chain info exists at
                       this epoch
                   details:
