@@ -11,7 +11,7 @@ Learn how to set up the full node for the Babylon system.
 
 ---
 <div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "750px"}} src={myImageUrl} alt="installationguide" />
+    <img style={{width: "750px"}} src={myImageUrl} alt="setupafullnode" />
 </div>
 
 :::info Note

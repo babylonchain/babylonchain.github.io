@@ -35,7 +35,7 @@ It gives us the following advantages:
 ## Running a Babylon IBC relayer
 
 <div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="installationguide" />
+    <img style={{width: "1000px"}} src={myImageUrl} alt="integration" />
 </div>
 
 Running a Babylon IBC relayer consists of the following steps:

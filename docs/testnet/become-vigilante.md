@@ -16,7 +16,7 @@ Vigilante programs are standalone programs that are run along-side with Babylon 
 People run a vigilante program in three modes, `reporter`, `submitter`, and `monitor`, each responsible to different aspects to the security of the Babylon network.
 
 <div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="installationguide" />
+    <img style={{width: "1000px"}} src={myImageUrl} alt="becomevigilante" />
 </div>
 
 ## Prerequisites

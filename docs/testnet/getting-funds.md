@@ -15,7 +15,7 @@ In this guide we will go through how you can create a keyring and request for to
 through the Babylon testnet faucet.
 
 <div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="installationguide" />
+    <img style={{width: "1000px"}} src={myImageUrl} alt="gettingtestnettokens" />
 </div>
 
 

@@ -15,7 +15,7 @@ In this guide we are going to go through the steps for someone
 to become a validator.
 
 <div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="installationguide" />
+    <img style={{width: "1000px"}} src={myImageUrl} alt="becomevalidator" />
 </div>
 
 ## Prerequisites

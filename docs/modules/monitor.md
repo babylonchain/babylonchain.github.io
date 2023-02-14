@@ -4,6 +4,8 @@ sidebar_label: Vigilante Monitor Program
 hide_table_of_contents: true
 ---
 
+import myImageUrl from './images/monitorprogram.png';
+
 # Vigilante Monitor
 
 Learn what the Babylon Vigilante Monitor program is and how it operates.
@@ -28,6 +30,10 @@ It ensures that the BTC header chain maintained by btclightclient is live and co
 It ensures that the checkpoint chain of the Babylon node is live and consistent with that submitted to BTC canonical chain.
 
 ## Design
+
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "1000px"}} src={myImageUrl} alt="vigilantemonitor" />
+</div>
 
 The Monitor can be started at any time after the Babylon node is started.
 The Monitor initiates by reading some parameters from the genesis file, i.e., validator BLS key set, base BTC height.

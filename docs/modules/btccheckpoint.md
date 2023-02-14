@@ -4,6 +4,8 @@ sidebar_label: BTC Checkpoint Module
 hide_table_of_contents: true
 ---
 
+import myImageUrl from './images/BTCCheckpoint.png';
+
 # BTC Checkpoint Module
 
 Learn what the Babylon BTC Checkpoint Module is and how it operates.
@@ -11,6 +13,10 @@ Learn what the Babylon BTC Checkpoint Module is and how it operates.
 ---
 
 ## Summary
+
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "1000px"}} src={myImageUrl} alt="btccheckpoint" />
+</div>
 
 The `btccheckpoint` module is responsible for receiving information about Babylon checkpoints
 submitted to Bitcoin ledger. Each valid submission is composed of two Bitcoin transactions.

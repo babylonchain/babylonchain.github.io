@@ -4,6 +4,8 @@ sidebar_label: Zone Concierge Module
 hide_table_of_contents: true
 ---
 
+import myImageUrl from './images/zoneconcierge.png';
+
 # CZ Concierge Module
 
 Learn what the Babylon Zone Concierge Module is and how it operates.
@@ -48,6 +50,10 @@ under the following assumptions:
 
 
 ## Design
+
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "1000px"}} src={myImageUrl} alt="epochingmodule" />
+</div>
 
 Babylon implements the zone concierge module in order to checkpoint headers of Cosmos zones.
 Specifically, the zone concierge module

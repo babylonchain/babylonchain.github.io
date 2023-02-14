@@ -3,6 +3,7 @@ id: epoching
 sidebar_label: Epoching Module
 hide_table_of_contents: true
 ---
+import myImageUrl from './images/epoching.png';
 
 # Epoching Module
 
@@ -33,6 +34,10 @@ In addition, in order to achieve slashable safety, Babylon has to implement Bitc
 With the epoching mechanism, all unbonding requests in an epoch will be finished upon this epoch has been checkpointed on Bitcoin.
 
 ## Design
+
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "1000px"}} src={myImageUrl} alt="epochingmodule" />
+</div>
 
 Babylon implements the epoching module in order to reduce the frequency of validator set updates, and thus the frequency of checkpointing to Bitcoin.
 Specifically, the epoching module is responsible for the following tasks:

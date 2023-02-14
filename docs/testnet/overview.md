@@ -14,7 +14,7 @@ import myImageUrl from './images/TestNet.png';
 The chart below illustrates a general overview of how to participate in Babylon testnet.
 
 <div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="installationguide" />
+    <img style={{width: "1000px"}} src={myImageUrl} alt="testnet" />
 </div>
 
 
