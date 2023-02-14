@@ -7,14 +7,18 @@ pagination_next: null
 custom_edit_url: null
 ---
 
+import myImageUrl from './image/installationguide.png';
+
 # Installation Guide
 
 💻 Learn how to install and initialize the Babylon chain on your system.
 
 ---
 
+<div style={{justifyContent: 'center', display: 'flex'}}>
+    <img style={{width: "1000px"}} src={myImageUrl} alt="installationguide" />
+</div>
 
-![Installation](./image/installationguide.png)
 
 ## Step 1: Install Golang <a id="step1"></a>
 :::info Note

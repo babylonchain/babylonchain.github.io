@@ -4,6 +4,8 @@ sidebar_label: Integrating with Babylon
 hide_table_of_contents: true
 ---
 
+import myImageUrl from './images/integrating.png';
+
 # Integrating with Babylon
 
 Learn how to integrate a Cosmos Zone with Babylon.
@@ -32,7 +34,9 @@ It gives us the following advantages:
 
 ## Running a Babylon IBC relayer
 
-![SetNode](./images/integrating.png)
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "1000px"}} src={myImageUrl} alt="installationguide" />
+</div>
 
 Running a Babylon IBC relayer consists of the following steps:
 

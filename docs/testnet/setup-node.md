@@ -3,13 +3,16 @@ id: setup-node
 sidebar_label: Setting Up a Full Node
 hide_table_of_contents: true
 ---
+import myImageUrl from './images/SetNode.png';
 
 # Setting Up a Full Node
 
 Learn how to set up the full node for the Babylon system.
 
 ---
-![SetNode](./images/SetNode.png)
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "750px"}} src={myImageUrl} alt="installationguide" />
+</div>
 
 :::info Note
 
