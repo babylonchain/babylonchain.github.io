@@ -5,6 +5,7 @@ hide_table_of_contents: true
 ---
 
 import myImageUrl from './images/BTCCheckpoint.png';
+import btcsum from './images/btccsum.png';
 
 # BTC Checkpoint Module
 
@@ -15,9 +16,8 @@ Learn what the Babylon BTC Checkpoint Module is and how it operates.
 ## Summary
 
 <div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="btccheckpoint" />
+    <img style={{width: "1000px"}} src={btcsum} alt="btccheckpoint" />
 </div>
-
 The `btccheckpoint` module is responsible for receiving information about Babylon checkpoints
 submitted to Bitcoin ledger. Each valid submission is composed of two Bitcoin transactions.
 Each of those transactions must contain at least one OP_RETRUN output which contains specific
@@ -46,6 +46,11 @@ lead to (if submitters and reporters do not coordinate):
 `btccheckpoint` module need to take care of properly de-duplicating identical submissions
 and deciding which submission is first on Bitcoin ledger.
 
+## Design
+
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "1000px"}} src={myImageUrl} alt="btccheckpoint" />
+</div>
 
 ### Submission Identification
 

@@ -5,6 +5,8 @@ hide_table_of_contents: true
 ---
 
 import myImageUrl from './images/zoneconcierge.png';
+import zoneprob from './images/zoneproblem.png';
+import zonesum from './images/zonesum.png';
 
 # CZ Concierge Module
 
@@ -14,6 +16,10 @@ Learn what the Babylon Zone Concierge Module is and how it operates.
 
 ## Summary
 
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "1000px"}} src={zonesum} alt="zoneconcierge" />
+</div>
+
 The zone concierge module is responsible for providing BTC timestamps to headers from other Cosmos zones.
 These BTC timestamps allow Cosmos zones integrating with Babylon to achieve Bitcoin security, i.e., forking a Cosmos zone is as hard as forking Bitcoin.
 To receive Cosmos zones' headers, the zone concierge module leverages the light clients in the IBC protocol.
@@ -22,6 +28,10 @@ Upon a header from IBC, zone concierge then stores the header's metadata in the 
 When the epoch that stores this header's metadata is finalized by Bitcoin, the header is consequently finalized by Bitcoin as well.
 
 ## Problem Statement
+
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "1000px"}} src={zoneprob} alt="zoneconcierge" />
+</div>
 
 Babylon aims at providing Bitcoin security to other Cosmos zones.
 To this end, Babylon needs to checkpoint itself to Bitcoin, and checkpoint other Cosmos zones to itself.
@@ -52,7 +62,7 @@ under the following assumptions:
 ## Design
 
 <div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="epochingmodule" />
+    <img style={{width: "1000px"}} src={myImageUrl} alt="zoneconcierge" />
 </div>
 
 Babylon implements the zone concierge module in order to checkpoint headers of Cosmos zones.

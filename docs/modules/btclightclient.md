@@ -5,6 +5,7 @@ hide_table_of_contents: true
 ---
 
 import myImageUrl from './images/BTCLightClient.png';
+import lightProb from './images/lightprob.png';
 
 # BTC Light Client Module
 
@@ -33,6 +34,10 @@ Each decision must be consistent among all the Babylon nodes
 to make sure their application state is the same after the execution of
 each Babylon block.
 Thus, Babylon nodes must have a consistent view of the Bitcoin chain included as a part of their state.
+
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "1000px"}} src={lightProb} alt="btclightclient" />
+</div>
 
 The BTC light client module accomplishes this by
 receiving Bitcoin headers as Tendermint-ordered Babylon transactions,

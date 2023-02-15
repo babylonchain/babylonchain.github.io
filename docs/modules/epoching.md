@@ -4,6 +4,8 @@ sidebar_label: Epoching Module
 hide_table_of_contents: true
 ---
 import myImageUrl from './images/epoching.png';
+import problem from './images/epochingprobstatement.png';
+import summary from './images/epochingsum2.png';
 
 # Epoching Module
 
@@ -13,6 +15,9 @@ Learn what the Babylon Epoching Module is and how it operates.
 
 ## Summary
 
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "1000px"}} src={summary} alt="epochingmodule" />
+</div>
 The epoching module is responsible for reducing and parameterising the frequency of updating the validator set in Babylon.
 The Babylon blockchain is divided into epochs, and each epoch contains a fixed number of consecutive blocks.
 All staking-related messages (creating validator, delegating, undelegating, and redelegating) are enqueued to the message queue of the current epoch.
@@ -20,6 +25,10 @@ At the end of each epoch, the epoching module will execute all staking-related m
 After that, the checkpointing module will generate a checkpoint containing the commitment to the epoch's validator set, then submit the checkpoint to Bitcoin.
 
 ## Problem Statement
+
+<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
+    <img style={{width: "1000px"}} src={problem} alt="epochingmodule" />
+</div>
 
 In Cosmos SDK, the validator set can change upon every block: staking-related messages that affect the validator set’s voting power distribution (e.g., bond/unbond, delegate/undelegate/redegate, slash) can be executed in any block.
 Since checkpointing the validator set to Bitcoin is necessary for Babylon to obtain Bitcoin security, the frequency of checkpointing to Bitcoin has to be same as the frequency of validator set updates.
