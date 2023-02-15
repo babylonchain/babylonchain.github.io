@@ -9,7 +9,7 @@ Learn about Babylon's use case for securing PoS chain transactions with Bitcoin 
 
 ---
 
-## Long-Range Attack: A Fundanmental Threat to PoS Chains <a id="long"></a>
+## Long-Range Attack: A Fundamental Threat to PoS Chains <a id="long"></a>
 By PoS chains, we refer to BFT (Byzantine-fault-tolerent) PoS chains that require a 2/3 majority vote from their validators to confirm a block. PoS chains are not supposed to fork, and when forking happens, the chain is attacked: To have 2/3 majority vote for both forks, at least 1/3 of the validators have double-voted by signing both forks, which is a prohibited behavior by the consensus protocol.
 
 The picture below illustrates a forking attack to a hypothetical PoS chain called **“Rugpull“**.
