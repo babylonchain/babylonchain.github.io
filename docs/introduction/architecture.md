@@ -4,7 +4,7 @@ sidebar_label: Architecture
 hide_table_of_contents: true
 ---
 
-# Babylon Architecture <a id="key"></a>
+# Babylon Architecture
 
 Examine the components and modules that construct Babylon.
 

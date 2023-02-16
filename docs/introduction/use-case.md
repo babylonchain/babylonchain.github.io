@@ -4,7 +4,7 @@ sidebar_label: A Primary Usecase - Securing PoS Chains
 hide_table_of_contents: true
 ---
 
-#  Primary Usecase: Securing PoS Chains <a id="usecase"></a>
+#  Primary Usecase: Securing PoS Chains
 Learn about Babylon's use case for securing PoS chain transactions with Bitcoin timestamps.
 
 ---

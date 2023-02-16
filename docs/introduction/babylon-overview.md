@@ -5,7 +5,7 @@ hide_table_of_contents: true
 ---
 
 
-# Babylon Overview <a id="overview"></a>
+# Babylon Overview
 
 Get to know what is Babylon and how it works.
 
