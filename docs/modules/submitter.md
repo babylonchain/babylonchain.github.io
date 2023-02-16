@@ -4,8 +4,6 @@ sidebar_label: Vigilante Submitter Program
 hide_table_of_contents: true
 ---
 
-import myImageUrl from './images/submitter.png';
-
 # Vigilante Submitter
 
 Learn what the Babylon Vigilante Submitter program is and how it operates.
@@ -26,10 +24,6 @@ It also needs to ensure that all the `SEALED` checkpoints will be eventually sub
 Further, since submitting checkpoints costs real Bitcoin to pay the miners, the submitter needs to minimize the cost and duplicate submissions.
 
 ## Design
-
-<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="vigilantesubmitter" />
-</div>
 
 The vigilante submitter program makes the following design decisions:
 

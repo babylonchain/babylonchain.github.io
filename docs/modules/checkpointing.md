@@ -4,9 +4,6 @@ sidebar_label: Checkpointing Module
 hide_table_of_contents: true
 ---
 
-import myImageUrl from './images/Checkpointing.png';
-import checksum from './images/checkpointingsum.png';
-
 # Checkpointing Module
 
 Learn what the Babylon Checkpointing Module is and how it operates.
@@ -23,18 +20,11 @@ This module plays a critical role in Babylon's security story as it produces a c
 
 Babylon's checkpointing is to empower Babylon with BTC-level security by perpetuating the Babylon ledger on BTC.
 The checkpointing module needs to generate a succinct checkpoint that involves sufficient voting power for each epoch.
-<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={checksum} alt="checkpointingmodule" />
-</div>
 For the above purpose, the Checkpointing module adopts the [BLS signature scheme](https://datatracker.ietf.org/doc/html/draft-boneh-bls-signature-00) which aggregates multiple signatures into a single signature.
 With the help of BLS signatures, a checkpoint is fixed in size and can be converted into two BTC transactions in the `OP_RETURN` field with a limit of 80 bytes.
 Therefore, the checkpointing module needs to handle all the messages related to BLS signatures such as signing, verifying and accumulating BLS signatures.
 
 ## Design
-
-<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="checkpointingmodule" />
-</div>
 
 The Checkpointing module makes the following design decisions:
 

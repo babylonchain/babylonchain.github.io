@@ -4,8 +4,6 @@ sidebar_label: Vigilante Reporter Program
 hide_table_of_contents: true
 ---
 
-import myImageUrl from './images/reporterprogram.png';
-
 # Vigilante Reporter
 
 Learn what the Babylon Vigilante Reporter program is and how it operates.
@@ -26,10 +24,6 @@ It needs to forward all the BTC headers on the canonical chain to feed the BTC h
 The reporter also needs to check every transaction in a BTC block and tries to match raw checkpoints since a raw checkpoint is decoded into two different BTC transactions.
 
 ## Design
-
-<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="vigilantereporter" />
-</div>
 
 The vigilante reporter program makes the following design decisions:
 

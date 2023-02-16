@@ -4,9 +4,6 @@ sidebar_label: BTC Light Client Module
 hide_table_of_contents: true
 ---
 
-import myImageUrl from './images/BTCLightClient.png';
-import lightProb from './images/lightprob.png';
-
 # BTC Light Client Module
 
 Learn what the Babylon BTC Light Client Module is and how it operates.
@@ -35,10 +32,6 @@ to make sure their application state is the same after the execution of
 each Babylon block.
 Thus, Babylon nodes must have a consistent view of the Bitcoin chain included as a part of their state.
 
-<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={lightProb} alt="btclightclient" />
-</div>
-
 The BTC light client module accomplishes this by
 receiving Bitcoin headers as Tendermint-ordered Babylon transactions,
 typically from a [vigilante reporter](./reporter),
@@ -52,10 +45,6 @@ Other modules can then query the BTC light client for checkpoint related
 decision making.
 
 ## Design
-
-<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="btclightclient" />
-</div>
 
 Below we outline the key design decisions for the BTC light client module:
 - [Base Bitcoin Header](#base-bitcoin-header)
