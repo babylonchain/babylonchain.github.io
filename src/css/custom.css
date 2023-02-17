@@ -139,7 +139,7 @@
   justify-content: center;
 }
 img[src*='#left'] {
-  width: 50%;
+  width: 60%;
   display: block;
   margin: auto;
 }
