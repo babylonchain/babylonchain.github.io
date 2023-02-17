@@ -4,7 +4,7 @@ sidebar_label: Testnet
 hide_table_of_contents: true
 
 ---
-import myImageUrl from './images/TestNet.png';
+import myImageUrl from './images/testnet.png';
 
 # Testnet
 

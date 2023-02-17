@@ -3,7 +3,6 @@ id: become-validator
 sidebar_label: Becoming a Validator
 hide_table_of_contents: true
 ---
-import myImageUrl from './images/validator.png';
 
 # Becoming a Validator
 
@@ -13,10 +12,7 @@ Learn how to become a Validator for Babylon.
 
 In this guide we are going to go through the steps for someone
 to become a validator.
-
-<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="becomevalidator" />
-</div>
+![validator](./images/validator.png#left)
 
 ## Prerequisites
 Having a full node setup and synced by following this [guide](./setup-node.md)

@@ -4,8 +4,6 @@ sidebar_label: Becoming a Vigilante
 hide_table_of_contents: true
 ---
 
-import myImageUrl from './images/vigilante.png';
-
 # Becoming a Babylon Vigilante
 
 Learn how to run the Babylon Vigilante program.
@@ -15,9 +13,7 @@ Learn how to run the Babylon Vigilante program.
 Vigilante programs are standalone programs that are run along-side with Babylon nodes.
 People run a vigilante program in three modes, `reporter`, `submitter`, and `monitor`, each responsible to different aspects to the security of the Babylon network.
 
-<div style={{justifyContent: 'center', display: 'flex', marginBottom: '50px'}}>
-    <img style={{width: "1000px"}} src={myImageUrl} alt="becomevigilante" />
-</div>
+![vigilante](./images/vigilante.png#left)
 
 ## Prerequisites
 
