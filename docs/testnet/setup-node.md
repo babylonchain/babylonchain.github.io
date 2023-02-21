@@ -42,8 +42,14 @@ of your choice. The full list of Babylon approved seeds and peers can be found u
 the [bbn-test1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test1).
 
 Edit the configuration file at `~/.babylond/config/app.toml` and modify the
-`btc-network` and `btc-tag` attributes to contain the BTC network parameters specified
-in the [bbn-test1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test1).
+`btc-network` and `checkpoint-tag` attributes to contain appropriate BTC network 
+parameters as below.
+
+```toml
+[btc-config]
+network = "testnet"
+checkpoint-tag = "bbn0"
+```
 
 ## 3. Setup Cosmovisor
 
