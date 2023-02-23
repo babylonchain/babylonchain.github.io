@@ -89,8 +89,7 @@ timeout_commit = "10s"
 
 Contrary to a vanilla Cosmos SDK chain, a validator for Babylon is created through
 the `babylond tx checkpointing create-validator` command.
-This command expects that a BLS validator key exists under the `~/.babylond/config/priv_validator_key.json`
-and has the same parameters as the `babylond tx staking create-validator` command.
+This command expects that a BLS validator key exists under the `~/.babylond/config/priv_validator_key.json`.
 
 :::info
 
@@ -105,7 +104,7 @@ for those transaction fees.
 To create the validator (using sample parameters):
 ```console
 # Note the variables
-# - $AMOUNT in ubbn, e.g. 10000000ubbn
+# - $AMOUNT the amount to delegate in ubbn, e.g. 10000000ubbn (must be less than the delegator's balance)
 # - $CHAIN_ID the chain ID
 # - $VAL_KEY the name of the key (with a test keyring backend) used for the validator
 babylond tx checkpointing create-validator \
