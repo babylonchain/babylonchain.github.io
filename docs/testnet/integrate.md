@@ -60,13 +60,13 @@ Please keep the secret key in a secret place.
 ### Obtain Babylon Tokens
 
 Then, you need to obtain some Babylon tokens for the address in order to run the relayer.
-The testnet tokens can be obtained from the faucet.
+The testnet tokens can be obtained from [the #faucet channel of Babylon Discord server](https://discord.com/channels/1046686458070700112/1075371070493831259).
 
 ### Install the Babylon Relayer
 
 The Babylon relayer is located at https://github.com/babylonchain/babylon-relayer.
 Please follow the documentation for installing it.
-To summary, under the `babylon-relayer/` folder,
+To summarize, under the `babylon-relayer/` folder,
 
 ```bash
 $ make build install
@@ -138,7 +138,7 @@ where `$INTERVAL` is the interval for relaying a header (e.g., `10m` to denote 1
 
 After the above steps, the Cosmos zone has been integrated to Babylon.
 You can do the following things to check the status of the integration:
-- Check the API http://rpc0.demo.babylonchain.io:1317/babylon/zoneconcierge/v1/chain_info/<your_chain_id> that shows the information of the Cosmos zone in Babylon's view
+- Check the API http://rpc.testnet.babylonchain.io:1317/babylon/zoneconcierge/v1/chain_info/<your_chain_id> that shows the information of the Cosmos zone in Babylon's view
 - Check whether BabylonScan shows the information of the Cosmos zone or not.
   - NOTE: one needs to submit a PR to Babylon's chain registry in order to be shown on BabylonScan
 
