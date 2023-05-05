@@ -10,25 +10,42 @@ Learn how to integrate a Cosmos Zone with Babylon.
 
 ---
 
-At the moment, Babylon provides a canonical chain oracle for each integrated Cosmos zone, and allows anyone to query the canonical chains of integrated Cosmos zones and query the fork headers created by a validator set with dishonest majority.
-In the future, integrating Babylon will allows Cosmos zones to raise alarms upon dishonest majority attacks, and reduce the unbonding time.
+At the moment, Babylon provides a canonical chain oracle for each integrated Cosmos zone,
+and allows anyone to query the canonical chains of integrated Cosmos zones and
+query the fork headers created by a validator set with dishonest majority.
+In the future, integrating Babylon will allows Cosmos zones to raise alarms upon
+dishonest majority attacks, and reduce the unbonding time.
 
-In order to integrate a Cosmos zone to Babylon, the first option would be sending an email to [the Babylon team](mailto:admin@babylonchain.io), then the Babylon team will deploy a relayer for your blockchain.
-Alternatively, anyone can integrate any Cosmos zone to Babylon by running an IBC relayer specialized for Babylon.
-The special IBC relayer uses a subset of the IBC protocol, and there is no need to modify the integrated Cosmos zone's code, or have tokens in the integrated Cosmos zone.
+In order to integrate a Cosmos zone to Babylon,
+the first option would be sending an email to [the Babylon team](mailto:admin@babylonchain.io),
+then the Babylon team will deploy a relayer for your blockchain.
+Alternatively, anyone can integrate any Cosmos zone to Babylon
+by running an IBC relayer specialized for Babylon.
+The special IBC relayer uses a subset of the IBC protocol,
+and there is no need to modify the integrated Cosmos zone's code,
+or have tokens in the integrated Cosmos zone.
 
 ## Babylon IBC relayer
 
-In order to provide a canonical chain oracle for Cosmos zones, Babylon only needs to use a subset of IBC protocols.
-Specifically, Babylon needs to maintain an IBC light client for the integrated Cosmos zone, but not the other way.
-However, existing relayers, including the [Go relayer](https://github.com/cosmos/relayer) and the Rust Hermes relayer, are designed for the full IBC protocol stack with an emphasis on IBC packets, thus only provide functionalities for updating both IBC clients in two Cosmos zones and relaying IBC packets among them.
+In order to provide a canonical chain oracle for Cosmos zones,
+Babylon only needs to use a subset of IBC protocols.
+Specifically, Babylon needs to maintain an IBC light client for the integrated Cosmos zone,
+but not the other way.
+However, existing relayers, including the [Go relayer](https://github.com/cosmos/relayer)
+and the Rust Hermes relayer, are designed for the full IBC protocol stack with an emphasis on
+IBC packets, thus only provide functionalities for updating both IBC clients in two Cosmos zones and
+relaying IBC packets among them.
 
-To this end, the Babylon team has developed a special IBC relayer based on [the official IBC relayer in Golang](https://github.com/cosmos/relayer).
-The special IBC relayer allows one to maintain an IBC light client of a Cosmos zone in Babylon, and periodically forward headers of the Cosmos zone to Babylon.
+To this end, the Babylon team has developed a special IBC relayer
+based on [the official IBC relayer in Golang](https://github.com/cosmos/relayer).
+The special IBC relayer allows one to maintain an IBC light client of a Cosmos zone in Babylon,
+and periodically forward headers of the Cosmos zone to Babylon.
 It gives us the following advantages:
 
-- Integrating a Cosmos zone to Babylon only needs Babylon accounts and tokens. Accounts and tokens of integrated Cosmos zones are not needed.
-- Integrating a Cosmos zone to Babylon incurs zero computational or storage overhead on integrated Cosmos zones.
+- Integrating a Cosmos zone to Babylon only needs Babylon accounts and tokens. 
+  Accounts and tokens of integrated Cosmos zones are not needed.
+- Integrating a Cosmos zone to Babylon incurs zero computational
+  or storage overhead on integrated Cosmos zones.
 
 ## Running a Babylon IBC relayer
 
@@ -37,44 +54,52 @@ It gives us the following advantages:
 
 Running a Babylon IBC relayer consists of the following steps:
 
-1. Create a Babylon Account
-2. Obtain Babylon Tokens
-3. Install the Babylon Relayer
-5. Configure the Babylon Relayer
-6. Restore the Babylon Account to the Babylon Relayer
-7. Start the Babylon Relayer
-
-### Create a Babylon Account
-
-To create a Babylon account, 
-
-```bash
-$ babylond keys add $BABYLON_KEY_NAME --chain-id $BABYLON_CHAIN_ID --node $BABYLON_RPC_NODE
-```
-
-where `$BABYLON_KEY_NAME` is a name you pick for the Babylon key, `$BABYLON_CHAIN_ID` is the chain ID of Babylon, and `$BABYLON_RPC_NODE` is the RPC endpoint of a Babylon node.
-
-The command will return the secret key, address and the mnemonics.
-Please keep the secret key in a secret place.
-
-### Obtain Babylon Tokens
-
-Then, you need to obtain some Babylon tokens for the address in order to run the relayer.
-The testnet tokens can be obtained from [the #faucet channel of Babylon Discord server](https://discord.com/channels/1046686458070700112/1075371070493831259).
+1. Install the Babylon Relayer
+2. Configure the Babylon Relayer
+3. Create a keyring for the Babylon relayer
+4. Obtain Babylon tokens
+5. Start the Babylon Relayer
 
 ### Install the Babylon Relayer
 
-The Babylon relayer is located at https://github.com/babylonchain/babylon-relayer.
+The Babylon relayer is located at [GitHub](https://github.com/babylonchain/babylon-relayer).
 Please follow the documentation for installing it.
-To summarize, under the `babylon-relayer/` folder,
+In summary, after cloning the repository,
+navigate to the folder in which you cloned it,
+checkout to the version you want to install (e.g. `git checkout v0.2.0`),
+and execute,
 
 ```bash
-$ make build install
+$ make install
+```
+
+This will install the `babylon-relayer` binary. You can verify that everything worked properly by running,
+```bash
+$ babylon-relayer --help
+babylon-relayer has:
+        1. Configuration management for Chains and Paths
+        2. Key management for managing multiple keys for multiple chains
+        3. Query and transaction functionality for IBC
+        4. Functionality for relaying headers from Cosmos Zones to Babylon periodically
+
+        NOTE: Most of the commands have aliases that make typing them much quicker
+                  (i.e. 'babylon-relayer tx', 'babylon-relayer q', etc...)
+
+Usage:
+  babylon-relayer [command]
+ 
+...output truncated
 ```
 
 ### Configure the Babylon Relayer
 
-The default Babylon config file will be located at `~/.relayer/config/config.yaml`.
+The default Babylon relayer home directory is `~/.relayer`.
+You can specify a different Babylon relayer home directory through the `--home` CLI flag.
+For the purposes of this document and for simplicity,
+we will assume that the home directory is `~/.relayer`.
+
+The configuration file for the relayer is located under the `$RELAYER_HOME/config/config.yaml`.
+In our case, `$RELAYER_HOME` is `~/.relayer`.
 An example config file for integrating Osmosis testnet is as follows:
 ```yaml
 global:
@@ -83,14 +108,23 @@ global:
     memo: ""
     light-cache-size: 10
 chains:
+    # Name for the Babylon chain
     babylon:
         type: cosmos
         value:
-            key: babylon-key      # REPLACEME: Nane of the key in the keyring (same as the one added on the bootrapping script by `keys add`.
-            chain-id: bbn-demo1   # REPLACEME: Chain ID for the network you're connecting to. NOTE: this chain-id should be the same as the directory that contains the test keyring, i.e. if bbn-demo1, then `relayer-home/keys/bbn-demo1` should contain the `keyring-test` directory with a key with the same name as the above attribute.
-            rpc-addr: http://rpc0.demo.babylonchain.io:26657 # REPLACEME: Address to which an RPC connection can be made
+            # REPLACEME: Name of the key in the keyring that will be used to send transactions to Babylon.
+            #            We will create this key on the next step.
+            key: babylon-relayer-key
+            # REPLACEME: The Chain ID of the Babylon network you want to connect to.
+            #            For example, for the current testnet, this is `bbn-test1`
+            #            Note that this chain ID should be the same one you used for creating the keyring.
+            chain-id: bbn-test1
+            # REPLACEME: The RPC endpoint of a node that runs on the Babylon network you want to connect to.
+            rpc-addr: http://rpc.testnet.babylonchain.io:26657
             account-prefix: bbn
+            # The backend of the keyring you're using. Recall that this should always be `test`.
             keyring-backend: test
+            # Gas prices and gas adjustment.
             gas-adjustment: 1.5
             gas-prices: 0.002ubbn
             min-gas-amount: 0
@@ -99,30 +133,64 @@ chains:
             output-format: json
             sign-mode: direct
             extra-codecs: []
+    # Name for the chain to be integrated
     osmosis:
         type: cosmos
         value:
-            chain-id: osmo-test-4                                        # REPLACEME: Chain ID for the network you're connecting to.
-            rpc-addr: https://osmosis-testnet-rpc.allthatnode.com:26657/ # REPLACEME: Address to which an RPC connection can be made
+            # REPLACEME: The chain ID of the chain you want to integrate with Babylon
+            chain-id: osmo-test-4
+            # REPLACEME: The RPC endpoint of a node that runs on the network of the chain you want to integrate with Babylon.
+            rpc-addr: https://osmosis-testnet-rpc.allthatnode.com:26657/
             keyring-backend: test
             timeout: 10s
 paths:
+    # Name of the relayer path
     osmosis:
+        # Chain IDs that this path will connect
+        # REPLACEME: Use the chain IDs For Babylon and the integrated chain you specified above.
         src:
-            chain-id: bbn-demo1
+            chain-id: bbn-test1
         dst:
             chain-id: osmo-test-4
 ```
 
-### Restore the Babylon Account to the Babylon Relayer
+### Create a key for the Babylon relayer
 
-To restore the Babylon account to the Babylon relayer,
+TODO: FILLME
 
+After specifying the configuration,
+we need to create a keyring that will pay the transaction fees for sending
+transactions to the Babylon chain.
+
+We have two options:
+1. Create a keyring from scratch
 ```bash
-$ babylon-relayer keys restore $BABYLON_CHAIN_ID testkey "$MNEMONICS"
+$ babylon-relayer keys add $BABYLON_NAME $BABYLON_KEY_NAME
+```
+2. Import an already existing keyring. For this you're going to need the mnemonic
+```bash
+$ babylon-relayer keys restore $BABYLON_NAME $BABYLON_KEY_NAME "$MNEMONIC"
 ```
 
-where `$BABYLON_CHAIN_ID` is the chain ID of Babylon and `$MNEMONICS` is the mnemonics generated when creating the Babylon account.
+In the above commands,
+- `$BABYLON_NAME` is the name assigned to the Babylon chain in the configuration file.
+  In the example configuration above this is `babylon`.
+- `$BABYLON_KEY_NAME` is the name assigned to the key for Babylon in the configuration file.
+  In the example configuration above this is `babylon-relayer-key`
+- `$MNEMONIC` is the mnemonic for the key you want to import.
+
+To verify that your key has been included, you can execute:
+```bash
+$ babylon-relayer keys list $BABYLON_NAME
+```
+If all worked as expected, you should see the key address in the output.
+
+### Obtain Babylon Tokens
+
+Now it's time to obtain the tokens that will be used to pay for Babylon transaction fees
+for relaying headers.
+Those funds should go to the address of the key you created on the previous step.
+You can obtain funds through the faucet found in the Babylon Discord.
 
 ### Start the Babylon Relayer
 
@@ -138,8 +206,9 @@ where `$INTERVAL` is the interval for relaying a header (e.g., `10m` to denote 1
 
 After the above steps, the Cosmos zone has been integrated to Babylon.
 You can do the following things to check the status of the integration:
-- Check the API http://rpc.testnet.babylonchain.io:1317/babylon/zoneconcierge/v1/chain_info/<your_chain_id> that shows the information of the Cosmos zone in Babylon's view
-- Check whether BabylonScan shows the information of the Cosmos zone or not.
+- Check the Babylon node API http://rpc.testnet.babylonchain.io:1317/babylon/zoneconcierge/v1/chain_info/<your_chain_id>
+  that shows the information of the Cosmos zone in Babylon's view.
+- Check whether [BabylonScan](https://babylonscan.io) shows the information of the Cosmos zone or not.
   - NOTE: one needs to submit a PR to Babylon's chain registry in order to be shown on BabylonScan
 
 ## Future Integration Phases
