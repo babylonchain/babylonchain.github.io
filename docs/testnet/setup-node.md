@@ -34,7 +34,7 @@ tar -xjf genesis.tar.bz2 && rm genesis.tar.bz2
 mv genesis.json ~/.babylond/config/genesis.json
 ```
 
-## 2. Add Seed Nodes and Persistent Peers
+## 2. Add Peers and Modify Configuration
 
 Edit the configuration file at `~/.babylond/config/config.toml` and modify
 the `seeds` and `persistent_peers` attributes to contain appropriate seeds and peers
@@ -42,12 +42,18 @@ of your choice. The full list of Babylon approved seeds and peers can be found u
 the [bbn-test-2 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-2).
 
 Edit the configuration file at `~/.babylond/config/app.toml` and modify the
-`btc-network` and `checkpoint-tag` attributes to contain appropriate BTC network 
+`btc-network` attribute to contain the appropriate BTC network 
 parameters as below.
 
 ```toml
 [btc-config]
 network = "mainnet"
+```
+
+On the same file, you can also modify the `minimum-gas-prices` attribute and
+set it to a value of your choosing. For example,
+```toml
+minimum-gas-prices = "0.00001ubbn"
 ```
 
 ## 3. Setup Cosmovisor
