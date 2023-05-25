@@ -116,9 +116,9 @@ chains:
             #            We will create this key on the next step.
             key: babylon-relayer-key
             # REPLACEME: The Chain ID of the Babylon network you want to connect to.
-            #            For example, for the current testnet, this is `bbn-test1`
+            #            For example, for the current testnet, this is `bbn-test-2`
             #            Note that this chain ID should be the same one you used for creating the keyring.
-            chain-id: bbn-test1
+            chain-id: bbn-test-2
             # REPLACEME: The RPC endpoint of a node that runs on the Babylon network you want to connect to.
             rpc-addr: http://rpc.testnet.babylonchain.io:26657
             account-prefix: bbn
@@ -149,14 +149,12 @@ paths:
         # Chain IDs that this path will connect
         # REPLACEME: Use the chain IDs For Babylon and the integrated chain you specified above.
         src:
-            chain-id: bbn-test1
+            chain-id: bbn-test-2
         dst:
             chain-id: osmo-test-4
 ```
 
 ### Create a key for the Babylon relayer
-
-TODO: FILLME
 
 After specifying the configuration,
 we need to create a keyring that will pay the transaction fees for sending

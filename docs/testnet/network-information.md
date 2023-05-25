@@ -10,4 +10,4 @@ Obtain the network information for the current Babylon Testnet.
 
 ---
 
-The network information can be found at the [bbn-test1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test1).
+The network information can be found at the [bbn-test-2 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-2).
