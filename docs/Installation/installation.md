@@ -23,7 +23,7 @@ import myImageUrl from './image/installationguide.png';
 ## Step 1: Install Golang <a id="step1"></a>
 :::info Note
 
-Babylon requires Golang [version 1.19](https://go.dev/doc/install) for Babylon to be installed on your system.
+Babylon requires Golang [version 1.20](https://go.dev/doc/install) for Babylon to be installed on your system.
 Install it using the instructions on the provided link.
 
 :::
@@ -31,7 +31,7 @@ Install it using the instructions on the provided link.
 After you install it, you can verify that you have the proper version by running:
 ```console
 $ go version
-go version go1.19 darwin/amd64
+go version go1.20 darwin/amd64
 ```
 
 ## Step 2: Build and Install Babylon <a id="step2"></a>
