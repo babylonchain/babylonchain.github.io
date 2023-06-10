@@ -66,7 +66,7 @@ The Babylon relayer is located at [GitHub](https://github.com/babylonchain/babyl
 Please follow the documentation for installing it.
 In summary, after cloning the repository,
 navigate to the folder in which you cloned it,
-checkout to the version you want to install (e.g. `git checkout v0.2.0`),
+checkout to the version you want to install (e.g. `git checkout v0.3.0`),
 and execute,
 
 ```bash
