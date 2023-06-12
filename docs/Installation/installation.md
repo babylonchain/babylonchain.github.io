@@ -23,7 +23,7 @@ import myImageUrl from './image/installationguide.png';
 ## Step 1: Install Golang <a id="step1"></a>
 :::info Note
 
-Babylon requires Golang [version 1.19](https://go.dev/doc/install) for Babylon to be installed on your system.
+Babylon requires Golang [version 1.20](https://go.dev/doc/install) for Babylon to be installed on your system.
 Install it using the instructions on the provided link.
 
 :::
@@ -31,7 +31,7 @@ Install it using the instructions on the provided link.
 After you install it, you can verify that you have the proper version by running:
 ```console
 $ go version
-go version go1.19 darwin/amd64
+go version go1.20 darwin/amd64
 ```
 
 ## Step 2: Build and Install Babylon <a id="step2"></a>
@@ -39,7 +39,7 @@ You need to clone Babylon’s GitHub repository to install the `babylond` execut
 
 1. Install build requirements
 ```console
-sudo apt install git build-essential ufw curl jq snapd --yes
+sudo apt install git build-essential curl jq --yes
 ```
 2. Retrieve the Babylon source code either through the [releases page](https://github.com/babylonchain/babylon/releases) or by cloning the [source code](https://github.com/babylonchain/babylon). In case you want to create a full node for the testnet, it is highly recommended that you choose the release corresponding to the current testnet. See the [testnet network information](/docs/testnet/network-information.md) page for more details.
 3. Navigate to the directory that contains the Babylon source code. From there build and install the babylond executable

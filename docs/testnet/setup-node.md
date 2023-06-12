@@ -15,7 +15,7 @@ Learn how to set up the full node for the Babylon system.
 
 This guide requires having Babylon installed on a Linux System.
 The instructions can be found on the [Installation page](/docs/Installation/installation.md)
-The version to install is specified at the [bbn-test1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test1).
+The version to install is specified at the [bbn-test-2 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-2).
 
 :::
 
@@ -24,31 +24,36 @@ The version to install is specified at the [bbn-test1 network info page](https:/
 First, initialize a node configuration directory under `~/.babylond`.
 The `$NODENAME` variable specifies the name you aim to give your node.
 ```console
-babylond init $NODENAME --chain-id bbn-test1
+babylond init $NODENAME --chain-id bbn-test-2
 ```
 
 Then, retrieve the genesis file and place it in the node directory:
 ```console
-wget https://github.com/babylonchain/networks/raw/main/bbn-test1/genesis.tar.bz2
+wget https://github.com/babylonchain/networks/raw/main/bbn-test-2/genesis.tar.bz2
 tar -xjf genesis.tar.bz2 && rm genesis.tar.bz2
 mv genesis.json ~/.babylond/config/genesis.json
 ```
 
-## 2. Add Seed Nodes and Persistent Peers
+## 2. Add Peers and Modify Configuration
 
 Edit the configuration file at `~/.babylond/config/config.toml` and modify
 the `seeds` and `persistent_peers` attributes to contain appropriate seeds and peers
 of your choice. The full list of Babylon approved seeds and peers can be found under
-the [bbn-test1 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test1).
+the [bbn-test-2 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-2).
 
 Edit the configuration file at `~/.babylond/config/app.toml` and modify the
-`btc-network` and `checkpoint-tag` attributes to contain appropriate BTC network 
+`btc-network` attribute to contain the appropriate BTC network 
 parameters as below.
 
 ```toml
 [btc-config]
-network = "testnet"
-checkpoint-tag = "bbn0"
+network = "mainnet"
+```
+
+On the same file, you can also modify the `minimum-gas-prices` attribute and
+set it to a value of your choosing. For example,
+```toml
+minimum-gas-prices = "0.00001ubbn"
 ```
 
 ## 3. Setup Cosmovisor

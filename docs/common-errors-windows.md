@@ -82,7 +82,7 @@ go build -mod=readonly -tags "netgo ledger" -ldflags '-X github.com/cosmos/cosmo
 go: updates to go.mod needed, disabled by -mod=readonly
 make: *** [Makefile:116: build] Error 1
 ```
-This occurs when a Golang version lower than 1.18 has been installed. Babylon requires Golang version 1.18 or above.
+This occurs when a Golang version lower than 1.20 has been installed. Babylon requires Golang version 1.20 or above.
 #### Solution: <a id="sol5"></a>
 You need to uninstall Golang by inserting the code below on Ubuntu:
 ```
@@ -90,8 +90,8 @@ sudo apt-get remove golang-go
 ```
 Next, install the latest version of Golang by inserting the code below:
 ```
-sudo wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
+sudo wget https://go.dev/dl/go1.20.5.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.20.5.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 source ~/.bashrc
 ```
