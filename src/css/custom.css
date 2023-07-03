@@ -7,8 +7,11 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-background-color: rgb(252, 251, 251);
-  --ifm-color-primary: #db00fd;
-  --ifm-color-primary: #0039d1;
+  /* TODO check if needed */
+  /* --ifm-color-primary: #db00fd;
+  --ifm-color-primary: #0039d1; */
+  --ifm-color-primary: #3b82f6;
+  /* these are dark/light colors not used currently */
   --ifm-color-primary-dark: #1490f3;
   --ifm-color-primary-darker: #0b8df5;
   --ifm-color-primary-darkest: #1567c0;
@@ -17,17 +20,18 @@
   --ifm-color-primary-lightest: #54aef9;
   --ifm-code-font-size: 95%;
   /* --ifm-navbar-background-color: #4752c4; */
-	--ifm-menu-link-sublist-icon-filter: invert(100%) sepia(94%) saturate(17%) hue-rotate(223deg) brightness(104%) contrast(9%);
-	--ifm-navbar-height: 64px;
-	--ifm-navbar-link-color: rgba(0, 57, 209);
-	--ifm-navbar-link-active-color: rgba(0, 57, 209);
-	--ifm-navbar-link-hover-color: rgba(0, 57, 209);
+  --ifm-menu-link-sublist-icon-filter: invert(100%) sepia(94%) saturate(17%)
+    hue-rotate(223deg) brightness(104%) contrast(9%);
+  --ifm-navbar-height: 64px;
+  --ifm-navbar-link-color: #3b82f6;
+  --ifm-navbar-link-active-color: #3b82f6;
+  --ifm-navbar-link-hover-color: #3b82f6;
   --docusaurus-highlighted-code-line-bg: rgba(4, 62, 234, 0);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: rgba(0, 57, 209);
+  --ifm-color-primary: #3b82f6;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -39,11 +43,11 @@
 
 .navbar {
   background-color: rgb(251, 251, 251);
-  color: rgba(0, 57, 209);
+  color: #3b82f6;
   height: 3rem;
 }
 .items label {
-  color: #fff
+  color: #fff;
 }
 [data-theme='dark'] .navbar {
   background-color: #242526;
@@ -62,19 +66,20 @@
   color: #fff;
 }
 .doc_title {
-  color: white
+  color: white;
 }
 .doc_subtitle {
-  color: white
+  color: white;
 }
 [data-theme='dark'] .doc_title {
-  color: white
+  color: white;
 }
 [data-theme='dark'] .doc_subtitle {
-  color: white
+  color: white;
 }
-.doc_title, .doc_subtitle {
-  text-align: left
+.doc_title,
+.doc_subtitle {
+  text-align: left;
 }
 .home_button {
   justify-content: left;
@@ -101,7 +106,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  .hero_container  {
+  .hero_container {
     flex-wrap: wrap;
   }
 
@@ -131,9 +136,9 @@
 .urlstyle:hover {
   text-decoration: none;
   color: black;
-  box-shadow: 5px 5px 23px -5px blue;
-  -webkit-box-shadow: 5px 5px 23px -5px blue;
-  -moz-box-shadow: 5px 5px 23px -5px blue;
+  box-shadow: 5px 5px 23px -5px var(--ifm-color-primary);
+  -webkit-box-shadow: 5px 5px 23px -5px var(--ifm-color-primary);
+  -moz-box-shadow: 5px 5px 23px -5px var(--ifm-color-primary);
 }
 .center-homepage {
   justify-content: center;

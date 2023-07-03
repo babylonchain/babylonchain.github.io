@@ -89,8 +89,8 @@ const config = {
         title: '',
         hideOnScroll: true,
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/navbarlogo.png',
+          alt: 'Babylon',
+          src: 'img/logo-primary-full.svg',
         },
         items: [
           {
