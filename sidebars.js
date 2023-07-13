@@ -27,7 +27,6 @@ const sidebars = {
         'introduction/architecture',
       ]
     },
-    'Whitepaper/whitepaper',
     {
       type: 'category',
       label: 'Babylon Key Components',
@@ -145,6 +144,7 @@ const sidebars = {
     //   ],
     // },
     'support',
+    'Papers/papers',
     {
       type: 'category',
       label: 'CLI Reference',
