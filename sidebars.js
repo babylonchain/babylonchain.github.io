@@ -144,6 +144,7 @@ const sidebars = {
     //   ],
     // },
     'support',
+    'Papers/papers',
     {
       type: 'category',
       label: 'CLI Reference',
