@@ -25,7 +25,7 @@ A standalone program that submits the Babylon checkpoints to BTC as BTC op_retur
 A standalone program that scans BTC ledger for Babylon’s BTC checkpoints, and reports them back to Babylon as Babylon transactions. It also reports BTC headers to Babylon as Babylon transactions.
 
 ## BTCCheckpoint <a id="check"></a>
-A new Cosmos app module for Babylon. It verifies the Babylon’s BTC checkpoints reported by the vigilante reporter, and provides the confirmation status of these checkpoints to the checkpointing module based on their depth according to the on chain BTC light client. 
+A new Cosmos app module for Babylon. It verifies the Babylon’s BTC checkpoints reported by the vigilante reporter, and provides the confirmation status of these checkpoints to the checkpointing module based on their depth according to the on-chain BTC light client. 
 
 ## BTCLightClient <a id="light"></a>
 A new Cosmos app module for Babylon. This module maintains a BTC header chain and validates if a BTC block is part of the canonical BTC chain, its depth, and whether the inclusion evidence for a Bitcoin transaction is valid.
