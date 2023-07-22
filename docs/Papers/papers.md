@@ -10,7 +10,7 @@ custom_edit_url: null
 # Papers
 
 <div class="pdf-banner">
-  <a class="pdf-link" target="\_blank" href={require('./assets/btc_staking_litepaper.pdf').default}>
+  <a class="pdf-link" target="\_blank" href="/papers/btc_staking_litepaper.pdf">
     <span class="pdf-text">BTC staking litepaper</span>
     <span class="pdf-icon">PDF</span>
   </a>
