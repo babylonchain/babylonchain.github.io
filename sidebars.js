@@ -21,6 +21,7 @@ const sidebars = {
         type: 'doc',
         id: 'introduction/overview',
       },
+      collapsed: false,
       items: [
         'introduction/babylon-overview',
         {
@@ -55,6 +56,7 @@ const sidebars = {
         type: 'doc',
         id: 'user-guides/overview',
       },
+      collapsed: false,
       items: [
         'user-guides/installation',
         {
@@ -94,6 +96,7 @@ const sidebars = {
         type: 'doc',
         id: 'developer-guides/overview',
       },
+      collapsed: false,
       items: [
         {
           type: 'category',
