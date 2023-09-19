@@ -1,6 +1,6 @@
 ---
 id: installation
-sidebar_label: Installation Guide
+sidebar_label: Installation
 hide_table_of_contents: true
 pagination_prev: null
 pagination_next: null
@@ -9,7 +9,7 @@ custom_edit_url: null
 
 import myImageUrl from './image/installationguide.png';
 
-# Installation Guide
+# Installation
 
 💻 Learn how to install and initialize the Babylon chain on your system.
 

@@ -1,12 +1,12 @@
 ---
 id: overview
-sidebar_label: Testnet
+sidebar_label: Bitcoin Timestamping Testnet
 hide_table_of_contents: true
 
 ---
 import myImageUrl from './images/Testnet.png';
 
-# Testnet
+# Bitcoin Timestamping Testnet
 
 🙋‍♂️ Let's participate in the Babylon testnet!
 
