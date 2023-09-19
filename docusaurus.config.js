@@ -9,7 +9,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Babylon Blockchain',
-  tagline: 'Bringing Bitcoin Security to Cosmos & Beyond',
+  tagline: 'Unlocking 21 Million Bitcoin to Secure the Decentralized Economy',
   url: 'https://docs.babylonchain.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
