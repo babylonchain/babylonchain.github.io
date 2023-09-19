@@ -139,7 +139,7 @@ const config = {
             items: [
               {
                 label: 'LinkedIn',
-                href: 'https://www.linkedin.com/company/babylon-chain/',
+                href: 'https://www.linkedin.com/company/babylon-chain',
               },
               {
                 label: 'Twitter',
@@ -156,7 +156,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: 'https://babylonchain.io/blogs',
+                to: 'https://babylonchain.io/blog',
               },
             ],
           },
