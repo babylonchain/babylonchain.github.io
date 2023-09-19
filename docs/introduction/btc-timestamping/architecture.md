@@ -10,7 +10,7 @@ Examine the components and modules that construct Babylon.
 
 ---
 
-![Architecture](./images/architecture.png)
+![Architecture](../images/architecture.png)
 
 ## Epoching <a id="epoch"></a>
 A new Cosmos app module for Babylon. It epoches the Babylon blocks, and within each epoch the validator set does not change. It achieves this by delaying the execution of validator-set-changing transactions to the last block of each epoch. This way, Babylon only needs to checkpoint one block per epoch to BTC, which reduces the checkpointing costs.

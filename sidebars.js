@@ -23,8 +23,19 @@ const sidebars = {
       },
       items: [
         'introduction/babylon-overview',
-        'introduction/use-case',
-        'introduction/architecture',
+        'introduction/btc-staking/overview',
+        {
+          type: 'category',
+          label: 'Bitcoin timestamping',
+          link: {
+            type: 'doc',
+            id: 'introduction/btc-timestamping/overview',
+          },
+          items: [
+            'introduction/btc-timestamping/use-case',
+            'introduction/btc-timestamping/architecture',
+          ],
+        }
       ]
     },
     {
