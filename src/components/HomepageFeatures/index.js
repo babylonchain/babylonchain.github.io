@@ -51,7 +51,7 @@ const FeatureList = [
     ),
   },
   {
-    url: 'docs/grpcrestapi',
+    url: 'docs/developer-guides/grpcrestapi',
     title: 'gRPC Gateway (REST API)',
     image: eight,
     description: (

@@ -1,12 +1,12 @@
 ---
 id: overview
-sidebar_label: Babylon Modules
+sidebar_label: Bitcoin Timestamping Modules
 hide_table_of_contents: true
 ---
 
 import myImageUrl from './images/architecture.png';
 
-# Babylon Modules
+# Bitcoin Timestamping Modules
 🕵️‍♂️ Find out about the Babylon modules and how they function.
 
 ---

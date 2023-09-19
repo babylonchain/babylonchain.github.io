@@ -88,23 +88,46 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Babylon Key Components',
+      label: 'Developer Guides',
       link: {
         type: 'doc',
-        id: 'modules/overview',
+        id: 'developer-guides/overview',
       },
       items: [
-        'modules/epoching',
-        'modules/checkpointing',
-        'modules/btccheckpoint',
-        'modules/btclightclient',
-        'modules/czconcierge',
-        'modules/submitter',
-        'modules/reporter',
-        'modules/monitor',
+        {
+          type: 'category',
+          label: 'Bitcoin Timestamping Modules',
+          link: {
+            type: 'doc',
+            id: 'developer-guides/btc-timestamping-modules/overview',
+          },
+          items: [
+            'developer-guides/btc-timestamping-modules/epoching',
+            'developer-guides/btc-timestamping-modules/checkpointing',
+            'developer-guides/btc-timestamping-modules/btccheckpoint',
+            'developer-guides/btc-timestamping-modules/btclightclient',
+            'developer-guides/btc-timestamping-modules/czconcierge',
+            'developer-guides/btc-timestamping-modules/submitter',
+            'developer-guides/btc-timestamping-modules/reporter',
+            'developer-guides/btc-timestamping-modules/monitor',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Bitcoin Staking Modules',
+          link: {
+            type: 'doc',
+            id: 'developer-guides/btc-staking-modules/overview',
+          },
+          items: [
+            'developer-guides/btc-staking-modules/btcstaking',
+            'developer-guides/btc-staking-modules/finality',
+          ],
+        },
+        'developer-guides/grpcrestapi',
       ],
     },
-    'grpcrestapi',
+    
     'support',
     'Papers/papers',
     {
