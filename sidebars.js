@@ -128,8 +128,8 @@ const sidebars = {
         'developer-guides/grpcrestapi',
       ],
     },
-    'support',
     'papers',
+    'support',
     {
       type: 'category',
       label: 'CLI Reference',
