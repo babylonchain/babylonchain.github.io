@@ -73,6 +73,17 @@ const sidebars = {
             'user-guides/btc-timestamping-testnet/czintegrate',
           ]
         },
+        {
+          type: 'category',
+          label: 'Bitcoin Staking Testnet',
+          link: {
+            type: 'doc',
+            id: 'user-guides/btc-staking-testnet/overview',
+          },
+          items: [
+            // TODO
+          ]
+        },
       ]
     },
     {
