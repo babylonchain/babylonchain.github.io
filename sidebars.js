@@ -23,10 +23,20 @@ const sidebars = {
       },
       items: [
         'introduction/babylon-overview',
-        'introduction/btc-staking/overview',
         {
           type: 'category',
-          label: 'Bitcoin timestamping',
+          label: 'Bitcoin Staking',
+          link: {
+            type: 'doc',
+            id: 'introduction/btc-staking/overview',
+          },
+          items: [
+            // TODO
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Bitcoin Timestamping',
           link: {
             type: 'doc',
             id: 'introduction/btc-timestamping/overview',
