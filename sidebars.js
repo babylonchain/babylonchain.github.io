@@ -51,6 +51,18 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'faq',
+      link: {
+        type: 'doc',
+        id: 'faq/overview',
+      },
+      collapsed: false,
+      items: [
+        // TODO
+      ]
+    },
+    {
+      type: 'category',
       label: 'User Guides',
       link: {
         type: 'doc',
