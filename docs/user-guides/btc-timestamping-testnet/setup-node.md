@@ -14,7 +14,7 @@ Learn how to set up the full node for the Babylon system.
 :::info Note
 
 This guide requires having Babylon installed on a Linux System.
-The instructions can be found on the [Installation page](/docs/Installation/installation.md)
+The instructions can be found on the [Installation page](/docs/user-guides/installation.md)
 The version to install is specified at the [bbn-test-2 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-2).
 
 :::

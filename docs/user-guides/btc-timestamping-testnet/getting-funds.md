@@ -27,7 +27,7 @@ by the Cosmos SDK for validators.
 :::
 
 One can create a keyring through the `babylond keys add` command. Full specification
-for this command can be found under the [CLI docs](../cli/babylond/keys/babylondkeysdd.md).
+for this command can be found under the [CLI docs](/docs/cli/babylond/keys/babylondkeysdd.md).
 
 ```console
 # Replace the --keyring-backend argument with a backend of your choice

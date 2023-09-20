@@ -76,17 +76,6 @@ const sidebars = {
             'user-guides/btc-timestamping-testnet/common-errors',
           ]
         },
-        {
-          type: 'category',
-          label: 'Bitcoin Staking Testnet',
-          link: {
-            type: 'doc',
-            id: 'user-guides/btc-staking-testnet/overview',
-          },
-          items: [
-            // TODO
-          ]
-        },
       ]
     },
     {
@@ -100,32 +89,20 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Bitcoin Timestamping Modules',
+          label: 'Modules',
           link: {
             type: 'doc',
-            id: 'developer-guides/btc-timestamping-modules/overview',
+            id: 'developer-guides/modules/overview',
           },
           items: [
-            'developer-guides/btc-timestamping-modules/epoching',
-            'developer-guides/btc-timestamping-modules/checkpointing',
-            'developer-guides/btc-timestamping-modules/btccheckpoint',
-            'developer-guides/btc-timestamping-modules/btclightclient',
-            'developer-guides/btc-timestamping-modules/czconcierge',
-            'developer-guides/btc-timestamping-modules/submitter',
-            'developer-guides/btc-timestamping-modules/reporter',
-            'developer-guides/btc-timestamping-modules/monitor',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Bitcoin Staking Modules',
-          link: {
-            type: 'doc',
-            id: 'developer-guides/btc-staking-modules/overview',
-          },
-          items: [
-            'developer-guides/btc-staking-modules/btcstaking',
-            'developer-guides/btc-staking-modules/finality',
+            'developer-guides/modules/epoching',
+            'developer-guides/modules/checkpointing',
+            'developer-guides/modules/btccheckpoint',
+            'developer-guides/modules/btclightclient',
+            'developer-guides/modules/czconcierge',
+            'developer-guides/modules/submitter',
+            'developer-guides/modules/reporter',
+            'developer-guides/modules/monitor',
           ],
         },
         'developer-guides/grpcrestapi',

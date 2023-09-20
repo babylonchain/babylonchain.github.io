@@ -213,4 +213,4 @@ You can do the following things to check the status of the integration:
 
 In the future, Babylon will enable further integration phases, such as raising alarms upon dishonest majority attacks and reducing the unbonding time period.
 Such integrations will need IBC packets, thus require using the original IBC relayer rather than the above specialized one.
-Please see [Zone Concierge](../modules/czconcierge.md) for more details.
+Please see [Zone Concierge](/docs/developer-guides/modules/czconcierge) for more details.
