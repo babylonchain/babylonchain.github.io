@@ -1,32 +1,35 @@
 ---
-id: error
-sidebar_label: Error Handling
+id: common-errors
+sidebar_label: Common Errors
 hide_table_of_contents: true
 pagination_prev: null
 pagination_next: null
 custom_edit_url: null
 ---
 
-# Error Handling
+# Common Errors
+
 This article provides an overview of how to handle any errors occurred when installing the Babylon Chain.
 
 In this article:
-- [Errors During Repository Cloning](#error1)
-    - [Too Many Arguments](#error1.1)
-        - [Solution:](#sol1)
-    -  [Could Not Set 'core.filemode' to 'false'](#error1.2)
-        - [Solution:](#sol2)
-- [Error During Babylon Chain Initialization](#error2)
-    - [No Such Directory Found](#error2.1)
-        - [Solution:](#sol3)
-    - [Command 'make' Not Found](#error2.2)
-        - [Solution:](#sol4)
-    - [Make Build Error 1](#error2.3)
-        - [Solution:](#sol5)
-    - [Make Build Error 127](#error2.4)
-        - [Solution:](#sol6)
-    - [Genesis File Already Exists](#error2.5)
-        - [Solution:](#sol7)
+
+- [Common Errors](#common-errors)
+  - [Error During Repository Cloning ](#error-during-repository-cloning-)
+    - [Too Many Arguments ](#too-many-arguments-)
+      - [Solution: ](#solution-)
+    - [Could Not Set 'core.filemode' to 'false' ](#could-not-set-corefilemode-to-false-)
+      - [Solution: ](#solution--1)
+  - [Error During Babylon Chain Initialization ](#error-during-babylon-chain-initialization-)
+    - [No Such Directory Found ](#no-such-directory-found-)
+      - [Solution: ](#solution--2)
+    - [Command 'make' Not Found ](#command-make-not-found-)
+      - [Solution: ](#solution--3)
+    - [Make Build Error 1 ](#make-build-error-1-)
+      - [Solution: ](#solution--4)
+    - [Make Build Error 127 ](#make-build-error-127-)
+      - [Solution: ](#solution--5)
+    - [Genesis File Already Exists ](#genesis-file-already-exists-)
+      - [Solution: ](#solution--6)
     
 ## Error During Repository Cloning <a id="error1"></a>
 ### Too Many Arguments <a id="error1.1"></a>

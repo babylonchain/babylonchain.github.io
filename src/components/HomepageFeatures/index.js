@@ -21,7 +21,7 @@ const FeatureList = [
     ),
   },
   {
-    url: 'docs/installation',
+    url: 'docs/user-guides/installation',
     title: 'Installation Guide',
     image: two,
     description: (
@@ -41,7 +41,7 @@ const FeatureList = [
     ),
   },
   {
-    url: 'docs/testnet/overview',
+    url: 'docs/user-guides/testnet/overview',
     title: 'Testnet',
     image: six,
     description: (
@@ -51,7 +51,7 @@ const FeatureList = [
     ),
   },
   {
-    url: 'docs/grpcrestapi',
+    url: 'docs/developer-guides/grpcrestapi',
     title: 'gRPC Gateway (REST API)',
     image: eight,
     description: (

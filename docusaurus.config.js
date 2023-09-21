@@ -9,7 +9,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Babylon Blockchain',
-  tagline: 'Bringing Bitcoin Security to Cosmos & Beyond',
+  tagline: 'Unlocking 21 Million Bitcoin to Secure the Decentralized Economy',
   url: 'https://docs.babylonchain.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -63,7 +63,7 @@ const config = {
           {
             id: 'grpc',
             spec: 'swagger.yaml',
-            route: 'docs/grpcrestapi',
+            route: 'docs/developer-guides/grpcrestapi',
           },
         ],
         // Theme Options for modifying how redoc renders them
@@ -100,7 +100,7 @@ const config = {
             label: 'Docs',
           },
           {
-            to: 'docs/grpcrestapi',
+            to: 'docs/developer-guides/grpcrestapi',
             position: 'left',
             label: 'API',
           },
@@ -139,7 +139,7 @@ const config = {
             items: [
               {
                 label: 'LinkedIn',
-                href: 'https://www.linkedin.com/company/babylon-chain/',
+                href: 'https://www.linkedin.com/company/babylon-chain',
               },
               {
                 label: 'Twitter',
@@ -156,7 +156,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: 'https://babylonchain.io/blogs',
+                to: 'https://babylonchain.io/blog',
               },
             ],
           },
