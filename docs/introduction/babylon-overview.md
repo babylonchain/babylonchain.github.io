@@ -7,16 +7,30 @@ hide_table_of_contents: true
 
 # Babylon Overview
 
-Get to know what is Babylon and how it works.
+<!-- 
+    TODO overview : Babylon vision (our slogan), 
+    tendermint + cosmos, 
+    we have two protocols.
+    timestamping is a building block of btc staking.
+-->
 
-<!-- TODO: add BTC staking overview here -->
+Babylon is a project that designs security protocols for the decentralized world.
+Our mission is to scale Bitcoin to secure the decentralized world.
+To this end, Babylon utilizes the three primary facets of Bitcoin: Bitcoin as an asset, its reliable timestamping service, its most censorship-resistant blockspace in the world.
+To leverage these facets, Babylon is developing three innovative security-sharing protocols: Bitcoin Staking Protocol, Bitcoin Timestamping Protocol, and Bitcoin Data Availability Protocol.
+Through these pioneering protocols, Babylon envisions a more secure and decentralized future.
 
----
+Babylon is a proof-of-stake (PoS) blockchain that brings the security of Bitcoin to other PoS blockchains.
+It consists of two security sharing protocols between Bitcoin and PoS blockchains:
 
-Babylon is a PoS (proof-of-stake) blockchain that provides secure Bitcoin timestamps to its transactions. Babylon is built using the Tendermint consensus engine and Cosmos SDK. It leverages cutting-edge cryptographic technologies and advanced Cosmos SDK features to send succinct, verifiable, and adversary-slashing checkpoints of the Babylon chain to BTC as BTC transactions. The BTC timestamps of Babylon checkpoints provide BTC-level security to all Babylon transactions.
+- **Bitcoin staking:** This protocol allows Bitcoin holders to stake their Bitcoin to a PoS blockchain, and
+- **Bitcoin timestamping:** This protocol sends succinct and verifiable timestamps of PoS blockchains to Bitcoin.
 
-Below is a high-level architecture of the Babylon system. Babylon can be viewed as a checkpoint verifier and aggregator. It verifies and aggregates the checkpoints submitted by its users into ones that BTC can securely timestamp.
+The following figure provides the high-level architecture of the Babylon system.
+The two protocols enable enormous security-related use cases for the decentralized world.
+One primary use case is to bring BTC security to PoS chains.
+
+
 
 ![Overview](./images/babylonoverview.png)
-
-This primitive enables enormous security-related use cases for the decentralized world. One motivating and primary use case is to bring BTC security to PoS chains.
+<!-- TODO: update the figure -->
