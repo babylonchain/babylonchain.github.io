@@ -10,6 +10,14 @@ Babylon's Bitcoin staking protocol allows Bitcoin holders to stake their BTC to 
 It provides security guarantees to the PoS chain while ensuring efficient stake unbonding to enhance liquidity for Bitcoin holders.
 This protocol is designed as a modular plug-in compatible with various PoS consensus algorithms and serves as a foundational component for building restaking protocols.
 
+
+<div class="pdf-banner">
+  <a class="pdf-link" target="\_blank" href="/papers/btc_staking_litepaper.pdf">
+    <span class="pdf-text">BTC staking litepaper</span>
+    <span class="pdf-icon">PDF</span>
+  </a>
+</div>
+
 ## Security guarantees
 
 Babylon's BTC staking protocol achieves the following security properties:
