@@ -1,6 +1,6 @@
 ---
 id: use-case
-sidebar_label: A Primary Usecase - Securing PoS Chains
+sidebar_label: Use Case
 hide_table_of_contents: true
 ---
 
