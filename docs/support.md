@@ -7,7 +7,8 @@ hide_table_of_contents: true
 
 # Support
 
-- [Github](https://github.com/babylonchain)
-- [Telegram](https://t.me/babyloncommunity)
-- [Discord](https://discord.com/invite/babylonglobal)
-- [Email](mailto:contact@babylonchain.io)
+For any issues, questions, comments, or concerns, please find the Babylon team and the Babylon community at [Discord](https://discord.com/invite/babylonglobal).
+
+Alternatively, please feel free to reach out via any of the contacts listed [here](https://babylonchain.io/contact).
+
+We look forward to seeing you there! 
