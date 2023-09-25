@@ -23,7 +23,7 @@ function HomepageHeader() {
           </Link>
         </div>
       </div>
-      <img className='image' src='https://i.ibb.co/Ms35zL8/Asset-2.png'></img>
+      <img className='image' src={require('/static/img/banner-btc.png').default}></img>
       </div>
     </header>
   );

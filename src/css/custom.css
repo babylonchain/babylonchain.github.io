@@ -8,7 +8,7 @@
 :root {
   --ifm-background-color: rgb(252, 251, 251);
   /* TODO check if needed */
-  --ifm-color-primary: #FF7C2B;
+  --ifm-color-primary: #0D161B;
   /* these are dark/light colors not used currently */
   --ifm-color-primary-dark: #FF7C2B;
   --ifm-color-primary-darker: #FF7C2B;
@@ -29,7 +29,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #FF7C2B;
+  --ifm-color-primary: #0D161B;
   /* --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
