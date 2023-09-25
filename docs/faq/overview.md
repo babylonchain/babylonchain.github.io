@@ -14,4 +14,4 @@ custom_edit_url: null
 
 ## BTC Timestamping Testnet
 
-<!-- TODO -->
+For FAQs on BTC testnet [Common issues in BTC timestamping testnet](/docs/user-guides/btc-timestamping-testnet/common-issues).
