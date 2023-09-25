@@ -8,42 +8,40 @@
 :root {
   --ifm-background-color: rgb(252, 251, 251);
   /* TODO check if needed */
-  /* --ifm-color-primary: #db00fd;
-  --ifm-color-primary: #0039d1; */
-  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary: #FF7C2B;
   /* these are dark/light colors not used currently */
-  --ifm-color-primary-dark: #1490f3;
-  --ifm-color-primary-darker: #0b8df5;
-  --ifm-color-primary-darkest: #1567c0;
-  --ifm-color-primary-light: #2b98f1;
-  --ifm-color-primary-lighter: #38a1f7;
-  --ifm-color-primary-lightest: #54aef9;
+  --ifm-color-primary-dark: #FF7C2B;
+  --ifm-color-primary-darker: #FF7C2B;
+  --ifm-color-primary-darkest: #FF7C2B;
+  --ifm-color-primary-light: #FF7C2B;
+  --ifm-color-primary-lighter: #FF7C2B;
+  --ifm-color-primary-lightest: #FF7C2B;
   --ifm-code-font-size: 95%;
   /* --ifm-navbar-background-color: #4752c4; */
   --ifm-menu-link-sublist-icon-filter: invert(100%) sepia(94%) saturate(17%)
     hue-rotate(223deg) brightness(104%) contrast(9%);
   --ifm-navbar-height: 64px;
-  --ifm-navbar-link-color: #3b82f6;
-  --ifm-navbar-link-active-color: #3b82f6;
-  --ifm-navbar-link-hover-color: #3b82f6;
+  --ifm-navbar-link-color: #FF7C2B;
+  --ifm-navbar-link-active-color: #FF7C2B;
+  --ifm-navbar-link-hover-color: #FF7C2B;
   --docusaurus-highlighted-code-line-bg: rgba(4, 62, 234, 0);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #3b82f6;
-  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary: #FF7C2B;
+  /* --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary-lightest: #4fddbf; */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
 .navbar {
   background-color: rgb(251, 251, 251);
-  color: #3b82f6;
+  color: #FF7C2B;
   height: 3rem;
 }
 .items label {

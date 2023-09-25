@@ -90,6 +90,7 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: 'Babylon',
+          srcDark: 'img/logo_white.svg',
           src: 'img/logo_black.svg',
         },
         items: [
