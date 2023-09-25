@@ -7,7 +7,7 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-background-color: rgb(252, 251, 251);
-  /* TODO check if needed */
+  /* TODO: use /static/img/banner.png for the banner image */
   --ifm-color-primary: #0D161B;
   /* these are dark/light colors not used currently */
   --ifm-color-primary-dark: #FF7C2B;
