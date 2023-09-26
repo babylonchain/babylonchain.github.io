@@ -7,7 +7,8 @@ custom_edit_url: null
 ---
 
 # Introduction
-💡 Get to know Babylon and how Babylon securing the PoS chains.
+
+💡 Get to know Babylon and how Babylon secures the PoS chains using Bitcoin.
 
 ---
 

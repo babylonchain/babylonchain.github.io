@@ -7,16 +7,21 @@ hide_table_of_contents: true
 
 # Babylon Overview
 
-Get to know what is Babylon and how it works.
+<!-- Babylon vision -->
+Babylon project designs security protocols that scale Bitcoin to secure the decentralized world.
+To this end, Babylon utilizes the three primary facets of Bitcoin: Bitcoin the asset, Bitcoin the reliable timestamping server, and Bitcoin the blockchain that contains the most censorship-resistant blockspace in the world.
+Through inventing pioneering protocols, Babylon envisions a more secure and decentralized future.
 
-<!-- TODO: add BTC staking overview here -->
+<!-- Two protocols in Babylon. BTC timestamping is a building block for BTC staking -->
+We build the [Babylon](https://github.com/babylonchain/babylon) blockchain to realize the vision.
+It is a proof-of-stake (PoS) blockchain that consists of two innovative security-sharing protocols between Bitcoin and other PoS blockchains:
 
----
+- **Bitcoin timestamping:** This protocol sends succinct and verifiable timestamps of PoS blockchains to Bitcoin; and
+- **Bitcoin staking:** Using Bitcoin timestamping as a building block, this protocol allows Bitcoin holders to stake their Bitcoin to PoS blockchains.
 
-Babylon is a PoS (proof-of-stake) blockchain that provides secure Bitcoin timestamps to its transactions. Babylon is built using the Tendermint consensus engine and Cosmos SDK. It leverages cutting-edge cryptographic technologies and advanced Cosmos SDK features to send succinct, verifiable, and adversary-slashing checkpoints of the Babylon chain to BTC as BTC transactions. The BTC timestamps of Babylon checkpoints provide BTC-level security to all Babylon transactions.
+The following figure provides the high-level architecture of the Babylon system.
+The two protocols enable enormous security-related use cases for the decentralized world.
+One primary use case is to bring BTC security to PoS chains.
 
-Below is a high-level architecture of the Babylon system. Babylon can be viewed as a checkpoint verifier and aggregator. It verifies and aggregates the checkpoints submitted by its users into ones that BTC can securely timestamp.
-
+<!-- TODO: update the figure -->
 ![Overview](./images/babylonoverview.png)
-
-This primitive enables enormous security-related use cases for the decentralized world. One motivating and primary use case is to bring BTC security to PoS chains.

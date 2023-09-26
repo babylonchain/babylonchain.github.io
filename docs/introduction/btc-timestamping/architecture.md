@@ -4,9 +4,9 @@ sidebar_label: Architecture
 hide_table_of_contents: true
 ---
 
-# Babylon Architecture
+# Bitcoin Timestamping Architecture
 
-Examine the components and modules that construct Babylon.
+Examine the components and modules of Babylon BTC timestamping protocol.
 
 ---
 
@@ -43,5 +43,5 @@ A standard Cosmos program that enables interchain communicaton. Its default clie
 ## IBC light client <a id="client"></a>
 A standard Cosmos app module residing in Babylon. It verifies the CZ headers shared by the IBC relayer and uses the verified CZ headers to further verify CZ transactions.
 
-## CZConcierge <a id="cz"></a>
+## ZoneConcierge <a id="cz"></a>
 A new Cosmos app module for Babyon. It extracts verified CZ headers from the IBC light client and maintain their BTC-confirmaton status based on the BTC-confirmation status of the Babylon transactons that carry them.
