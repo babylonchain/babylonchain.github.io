@@ -14,7 +14,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.png',
+  favicon: 'img/favicon_black.png',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -90,7 +90,8 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: 'Babylon',
-          src: 'img/logo-primary-full.svg',
+          srcDark: 'img/logo_white.svg',
+          src: 'img/logo_black.svg',
         },
         items: [
           {
