@@ -31,7 +31,7 @@ const FeatureList = [
     ),
   },
   {
-    url: 'docs/modules/overview',
+    url: 'docs/developer-guides/modules/overview',
     title: 'Modules',
     image: four,
     description: (
@@ -41,7 +41,7 @@ const FeatureList = [
     ),
   },
   {
-    url: 'docs/user-guides/testnet/overview',
+    url: 'docs/user-guides/btc-timestamping-testnet/overview',
     title: 'Testnet',
     image: six,
     description: (
