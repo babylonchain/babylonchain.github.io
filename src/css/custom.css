@@ -29,7 +29,6 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-background-color: #0D161B;
   --ifm-color-primary: #fff;
   /* --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -71,10 +70,10 @@
   color: white;
 }
 [data-theme='dark'] .doc_title {
-  color: white;
+  color: black;
 }
 [data-theme='dark'] .doc_subtitle {
-  color: white;
+  color: black;
 }
 .doc_title,
 .doc_subtitle {
