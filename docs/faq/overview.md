@@ -8,7 +8,7 @@ custom_edit_url: null
 
 # Frequently Asked Questions (FAQ)
 
-## BTC Staking
+<!-- ## BTC Staking -->
 
 <!-- TODO -->
 
