@@ -12,7 +12,7 @@ Babylon project designs security protocols that scale Bitcoin to secure the dece
 To this end, Babylon utilizes the three primary facets of Bitcoin: bitcoin the asset, Bitcoin the PoW-secured timestamping server, and Bitcoin the most censorship-resistant blockspace in the world.
 Through inventing pioneering protocols, Babylon envisions a more secure and Bitcoin-centric decentralized world.
 
-<!-- Two protocols in Babylon. BTC timestamping is a building block for BTC staking -->
+<!-- Two protocols in Babylon. BTC timestamping is a building block for Bitcoin staking -->
 To realize the vision, we build [Babylon](https://github.com/babylonchain/babylon), a suite of Bitcoin security-sharing protocols.
 Currently, it includes two protocols:
 
