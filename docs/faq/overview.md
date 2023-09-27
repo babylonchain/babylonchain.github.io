@@ -8,4 +8,8 @@ custom_edit_url: null
 
 # Frequently Asked Questions
 
-<!-- TODO -->
+<!-- TODO: 
+
+- when to open source / testnet 
+
+-->
