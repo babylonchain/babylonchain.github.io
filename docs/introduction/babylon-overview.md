@@ -19,7 +19,7 @@ Currently, it includes two protocols:
 - **Bitcoin timestamping:** This protocol sends succinct and verifiable timestamps of any data (such as PoS blockchains) to Bitcoin; and
 - **Bitcoin staking:** This protocol allows bitcoin the asset to provide economic security to any decentralized systems through trustless (and self-custodian) staking.
 
-The Babylon team is developing the core primitives of Bitcoin staking protocols and will open source it very soon.
+The Babylon team is developing the core primitives of the Bitcoin staking protocol and will open source it very soon.
 This documentation provides a brief overview of the design.
 More documents will be published after open source.
 
