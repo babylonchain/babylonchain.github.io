@@ -4,16 +4,24 @@ sidebar_label: Bitcoin Staking
 hide_table_of_contents: true
 ---
 
+import Paperclip from "/img/paperclip.svg";
+
 # Bitcoin Staking
 
 Babylon's Bitcoin staking protocol allows bitcoin holders to stake their bitcoin for PoS blockchains, without needing any third-party custody/bridge/wrapping.
 It provides slashable economic security guarantees to the PoS chains while ensuring efficient stake unbonding to enhance liquidity for Bitcoin holders.
 This protocol is designed as a modular plug-in compatible with various PoS consensus protocols and serves as a foundational component for building restaking protocols.
 
-<div class="pdf-banner">
-  <a class="pdf-link" target="\_blank" href="/papers/btc_staking_litepaper.pdf">
-    <span class="pdf-text">Bitcoin staking litepaper</span>
-    <span class="pdf-icon">PDF</span>
+<div class="pdf-file-banner">
+  <a class="link" target="_blank" href="/papers/btc_staking_litepaper.pdf">
+    <div class="icon-holder">
+      <Paperclip class="icon" alt="paper clip" />
+    </div>
+    <div class="info">
+      <p class="title">BTC staking litepaper</p>
+      <p class="subtitle">PDF</p>
+    </div>
+    <p class="size">4.7MB</p>
   </a>
 </div>
 
