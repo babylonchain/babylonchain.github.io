@@ -10,6 +10,7 @@ import Paperclip from "/img/paperclip.svg";
 
 Babylon's BTC timestamping protocol allows any arbitrary data submitted to Babylon to obtain Bitcoin timestamps.
 A primary use case of this protocol is to timestamp PoS blockchains to enhance their integrity and security, such as resisting against long range attacks.
+The security level of these timestamps in terms of immutability increases over time because more works are added on top of them over time.
 The protocol includes Bitcoin as the timestamping service, the Babylon blockchain as the checkpoint aggregation and data availability service, and other PoS blockchains as the consumers of security.
 
 Such security enables several use cases:
