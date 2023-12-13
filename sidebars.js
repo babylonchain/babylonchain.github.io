@@ -46,6 +46,18 @@ const sidebars = {
             'introduction/btc-timestamping/use-case',
             'introduction/btc-timestamping/architecture',
           ],
+        },
+        {
+          type: 'category',
+          label: 'Finality Providers',
+          link: {
+            type: 'doc',
+            id: 'introduction/finality-providers/overview',
+          },
+          items: [
+            'introduction/finality-providers/eots',
+            'introduction/finality-providers/finality-provider',
+          ],
         }
       ]
     },
