@@ -1,3 +1,6 @@
+:::caution
+This software is unreleased; CLI options may change in the official release.
+:::
 # EOTS Manager
 
 ## 1. Overview

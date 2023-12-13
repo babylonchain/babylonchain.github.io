@@ -1,3 +1,6 @@
+:::caution
+This software is unreleased; CLI options may change in the official release.
+:::
 # Finality Provider
 
 ## 1. Overview
