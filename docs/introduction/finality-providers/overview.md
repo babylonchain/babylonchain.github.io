@@ -1,7 +1,12 @@
+---
+id: overview
+title: Finality Providers
+sidebar_label: Finality Providers
+---
+
 :::caution
 This software is unreleased; CLI options may change in the official release.
 :::
-# Finality Provider
 
 A toolset crafted for the creation and
 management of Finality Providers.

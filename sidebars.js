@@ -55,7 +55,7 @@ const sidebars = {
             id: 'introduction/finality-providers/overview',
           },
           items: [
-            'introduction/finality-providers/eots',
+            'introduction/finality-providers/eots-manager',
             'introduction/finality-providers/finality-provider',
           ],
         }

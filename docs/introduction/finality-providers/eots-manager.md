@@ -1,7 +1,12 @@
+---
+id: eots-manager
+title: EOTS Manager
+sidebar_label: EOTS Manager
+---
+
 :::caution
 This software is unreleased; CLI options may change in the official release.
 :::
-# EOTS Manager
 
 ## 1. Overview
 
