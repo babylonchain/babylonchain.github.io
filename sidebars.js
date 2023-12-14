@@ -46,18 +46,6 @@ const sidebars = {
             'introduction/btc-timestamping/use-case',
             'introduction/btc-timestamping/architecture',
           ],
-        },
-        {
-          type: 'category',
-          label: 'Finality Providers',
-          link: {
-            type: 'doc',
-            id: 'introduction/finality-providers/overview',
-          },
-          items: [
-            'introduction/finality-providers/eots-manager',
-            'introduction/finality-providers/finality-provider',
-          ],
         }
       ]
     },
@@ -100,6 +88,18 @@ const sidebars = {
             'user-guides/btc-timestamping-testnet/common-errors',
           ]
         },
+        {
+          type: 'category',
+          label: 'Finality Providers',
+          link: {
+            type: 'doc',
+            id: 'user-guides/finality-providers/overview',
+          },
+          items: [
+            'user-guides/finality-providers/eots-manager',
+            'user-guides/finality-providers/finality-provider',
+          ],
+        }
       ]
     },
     {
