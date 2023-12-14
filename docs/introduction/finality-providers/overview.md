@@ -122,7 +122,7 @@ the operator can set up and run the
 Extractable One Time Signature (EOTS) manager daemon.
 A complete overview of the EOTS manager, its operation, and
 its configuration options can be found in the
-[EOTS Manager page](./eots.md)
+[EOTS Manager page](./eots-manager.md)
 
 #### 3.3. Setting up a Finality Provider 
 
