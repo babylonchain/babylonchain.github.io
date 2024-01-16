@@ -13,15 +13,25 @@ It provides slashable economic security guarantees to the PoS chains while ensur
 This protocol is designed as a modular plug-in compatible with various PoS consensus protocols and serves as a foundational component for building restaking protocols.
 
 <div class="pdf-file-banner">
-  <a class="link" target="_blank" href="/papers/btc_staking_litepaper.pdf">
+  <a class="link" target="_blank" href="/papers/btc_staking_litepaper(EN).pdf">
     <div class="icon-holder">
       <Paperclip class="icon" alt="paper clip" />
     </div>
     <div class="info">
-      <p class="title">BTC staking litepaper</p>
+      <p class="title">BTC staking litepaper (EN)</p>
       <p class="subtitle">PDF</p>
     </div>
     <p class="size">4.7MB</p>
+  </a>
+  <a class="link" target="_blank" href="/papers/btc_staking_litepaper(CN).pdf">
+    <div class="icon-holder">
+      <Paperclip class="icon" alt="paper clip" />
+    </div>
+    <div class="info">
+      <p class="title">BTC staking litepaper (CN)</p>
+      <p class="subtitle">PDF</p>
+    </div>
+    <p class="size">1.2MB</p>
   </a>
 </div>
 
