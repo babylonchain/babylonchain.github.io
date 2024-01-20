@@ -10,9 +10,6 @@ Learn how to get testnet tokens for Babylon.
 
 ---
 
-In this guide we will go through how you can create a keyring and request for tokens
-through the Babylon testnet faucet.
-![gettokens](./images/GettingTestnetTokens.png#left)
 
 ## 1. Create a Keyring
 

@@ -9,7 +9,6 @@ hide_table_of_contents: true
 Learn how to set up the full node for the Babylon system.
 
 ---
-![setfullnode](./images/setfullnode.png#left)
 
 :::info Note
 

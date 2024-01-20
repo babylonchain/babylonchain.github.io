@@ -49,9 +49,6 @@ It gives us the following advantages:
 
 ## Running a Babylon IBC relayer
 
-![integration](./images/integrating.png#left)
-
-
 Running a Babylon IBC relayer consists of the following steps:
 
 1. Install the Babylon Relayer
@@ -204,13 +201,19 @@ where `$INTERVAL` is the interval for relaying a header (e.g., `10m` to denote 1
 
 After the above steps, the Cosmos zone has been integrated to Babylon.
 You can do the following things to check the status of the integration:
-- Check the Babylon node API http://rpc.testnet.babylonchain.io:1317/babylon/zoneconcierge/v1/chain_info/<your_chain_id>
+- Check the Babylon node API
+  `http://rpc.testnet.babylonchain.io:1317/babylon/zoneconcierge/v1/chain_info/<your_chain_id>`
   that shows the information of the Cosmos zone in Babylon's view.
-- Check whether [BabylonScan](https://babylonscan.io) shows the information of the Cosmos zone or not.
+- Check whether [BabylonScan](https://babylonscan.io) shows
+  the information of the Cosmos zone or not.
   - NOTE: one needs to submit a PR to Babylon's chain registry in order to be shown on BabylonScan
 
 ## Future Integration Phases
 
-In the future, Babylon will enable further integration phases, such as raising alarms upon dishonest majority attacks and reducing the unbonding time period.
-Such integrations will need IBC packets, thus require using the original IBC relayer rather than the above specialized one.
+In the future, Babylon will enable further integration phases,
+such as raising alarms upon dishonest majority attacks and
+reducing the unbonding time period.
+Such integrations will need IBC packets,
+thus require using the original IBC relayer
+rather than the above specialized one.
 Please see [Zone Concierge](/docs/developer-guides/modules/czconcierge) for more details.
