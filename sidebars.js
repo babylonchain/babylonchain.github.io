@@ -26,17 +26,6 @@ const sidebars = {
         'introduction/babylon-overview',
         {
           type: 'category',
-          label: 'Bitcoin Staking',
-          link: {
-            type: 'doc',
-            id: 'introduction/btc-staking/overview',
-          },
-          items: [
-            // TODO
-          ],
-        },
-        {
-          type: 'category',
           label: 'Bitcoin Timestamping',
           link: {
             type: 'doc',
@@ -46,19 +35,18 @@ const sidebars = {
             'introduction/btc-timestamping/use-case',
             'introduction/btc-timestamping/architecture',
           ],
+        },
+        {
+          type: 'category',
+          label: 'Bitcoin Staking',
+          link: {
+            type: 'doc',
+            id: 'introduction/btc-staking/overview',
+          },
+          items: [
+            // TODO
+          ],
         }
-      ]
-    },
-    {
-      type: 'category',
-      label: 'faq',
-      link: {
-        type: 'doc',
-        id: 'faq/overview',
-      },
-      collapsed: false,
-      items: [
-        // TODO
       ]
     },
     {
@@ -134,6 +122,18 @@ const sidebars = {
     },
     'papers',
     'support',
+    {
+      type: 'category',
+      label: 'faq',
+      link: {
+        type: 'doc',
+        id: 'faq/overview',
+      },
+      collapsed: false,
+      items: [
+        // TODO
+      ]
+    },
     {
       type: 'category',
       label: 'CLI Reference',
