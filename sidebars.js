@@ -73,7 +73,6 @@ const sidebars = {
             'user-guides/btc-timestamping-testnet/become-validator',
             'user-guides/btc-timestamping-testnet/become-vigilante',
             'user-guides/btc-timestamping-testnet/czintegrate',
-            'user-guides/btc-timestamping-testnet/common-errors',
           ]
         },
         {
