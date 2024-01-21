@@ -1,13 +1,14 @@
 ---
-id: overview
+id: btc-staker
 title: BTC Staker
 sidebar_label: BTC Staker
 ---
 
+BTC-Staker is a toolset designed for seamless Bitcoin staking.
+
 ## 1. Overview
 
-BTC-Staker is a toolset designed for seamless Bitcoin staking. It consists of two
-components:
+It consists of two components:
 
 1. `stakerd` - The `stakerd` daemon manages connections to the Babylon and Bitcoin
    nodes.

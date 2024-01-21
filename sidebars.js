@@ -66,6 +66,7 @@ const sidebars = {
             'user-guides/btc-staking-testnet/setup-node',
             'user-guides/btc-staking-testnet/getting-funds',
             'user-guides/btc-staking-testnet/become-validator',
+            'user-guides/btc-staking-testnet/btc-staker',
             {
               type: 'category',
               label: 'Finality Providers',
@@ -77,15 +78,6 @@ const sidebars = {
                 'user-guides/finality-providers/eots-manager',
                 'user-guides/finality-providers/finality-provider',
               ],
-            },
-            {
-              type: 'category',
-              label: 'BTC Staker',
-              link: {
-                type: 'doc',
-                id: 'user-guides/btc-staker/overview',
-              },
-              items: [],
             },
           ]
         },
