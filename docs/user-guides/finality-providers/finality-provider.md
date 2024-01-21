@@ -4,10 +4,6 @@ title: Finality Provider
 sidebar_label: Finality Provider
 ---
 
-:::caution
-This software is unreleased; CLI options may change in the official release.
-:::
-
 ## 1. Overview
 
 The Finality Provider Daemon is responsible for

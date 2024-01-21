@@ -4,10 +4,6 @@ title: EOTS Manager
 sidebar_label: EOTS Manager
 ---
 
-:::caution
-This software is unreleased; CLI options may change in the official release.
-:::
-
 ## 1. Overview
 
 The EOTS daemon is responsible for managing EOTS keys,
