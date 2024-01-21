@@ -64,7 +64,6 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 
 Create the necessary directories
 ```console
-mkdir -p ~/.babylond
 mkdir -p ~/.babylond/cosmovisor
 mkdir -p ~/.babylond/cosmovisor/genesis
 mkdir -p ~/.babylond/cosmovisor/genesis/bin
