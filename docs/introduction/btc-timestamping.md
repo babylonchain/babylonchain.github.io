@@ -36,7 +36,7 @@ Such security enables several use cases:
   can use Babylon as a backup to enter the ledger.
 - **Bitcoin staking:** Bitcoin timestamping protocol serves
   as a building block for our
-  [Bitcoin staking protocol](/docs/introduction/btc-staking/overview.md),
+  [Bitcoin staking protocol](/docs/introduction/btc-staking.md),
   because it provides synchronization between PoS blockchains and Bitcoin.
 
 In addition, via CosmWasm, one can develop timestamping services with any
