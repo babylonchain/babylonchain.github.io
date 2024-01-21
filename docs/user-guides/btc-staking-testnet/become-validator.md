@@ -99,7 +99,7 @@ To verify that you have become a validator, first find your validator address:
 ```
 babylond keys show $KEYNAME -a --bech val
 ```
-where `$KEYNAME` is the name of the key that you used for the self-delegation (e.g. `val-key` on our example).
+where `$KEYNAME` is the name of the key that you used for the self-delegation (e.g. `my-key` on our example).
 This will return an address which you can use as the `$ADDR` variable to perform the following query:
 ```console
 babylond query staking validator $ADDR
