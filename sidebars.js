@@ -66,6 +66,15 @@ const sidebars = {
             'user-guides/finality-providers/eots-manager',
             'user-guides/finality-providers/finality-provider',
           ],
+        },
+        {
+          type: 'category',
+          label: 'BTC Staker',
+          link: {
+            type: 'doc',
+            id: 'user-guides/btc-staker/overview',
+          },
+          items: [],
         }
       ]
     },
