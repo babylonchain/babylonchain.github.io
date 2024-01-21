@@ -15,10 +15,6 @@ Having a full node setup and synced by following this [guide](./setup-node.md)
 
 ## 1. Create a Keyring and Get Funds
 
-Validators are required to have funds for two reasons:
-1. They need to provide a self delegation
-2. They need to pay for transaction fees for submitting BLS signature transactions
-
 The [Getting Testnet Tokens](./getting-funds.md) page contains detailed instructions
 on how to create a keyring and get funds for it through a faucet.
 
