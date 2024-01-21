@@ -85,7 +85,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which cosmovisor) start --x-crisis-skip-assert-invariants
+ExecStart=$(which cosmovisor) run start --x-crisis-skip-assert-invariants
 Restart=always
 RestartSec=3
 LimitNOFILE=infinity
