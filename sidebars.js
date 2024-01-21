@@ -57,7 +57,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Bitcoin Staking Testnet',
+          label: 'Bitcoin Staking Testnet (not launched yet)',
           link: {
             type: 'doc',
             id: 'user-guides/btc-staking-testnet/overview',
