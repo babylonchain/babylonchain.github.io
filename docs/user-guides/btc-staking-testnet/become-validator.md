@@ -19,13 +19,6 @@ Validators are required to have funds for two reasons:
 1. They need to provide a self delegation
 2. They need to pay for transaction fees for submitting BLS signature transactions
 
-:::info Note
-
-Currently, validators can only use the `test` keyring backend. In the future,
-Babylon will support other types of encrypted backends provided by the Cosmos SDK for validators.
-
-:::
-
 The [Getting Testnet Tokens](./getting-funds.md) page contains detailed instructions
 on how to create a keyring and get funds for it through a faucet.
 
@@ -54,24 +47,7 @@ sudo systemctl start babylond
 
 ## 3. Modify the Configuration
 
-A Babylon validator needs to send BLS signature transactions at the end of each epoch.
-This process is done automatically through the Babylon codebase which identifies
-which key to use from the `~/.babylond/config/client.toml` file. Edit this file and
-set the keyring backend that you're using.
-In this guide's case:
-```toml
-keyring-backend = "test"
-```
-
-Furthermore, you need to specify the name of the key that the validator will be
-using to submit BLS signature transactions under the
-`~/.babylond/config/app.toml` file. Edit this file and set the key name to the
-one that holds funds on your keyring:
-```toml
-key-name = "val-key" # replace with your key name
-```
-
-Finally, it is strongly recommended to modify the `timeout_commit` value
+It is strongly recommended to modify the `timeout_commit` value
 under `~/.babylond/config/config.toml`. This value specifies
 how long a validator will wait before commiting a block before starting
 on a new height. More information can be found [here](https://docs.tendermint.com/v0.33/tendermint-core/configuration.html#consensus-timeouts-explained).
@@ -90,7 +66,7 @@ This command expects that a BLS validator key exists under the `~/.babylond/conf
 :::info
 
 Note: Babylon validators are required to submit a BLS signature transaction
-every epoch (with current parameters every ~30mins). Those transactions
+every epoch (with current parameters every ~1 hour). Those transactions
 currently cost a static gas fee of `100ubbn`. Therefore, it is important
 that validators maintain enough unbonded funds in their keyring to pay
 for those transaction fees.

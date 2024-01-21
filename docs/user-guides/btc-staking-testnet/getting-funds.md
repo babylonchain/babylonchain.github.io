@@ -13,16 +13,6 @@ Learn how to get testnet tokens for Babylon.
 
 ## 1. Create a Keyring
 
-:::info Note
-
-Currently, validators can only use the `test` keyring backend
-because they need to automatically submit transactions containing BLS signatures.
-In the future,
-Babylon will support other types of encrypted backends provided
-by the Cosmos SDK for validators.
-
-:::
-
 One can create a keyring through the `babylond keys add` command. Full specification
 for this command can be found under the [CLI docs](/docs/cli/babylond/keys/babylondkeysdd.md).
 

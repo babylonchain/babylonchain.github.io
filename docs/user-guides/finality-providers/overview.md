@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Finality Providers
+title: Become a Finality Provider
 sidebar_label: Finality Providers
 ---
 
