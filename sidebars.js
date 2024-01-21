@@ -24,29 +24,9 @@ const sidebars = {
       collapsed: false,
       items: [
         'introduction/babylon-overview',
-        {
-          type: 'category',
-          label: 'Bitcoin Timestamping',
-          link: {
-            type: 'doc',
-            id: 'introduction/btc-timestamping/overview',
-          },
-          items: [
-            'introduction/btc-timestamping/use-case',
-            'introduction/btc-timestamping/architecture',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Bitcoin Staking',
-          link: {
-            type: 'doc',
-            id: 'introduction/btc-staking/overview',
-          },
-          items: [
-            // TODO
-          ],
-        }
+        'introduction/btc-timestamping',
+        'introduction/btc-staking',
+        'introduction/architecture',
       ]
     },
     {
@@ -110,10 +90,20 @@ const sidebars = {
             'developer-guides/modules/checkpointing',
             'developer-guides/modules/btccheckpoint',
             'developer-guides/modules/btclightclient',
-            'developer-guides/modules/czconcierge',
-            'developer-guides/modules/submitter',
-            'developer-guides/modules/reporter',
-            'developer-guides/modules/monitor',
+            'developer-guides/modules/zoneconcierge',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Vigilantes',
+          link: {
+            type: 'doc',
+            id: 'developer-guides/vigilantes/overview',
+          },
+          items: [
+            'developer-guides/vigilantes/submitter',
+            'developer-guides/vigilantes/reporter',
+            'developer-guides/vigilantes/monitor',
           ],
         },
         'developer-guides/grpcrestapi',
