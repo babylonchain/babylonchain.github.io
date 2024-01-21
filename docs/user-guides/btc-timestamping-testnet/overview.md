@@ -4,7 +4,6 @@ sidebar_label: Bitcoin Timestamping Testnet
 hide_table_of_contents: true
 
 ---
-import myImageUrl from './images/Testnet.png';
 
 # Bitcoin Timestamping Testnet
 

@@ -11,14 +11,17 @@ Learn how to run the Babylon Vigilante program.
 ---
 
 Vigilante programs are standalone programs that are run along-side with Babylon nodes.
-People run a vigilante program in three modes, `reporter`, `submitter`, and `monitor`, each responsible to different aspects to the security of the Babylon network.
-
-![vigilante](./images/vigilante.png#left)
+People run a vigilante program in three modes,
+`reporter`, `submitter`, and
+`monitor`, each responsible to different aspects to the security of the Babylon network.
 
 ## Prerequisites
 
 First we need to have the access to a synced Babylon full node and a synced BTC full node.
-To run a BTC full node, please follow the [instructions of running a `bitcoind` full node](https://bitcoin.org/en/full-node) or the [instructions of running a `btcd` full node](https://github.com/btcsuite/btcd) (an alternative full node bitcoin implementation written in Golang).
+To run a BTC full node, please follow the
+[instructions of running a `bitcoind` full node](https://bitcoin.org/en/full-node) or
+the [instructions of running a `btcd` full node](https://github.com/btcsuite/btcd)
+(an alternative full node bitcoin implementation written in Golang).
 We support the connections to both.
 To run a Babylon full node, please follow this [guide](./setup-node.md).
 
@@ -72,8 +75,9 @@ go run $VIGILANTE_PATH/cmd/main.go submitter \
 
 ### Monitor
 
-The monitor mode requires the genesis file of Babylon as an additional parameter, which is stored under `$BABYLON_NODE_PATH/config/genesis.json`.
-So, run the vigilante monitor
+The monitor mode requires the genesis file of Babylon as an additional parameter,
+which is stored under `$BABYLON_NODE_PATH/config/genesis.json`.
+To run the vigilante monitor
 
 ```shell
 go run $VIGILANTE_PATH/cmd/main.go monitor \
@@ -126,7 +130,8 @@ docker run --rm \
 
 ### Buildx
 
-The above `Dockerfile`s are also compatible with Docker's [buildx feature](https://docs.docker.com/desktop/multi-arch/)
+The above `Dockerfile`s are also compatible with Docker's
+[buildx feature](https://docs.docker.com/desktop/multi-arch/)
 that allows multi-architectural builds. To have a multi-architectural build,
 
 ```shell
