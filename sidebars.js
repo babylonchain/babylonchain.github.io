@@ -57,25 +57,38 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Finality Providers',
+          label: 'Bitcoin Staking Testnet',
           link: {
             type: 'doc',
-            id: 'user-guides/finality-providers/overview',
+            id: 'user-guides/btc-staking-testnet/overview',
           },
           items: [
-            'user-guides/finality-providers/eots-manager',
-            'user-guides/finality-providers/finality-provider',
-          ],
+            'user-guides/btc-staking-testnet/setup-node',
+            'user-guides/btc-staking-testnet/getting-funds',
+            'user-guides/btc-staking-testnet/become-validator',
+            {
+              type: 'category',
+              label: 'Finality Providers',
+              link: {
+                type: 'doc',
+                id: 'user-guides/finality-providers/overview',
+              },
+              items: [
+                'user-guides/finality-providers/eots-manager',
+                'user-guides/finality-providers/finality-provider',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'BTC Staker',
+              link: {
+                type: 'doc',
+                id: 'user-guides/btc-staker/overview',
+              },
+              items: [],
+            },
+          ]
         },
-        {
-          type: 'category',
-          label: 'BTC Staker',
-          link: {
-            type: 'doc',
-            id: 'user-guides/btc-staker/overview',
-          },
-          items: [],
-        }
       ]
     },
     {
