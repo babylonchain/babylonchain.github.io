@@ -33,7 +33,7 @@ It consists of the following programs:
 
 The following graphic demonstrates the interconnections between the above programs:
 
-![Finality Provider Interconnections](./images/finality-toolset.png)
+![Finality Provider Interconnections](images/finality-toolset.png)
 
 
 ## 2. Installation

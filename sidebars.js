@@ -72,11 +72,11 @@ const sidebars = {
               label: 'Finality Providers',
               link: {
                 type: 'doc',
-                id: 'user-guides/finality-providers/overview',
+                id: 'user-guides/btc-staking-testnet/finality-providers/overview',
               },
               items: [
-                'user-guides/finality-providers/eots-manager',
-                'user-guides/finality-providers/finality-provider',
+                'user-guides/btc-staking-testnet/finality-providers/eots-manager',
+                'user-guides/btc-staking-testnet/finality-providers/finality-provider',
               ],
             },
           ]
