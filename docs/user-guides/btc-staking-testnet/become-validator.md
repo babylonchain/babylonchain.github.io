@@ -74,7 +74,7 @@ babylond tx checkpointing create-validator /path/to/validator.json \
 
 where `/path/to/validator.json` contains
 ```json
-# - $AMOUNT the amount to delegate in ubbn, e.g. 10000000ubbn (must be less than the delegator's balance)
+# - $AMOUNT the amount to delegate in ubbn, e.g. 1000000ubbn (must be less than the delegator's balance)
 {
   "pubkey": {"@type":"/cosmos.crypto.ed25519.PubKey","key":"BnbwFpeONLqvWqJb3qaUbL5aoIcW3fSuAp9nT3z5f20="},
   "amount": "$AMOUNT",
@@ -97,7 +97,7 @@ babylond tendermint show-validator
 
 Note: In order to become an active validator, you need to have more `ubbn`
 tokens bonded than the last validator ordered by the tokens bonded (or the
-validator set to not be full) as well as have at least `10000000ubbn` bonded.
+validator set to not be full) as well as have at least `1000000ubbn` bonded.
 
 :::
 
@@ -105,7 +105,7 @@ validator set to not be full) as well as have at least `10000000ubbn` bonded.
 
 On the Babylon system,
 one can become a validator only after an epoch ends.
-For the testnet, an epoch lasts for around 30 minutes.
+For the testnet, an epoch lasts for around 1 hour.
 
 To verify that you have become a validator, first find your validator address:
 ```

@@ -100,7 +100,7 @@ for those transaction fees.
 To create the validator (using sample parameters):
 ```console
 # Note the variables
-# - $AMOUNT the amount to delegate in ubbn, e.g. 10000000ubbn (must be less than the delegator's balance)
+# - $AMOUNT the amount to delegate in ubbn, e.g. 1000000ubbn (must be less than the delegator's balance)
 # - $CHAIN_ID the chain ID
 # - $VAL_KEY the name of the key (with a test keyring backend) used for the validator
 babylond tx checkpointing create-validator \
@@ -123,7 +123,7 @@ babylond tx checkpointing create-validator \
 
 Note: In order to become an active validator, you need to have more `ubbn`
 tokens bonded than the last validator ordered by the tokens bonded (or the
-validator set to not be full) as well as have at least `10000000ubbn` bonded.
+validator set to not be full) as well as have at least `1000000ubbn` bonded.
 
 :::
 

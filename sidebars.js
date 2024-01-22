@@ -69,7 +69,7 @@ const sidebars = {
             'user-guides/btc-staking-testnet/btc-staker',
             {
               type: 'category',
-              label: 'Finality Providers',
+              label: 'Becoming a Finality Provider',
               link: {
                 type: 'doc',
                 id: 'user-guides/btc-staking-testnet/finality-providers/overview',

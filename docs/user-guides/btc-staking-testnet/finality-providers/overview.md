@@ -1,7 +1,7 @@
 ---
 id: overview
-title: Become a Finality Provider
-sidebar_label: Finality Providers
+title: Becoming a Finality Provider
+sidebar_label: Becoming a Finality Provider
 ---
 
 A toolset crafted for the creation and
@@ -50,46 +50,50 @@ the [official Go installation guide](https://golang.org/doc/install).
 To get started, clone the repository to your local machine from Github:
 
 ```bash
-$ git clone git@github.com:babylonchain/finality-provider.git
+git clone git@github.com:babylonchain/finality-provider.git
 ```
 
 You can choose a specific version from
 the [official releases page](https://github.com/babylonchain/finality-provider/releases)
 
 ```bash
-$ cd finality-provider # cd into the project directory
-$ git checkout <release-tag>
+cd finality-provider # cd into the project directory
+git checkout <release-tag>
 ```
 
 #### Building and installing the binary
 
-```bash
-# cd into the project directory
-$ cd finality-provider
+At the top-level directory of the project
 
-# installs the compiled binaries to your
-# $GOPATH/bin directory allowing access
-# from anywhere on your system
-$ make install 
+```bash
+make install
 ```
 
-The above will produce the following binaries:
+The above command will build and install the following binaries to
+`$GOPATH/bin`:
 
 - `eotsd`: The daemon program for the EOTS manager.
 - `fpd`: The daemon program for the finality-provider.
 - `fpcli`: The CLI tool for interacting with the finality-provider daemon.
 
-To build locally,
+If your shell cannot find the installed binaries, make sure `$GOPATH/bin` is in
+the `$PATH` of your shell. Usually these commands will do the job
 
 ```bash
-$ cd finality-provider # cd into the project directory
-$ make build
+export PATH=$HOME/go/bin:$PATH
+echo 'export PATH=$HOME/go/bin:$PATH' >> ~/.profile
 ```
 
-The above will lead to a build directory having the following structure:
+To build without installing,
 
 ```bash
-$ ls build
+make build
+```
+
+The above command will put the built binaries in a build directory with the
+following structure:
+```bash
+ls build
     ├── eotsd
     ├── fpcli
     └── fpd
