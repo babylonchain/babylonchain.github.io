@@ -62,23 +62,35 @@ This command expects that a BLS validator key exists under the `~/.babylond/conf
 To create the validator (using sample parameters):
 ```console
 # Note the variables
-# - $AMOUNT the amount to delegate in ubbn, e.g. 10000000ubbn (must be less than the delegator's balance)
 # - $CHAIN_ID the chain ID
 # - $VAL_KEY the name of the key (with a test keyring backend) used for the validator
-babylond tx checkpointing create-validator \
-    --amount="$AMOUNT" \
-    --pubkey=$(babylond tendermint show-validator) \
-    --moniker="My Validator" \
-    --chain-id=$CHAIN_ID \
+babylond tx checkpointing create-validator /path/to/validator.json \
+    --chain-id="$CHAIN_ID" \
     --gas="auto" \
-    --gas-adjustment=1.2 \
-    --gas-prices="0.0025ubbn" \
-    --keyring-backend=test \
-    --from=$VAL_KEY \
-    --commission-rate="0.10" \
-    --commission-max-rate="0.20" \
-    --commission-max-change-rate="0.01" \
-    --min-self-delegation="1"
+    --gas-adjustment="1.2" \
+    --gas-prices="0.025ubbn" \
+    --from=$VAL_KEY
+```
+
+where `/path/to/validator.json` contains
+```json
+# - $AMOUNT the amount to delegate in ubbn, e.g. 10000000ubbn (must be less than the delegator's balance)
+{
+  "pubkey": {"@type":"/cosmos.crypto.ed25519.PubKey","key":"BnbwFpeONLqvWqJb3qaUbL5aoIcW3fSuAp9nT3z5f20="},
+  "amount": "$AMOUNT",
+  "moniker": "my-moniker",
+  "website": "https://myweb.site",
+  "security": "security-contact@gmail.com",
+  "details": "description of your validator",
+  "commission-rate": "0.10",
+  "commission-max-rate": "0.20",
+  "commission-max-change-rate": "0.01",
+  "min-self-delegation": "1"
+}
+```
+and `pubkey` can be obtained through the following command
+```console
+babylond tendermint show-validator
 ```
 
 :::info
