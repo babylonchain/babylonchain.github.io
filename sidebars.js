@@ -57,16 +57,30 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Finality Providers',
+          label: 'Bitcoin Staking Testnet (not launched yet)',
           link: {
             type: 'doc',
-            id: 'user-guides/finality-providers/overview',
+            id: 'user-guides/btc-staking-testnet/overview',
           },
           items: [
-            'user-guides/finality-providers/eots-manager',
-            'user-guides/finality-providers/finality-provider',
-          ],
-        }
+            'user-guides/btc-staking-testnet/setup-node',
+            'user-guides/btc-staking-testnet/getting-funds',
+            'user-guides/btc-staking-testnet/become-validator',
+            {
+              type: 'category',
+              label: 'Becoming a Finality Provider',
+              link: {
+                type: 'doc',
+                id: 'user-guides/btc-staking-testnet/finality-providers/overview',
+              },
+              items: [
+                'user-guides/btc-staking-testnet/finality-providers/eots-manager',
+                'user-guides/btc-staking-testnet/finality-providers/finality-provider',
+              ],
+            },
+            'user-guides/btc-staking-testnet/btc-staker',
+          ]
+        },
       ]
     },
     {

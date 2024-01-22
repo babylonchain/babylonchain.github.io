@@ -15,17 +15,6 @@ Having a full node setup and synced by following this [guide](./setup-node.md)
 
 ## 1. Create a Keyring and Get Funds
 
-Validators are required to have funds for two reasons:
-1. They need to provide a self delegation
-2. They need to pay for transaction fees for submitting BLS signature transactions
-
-:::info Note
-
-Currently, validators can only use the `test` keyring backend. In the future,
-Babylon will support other types of encrypted backends provided by the Cosmos SDK for validators.
-
-:::
-
 The [Getting Testnet Tokens](./getting-funds.md) page contains detailed instructions
 on how to create a keyring and get funds for it through a faucet.
 
@@ -54,24 +43,7 @@ sudo systemctl start babylond
 
 ## 3. Modify the Configuration
 
-A Babylon validator needs to send BLS signature transactions at the end of each epoch.
-This process is done automatically through the Babylon codebase which identifies
-which key to use from the `~/.babylond/config/client.toml` file. Edit this file and
-set the keyring backend that you're using.
-In this guide's case:
-```toml
-keyring-backend = "test"
-```
-
-Furthermore, you need to specify the name of the key that the validator will be
-using to submit BLS signature transactions under the
-`~/.babylond/config/app.toml` file. Edit this file and set the key name to the
-one that holds funds on your keyring:
-```toml
-key-name = "val-key" # replace with your key name
-```
-
-Finally, it is strongly recommended to modify the `timeout_commit` value
+It is strongly recommended to modify the `timeout_commit` value
 under `~/.babylond/config/config.toml`. This value specifies
 how long a validator will wait before commiting a block before starting
 on a new height. More information can be found [here](https://docs.tendermint.com/v0.33/tendermint-core/configuration.html#consensus-timeouts-explained).
@@ -87,36 +59,38 @@ Contrary to a vanilla Cosmos SDK chain, a validator for Babylon is created throu
 the `babylond tx checkpointing create-validator` command.
 This command expects that a BLS validator key exists under the `~/.babylond/config/priv_validator_key.json`.
 
-:::info
-
-Note: Babylon validators are required to submit a BLS signature transaction
-every epoch (with current parameters every ~30mins). Those transactions
-currently cost a static gas fee of `100ubbn`. Therefore, it is important
-that validators maintain enough unbonded funds in their keyring to pay
-for those transaction fees.
-
-:::
-
 To create the validator (using sample parameters):
 ```console
 # Note the variables
-# - $AMOUNT the amount to delegate in ubbn, e.g. 1000000ubbn (must be less than the delegator's balance)
 # - $CHAIN_ID the chain ID
 # - $VAL_KEY the name of the key (with a test keyring backend) used for the validator
-babylond tx checkpointing create-validator \
-    --amount="$AMOUNT" \
-    --pubkey=$(babylond tendermint show-validator) \
-    --moniker="My Validator" \
-    --chain-id=$CHAIN_ID \
+babylond tx checkpointing create-validator /path/to/validator.json \
+    --chain-id="$CHAIN_ID" \
     --gas="auto" \
-    --gas-adjustment=1.2 \
-    --gas-prices="0.0025ubbn" \
-    --keyring-backend=test \
-    --from=$VAL_KEY \
-    --commission-rate="0.10" \
-    --commission-max-rate="0.20" \
-    --commission-max-change-rate="0.01" \
-    --min-self-delegation="1"
+    --gas-adjustment="1.2" \
+    --gas-prices="0.025ubbn" \
+    --from=$VAL_KEY
+```
+
+where `/path/to/validator.json` contains
+```json
+# - $AMOUNT the amount to delegate in ubbn, e.g. 1000000ubbn (must be less than the delegator's balance)
+{
+  "pubkey": {"@type":"/cosmos.crypto.ed25519.PubKey","key":"BnbwFpeONLqvWqJb3qaUbL5aoIcW3fSuAp9nT3z5f20="},
+  "amount": "$AMOUNT",
+  "moniker": "my-moniker",
+  "website": "https://myweb.site",
+  "security": "security-contact@gmail.com",
+  "details": "description of your validator",
+  "commission-rate": "0.10",
+  "commission-max-rate": "0.20",
+  "commission-max-change-rate": "0.01",
+  "min-self-delegation": "1"
+}
+```
+and `pubkey` can be obtained through the following command
+```console
+babylond tendermint show-validator
 ```
 
 :::info
@@ -131,13 +105,13 @@ validator set to not be full) as well as have at least `1000000ubbn` bonded.
 
 On the Babylon system,
 one can become a validator only after an epoch ends.
-For the testnet, an epoch lasts for around 30 minutes.
+For the testnet, an epoch lasts for around 1 hour.
 
 To verify that you have become a validator, first find your validator address:
 ```
 babylond keys show $KEYNAME -a --bech val
 ```
-where `$KEYNAME` is the name of the key that you used for the self-delegation (e.g. `val-key` on our example).
+where `$KEYNAME` is the name of the key that you used for the self-delegation (e.g. `my-key` on our example).
 This will return an address which you can use as the `$ADDR` variable to perform the following query:
 ```console
 babylond query staking validator $ADDR

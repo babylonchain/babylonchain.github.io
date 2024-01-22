@@ -4,10 +4,6 @@ title: EOTS Manager
 sidebar_label: EOTS Manager
 ---
 
-:::caution
-This software is unreleased; CLI options may change in the official release.
-:::
-
 ## 1. Overview
 
 The EOTS daemon is responsible for managing EOTS keys,
@@ -49,13 +45,13 @@ manager. This directory is created in the default home location or in a location
 specified by the `--home` flag.
 
 ```bash
-$ eotsd init --home /path/to/eotsd/home/
+eotsd init --home /path/to/eotsd/home/
 ```
 
 After initialization, the home directory will have the following structure
 
 ```bash
-$ ls /path/to/eotsd/home/
+ls /path/to/eotsd/home/
   ├── eotsd.conf # Eotsd-specific configuration file.
   ├── logs       # Eotsd logs
 ```
@@ -63,15 +59,15 @@ $ ls /path/to/eotsd/home/
 If the `--home` flag is not specified, then the default home location will
 be used. For different operating systems, those are:
 
-- **MacOS** `~/Library/Application Support/Eotsd`
+- **MacOS** `~/Users/<username>/Library/Application Support/Eotsd`
 - **Linux** `~/.Eotsd`
 - **Windows** `C:\Users\<username>\AppData\Local\Eotsd`
 
-Below are some of the important parameters in the `eotsd.conf` file.
+Below are the `eotsd.conf` file contents:
 
 ```bash
 # Default address to listen for RPC connections
-RpcListener = localhost:15813
+RpcListener = 127.0.0.1:15813
 
 # Type of keyring to use,
 # supported backends - (os|file|kwallet|pass|test|memory)
@@ -88,24 +84,22 @@ Path = bbolt-eots.db
 Name = default
 ```
 
-To see the complete list of configuration options, check the `eotsd.conf` file.
-
 ## 3. Starting the EOTS Daemon
 
 You can start the EOTS daemon using the following command:
 
 ```bash
-$ eotsd --home /path/to/eotsd/home
+eotsd start --home /path/to/eotsd/home
 ```
 
 This will start the rpc server at the address specified in the configuration under
-the `RpcListener` field. It can also be overridden with custom address using
-the `--rpclistener` flag.
+the `RpcListener` field, which has a default value of `127.0.0.1:15813`.
+You can also specify a custom address using the `--rpc-listener` flag.
 
 ```bash
-$ eotsd --rpclistener 'localhost:8081'
+eotsd start
 
-time="2023-11-26T16:35:04-05:00" level=info msg="RPC server listening on 127.0.0.1:8081"
+time="2023-11-26T16:35:04-05:00" level=info msg="RPC server listening	{"address": "127.0.0.1:15813"}"
 time="2023-11-26T16:35:04-05:00" level=info msg="EOTS Manager Daemon is fully active!"
 ```
 
