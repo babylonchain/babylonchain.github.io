@@ -67,14 +67,14 @@ To create the validator (using sample parameters):
 babylond tx checkpointing create-validator /path/to/validator.json \
     --chain-id="$CHAIN_ID" \
     --gas="auto" \
-    --gas-adjustment="1.2" \
+    --gas-adjustment="1.5" \
     --gas-prices="0.025ubbn" \
     --from=$VAL_KEY
 ```
 
 where `/path/to/validator.json` contains
 ```json
-# - $AMOUNT the amount to delegate in ubbn, e.g. 1000000ubbn (must be less than the delegator's balance)
+# - $AMOUNT the amount to delegate in ubbn, e.g. 1000000ubbn (must be less than the delegator's balance, and unit must be included)
 {
   "pubkey": {"@type":"/cosmos.crypto.ed25519.PubKey","key":"BnbwFpeONLqvWqJb3qaUbL5aoIcW3fSuAp9nT3z5f20="},
   "amount": "$AMOUNT",
