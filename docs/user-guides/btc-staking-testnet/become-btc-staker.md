@@ -38,7 +38,7 @@ sudo apt install build-essential
 To get started, clone the repository to your local machine from Github:
 
 ```bash
-git clone git@github.com:babylonchain/btc-staker.git
+git clone https://github.com/babylonchain/btc-staker.git
 ```
 
 You can choose a specific version from
