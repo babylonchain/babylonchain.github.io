@@ -1,4 +1,8 @@
-# Finality Provider
+---
+id: finality-provider
+title: Finality Provider
+sidebar_label: Finality Provider
+---
 
 ## 1. Overview
 
