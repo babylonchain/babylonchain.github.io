@@ -100,24 +100,134 @@ to create a keyring and request funds.
 #### 2. Start Bitcoin node with wallet
 
 The `stakerd` daemon requires a running Bitcoin node and a **legacy** wallet loaded
-with signet Bitcoins. You can configure the daemon to connect to either
-`bitcoind` or `btcd` node types.
+with signet Bitcoins.
 
-Follow the official guides to install and run the Bitcoin node:
+You can configure `stakerd` daemon to connect to either
+`bitcoind` or `btcd` node types. While both are compatible, we recommend
+using `bitcoind`. Ensure that you are using legacy wallets, as `stakerd` daemon
+doesn't currently support descriptor wallets.
 
-- ##### Bitcoin Core (bitcoind)
-    - Official Bitcoin Core
-      website: [Bitcoin core](https://bitcoin.org/en/bitcoin-core/)
+Below, we'll guide you through setting up a signet `bitcoind` node and a legacy
+wallet:
 
-    - For information on Signet, you can
-      check [this](https://en.bitcoin.it/wiki/Signet) wiki page.
+#### 2.1. Download and Extract Bitcoin Binary:
 
-    - Currently we only support Bitcoin Core
-      version [24.1](https://bitcoincore.org/en/releases/24.1/)
+```bash
+# Download Bitcoin Core binary
+wget https://bitcoincore.org/bin/bitcoin-core-26.0/bitcoin-26.0-x86_64-linux-gnu.tar.gz
 
-- ##### btcd
+# Extract the downloaded archive
+tar -xvf bitcoin-26.0-x86_64-linux-gnu.tar.gz
 
-  GitHub repository for btcd: [btcd](https://github.com/btcsuite/btcd)
+# Provide execution permissions to binaries
+chmod +x bitcoin-26.0/bin/bitcoind
+chmod +x bitcoin-26.0/bin/bitcoin-cli
+```
+
+#### 2.2. Create and start a Systemd Service:
+
+Please update the following configurations in the provided file:
+
+1. Replace `<rpcuser>` and `<rpcpass>` with your own values. These credentials will
+   also be utilized in the btc-staker configuration file later on.
+2. Ensure that the `<user>` is set to the machine user. In the guide below, it's set
+   to ubuntu.
+3. Note that `deprecatedrpc=create_bdb` is necessary to enable the creation of a
+   legacy wallet, which has been deprecated in the latest core version. For more
+   information, refer to the Bitcoin Core 26.0 release
+   page [here](https://bitcoincore.org/en/releases/26.0/)
+   and this [link](https://github.com/bitcoin/bitcoin/pull/28597).
+4. If you want to enable remote connections to the node, you can add
+   `rpcallowip=0.0.0.0/0` and `rpcbind=0.0.0.0` to the bitcoind command.
+
+```bash 
+# Create the service file
+sudo tee /etc/systemd/system/bitcoind.service >/dev/null <<EOF
+[Unit]
+Description=bitcoin signet node
+After=network.target
+
+[Service]
+User=<user>
+Type=simple
+ExecStart=/home/ubuntu/bitcoin-26.0/bin/bitcoind \
+    -deprecatedrpc=create_bdb \
+    -signet \
+    -server \
+    -rpcport=38332 \
+    -rpcuser=<your_rpc_username> \
+    -rpcpassword=<your_rpc_password>
+Restart=on-failure
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+```bash
+# Start the service
+sudo systemctl daemon-reload
+sudo systemctl enable bitcoind
+sudo systemctl start bitcoind
+```
+
+```bash
+# Check the status and logs of the service
+systemctl status bitcoind
+journalctl -u bitcoind -f
+```
+
+#### 2.3. Create legacy wallet and generate address:
+
+```bash
+# Create a new wallet
+~/bitcoin-26.0/bin/bitcoin-cli -signet \
+    -rpcuser=<your_rpc_username> \
+    -rpcpassword=<your_rpc_password> \
+    -rpcport=38332 \
+    -named createwallet \
+    wallet_name=btcstaker \
+    passphrase="<passphrase>" \
+    load_on_startup=true \
+    descriptors=false
+
+# Load the newly created wallet
+~/bitcoin-26.0/bin/bitcoin-cli -signet \
+    -rpcuser=<your_rpc_username> \
+    -rpcpassword=<your_rpc_password> \
+    -rpcport=38332 \
+    loadwallet "btcstaker"
+
+# Generate a new address for the wallet
+~/bitcoin-26.0/bin/bitcoin-cli -signet \
+    -rpcuser=<your_rpc_username> \
+    -rpcpassword=<your_rpc_password> \
+    -rpcport=38332 \
+    getnewaddress
+```
+
+#### 2.4. Request signet BTC from faucet:
+
+Use the faucet [link](https://signet.bc-2.jp/) to request signet BTC to the address
+generated in the previous step. You can use the following command to check the
+balance.
+
+```bash
+# Replace $TXID with the transaction id you received from the faucet
+~/bitcoin-26.0/bin/bitcoin-cli -signet \
+    -rpcuser=<your_rpc_username> \
+    -rpcpassword=<your_rpc_password> \
+    -rpcport=38332 \
+    gettransaction $TXID
+
+# Once the transaction is confirmed, you can check the balance
+~/bitcoin-26.0/bin/bitcoin-cli -signet \
+    -rpcuser=<your_rpc_username> \
+    -rpcpassword=<your_rpc_password> \
+    -rpcport=38332 \
+    getbalance
+```
 
 **Notes**:
 
@@ -128,6 +238,11 @@ Follow the official guides to install and run the Bitcoin node:
    hour, testnet takes a few hours, and mainnet could take a few days.
 4. Ensure that you use a legacy (non-descriptor) wallet, as BTC Staker doesn't
    currently support descriptor wallets.
+5. You can also use `bitcoin.conf` instead of using flags in the `bitcoind` cmd.
+   Please check the Bitcoin signet [wiki](https://en.bitcoin.it/wiki/Signet) and this
+   manual [here](https://manpages.org/bitcoinconf/5) to learn how to
+   set `bitcoin.conf`. Ensure you have configured the `bitcoind.conf` correctly and
+   set all the required parameters as shown in the systemd service file above.
 
 ### Staker daemon (`stakerd`) configuration
 
@@ -162,10 +277,27 @@ In the following, we go through important parameters of the `stakerd.conf` file.
 
 1. The `Key` parameter in the config below is the name of the key in the keyring to
    use for signing transactions. Use the key name you created
-   in [Create a Babylon keyring with funds](#create-a-babylon-keyring-with-funds)
+   in [Create a Babylon keyring with funds](#1-create-a-babylon-keyring-keyring-backend-test-with-funds).
 2. Ensure that the `KeyringDirectory` is set to the location where the keyring is
    stored.
-3. Make sure to use the  `test` keyring backend.
+3. Ensure to use the `test` keyring backend
+4. Ensure you use the correct `ChainID` for the network you're connecting to. For
+   example, for Babylon devnet, the chain ID is `bbn-dev-5`.
+5. To change the Babylon RPC/GRPC address, update the following:
+
+    ```bash
+    RPCAddr = https://rpc.devnet.babylonchain.io:443 # rpc node address
+    GRPCAddr = https://grpc.devnet.babylonchain.io:443 # grpc node address
+    ```
+   The above addresses are for Babylon devnet.
+6. If you encounter any gas-related errors while performing staking operations,
+   consider adjusting the `GasAdjustment` and `GasPrices` parameters. For example,
+   you can set:
+
+   ```bash
+   GasAdjustment = 1.5
+   GasPrices = 0.002ubbn
+   ```
 
 ```bash
 [babylon]
@@ -194,24 +326,6 @@ GasPrices = 0.01ubbn
 KeyDirectory = /Users/<user>/Library/Application Support/Stakerd
 ```
 
-**Additional Notes:**
-
-1. To change the babylon rpc/grpc address, you can set
-
-   ```bash
-   RPCAddr = https://rpc.devnet.babylonchain.io:443
-   GRPCAddr = https://grpc.devnet.babylonchain.io:443
-   ```
-
-2. If you encounter any gas-related errors while performing staking operations,
-   consider adjusting the `GasAdjustment` and `GasPrices` parameters. For example,
-   you can set:
-
-   ```bash
-   GasAdjustment = 1.5
-   GasPrices = 0.002ubbn
-   ```
-
 #### BTC Node configuration
 
 **Notes:**
@@ -238,13 +352,13 @@ FeeMode = static
 
 #### BTC Wallet configuration
 
-**Notes:**
+**Note:**
 Make sure you create a BTC wallet, name it appropriately, and load it with enough
 signet BTC.
 
 ```bash
 [walletconfig]
-# name of the wallet to sign Bitcoin transactions
+# name of the wallet to sign Bitcoin transactions. This should be the same as set in createwallet command in bitcoind.
 WalletName = btcstaker
 
 # passphrase to unlock the wallet
@@ -253,14 +367,15 @@ WalletPass = walletpass
 [walletrpcconfig]
 # location of the wallet rpc server
 # note: in case of bitcoind, the wallet host is same as the rpc host
-Host = localhost:18556
+Host = localhost:38332
 
 # user auth for the wallet rpc server
 # note: in case of bitcoind, the wallet rpc credentials are same as rpc credentials
-User = rpcuser
+# this should be the same as set in the bitcoind daemon
+User = your_rpc_username
 
-# password auth for the wallet rpc server
-Pass = rpcpass
+# password auth for the wallet rpc server. This should be the same as set in the bitcoind daemon
+Pass = your_rpc_password
 
 # disables tls for the wallet rpc client
 DisableTls = true
@@ -268,26 +383,8 @@ DisableTls = true
 
 #### BTC Node type specific configuration
 
-If you selected `btcd` as the node type, then you can configure the btcd node using
-the following parameters.
-
-```bash
-[btcd]
-# The daemon's rpc listening address. 
-# note: P2P port for signet is 38332
-# for other networks, check the ref below'
-# https://github.com/btcsuite/btcd/blob/17fdc5219b363c98df12e3ed7849a14f4820d93f/params.go#L23
-RPCHost = 127.0.0.1:38332
-
-# Username for RPC connections
-RPCUser = user
-
-# Password for RPC connections
-RPCPass = pass
-```
-
-If you selected `bitcoind` as the node type, then you can configure it using the
-following parameters.
+Make sure to replace the following important parameters related to `bitcoind` as per
+your setup.
 
 ```bash
 [bitcoind]
@@ -299,16 +396,16 @@ following parameters.
 # ref - https://github.com/bitcoin/bitcoin/blob/03752444cd54df05a731557968d5a9f33a55c55c/src/chainparamsbase.cpp#L39
 RPCHost = 127.0.0.1:38332
 
-# Username for RPC connections
-RPCUser = user
+# Username for RPC connections. This should be the same as set in the bitcoind daemon
+RPCUser = your_rpc_username
 
-# Password for RPC connections
-RPCPass = pass
+# Password for RPC connections. This should be the same as set in the bitcoind daemon
+RPCPass = your_rpc_password
 
-; The address listening for ZMQ connections to deliver raw block notifications
+# The address listening for ZMQ connections to deliver raw block notifications
 ZMQPubRawBlock = tcp://127.0.0.1:29001
 
-; The address listening for ZMQ connections to deliver raw transaction notifications
+# The address listening for ZMQ connections to deliver raw transaction notifications
 ZMQPubRawTx = tcp://127.0.0.1:29002
 ```
 
@@ -330,7 +427,6 @@ the `--rpclisten` flag.
 stakerd --rpclisten 'localhost:15812'
 
 time="2023-12-08T11:48:04+05:30" level=info msg="Starting StakerApp"
-time="2023-12-08T11:48:04+05:30" level=info msg="Connecting to node backend: btcd"
 ```
 
 All the available CLI options can be viewed using the `--help` flag. These options
