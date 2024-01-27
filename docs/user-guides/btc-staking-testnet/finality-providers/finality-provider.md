@@ -21,7 +21,7 @@ finality providers:
    finality provider intends to vote for. The commit intervals can be specified
    in the configuration.
    The EOTS public randomness is retrieved through the finality provider daemon's
-   connection with the [EOTS daemon](eots.md).
+   connection with the [EOTS daemon](./eots-manager.md).
 3. **Finality Votes Submission**: The daemon monitors the Babylon chain
    and produces finality votes for each block each maintained finality provider
    has committed to vote for.
