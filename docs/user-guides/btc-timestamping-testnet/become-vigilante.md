@@ -1,10 +1,10 @@
 ---
 id: become-vigilante
-sidebar_label: Becoming a Vigilante
+sidebar_label: Become a Vigilante
 hide_table_of_contents: true
 ---
 
-# Becoming a Babylon Vigilante
+# Become a Babylon Vigilante
 
 Learn how to run the Babylon Vigilante program.
 

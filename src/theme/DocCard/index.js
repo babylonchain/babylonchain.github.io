@@ -73,8 +73,8 @@ function CardLink({item}) {
   : (item.label === "Set up a Node") ? '👀'
   : (item.label === "Get Testnet Tokens") ? '🔎'
   : (item.label === "Become a Validator") ? '👨‍🏫'
-  : (item.label === "Becoming a Vigilante") ? '👨‍💻'
-  : (item.label === "Integrating with Babylon") ? '🔐' : '📄️';
+  : (item.label === "Become a Vigilante") ? '👨‍💻'
+  : (item.label === "Integrate with Babylon") ? '🔐' : '📄️';
   const doc = useDocById(item.docId ?? undefined);
   return (
     <CardLayout
