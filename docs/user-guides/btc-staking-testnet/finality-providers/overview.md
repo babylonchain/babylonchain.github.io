@@ -1,7 +1,7 @@
 ---
 id: overview
-title: Becoming a Finality Provider
-sidebar_label: Becoming a Finality Provider
+title: Become a Finality Provider
+sidebar_label: Become a Finality Provider
 ---
 
 A toolset crafted for the creation and
