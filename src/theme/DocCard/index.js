@@ -71,7 +71,7 @@ function CardLink({item}) {
   : (item.label === "Vigilante Monitor Program") ? '📺'
   : (item.label === "Network Information") ? '🧐'
   : (item.label === "Set up a Node") ? '👀'
-  : (item.label === "Getting Testnet Tokens") ? '🔎'
+  : (item.label === "Get Testnet Tokens") ? '🔎'
   : (item.label === "Becoming a Validator") ? '👨‍🏫'
   : (item.label === "Becoming a Vigilante") ? '👨‍💻'
   : (item.label === "Integrating with Babylon") ? '🔐' : '📄️';
