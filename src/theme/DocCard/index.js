@@ -70,7 +70,7 @@ function CardLink({item}) {
   : (item.label === "Vigilante Reporter Program") ? '🎤'
   : (item.label === "Vigilante Monitor Program") ? '📺'
   : (item.label === "Network Information") ? '🧐'
-  : (item.label === "Setting Up a Full Node") ? '👀'
+  : (item.label === "Set up a Node") ? '👀'
   : (item.label === "Getting Testnet Tokens") ? '🔎'
   : (item.label === "Becoming a Validator") ? '👨‍🏫'
   : (item.label === "Becoming a Vigilante") ? '👨‍💻'
