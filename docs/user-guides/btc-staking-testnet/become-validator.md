@@ -1,10 +1,10 @@
 ---
 id: become-validator
-sidebar_label: Becoming a Validator
+sidebar_label: Become a Validator
 hide_table_of_contents: true
 ---
 
-# Becoming a Validator
+# Become a Validator
 
 Learn how to become a Validator for Babylon.
 
