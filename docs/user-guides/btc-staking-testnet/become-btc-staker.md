@@ -1,7 +1,7 @@
 ---
 id: btc-staker
-title: Becoming a BTC Staker
-sidebar_label: Becoming a BTC Staker
+title: Become a BTC Staker
+sidebar_label: Become a BTC Staker
 ---
 
 ## 1. Overview
