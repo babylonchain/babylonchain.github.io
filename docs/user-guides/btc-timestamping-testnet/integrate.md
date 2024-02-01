@@ -1,10 +1,10 @@
 ---
 id: czintegrate
-sidebar_label: Integrating with Babylon
+sidebar_label: Integrate with Babylon
 hide_table_of_contents: true
 ---
 
-# Integrating with Babylon
+# Integrate with Babylon
 
 Learn how to integrate a Cosmos Zone with Babylon.
 

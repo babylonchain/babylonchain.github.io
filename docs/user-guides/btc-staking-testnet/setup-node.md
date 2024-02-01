@@ -1,12 +1,12 @@
 ---
 id: setup-node
-sidebar_label: Setting Up a Full Node
+sidebar_label: Set up a Node
 hide_table_of_contents: true
 ---
 
-# Setting Up a Full Node
+# Set up a Node
 
-Learn how to set up the full node for the Babylon system.
+Learn how to set up a node for the Babylon system.
 
 ---
 

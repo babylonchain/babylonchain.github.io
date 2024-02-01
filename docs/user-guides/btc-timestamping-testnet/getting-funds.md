@@ -1,10 +1,10 @@
 ---
 id: getting-funds
-sidebar_label: Getting Testnet Tokens
+sidebar_label: Get Testnet Tokens
 hide_table_of_contents: true
 ---
 
-# Getting Testnet Tokens
+# Get Testnet Tokens
 
 Learn how to get testnet tokens for Babylon.
 

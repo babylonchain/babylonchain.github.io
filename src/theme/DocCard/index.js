@@ -70,11 +70,11 @@ function CardLink({item}) {
   : (item.label === "Vigilante Reporter Program") ? '🎤'
   : (item.label === "Vigilante Monitor Program") ? '📺'
   : (item.label === "Network Information") ? '🧐'
-  : (item.label === "Setting Up a Full Node") ? '👀'
-  : (item.label === "Getting Testnet Tokens") ? '🔎'
-  : (item.label === "Becoming a Validator") ? '👨‍🏫'
-  : (item.label === "Becoming a Vigilante") ? '👨‍💻'
-  : (item.label === "Integrating with Babylon") ? '🔐' : '📄️';
+  : (item.label === "Set up a Node") ? '👀'
+  : (item.label === "Get Testnet Tokens") ? '🔎'
+  : (item.label === "Become a Validator") ? '👨‍🏫'
+  : (item.label === "Become a Vigilante") ? '👨‍💻'
+  : (item.label === "Integrate with Babylon") ? '🔐' : '📄️';
   const doc = useDocById(item.docId ?? undefined);
   return (
     <CardLayout
