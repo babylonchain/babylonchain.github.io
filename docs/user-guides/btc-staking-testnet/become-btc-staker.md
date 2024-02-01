@@ -1,7 +1,7 @@
 ---
 id: btc-staker
-title: Become a BTC Staker
-sidebar_label: Become a BTC Staker
+title: Stake with BTC Staker CLI
+sidebar_label: Stake with BTC Staker CLI
 ---
 
 ## 1. Overview
