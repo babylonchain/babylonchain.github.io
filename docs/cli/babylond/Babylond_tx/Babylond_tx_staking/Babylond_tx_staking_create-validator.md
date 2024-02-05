@@ -7,7 +7,7 @@ hide_table_of_contents: true
 
 :::warning
 Use the wrapped message 
-[create-validator](/docs/cli/babylond/Babylond_tx/Babylond_tx_checkpointing/Babylond_tx_checkpointing_create-validator.md) in the 
+[create-validator](/docs/cli/babylond/Babylond_tx/Babylond_tx_checkpointing/babylond_tx_checkpointing_create-validator) in the 
 checkpointing module.
 :::
 

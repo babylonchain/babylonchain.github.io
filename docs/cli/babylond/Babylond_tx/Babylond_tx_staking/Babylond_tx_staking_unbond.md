@@ -7,7 +7,7 @@ hide_table_of_contents: true
 
 :::warning 
 Use the wrapped message 
-[unbond](/docs/cli/babylond/Babylond_tx/Babylond_tx_epoching/Babylond_tx_epoching_unbond.md)
+[unbond](/docs/cli/babylond/Babylond_tx/Babylond_tx_epoching/babylond_tx_epoching_unbond)
 in the epoching module.
 :::
 
