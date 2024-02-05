@@ -5,17 +5,30 @@ hide_table_of_contents: true
 
 ---
 
+:::info 
+Use the wrapped message 
+[redelegate](/docs/cli/babylond/Babylond_tx/Babylond_tx_epoching/Babylond_tx_epoching-redelegate.md)
+in the epoching module.
+:::
+
 # babylond tx staking redelegate
+
 Redelegate liquids tokens from a validator to another.
+
 ## tx staking redelegate command
+
 ```
 babylond tx staking redelegate [src-validator-addr] [dst-validator-addr] [amount] [flags]
 ```
+
 ### Example Command
+
 ```
 $ babylond tx staking redelegate babylonddev1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj babylonddev1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 150stake --from mykey
 ```
+
 ## Options
+
 ```
   -a, --account-number uint      The account number of the signing account (offline mode only)
       --aux                      Generate aux signer data instead of sending a tx
@@ -43,7 +56,9 @@ $ babylond tx staking redelegate babylonddev1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqh
       --tip string               Tip is the amount that is going to be transferred to the fee payer on the target chain. This flag is only valid when used with --aux, and is ignored if the target chain didn't enable the TipDecorator
   -y, --yes                      Skip tx broadcasting prompt confirmation
 ```
+
 ## Options Inherited from Parent Commands
+
 ```
       --chain-id string     The network chain ID
       --home string         directory for config and data (default "/home/<yourSystemUsername>/.babylond")

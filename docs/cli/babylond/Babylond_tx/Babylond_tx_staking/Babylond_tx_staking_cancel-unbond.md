@@ -5,6 +5,12 @@ hide_table_of_contents: true
 
 ---
 
+:::warning 
+Use the wrapped message 
+[cancel-unbond](/docs/cli/babylond/Babylond_tx/Babylond_tx_epoching/Babylond_tx_epoching-cancel-unbond.md)
+in the epoching module.
+:::
+
 # babylond tx staking cancel-unbond
 Cancel unbonding delegation and delegate back to the validator.
 ## tx staking cancel-unbond command

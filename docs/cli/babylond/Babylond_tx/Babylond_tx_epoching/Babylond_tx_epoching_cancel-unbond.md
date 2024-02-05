@@ -1,25 +1,19 @@
 ---
-id: babylond_tx_staking_delegate
-sidebar_label: babylond tx staking delegate
+id: babylond_tx_epoching_cancel-unbond
+sidebar_label: babylond tx epoching cancel-unbond
 hide_table_of_contents: true
 
 ---
 
-:::info 
-Use the wrapped message 
-[delegate](/docs/cli/babylond/Babylond_tx/Babylond_tx_epoching/Babylond_tx_epoching-delegate.md) in the
-epoching module.
-:::
-
-# babylond tx staking delegate
-Delegate liquids tokens to a validator.
-## tx staking delegate command
+# babylond tx epoching cancel-unbond
+Cancel unbonding delegation and delegate back to the validator.
+## tx epoching cancel-unbond command
 ```
-babylond tx staking delegate [validator-addr] [amount] [flags]
+babylond tx epoching cancel-unbond [validator-addr] [amount] [creation-height] [flags]
 ```
 ### Example Command
 ```
-$ babylond tx staking delegate babylonddev1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 2500stake --from mykey
+$ babylond tx epoching cancel-unbond bbnvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 100stake 2 --from mykey
 ```
 ## Options
 ```
@@ -35,7 +29,7 @@ $ babylond tx staking delegate babylonddev1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59w
       --gas-adjustment float     adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
       --gas-prices string        Gas prices in decimal format to determine the transaction fee (e.g. 0.1uatom)
       --generate-only            Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase only accessed when providing a key name)
-  -h, --help                     help for delegate
+  -h, --help                     help for cancel-unbond
       --keyring-backend string   Select keyring's backend (os|file|kwallet|pass|test|memory) (default "os")
       --keyring-dir string       The client Keyring directory; if omitted, the default 'home' directory will be used
       --ledger                   Use a connected Ledger device
