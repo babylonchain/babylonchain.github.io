@@ -5,7 +5,7 @@ hide_table_of_contents: true
 
 ---
 
-:::info 
+:::warning 
 Use the wrapped message 
 [unbond](/docs/cli/babylond/Babylond_tx/Babylond_tx_epoching/Babylond_tx_epoching_unbond.md)
 in the epoching module.
