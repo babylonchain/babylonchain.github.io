@@ -7,7 +7,7 @@ hide_table_of_contents: true
 
 :::warning 
 Use the wrapped message 
-[redelegate](/docs/cli/babylond/Babylond_tx/Babylond_tx_epoching/Babylond_tx_epoching-redelegate.md)
+[redelegate](/docs/cli/babylond/Babylond_tx/Babylond_tx_epoching/Babylond_tx_epoching_redelegate.md)
 in the epoching module.
 :::
 
