@@ -33,5 +33,5 @@ could self-delegate BTC Signet tokens via the staking web application provided
 by the Babylon team.
 
 CometBFT validators and Finality providers are independent entities - you can be
-any of the 2. For a more complete understanding of the BTC Staking protocol, we
+any of the 2. To fully participate in the testnet, we
 strongly encourage experimenting with both and executing self-delegations.
