@@ -63,6 +63,7 @@ const sidebars = {
             id: 'user-guides/btc-staking-testnet/overview',
           },
           items: [
+            'user-guides/btc-staking-testnet/deployment-overview',
             'user-guides/btc-staking-testnet/setup-node',
             'user-guides/btc-staking-testnet/getting-funds',
             'user-guides/btc-staking-testnet/become-validator',
