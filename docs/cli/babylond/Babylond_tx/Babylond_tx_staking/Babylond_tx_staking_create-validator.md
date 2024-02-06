@@ -6,9 +6,9 @@ hide_table_of_contents: true
 ---
 
 :::warning
-Use the wrapped message 
+This message is disabled in Babylon. Please use the wrapped message 
 [create-validator](/docs/cli/babylond/Babylond_tx/Babylond_tx_checkpointing/babylond_tx_checkpointing_create-validator) in the 
-checkpointing module.
+checkpointing module instead.
 :::
 
 # babylond tx stking create-validator

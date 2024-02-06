@@ -5,10 +5,10 @@ hide_table_of_contents: true
 
 ---
 
-:::warning 
-Use the wrapped message 
+:::warning
+This message is disabled in Babylon. Please use the wrapped message 
 [cancel-unbond](/docs/cli/babylond/Babylond_tx/Babylond_tx_epoching/babylond_tx_epoching_cancel-unbond)
-in the epoching module.
+in the epoching module instead.
 :::
 
 # babylond tx staking cancel-unbond
