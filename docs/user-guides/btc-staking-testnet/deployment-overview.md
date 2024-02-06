@@ -32,4 +32,6 @@ programs can be shut down and you don't need to keep them up. Alternatively, you
 could self-delegate BTC Signet tokens via the staking web application provided
 by the Babylon team.
 
-We recommend to try all of these actions, although it's not mandatory.
+CometBFT validators and Finality providers are independent entities - you can be
+any of the 2. For a more complete understanding of the BTC Staking protocol, we
+strongly encourage experimenting with both and executing self-delegations.
