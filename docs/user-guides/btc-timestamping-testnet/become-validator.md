@@ -151,7 +151,7 @@ performing this query will return you a status `BOND_STATUS_BONDED`.
 Congrats! You are now a validator on the Babylon system.
 
 :::info
-If you want to delegate, redelegate, unbond or cancel-unbond use the wrapped messages in the
+If you want to delegate, redelegate, unbond or cancel-unbond, please use the wrapped messages in the
 checkpointing and epoching modules as the messages in staking module are disabled.
 Read more [here](/docs/developer-guides/modules/epoching.md#delaying-wrapped-messages-to-the-end-of-epochs)
 :::
