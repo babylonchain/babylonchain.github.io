@@ -1,25 +1,19 @@
 ---
-id: babylond_tx_staking_cancel-unbond
-sidebar_label: babylond tx staking cancel-unbond
+id: babylond_tx_epoching_cancel-unbond
+sidebar_label: babylond tx epoching cancel-unbond
 hide_table_of_contents: true
 
 ---
 
-:::warning
-This message is disabled in Babylon. Please use the wrapped message 
-[cancel-unbond](/docs/cli/babylond/Babylond_tx/Babylond_tx_epoching/babylond_tx_epoching_cancel-unbond)
-in the epoching module instead.
-:::
-
-# babylond tx staking cancel-unbond
+# babylond tx epoching cancel-unbond
 Cancel unbonding delegation and delegate back to the validator.
-## tx staking cancel-unbond command
+## tx epoching cancel-unbond command
 ```
-babylond tx staking cancel-unbond [validator-addr] [amount] [creation-height] [flags]
+babylond tx epoching cancel-unbond [validator-addr] [amount] [creation-height] [flags]
 ```
 ### Example Command
 ```
-$ babylond tx staking cancel-unbond bbnvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 100stake 2 --from mykey
+$ babylond tx epoching cancel-unbond bbnvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 100stake 2 --from mykey
 ```
 ## Options
 ```

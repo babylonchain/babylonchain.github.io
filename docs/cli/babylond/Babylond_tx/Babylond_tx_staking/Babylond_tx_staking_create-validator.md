@@ -1,9 +1,15 @@
 ---
 id: babylond_tx_staking_create-validator
-sidebar_label: babylond tx stking create-validator
+sidebar_label: babylond tx staking create-validator
 hide_table_of_contents: true
 
 ---
+
+:::warning
+This message is disabled in Babylon. Please use the wrapped message 
+[create-validator](/docs/cli/babylond/Babylond_tx/Babylond_tx_checkpointing/babylond_tx_checkpointing_create-validator) in the 
+checkpointing module instead.
+:::
 
 # babylond tx stking create-validator
 Create new validator initialized with a self-delegation to it.

@@ -5,18 +5,36 @@ hide_table_of_contents: true
 
 ---
 
+:::info
+Please use the wrapped messages in the [epoching](/docs/cli/babylond/Babylond_tx/Babylond_tx_epoching) and 
+[checkpointing](/docs/cli/babylond/Babylond_tx/Babylond_tx_checkpointing) module to perform
+staking-related operations.
+
+In order to keep the validator set unchanged in the middle of epochs, the epoching
+module intercepts and rejects staking-related messages that affect validator sets via
+AnteHandler, but instead defines wrapped versions of them and forwards their
+unwrapped forms to the staking module upon an epoch ends. Read more [here](/docs/developer-guides/modules/epoching.md#delaying-wrapped-messages-to-the-end-of-epochs)
+:::
+
 # babylond tx staking
+
 Querying subcommands for staking transactions.
+
 ## tx staking commands
+
 ```
 babylond tx staking [flags]
 babylond tx staking [command]
 ```
+
 ## Options
+
 ```
 -h, --help   help for staking
 ```
+
 ## Options Inherited from Parent Commands
+
 ```
       --chain-id string     The network chain ID
       --home string         directory for config and data (default "/home/<yourSystemUsername>/.babylond")
