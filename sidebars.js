@@ -64,9 +64,12 @@ const sidebars = {
           },
           items: [
             'user-guides/btc-staking-testnet/deployment-overview',
+            'user-guides/btc-staking-testnet/network-information',
             'user-guides/btc-staking-testnet/setup-node',
             'user-guides/btc-staking-testnet/getting-funds',
             'user-guides/btc-staking-testnet/become-validator',
+            'user-guides/btc-staking-testnet/become-vigilante',
+            'user-guides/btc-staking-testnet/czintegrate',
             {
               type: 'category',
               label: 'Become a Finality Provider',
