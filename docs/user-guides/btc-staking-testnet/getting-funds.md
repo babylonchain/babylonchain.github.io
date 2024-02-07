@@ -25,7 +25,6 @@ This will output an address and a memo. Record the memo as it is the only way to
 
 ## 2. Request Funds from the Babylon Testnet Faucet
 
-This can be accomplished by going to the `#faucet` channel of our official [Discord server](https://discord.com/invite/babylonglobal) to 
-request funds by providing the address you created before.
-After joining the channel, users send a request starting with `!faucet` followed by the request address.
-For example, `!faucet bbn1sajf5fd7tyjt0jjy6lqzahy09jl2nkcnx5qm06`.
+:::info
+Please note that the faucet is currently inactive until the testnet launch; kindly reach out to the team for testnet tokens in the meantime.
+:::
