@@ -202,7 +202,7 @@ where `$INTERVAL` is the interval for relaying a header (e.g., `10m` to denote 1
 After the above steps, the Cosmos zone has been integrated to Babylon.
 You can do the following things to check the status of the integration:
 - Check the Babylon node API
-  `http://rpc.testnet.babylonchain.io:1317/babylon/zoneconcierge/v1/chain_info/<your_chain_id>`
+  `http://lcd.testnet.babylonchain.io/babylon/zoneconcierge/v1/chain_info/<your_chain_id>`
   that shows the information of the Cosmos zone in Babylon's view.
 - Check whether [BabylonScan](https://babylonscan.io) shows
   the information of the Cosmos zone or not.
