@@ -117,7 +117,7 @@ chains:
             #            Note that this chain ID should be the same one you used for creating the keyring.
             chain-id: bbn-test-2
             # REPLACEME: The RPC endpoint of a node that runs on the Babylon network you want to connect to.
-            rpc-addr: http://rpc.testnet.babylonchain.io:26657
+            rpc-addr: https://rpc.testnet.babylonchain.io:443
             account-prefix: bbn
             # The backend of the keyring you're using. Recall that this should always be `test`.
             keyring-backend: test
