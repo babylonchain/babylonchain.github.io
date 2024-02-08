@@ -95,10 +95,10 @@ To see the complete list of configuration options, check the `fpd.conf` file.
    default value: 100 blocks)
 
    ```bash
-   ; The number of Schnorr public randomness for each commitment
+   # The number of Schnorr public randomness for each commitment
    NumPubRand = 100
 
-   ; The upper bound of the number of Schnorr public randomness for each commitment
+   # The upper bound of the number of Schnorr public randomness for each commitment
    NumPubRandMax = 200
    ```
 
