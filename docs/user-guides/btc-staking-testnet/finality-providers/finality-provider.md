@@ -122,10 +122,11 @@ Use the following command to add the key:
 ```bash
 fpd keys add --key-name my-finality-provider --chain-id bbn-test-3
 ```
+
+**Note**: Please use the same `--chain-id` value set in the `fpd.conf`.
+
 After executing the above command, the key name will be saved in the config file
 created in [step](#2-configuration).
-
-**Note**: Please use the same `--chain-id` value as the `ChainID` set in the `fpd.conf`
 
 ## 4. Starting the Finality Provider Daemon
 
