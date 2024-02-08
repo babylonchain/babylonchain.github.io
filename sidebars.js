@@ -68,8 +68,6 @@ const sidebars = {
             'user-guides/btc-staking-testnet/setup-node',
             'user-guides/btc-staking-testnet/getting-funds',
             'user-guides/btc-staking-testnet/become-validator',
-            'user-guides/btc-staking-testnet/become-vigilante',
-            'user-guides/btc-staking-testnet/czintegrate',
             {
               type: 'category',
               label: 'Become a Finality Provider',
@@ -83,6 +81,8 @@ const sidebars = {
               ],
             },
             'user-guides/btc-staking-testnet/btc-staker',
+            'user-guides/btc-staking-testnet/become-vigilante',
+            'user-guides/btc-staking-testnet/czintegrate',
           ]
         },
       ]
