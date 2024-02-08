@@ -115,7 +115,7 @@ chains:
             # REPLACEME: The Chain ID of the Babylon network you want to connect to.
             #            For example, for the current testnet, this is `bbn-test-2`
             #            Note that this chain ID should be the same one you used for creating the keyring.
-            chain-id: bbn-test-2
+            chain-id: bbn-test-3
             # REPLACEME: The RPC endpoint of a node that runs on the Babylon network you want to connect to.
             rpc-addr: https://rpc.testnet3.babylonchain.io:443
             account-prefix: bbn
@@ -146,7 +146,7 @@ paths:
         # Chain IDs that this path will connect
         # REPLACEME: Use the chain IDs For Babylon and the integrated chain you specified above.
         src:
-            chain-id: bbn-test-2
+            chain-id: bbn-test-3
         dst:
             chain-id: osmo-test-4
 ```

@@ -74,7 +74,7 @@ RpcListener = 127.0.0.1:12581
 Key = <finality-provider-key-name>
 
 # Chain id of the chain to connect to
-# Please confirm the Babylon Chain ID from our rpc node. https://rpc.testnet3.babylonchain.io/status
+# Please verify the `ChainID` from the Babylon RPC node https://rpc.testnet3.babylonchain.io/status
 ChainID = bbn-test-3
 
 # RPC Address of Babylon node
@@ -123,7 +123,7 @@ Use the following command to add the key:
 fpd keys add --key-name my-finality-provider --chain-id bbn-test-3
 ```
 
-**Note**: Please use the same `--chain-id` value set in the `fpd.conf`.
+**Note**: Please verify the `chain-id` from the Babylon RPC node https://rpc.testnet3.babylonchain.io/status
 
 After executing the above command, the key name will be saved in the config file
 created in [step](#2-configuration).
@@ -173,7 +173,7 @@ in [step](#3-add-key-for-the-consumer-chain) will be used.
 
 ```bash
 fpcli create-finality-provider --key-name my-finality-provider \
-                --chain-id chain-test --moniker my-name
+                --chain-id bbn-test-3 --moniker my-name
 {
     "babylon_pk_hex": "02face5996b2792114677604ec9dfad4fe66eeace3df92dab834754add5bdd7077",
     "btc_pk_hex": "d0fc4db48643fbb4339dc4bbf15f272411716b0d60f18bdfeb3861544bf5ef63",
