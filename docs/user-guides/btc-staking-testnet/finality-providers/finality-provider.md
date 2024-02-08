@@ -134,6 +134,8 @@ You can start the finality provider daemon using the following command:
 fpd start --home /path/to/fpd/home
 ```
 
+If the `--home` flag is not specified, then the default home location will be used.
+
 This will start the Finality provider RPC server at the address specified
 in `fpd.conf` under the `RpcListener` field, which has a default value
 of `127.0.0.1:12581`. You can change this value in the configuration file or override
