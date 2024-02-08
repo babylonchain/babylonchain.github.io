@@ -108,7 +108,7 @@ To see the complete list of configuration options, check the `fpd.conf` file.
 
    ```bash
    GasAdjustment = 1.5
-   GasPrices = 0.01ubbn
+   GasPrices = 0.002ubbn
    ```
 
 ## 3. Add key for the consumer chain

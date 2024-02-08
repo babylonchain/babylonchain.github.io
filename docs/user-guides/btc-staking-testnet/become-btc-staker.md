@@ -395,7 +395,7 @@ In the following, we go through important parameters of the `stakerd.conf` file.
 Key = btc-staker
 
 # Chain id of the chain (Babylon)
-ChainID = chain-test
+ChainID = bbn-test-3
 
 # Address of the chain's RPC server (Babylon)
 RPCAddr = http://localhost:26657
@@ -403,17 +403,8 @@ RPCAddr = http://localhost:26657
 # Address of the chain's GRPC server (Babylon)
 GRPCAddr = https://localhost:9090
 
-# Type of keyring backend to use 
-KeyringBackend = test
-
-# Adjustment factor when using gas estimation
-GasAdjustment = 1.2
-
-# Comma separated minimum gas prices to accept for transactions
-GasPrices = 0.01ubbn
-
 # Directory to store staker keys in
-KeyDirectory = /Users/<user>/Library/Application Support/Stakerd
+KeyDirectory = /path/to/stakerd-home/
 ```
 
 #### BTC Node configuration
@@ -652,3 +643,6 @@ db.
 ```bash
 stakercli daemon withdrawable-transactions
 ```
+
+In order to `unstake` you'll need to wait for your staking/unbonding tx to be deep
+enough in btc so that timelock expires.
