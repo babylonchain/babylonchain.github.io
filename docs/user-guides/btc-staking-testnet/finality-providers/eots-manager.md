@@ -71,10 +71,10 @@ You can start the EOTS daemon using the following command:
 eotsd start --home /path/to/eotsd/home
 ```
 
-This will start the rpc server at the address specified in the configuration
-file `eotsd.conf` under the `RpcListener` field, which has a default value
-of `127.0.0.1:12582`. You can change this value in the configuration file or override
-this value and specify a custom address using the `--rpc-listener` flag.
+This will start the EOTS rpc server at the address specified in `eotsd.conf` under
+the `RpcListener` field, which is by default set to `127.0.0.1:12582`. You can change
+this value in the configuration file or override this value and specify a custom
+address using the `--rpc-listener` flag.
 
 ```bash
 eotsd start
