@@ -84,21 +84,6 @@ export PATH=$HOME/go/bin:$PATH
 echo 'export PATH=$HOME/go/bin:$PATH' >> ~/.profile
 ```
 
-To build without installing,
-
-```bash
-make build
-```
-
-The above command will put the built binaries in a build directory with the
-following structure:
-```bash
-ls build
-    ├── eotsd
-    ├── fpcli
-    └── fpd
-```
-
 ## 3. Setting up a finality provider
 
 ### 3.1. Setting up a Babylon Full Node
