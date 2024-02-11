@@ -91,25 +91,13 @@ To see the complete list of configuration options, check the `fpd.conf` file.
 
 **Additional Notes:**
 
-1. We strongly recommend that EOTS randomness commitments are limited to 500 blocks (
-   default value: 100 blocks)
+If you encounter any gas-related errors while performing staking operations, consider
+adjusting the `GasAdjustment` and `GasPrices` parameters. For example, you can set:
 
-   ```bash
-   # The number of Schnorr public randomness for each commitment
-   NumPubRand = 100
-
-   # The upper bound of the number of Schnorr public randomness for each commitment
-   NumPubRandMax = 200
-   ```
-
-2. If you encounter any gas-related errors while performing staking operations,
-   consider adjusting the `GasAdjustment` and `GasPrices` parameters. For example,
-   you can set:
-
-   ```bash
-   GasAdjustment = 1.5
-   GasPrices = 0.002ubbn
-   ```
+```bash
+GasAdjustment = 1.5
+GasPrices = 0.002ubbn
+```
 
 ## 3. Add key for the consumer chain
 
@@ -123,7 +111,8 @@ Use the following command to add the key:
 fpd keys add --key-name my-finality-provider --chain-id bbn-test-3
 ```
 
-**Note**: Please verify the `chain-id` from the Babylon RPC node https://rpc.testnet3.babylonchain.io/status
+**Note**: Please verify the `chain-id` from the Babylon RPC
+node https://rpc.testnet3.babylonchain.io/status
 
 After executing the above command, the key name will be saved in the config file
 created in [step](#2-configuration).
