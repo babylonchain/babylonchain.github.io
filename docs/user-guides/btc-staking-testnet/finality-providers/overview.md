@@ -38,14 +38,14 @@ The following graphic demonstrates the interconnections between the above progra
 
 ## 2. Installation
 
-#### Prerequisites
+### Prerequisites
 
 This project requires Go version 1.21 or later.
 
 Install Go by following the instructions on
 the [official Go installation guide](https://golang.org/doc/install).
 
-#### Downloading the code
+### Downloading the code
 
 To get started, clone the repository to your local machine from Github:
 
@@ -61,7 +61,7 @@ cd finality-provider # cd into the project directory
 git checkout <release-tag>
 ```
 
-#### Building and installing the binary
+### Building and installing the binary
 
 At the top-level directory of the project
 
@@ -84,24 +84,9 @@ export PATH=$HOME/go/bin:$PATH
 echo 'export PATH=$HOME/go/bin:$PATH' >> ~/.profile
 ```
 
-To build without installing,
-
-```bash
-make build
-```
-
-The above command will put the built binaries in a build directory with the
-following structure:
-```bash
-ls build
-    ├── eotsd
-    ├── fpcli
-    └── fpd
-```
-
 ## 3. Setting up a finality provider
 
-#### 3.1. Setting up a Babylon Full Node
+### 3.1. Setting up a Babylon Full Node
 
 Before setting up the finality provider toolset,
 an operator must ensure a working connection with a Babylon full node.
@@ -115,7 +100,7 @@ in order to be able to send transactions to Babylon.
 To setup such a keyring, follow the instructions in
 [the Babylon documentation](https://docs.babylonchain.io/docs/user-guides/btc-timestamping-testnet/getting-funds).
 
-#### 3.2. Setting up the EOTS Manager
+### 3.2. Setting up the EOTS Manager
 
 After a node and a keyring have been set up,
 the operator can set up and run the
@@ -124,7 +109,7 @@ A complete overview of the EOTS manager, its operation, and
 its configuration options can be found in the
 [EOTS Manager page](./eots-manager.md)
 
-#### 3.3. Setting up a Finality Provider 
+### 3.3. Setting up a Finality Provider 
 
 The last step is to set up and run
 the finality daemon.
