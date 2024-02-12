@@ -1,5 +1,5 @@
 ---
-id: btc-staker
+id: become-btc-staker
 title: Stake with BTC Staker CLI
 sidebar_label: Stake with BTC Staker CLI
 ---
