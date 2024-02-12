@@ -80,7 +80,7 @@ const sidebars = {
                 'user-guides/btc-staking-testnet/finality-providers/finality-provider',
               ],
             },
-            'user-guides/btc-staking-testnet/btc-staker',
+            'user-guides/btc-staking-testnet/become-btc-staker',
             'user-guides/btc-staking-testnet/become-vigilante',
             'user-guides/btc-staking-testnet/czintegrate',
           ]
