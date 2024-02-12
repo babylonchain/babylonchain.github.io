@@ -12,9 +12,10 @@ Learn how to set up a node for the Babylon system.
 
 :::info Note
 
-This guide requires having Babylon installed on a Linux System.
-The instructions can be found on the [Installation page](/docs/user-guides/installation.md)
-The version to install is specified at the [bbn-test-3 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-3).
+This guide requires having Babylon installed on a Linux System. The instructions
+can be found on the [Installation page](/docs/user-guides/installation.md) The
+version to install is specified at the [bbn-test-3 network info
+page](https://github.com/babylonchain/networks/tree/main/bbn-test-3).
 
 :::
 
@@ -27,12 +28,13 @@ This system spec has been tested by validators and found to be comfortable:
 - 1TB NVMe Storage
 - 100MBps bidirectional internet connection
 
-You can run Babylon on lower-spec hardware for each component, but you may find that it is not highly performant or prone to crashing.
+You can run Babylon on lower-spec hardware for each component, but you may find
+that it is not highly performant or prone to crashing.
 
 ## 1. Initialize the Node Directory
 
-First, initialize a node configuration directory under `~/.babylond`.
-The `$NODENAME` variable specifies the name you aim to give your node.
+First, initialize a node configuration directory under `~/.babylond`. The
+`$NODENAME` variable specifies the name you aim to give your node.
 
 ```console
 babylond init $NODENAME --chain-id bbn-test-3
@@ -48,22 +50,23 @@ mv genesis.json ~/.babylond/config/genesis.json
 
 ## 2. Add Peers and Modify Configuration
 
-Edit the configuration file at `~/.babylond/config/config.toml` and modify
-the `seeds` and `persistent_peers` attributes to contain appropriate seeds and peers
-of your choice. The full list of Babylon approved seeds and peers can be found under
-the [bbn-test-3 network info page](https://github.com/babylonchain/networks/tree/main/bbn-test-3).
+Edit the configuration file at `~/.babylond/config/config.toml` and modify the
+`seeds` and `persistent_peers` attributes to contain appropriate seeds and peers
+of your choice. The full list of Babylon approved seeds and peers can be found
+under the [bbn-test-3 network info
+page](https://github.com/babylonchain/networks/tree/main/bbn-test-3).
 
 Edit the configuration file at `~/.babylond/config/app.toml` and modify the
-`btc-network` attribute to contain the appropriate BTC network
-parameters as below.
+`btc-network` attribute to contain the appropriate BTC network parameters as
+below.
 
 ```toml
 [btc-config]
 network = "signet"
 ```
 
-On the same file, you can also modify the `minimum-gas-prices` attribute and
-set it to a value of your choosing. For example,
+On the same file, you can also modify the `minimum-gas-prices` attribute and set
+it to a value of your choosing. For example,
 
 ```toml
 minimum-gas-prices = "0.00001ubbn"
