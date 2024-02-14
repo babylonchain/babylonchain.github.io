@@ -47,10 +47,10 @@ It is strongly recommended to modify the `timeout_commit` value
 under `~/.babylond/config/config.toml`. This value specifies
 how long a validator will wait before commiting a block before starting
 on a new height. More information can be found [here](https://docs.tendermint.com/v0.33/tendermint-core/configuration.html#consensus-timeouts-explained).
-Given that Babylon aims to have a 10 second time between blocks, set this value
+Given that Babylon aims to have a 30 second time between blocks, set this value
 to:
 ```toml
-timeout_commit = "10s"
+timeout_commit = "30s"
 ```
 
 ## 4. Create the Validator
