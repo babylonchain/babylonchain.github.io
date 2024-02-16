@@ -38,15 +38,34 @@ go version go1.21.6 linux/amd64
 You need to clone Babylon’s GitHub repository to install the `babylond` executable.
 
 1. Install build requirements
-```console
-sudo apt install git build-essential curl jq --yes
-```
+   ```console
+   sudo apt install git build-essential curl jq --yes
+   ```
 2. Retrieve the Babylon source code either through the [releases page](https://github.com/babylonchain/babylon/releases) or by cloning the [source code](https://github.com/babylonchain/babylon). In case you want to create a full node for the testnet, it is highly recommended that you choose the release corresponding to the current testnet. See the [testnet network information](/docs/user-guides/btc-timestamping-testnet/network-information) page for more details.
+   - To download the repository with curl (to `${HOME}/babylon-source`, change as required):
+     ```console
+     #latest_tag=v0.7.2
+     latest_tag=$(curl -s https://api.github.com/repos/babylonchain/babylon/tags | jq -r .[0].name)
+     curl \
+       --location \
+       --output /tmp/babylon-${latest_tag}.tar.gz \
+       --url https://github.com/babylonchain/babylon/archive/refs/tags/${latest_tag}.tar.gz
+     mkdir ${HOME}/babylon-source
+     tar -xzf /tmp/babylon-${latest_tag}.tar.gz -C ${HOME}/babylon-source --strip-components 1
+     ```
+   - To clone the repository with git (to `${HOME}/babylon-source`, change as required):
+
+     Note: this is the recommended approach as absence of the git metadata causes issues with the later build (`make install`) command...
+     ```console
+     git clone https://github.com/babylonchain/babylon.git ${HOME}/babylon-source
+     ```
 3. Navigate to the directory that contains the Babylon source code. From there build and install the babylond executable
-```console
-git checkout <version_to_install>
-make install
-```
+   ```console
+   #latest_tag=v0.7.2
+   latest_tag=$(curl -s https://api.github.com/repos/babylonchain/babylon/tags | jq -r .[0].name)
+   git checkout ${latest_tag}
+   make install
+   ```
 
 :::info Note
 
