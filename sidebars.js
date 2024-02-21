@@ -41,22 +41,6 @@ const sidebars = {
         'user-guides/installation',
         {
           type: 'category',
-          label: 'Bitcoin Timestamping Testnet',
-          link: {
-            type: 'doc',
-            id: 'user-guides/btc-timestamping-testnet/overview',
-          },
-          items: [
-            'user-guides/btc-timestamping-testnet/network-information',
-            'user-guides/btc-timestamping-testnet/setup-node',
-            'user-guides/btc-timestamping-testnet/getting-funds',
-            'user-guides/btc-timestamping-testnet/become-validator',
-            'user-guides/btc-timestamping-testnet/become-vigilante',
-            'user-guides/btc-timestamping-testnet/czintegrate',
-          ]
-        },
-        {
-          type: 'category',
           label: 'Bitcoin Staking Testnet',
           link: {
             type: 'doc',

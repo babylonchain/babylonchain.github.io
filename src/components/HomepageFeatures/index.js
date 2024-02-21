@@ -41,7 +41,7 @@ const FeatureList = [
     ),
   },
   {
-    url: 'docs/user-guides/btc-timestamping-testnet/overview',
+    url: 'docs/user-guides/btc-staking-testnet/overview',
     title: 'Testnet',
     image: six,
     description: (
