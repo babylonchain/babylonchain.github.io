@@ -168,7 +168,7 @@ fpcli create-finality-provider \
     --commission 0.05 \
     --identity "your_keybase_username_or_identifier_here" \
     --website "your_website_here" \
-    --security-contact "your_security_contract_email_here" \
+    --security-contact "your_security_contact_email_here" \
     --details "your_other_details_here"
 
 {
