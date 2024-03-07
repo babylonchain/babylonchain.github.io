@@ -161,8 +161,16 @@ is not specified, the `Key` field of config specified
 in [step](#3-add-key-for-the-consumer-chain) will be used.
 
 ```bash
-fpcli create-finality-provider --key-name my-finality-provider \
-                --chain-id bbn-test-3 --moniker my-name
+fpcli create-finality-provider \
+    --key-name my-finality-provider \
+    --chain-id bbn-test-3 \
+    --moniker my-name \
+    --commission 0.05 \
+    --identity "your_keybase_username_or_identifier_here" \
+    --website "your_website_here" \
+    --security-contact "your_security_contract_email_here" \
+    --details "your_other_details_here"
+
 {
     "babylon_pk_hex": "02face5996b2792114677604ec9dfad4fe66eeace3df92dab834754add5bdd7077",
     "btc_pk_hex": "d0fc4db48643fbb4339dc4bbf15f272411716b0d60f18bdfeb3861544bf5ef63",
