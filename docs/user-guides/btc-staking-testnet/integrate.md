@@ -1,12 +1,12 @@
 ---
 id: czintegrate
-sidebar_label: Integrate with Babylon
+sidebar_label: Integrate for BTC timestamping
 hide_table_of_contents: true
 ---
 
-# Integrate with Babylon
+# Integrate for BTC timestamping
 
-Learn how to integrate a Cosmos Zone with Babylon.
+Learn how to integrate a Cosmos Zone with Babylon's BTC timestamping protocol.
 
 ---
 
