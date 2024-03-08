@@ -58,9 +58,11 @@ page](https://github.com/babylonchain/networks/tree/main/bbn-test-3).
 
 Edit the configuration file at `~/.babylond/config/app.toml` and modify the
 `btc-network` attribute to contain the appropriate BTC network parameters as
-below.
+below and `iavl-cache-size=0` to handle caching issues.
 
 ```toml
+iavl-cache-size = 0
+
 [btc-config]
 network = "signet"
 ```

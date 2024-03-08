@@ -162,7 +162,8 @@ have set up.
 
 ### 2.4. Request signet BTC from faucet:
 
-Use the faucet [link](https://signet.bc-2.jp/) to request signet BTC to the address
+Use our [Discord #faucet-signet-btc channel](https://discord.gg/babylonglobal)
+to request signet BTC to the address
 generated in the previous step. You can use the following commands if you have
 received the funds
 
@@ -398,7 +399,8 @@ KeyDirectory = /path/to/stakerd-home/
 
 1. BTC configuration should reflect the BTC node that we're running and the network
    Babylon connects to.
-2. You can use this [faucet](https://signet.bc-2.jp/) to receive signet BTC.
+2. You can use the [Discord #faucet-signet-btc channel](https://discord.gg/babylonglobal)
+   to receive signet BTC.
 
 ```bash
 [chain]
@@ -536,8 +538,9 @@ stakercli daemon babylon-finality-providers
 Find the BTC address that has sufficient Bitcoin balance that you want to stake from.
 
 **Note**: In case you don't have addresses with adequate balances, you can use the
-faucet to receive signet BTC. Visit the faucet [link](https://signet.bc-2.jp/) to
-acquire signet BTC.
+faucet to receive signet BTC.
+Visit our [Discord #faucet-signet-btc channel](https://discord.gg/babylonglobal)
+to acquire signet BTC.
 
 ```bash
 stakercli daemon list-outputs
