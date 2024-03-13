@@ -164,8 +164,8 @@ in [step](#3-add-key-for-the-consumer-chain) will be used.
 fpcli create-finality-provider \
     --key-name my-finality-provider \
     --chain-id bbn-test-3 \
-    --moniker my-name \
     --commission 0.05 \
+    --moniker "your_finality_provider_name_here" \
     --identity "your_keybase_username_or_identifier_here" \
     --website "your_website_here" \
     --security-contact "your_security_contact_email_here" \
