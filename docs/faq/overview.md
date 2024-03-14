@@ -7,15 +7,14 @@ custom_edit_url: null
 ---
 
 # Frequently Asked Questions
-
-## Questions about Bitcoin Staking
-
-- [Frequently Asked Questions](#frequently-asked-questions)
   - [Questions about Bitcoin Staking](#questions-about-bitcoin-staking)
     - [Will my bitcoins be bridged to other blockchains?](#will-my-bitcoins-be-bridged-to-other-blockchains)
     - [As a bitcoin staker, do I have to run a validator by myself?](#as-a-bitcoin-staker-do-i-have-to-run-a-validator-by-myself)
     - [When slashing happens, will all my staked bitcoins be burned?](#when-slashing-happens-will-all-my-staked-bitcoins-be-burned)
   - [Questions about Bitcoin Timestamping](#questions-about-bitcoin-timestamping)
+
+## Questions about Bitcoin Staking
+Below you'll find answers to common questions not found in [the documentation about bitcoin staking](https://docs.babylonchain.io/docs/introduction/btc-staking)
 
 ### Will my bitcoins be bridged to other blockchains?
 
@@ -42,3 +41,7 @@ Our protocol supports partial slashing.
 This means that, when slashing happens,
 only a certain portion of the staked bitcoins will be slashed,
 with the portion being a parameter of the protocol.
+
+
+## Questions about Bitcoin Timestamping
+At the moment it seems like all the information can be found in [the documentation about bitcoin timestamping](https://docs.babylonchain.io/docs/introduction/btc-timestamping)
