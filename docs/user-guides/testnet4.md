@@ -30,20 +30,20 @@ which is for those who want to construct Bitcoin staking related transactions by
 
 ## For Finality Providers <a id="finality-providers"></a>
 
-[To become a finality provider](https://github.com/babylonchain/networks/tree/main/bbn-test-4/finality-providers).
+- [To become a finality provider](https://github.com/babylonchain/networks/tree/main/bbn-test-4/finality-providers).
 
 ## For Covenant Committee Signers <a id="covenant-signer"></a>
 
-[To participate covenant committee signing](https://github.com/babylonchain/covenant-signer/blob/v0.1.0/README.md).
+- [To participate covenant committee signing](https://github.com/babylonchain/covenant-signer/blob/v0.1.0/README.md).
 
 ## For LST Projects and Custodies <a id="lst-custodies"></a>
 
-[Specification of all the transactions](https://github.com/babylonchain/babylon/blob/dev/docs/transaction-impl-spec.md),
+- [Specification of all the transactions](https://github.com/babylonchain/babylon/blob/dev/docs/transaction-impl-spec.md),
 which is for those who want to construct Bitcoin staking related transactions by
 themselves instead of using our code or dapps.
 
-[Swagger API doc](https://staking-api.testnet.babylonchain.io/swagger/index.html#),
+- [Swagger API doc](https://staking-api.testnet.babylonchain.io/swagger/index.html#),
 which is for those who want to build their own BTC staking frontend but want to
 use our backend.
 
-Our staking web dapp as a [reference implementation](https://github.com/babylonchain/simple-staking).
+- Our staking web dapp as a [reference implementation](https://github.com/babylonchain/simple-staking).

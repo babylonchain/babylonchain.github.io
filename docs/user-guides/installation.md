@@ -41,7 +41,7 @@ You need to clone Babylon’s GitHub repository to install the `babylond` execut
 ```console
 sudo apt install git build-essential curl jq --yes
 ```
-2. Retrieve the Babylon source code either through the [releases page](https://github.com/babylonchain/babylon/releases) or by cloning the [source code](https://github.com/babylonchain/babylon). In case you want to create a full node for the testnet, it is highly recommended that you choose the release corresponding to the current testnet. See the [testnet network information](/docs/user-guides/btc-staking-testnet/network-information) page for more details.
+2. Retrieve the Babylon source code either through the [releases page](https://github.com/babylonchain/babylon/releases) or by cloning the [source code](https://github.com/babylonchain/babylon).
 3. Navigate to the directory that contains the Babylon source code. From there build and install the babylond executable
 ```console
 git checkout <version_to_install>
