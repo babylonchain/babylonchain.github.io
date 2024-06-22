@@ -13,7 +13,7 @@ Learn how to integrate a Cosmos Zone with Babylon's BTC timestamping protocol.
 At the moment, Babylon provides a canonical chain oracle for each integrated Cosmos zone,
 and allows anyone to query the canonical chains of integrated Cosmos zones and
 query the fork headers created by a validator set with dishonest majority.
-In the future, integrating Babylon will allows Cosmos zones to raise alarms upon
+In the future, integrating Babylon will allow Cosmos zones to raise alarms upon
 dishonest majority attacks, and reduce the unbonding time.
 
 In order to integrate a Cosmos zone to Babylon,

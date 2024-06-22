@@ -315,7 +315,7 @@ echo 'export PATH=$HOME/go/bin:$PATH' >> ~/.profile
 
 The `stakerd` daemon requires a keyring with loaded Babylon tokens to pay for the
 transactions. Follow this
-[guide](https://docs.babylonchain.io/docs/user-guides/btc-staking-testnet/getting-funds)
+[guide](https://docs.babylonchain.io/docs/user-guides/btc-staking-integration/getting-funds)
 to create a keyring and request funds.
 
 ## 4. BTC Staker Setup
