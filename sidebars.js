@@ -40,39 +40,36 @@ const sidebars = {
       items: [
         'user-guides/installation',
         'user-guides/testnet4',
-        /**
-         * TODO revive below in phase two
-         */
-        // {
-        //   type: 'category',
-        //   label: 'Bitcoin Staking Testnet',
-        //   link: {
-        //     type: 'doc',
-        //     id: 'user-guides/btc-staking-testnet/overview',
-        //   },
-        //   items: [
-        //     'user-guides/btc-staking-testnet/deployment-overview',
-        //     'user-guides/btc-staking-testnet/network-information',
-        //     'user-guides/btc-staking-testnet/setup-node',
-        //     'user-guides/btc-staking-testnet/getting-funds',
-        //     'user-guides/btc-staking-testnet/become-validator',
-        //     {
-        //       type: 'category',
-        //       label: 'Become a Finality Provider',
-        //       link: {
-        //         type: 'doc',
-        //         id: 'user-guides/btc-staking-testnet/finality-providers/overview',
-        //       },
-        //       items: [
-        //         'user-guides/btc-staking-testnet/finality-providers/eots-manager',
-        //         'user-guides/btc-staking-testnet/finality-providers/finality-provider',
-        //       ],
-        //     },
-        //     'user-guides/btc-staking-testnet/become-btc-staker',
-        //     'user-guides/btc-staking-testnet/become-vigilante',
-        //     'user-guides/btc-staking-testnet/czintegrate',
-        //   ]
-        // },
+        {
+          type: 'category',
+          label: 'Bitcoin Staking Testnet-3 (Sunset)',
+          link: {
+            type: 'doc',
+            id: 'user-guides/btc-staking-testnet/overview',
+          },
+          items: [
+            'user-guides/btc-staking-testnet/deployment-overview',
+            'user-guides/btc-staking-testnet/network-information',
+            'user-guides/btc-staking-testnet/setup-node',
+            'user-guides/btc-staking-testnet/getting-funds',
+            'user-guides/btc-staking-testnet/become-validator',
+            {
+              type: 'category',
+              label: 'Become a Finality Provider',
+              link: {
+                type: 'doc',
+                id: 'user-guides/btc-staking-testnet/finality-providers/overview',
+              },
+              items: [
+                'user-guides/btc-staking-testnet/finality-providers/eots-manager',
+                'user-guides/btc-staking-testnet/finality-providers/finality-provider',
+              ],
+            },
+            'user-guides/btc-staking-testnet/become-btc-staker',
+            'user-guides/btc-staking-testnet/become-vigilante',
+            'user-guides/btc-staking-testnet/czintegrate',
+          ]
+        },
       ]
     },
     {
