@@ -46,4 +46,8 @@ themselves instead of using our code or dapps.
 which is for those who want to build their own BTC staking frontend but want to
 use our backend.
 
+<<<<<<< HEAD
+Our staking web dapp as a [reference implementation](https://github.com/babylonchain/simple-staking).
+=======
 - Our staking web dapp as a [reference implementation](https://github.com/babylonchain/simple-staking).
+>>>>>>> main
