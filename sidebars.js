@@ -70,6 +70,30 @@ const sidebars = {
             'user-guides/btc-staking-testnet/czintegrate',
           ]
         },
+        {
+          type: 'category',
+          label: 'Phase-1',
+          link: {
+            type: 'doc',
+            id: 'user-guides/phase-1/overview',
+          },
+          items: [
+            'user-guides/phase-1/deployment-overview',
+            'user-guides/phase-1/infra-setup',
+            {
+              type: 'category',
+              label: 'BTC staking services',
+              link: {
+                type: 'doc',
+                id: 'user-guides/phase-1/services/overview',
+              },
+              items: [
+                'user-guides/phase-1/services/staking-indexer',
+              ],
+            },
+            'user-guides/phase-1/global-params',
+          ]
+        }
       ]
     },
     {
