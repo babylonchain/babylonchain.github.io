@@ -47,3 +47,7 @@ which is for those who want to build their own BTC staking frontend but want to
 use our backend.
 
 - Our staking web dapp as a [reference implementation](https://github.com/babylonchain/simple-staking).
+
+## Staking via CLI
+
+- [Instructions of staking via CLI](https://github.com/babylonchain/btc-staker/blob/9be9838ca1124b64660dd1bdd57790bd7cc74e11/docs/create-phase1-staking.md).
