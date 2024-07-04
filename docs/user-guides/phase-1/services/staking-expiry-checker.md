@@ -4,6 +4,7 @@ sidebar_label: Staking Expiry Checker
 hide_table_of_contents: true
 ---
 # Staking Expiry Checker
+
 ## 1. Install Staking Expiry Checker
 
 ### 1.1 Clone the repository to your local machine from Github:
@@ -20,6 +21,7 @@ make install
 ```
 
 ## 2. Configuration
+
 ### 2.1 Create home directory:
 ```
 mkdir -p ~/.staking-expiry-checker/

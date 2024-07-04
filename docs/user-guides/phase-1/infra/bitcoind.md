@@ -4,6 +4,7 @@ sidebar_label: Bitcoind
 hide_table_of_contents: true
 ---
 # Bitcoin Node Setup
+
 ## 1. Bitcoin Core  Setup
 
 ### 1.1 Update and Upgrade the System
@@ -74,6 +75,7 @@ bitcoin-cli getblockchaininfo
 You should see information about the blockchain, indicating that `bitcoind` is running correctly.
 
 ## 4. Create a systemd Service for bitcoind (Optional)
+
 ### 4.1 Create systemd service definition
 Run the following command, replacing `your_username` with your actual username:
 ```

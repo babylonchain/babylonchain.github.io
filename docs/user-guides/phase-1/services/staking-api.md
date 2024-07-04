@@ -5,6 +5,7 @@ hide_table_of_contents: true
 ---
 # Staking Api
 The Staking API Service is a critical component of the Babylon Phase-1 system, focused on serving information about the state of the network and receiving unbonding requests for further processing. The API can be utilised by user facing applications, such as staking dApps.
+
 ## 1. Install Staking Api
 
 ### 1.1 Clone the repository to your local machine from Github:
@@ -21,6 +22,7 @@ make install
 ```
 
 ## 2. Configuration
+
 ### 2.1 Create home directory:
 ```
 mkdir -p ~/.staking-api-service/

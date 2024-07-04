@@ -5,6 +5,7 @@ hide_table_of_contents: true
 ---
 # Staking Indexer
 The staking indexer is a tool that extracts BTC staking relevant data from the Bitcoin blockchain, ensures that it follows the pre-requisites for a valid staking transaction, and determines whether the transaction should be active or not. All valid staking transactions are transformed into a structured form, stored in a database, and published as events in a RabbitMQ messaging queue for consumption by consumers. The staking indexer is the enforcer of the Bitcoin Staking protocol and serves as the ground truth for the Bitcoin Staking system.
+
 ## 1. Install Staking Indexer
 
 ### 1.1 Clone the repository to your local machine from Github:

@@ -4,6 +4,7 @@ sidebar_label: RabbitMQ
 hide_table_of_contents: true
 ---
 # RabbitMQ Setup
+
 ## 1. Install RabbitMQ
  
 ### 1.1 Update the package list
@@ -26,6 +27,7 @@ sudo systemctl start rabbitmq-server
 ```
 
 ## 2. Add RabbitMQ credentials
+
 ### 2.1 Enable RabbitMQ Management Dashboard
 
 ```

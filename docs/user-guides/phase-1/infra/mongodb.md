@@ -6,6 +6,7 @@ hide_table_of_contents: true
 # Mongodb Setup
 
 ## 1. Install MongoDB
+
 ### 1.1 Import the public key used by the package management system
 
 ```
