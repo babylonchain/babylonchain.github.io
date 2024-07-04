@@ -1,10 +1,10 @@
 ---
 id: overview
-sidebar_label: Phase-1
+sidebar_label: Infra
 hide_table_of_contents: true
 
 ---
-# BTC staking services setup
+# Infra Setup
 
 import DocCardList from '@theme/DocCardList';
 

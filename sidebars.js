@@ -78,8 +78,19 @@ const sidebars = {
             id: 'user-guides/phase-1/overview',
           },
           items: [
-            'user-guides/phase-1/deployment-overview',
-            'user-guides/phase-1/infra-setup',
+            {
+              type: 'category',
+              label: 'Infra setup',
+              link: {
+                type: 'doc',
+                id: 'user-guides/phase-1/infra/overview',
+              },
+              items: [
+                'user-guides/phase-1/infra/mongodb',
+                'user-guides/phase-1/infra/rabbitmq',
+                'user-guides/phase-1/infra/bitcoind',
+              ],
+            },
             {
               type: 'category',
               label: 'BTC staking services',
@@ -89,6 +100,8 @@ const sidebars = {
               },
               items: [
                 'user-guides/phase-1/services/staking-indexer',
+                'user-guides/phase-1/services/staking-api',
+                'user-guides/phase-1/services/staking-expiry-checker',
               ],
             },
             'user-guides/phase-1/global-params',
