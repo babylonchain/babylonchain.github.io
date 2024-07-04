@@ -80,7 +80,7 @@ sid start
 ## Step 5: Create systemd service (Optional)
 
 ### 5.1 Create systemd service definition
-Run the following command, replacing your_username with your actual username:
+Run the following command, replacing `your_username` with your actual username:
 ```
 cat <<EOF | sudo tee /etc/systemd/system/sid.service
 [Unit]

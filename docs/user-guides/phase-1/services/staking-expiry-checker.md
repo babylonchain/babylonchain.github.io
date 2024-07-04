@@ -68,7 +68,7 @@ staking-expiry-checker --config ~/.staking-expiry-checker/config.yml
 ## Step 4: Create systemd service (Optional)
 
 ### 4.1 Create systemd service definition
-Run the following command, replacing your_username with your actual username:
+Run the following command, replacing `your_username` with your actual username:
 ```
 cat <<EOF | sudo tee /etc/systemd/system/staking-expiry-checker.service
 [Unit]

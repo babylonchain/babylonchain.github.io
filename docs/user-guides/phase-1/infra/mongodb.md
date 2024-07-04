@@ -77,13 +77,3 @@ rs.initiate()
 ```
 rs.status()
 ```
-
-
-
-## Step 4: Verify Installations
-
-### 4.1 Verify MongoDB Replica Set
-
-```
-mongo --eval 'rs.status()'
-```
