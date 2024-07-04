@@ -5,7 +5,7 @@ hide_table_of_contents: true
 ---
 # Staking Api
 The Staking API Service is a critical component of the Babylon Phase-1 system, focused on serving information about the state of the network and receiving unbonding requests for further processing. The API can be utilised by user facing applications, such as staking dApps.
-## 1. Install staking-api
+## 1. Install Staking Api
 
 ### 1.1 Clone the repository to your local machine from Github:
 
@@ -61,9 +61,16 @@ Download the [global-params.json](../global-params.md) and put into the default 
 wget https://raw.githubusercontent.com/babylonchain/networks/main/bbn-test-4/parameters/global-params.json -O ~/.staking-api-service/global-params.json
 ```
 
-## 5. Create systemd service (Optional)
+## 5. Start Staking Api
+You can start the Staking Api by running:
 
-### 5.1 Create systemd service definition
+```
+staking-api-service --config ~/.staking-api-service/config.yml --params ~/.staking-api-service/global-params.json --finality-providers ~/.staking-api-service/finality-providers.json
+```
+
+## 6. Create systemd service (Optional)
+
+### 6.1 Create systemd service definition
 Run the following command, replacing `your_username` with your actual username:
 ```
 cat <<EOF | sudo tee /etc/systemd/system/staking-api.service
@@ -85,27 +92,27 @@ WantedBy=multi-user.target
 EOF
 ```
 
-### 5.2 Reload systemd manager configuration
+### 6.2 Reload systemd manager configuration
 
 ```
 sudo systemctl daemon-reload
 ```
 
-### 5.3 Enable the service to start on boot
+### 6.3 Enable the service to start on boot
 
 ```
 sudo systemctl enable staking-api.service
 ```
 
-### 5.4 Start the service
+### 6.4 Start the service
 
 ```
 sudo systemctl start staking-api.service
 ```
 
-### 6. Verify staking-api is running
+### 6.5. Verify Staking Api is running
 
-Check Staking-api service status:
+Check staking-api service status:
 ```
 sudo systemctl status staking-api
 ```

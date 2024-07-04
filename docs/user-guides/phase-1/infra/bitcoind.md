@@ -74,7 +74,8 @@ bitcoin-cli getblockchaininfo
 You should see information about the blockchain, indicating that `bitcoind` is running correctly.
 
 ## 4. Create a systemd Service for bitcoind (Optional)
-### 4.1 Run the following command, replacing `your_username` with your actual username:
+### 4.1 Create systemd service definition
+Run the following command, replacing `your_username` with your actual username:
 ```
 cat <<EOF | sudo tee /etc/systemd/system/bitcoind.service
 [Unit]
