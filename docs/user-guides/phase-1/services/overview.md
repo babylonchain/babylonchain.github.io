@@ -1,6 +1,5 @@
 ---
 id: overview
-sidebar_label: Phase-1
 hide_table_of_contents: true
 
 ---

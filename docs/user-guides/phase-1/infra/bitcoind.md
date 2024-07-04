@@ -3,9 +3,10 @@ id: bitcoind
 sidebar_label: Bitcoind
 hide_table_of_contents: true
 ---
-# Bitcoind node Setup
+# Bitcoin Node Setup
+## 1. Bitcoin Core  Setup
 
-## Update and Upgrade the System
+### 1.1 Update and Upgrade the System
 
 Ensure your system is up to date.
 
@@ -14,7 +15,7 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-## Install Dependencies
+### 1.2 Install Dependencies
 
 Install the required dependencies.
 
@@ -23,7 +24,7 @@ sudo apt install -y build-essential libtool autotools-dev automake pkg-config bs
 ```
 
 
-## Download Bitcoin Core
+### 1.3 Download Bitcoin Core
 
 Download Bitcoin Core from the official repository.
 
@@ -33,7 +34,7 @@ tar -xvf bitcoin-26.1-x86_64-linux-gnu.tar.gz
 sudo cp bitcoin-26.1/bin/* /usr/local/bin/
 ```
 
-## Configure bitcoind
+## 2. Configuration
 
 Create a configuration file for Bitcoin Core.
 
@@ -54,15 +55,15 @@ rpcpassword=yourpassword
 
 Save and close the file.
 
-## Start bitcoind
+## 3. Start bitcoind
 
-Start the Bitcoin daemon.
+### 3.1 Start the Bitcoin daemon.
 
 ```
 bitcoind
 ```
 
-## Verify bitcoind is Running
+### 3.2 Verify bitcoind is Running
 
 Check the status of bitcoind.
 
@@ -72,8 +73,8 @@ bitcoin-cli getblockchaininfo
 
 You should see information about the blockchain, indicating that `bitcoind` is running correctly.
 
-## Create a systemd Service for bitcoind (Optional)
-Run the following command, replacing your_username with your actual username:
+## 4. Create a systemd Service for bitcoind (Optional)
+### 4.1 Run the following command, replacing `your_username` with your actual username:
 ```
 cat <<EOF | sudo tee /etc/systemd/system/bitcoind.service
 [Unit]
@@ -91,19 +92,19 @@ WantedBy=multi-user.target
 EOF
 ```
 
-## Reload systemd manager configuration
+### 4.2 Reload systemd manager configuration
 
 ```
 sudo systemctl daemon-reload
 ```
 
-## Enable the service to start on boot
+### 4.3 Enable the service to start on boot
 
 ```
 sudo systemctl enable bitcoind.service
 ```
 
-## Start the service
+### 4.4 Start the service
 
 ```
 sudo systemctl start bitcoind.service

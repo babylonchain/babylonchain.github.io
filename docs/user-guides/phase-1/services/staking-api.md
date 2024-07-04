@@ -5,7 +5,7 @@ hide_table_of_contents: true
 ---
 # Staking Api
 The Staking API Service is a critical component of the Babylon Phase-1 system, focused on serving information about the state of the network and receiving unbonding requests for further processing. The API can be utilised by user facing applications, such as staking dApps.
-## Step 1: Install staking-api
+## 1. Install staking-api
 
 ### 1.1 Clone the repository to your local machine from Github:
 
@@ -20,7 +20,7 @@ cd staking-api-service
 make install
 ```
 
-## Step 2: Configuration
+## 2. Configuration
 ### 2.1 Create home directory:
 ```
 mkdir -p ~/.staking-api-service/
@@ -47,21 +47,21 @@ queue:
   url: "localhost:5672"
 ```
 
-## Step 3: Download global params
+## 3. Download global params
 
 Download the [global-params.json](../global-params.md) and put into the default home directory
 ```
 wget https://raw.githubusercontent.com/babylonchain/networks/main/bbn-test-4/parameters/global-params.json -O ~/.staking-api-service/global-params.json
 ```
 
-## Step 4: Download finality providers
+## 4. Download finality providers
 
 Download the [global-params.json](../global-params.md) and put into the default home directory
 ```
 wget https://raw.githubusercontent.com/babylonchain/networks/main/bbn-test-4/parameters/global-params.json -O ~/.staking-api-service/global-params.json
 ```
 
-## Step 5: Create systemd service (Optional)
+## 5. Create systemd service (Optional)
 
 ### 5.1 Create systemd service definition
 Run the following command, replacing `your_username` with your actual username:

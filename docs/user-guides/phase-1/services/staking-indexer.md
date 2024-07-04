@@ -5,7 +5,7 @@ hide_table_of_contents: true
 ---
 # Staking Indexer
 The staking indexer is a tool that extracts BTC staking relevant data from the Bitcoin blockchain, ensures that it follows the pre-requisites for a valid staking transaction, and determines whether the transaction should be active or not. All valid staking transactions are transformed into a structured form, stored in a database, and published as events in a RabbitMQ messaging queue for consumption by consumers. The staking indexer is the enforcer of the Bitcoin Staking protocol and serves as the ground truth for the Bitcoin Staking system.
-## Step 1: Install staking-indexer
+## 1. Install staking-indexer
 
 ### 1.1 Clone the repository to your local machine from Github:
 
@@ -20,7 +20,7 @@ cd staking-indexer # cd into the project directory
 make install
 ```
 
-## Step 2: Configuration
+## 2. Configuration
 ### 2.1 Generate the default configuration:
 
 ```
@@ -65,14 +65,14 @@ Password = password
 Url = localhost:5672
 ```
 
-## Step 3: Download global params
+## 3. Download global params
 
 Download the [global-params.json](../global-params.md) and put into the default home directory
 ```
 wget https://raw.githubusercontent.com/babylonchain/networks/main/bbn-test-4/parameters/global-params.json -O ~/.sid/global-params.json
 ```
 
-## Step 4: Start staking-indexer
+## 4. Start staking-indexer
 
 In case you are using the default home directory, you can start the staking-indexer running:
 
@@ -80,7 +80,7 @@ In case you are using the default home directory, you can start the staking-inde
 sid start
 ```
 
-## Step 5: Create systemd service (Optional)
+## 5. Create systemd service (Optional)
 
 ### 5.1 Create systemd service definition
 Run the following command, replacing `your_username` with your actual username:

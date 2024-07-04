@@ -5,7 +5,7 @@ hide_table_of_contents: true
 ---
 # Mongodb Setup
 
-## Step 1: Install MongoDB
+## 1. Install MongoDB
 ### 1.1 Import the public key used by the package management system
 
 ```
@@ -37,7 +37,7 @@ sudo systemctl start mongod
 sudo systemctl enable mongod
 ```
 
-## Step 2: Configure MongoDB Replica Set
+## 2. Configure MongoDB Replica Set
 
 ### 2.1 Edit MongoDB configuration file
 

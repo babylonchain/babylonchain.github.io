@@ -4,7 +4,7 @@ sidebar_label: Staking Expiry Checker
 hide_table_of_contents: true
 ---
 # Staking Expiry Checker
-## Step 1: Install staking-expiry-checker
+## 1. Install staking-expiry-checker
 
 ### 1.1 Clone the repository to your local machine from Github:
 
@@ -19,7 +19,7 @@ cd staking-expiry-checker
 make install
 ```
 
-## Step 2: Configuration
+## 2. Configuration
 ### 2.1 Create home directory:
 ```
 mkdir -p ~/.staking-expiry-checker/
@@ -57,7 +57,7 @@ queue:
 ```
 
 
-## Step 3: Start staking-expiry-checker
+## 3. Start staking-expiry-checker
 
 You can start the staking-expiry-checker by running:
 
@@ -65,7 +65,7 @@ You can start the staking-expiry-checker by running:
 staking-expiry-checker --config ~/.staking-expiry-checker/config.yml
 ```
 
-## Step 4: Create systemd service (Optional)
+## 4. Create systemd service (Optional)
 
 ### 4.1 Create systemd service definition
 Run the following command, replacing `your_username` with your actual username:
