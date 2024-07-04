@@ -50,13 +50,15 @@ queue:
 ## Step 3: Download global params
 
 Download the [global-params.json](../global-params.md) and put into the default home directory
+```
+wget https://raw.githubusercontent.com/babylonchain/networks/main/bbn-test-4/parameters/global-params.json -O ~/.staking-api-service/global-params.json
+```
 
 ## Step 4: Download finality providers
 
-In case you are using the default home directory, you can start the staking-api running:
-
+Download the [global-params.json](../global-params.md) and put into the default home directory
 ```
-sid start
+wget https://raw.githubusercontent.com/babylonchain/networks/main/bbn-test-4/parameters/global-params.json -O ~/.staking-api-service/global-params.json
 ```
 
 ## Step 5: Create systemd service (Optional)
@@ -73,8 +75,8 @@ After=network.target
 Type=simple
 ExecStart=$(which staking-api-service)  \
           --config /home/your_username/.staking-api-service/config.yml \
-          --params /home/your_username/.staking-api-service/global_params.json \
-          --finality-providers /home/your_username/.staking-api-service/finality_providers.json
+          --params /home/your_username/.staking-api-service/global-params.json \
+          --finality-providers /home/your_username/.staking-api-service/finality-providers.json
 Restart=on-failure
 User=your_username
 
