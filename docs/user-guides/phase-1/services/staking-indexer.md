@@ -22,6 +22,7 @@ make install
 ```
 
 ## 2. Configuration
+
 ### 2.1 Generate the default configuration:
 
 ```
@@ -34,7 +35,9 @@ This will create a sid.conf file in the default home directory. The default home
 - Windows: `C:\Users\<username>\AppData\Local\Sid`
 
 ### 2.2 Update default configurations:
+
 - [Bitcoin network](../infra/bitcoind) to run on
+
 ```
 [Application Options]
 ; Bitcoin network to run on
@@ -42,6 +45,7 @@ BitcoinNetwork = signet
 ```
 
 - Bitcoin node to connect to
+
 ```
 [btcconfig]
 ; The daemon's rpc listening address.
@@ -54,6 +58,7 @@ RPCUser = user
 RPCPass = pass
 ```
 - [Rabbitmq cluster](../infra/rabbitmq) to connect to
+
 ```
 [queueconfig]
 ; the user name of the queue
@@ -69,6 +74,7 @@ Url = localhost:5672
 ## 3. Download global params
 
 Download the [global-params.json](../global-params.md) and put into the default home directory
+
 ```
 wget https://raw.githubusercontent.com/babylonchain/networks/main/bbn-test-4/parameters/global-params.json -O ~/.sid/global-params.json
 ```
@@ -85,6 +91,7 @@ sid start
 
 ### 5.1 Create systemd service definition
 Run the following command, replacing `your_username` with your actual username:
+
 ```
 cat <<EOF | sudo tee /etc/systemd/system/sid.service
 [Unit]
@@ -123,10 +130,13 @@ sudo systemctl start sid.service
 ### 5.5 Verify Staking Indexer is running
 
 Check sid service status:
+
 ```
 sudo systemctl status sid
 ```
-Expected log
+
+Expected log:
+
 ```
 Jul 04 06:49:54 your_username sid[839944]: 2024-07-04T06:49:54.798273Z        info        Starting Prometheus server        {"address": "127.0.0.1:2114"}
 Jul 04 06:49:54 your_username sid[839944]: 2024-07-04T06:49:54.805957Z        info        Starting Staking Indexer App        {"module": "staking indexer"}

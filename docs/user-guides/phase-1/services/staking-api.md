@@ -24,6 +24,7 @@ make install
 ## 2. Configuration
 
 ### 2.1 Create home directory:
+
 ```
 mkdir -p ~/.staking-api-service/
 ```
@@ -35,13 +36,16 @@ wget https://raw.githubusercontent.com/babylonchain/staking-api-service/dev/conf
 ```
 
 ### 2.3 Update default configurations:
+
 - [MongoDB](../infra/mongodb.md) cluster to connect to
+
 ```
 db:
   address: "mongodb://localhost:27017/?directConnection=true"
 ```
 
 - [Rabbitmq cluster](../infra/rabbitmq.md) to connect to
+
 ```
 queue:
   queue_user: admin
@@ -52,6 +56,7 @@ queue:
 ## 3. Download global params
 
 Download the [global-params.json](../global-params.md) and put into the default home directory
+
 ```
 wget https://raw.githubusercontent.com/babylonchain/networks/main/bbn-test-4/parameters/global-params.json -O ~/.staking-api-service/global-params.json
 ```
@@ -59,6 +64,7 @@ wget https://raw.githubusercontent.com/babylonchain/networks/main/bbn-test-4/par
 ## 4. Download finality providers
 
 Download the [global-params.json](../global-params.md) and put into the default home directory
+
 ```
 wget https://raw.githubusercontent.com/babylonchain/networks/main/bbn-test-4/parameters/global-params.json -O ~/.staking-api-service/global-params.json
 ```
@@ -74,6 +80,7 @@ staking-api-service --config ~/.staking-api-service/config.yml --params ~/.staki
 
 ### 6.1 Create systemd service definition
 Run the following command, replacing `your_username` with your actual username:
+
 ```
 cat <<EOF | sudo tee /etc/systemd/system/staking-api.service
 [Unit]
@@ -115,11 +122,13 @@ sudo systemctl start staking-api.service
 ### 6.5. Verify Staking Api is running
 
 Check staking-api service status:
+
 ```
 sudo systemctl status staking-api
 ```
 
-Expected log
+Expected log:
+
 ```
 Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"debug","time":"2024-07-04T03:36:05Z","message":"Index created successfully on collection: unbonding_queue"}
 Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","time":"2024-07-04T03:36:05Z","message":"Collections and Indexes created successfully."}

@@ -24,7 +24,6 @@ Install the required dependencies.
 sudo apt install -y build-essential libtool autotools-dev automake pkg-config bsdmainutils python3 libevent-dev libboost-system-dev libboost-filesystem-dev libboost-test-dev libboost-thread-dev
 ```
 
-
 ### 1.3 Download Bitcoin Core
 
 Download Bitcoin Core from the official repository.

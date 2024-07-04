@@ -23,6 +23,7 @@ make install
 ## 2. Configuration
 
 ### 2.1 Create home directory:
+
 ```
 mkdir -p ~/.staking-expiry-checker/
 ```
@@ -34,13 +35,16 @@ wget https://raw.githubusercontent.com/babylonchain/staking-expiry-checker/main/
 ```
 
 ### 2.3 Update default configurations:
+
 - [MongoDB](../infra/mongodb.md) cluster to connect to
+
 ```
 db:
   address: "mongodb://localhost:27017/?directConnection=true"
 ```
 
 - [Bitcoin node](../infra/bitcoind.md) to connect to
+
 ```
 btc:
   endpoint: localhost:18332
@@ -51,6 +55,7 @@ btc:
 ```
 
 - [Rabbitmq cluster](../infra/rabbitmq.md) to connect to
+
 ```
 queue:
   queue_user: admin
@@ -70,7 +75,9 @@ staking-expiry-checker --config ~/.staking-expiry-checker/config.yml
 ## 4. Create systemd service (Optional)
 
 ### 4.1 Create systemd service definition
+
 Run the following command, replacing `your_username` with your actual username:
+
 ```
 cat <<EOF | sudo tee /etc/systemd/system/staking-expiry-checker.service
 [Unit]
