@@ -5,6 +5,12 @@ hide_table_of_contents: true
 ---
 # RabbitMQ Setup
 
+:::info Note
+
+For a production system, we recommend a multi-node RabbitMQ cluster with quorum queues to ensure message durability and high availability. This setup enhances fault tolerance and performance for reliable messaging infrastructure.
+
+:::
+
 ## 1. Install RabbitMQ
  
 ### 1.1 Update the package list
@@ -35,6 +41,12 @@ sudo rabbitmq-plugins enable rabbitmq_management
 ```
 
 ### 2.2 Create an admin user for RabbitMQ
+
+:::info Note
+
+The exact credentials will later be used by the services to connect to the queues.
+
+:::
 
 ```
 sudo rabbitmqctl add_user admin password

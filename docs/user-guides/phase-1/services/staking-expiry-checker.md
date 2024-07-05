@@ -28,10 +28,10 @@ make install
 mkdir -p ~/.staking-expiry-checker/
 ```
 
-### 2.2 Download the default configuration:
+### 2.2 Copy the default configuration:
 
 ```
-wget https://raw.githubusercontent.com/babylonchain/staking-expiry-checker/main/config/config-local.yml -O ~/.staking-expiry-checker/config.yml
+cp ~/staking-expiry-checker/config/config-local.yml ~/.staking-expiry-checker/config.yml
 ```
 
 ### 2.3 Update default configurations:

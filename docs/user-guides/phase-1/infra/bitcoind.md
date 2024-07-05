@@ -5,55 +5,58 @@ hide_table_of_contents: true
 ---
 # Bitcoin Node Setup
 
-## 1. Bitcoin Core  Setup
+## 1. Bitcoin Core Setup
 
-### 1.1 Update and Upgrade the System
-
-Ensure your system is up to date.
-
-```
-sudo apt update
-sudo apt upgrade -y
-```
-
-### 1.2 Install Dependencies
-
-Install the required dependencies.
-
-```
-sudo apt install -y build-essential libtool autotools-dev automake pkg-config bsdmainutils python3 libevent-dev libboost-system-dev libboost-filesystem-dev libboost-test-dev libboost-thread-dev
-```
-
-### 1.3 Download Bitcoin Core
-
-Download Bitcoin Core from the official repository.
-
-```
-wget https://bitcoincore.org/bin/bitcoin-core-26.1/bitcoin-26.1-x86_64-linux-gnu.tar.gz
-tar -xvf bitcoin-26.1-x86_64-linux-gnu.tar.gz
-sudo cp bitcoin-26.1/bin/* /usr/local/bin/
-```
+Download and install the bitcoin binaries according to your operating system from the official [Bitcoind Core registry](https://bitcoincore.org/bin/bitcoin-core-26.0/). All programs in this guide are compatible with version 26.0.
 
 ## 2. Configuration
 
-Create a configuration file for Bitcoin Core.
+bitcoind is configured through a main configuration file named bitcoin.conf.
 
-```
-mkdir -p ~/.bitcoin
-vi ~/.bitcoin/bitcoin.conf
-```
+Depending on the operating system, the configuration file should be placed under the corresponding path:
 
-Add the following configuration to the `bitcoin.conf` file:
+- MacOS: `/Users/<username>/Library/Application Support/Bitcoin`
+- Linux: `/home/<username>/.bitcoin`
+- Windows: `C:\Users\<username>\AppData\Roaming\Bitcoin`
 
+Both servers can utilize the following base parameter skeleton (adapted for the BTC signet network):
 ```
+# Accept command line and JSON-RPC commands
 server=1
-daemon=1
+# Enable transaction indexing
 txindex=1
-rpcuser=yourusername
-rpcpassword=yourpassword
+# RPC server settings
+rpcuser=<rpc-username>
+rpcpassword=<rpc-password>
+# Optional: In case of non-mainnet BTC node,
+# the following two lines specify the network that your
+# node will operate; for this example, utilizing signet
+signet=1
+[signet]
+# Port your bitcoin node will listen for incoming requests;
+# below port is the canonical port for signet,
+# for mainnet, typically 8332 is used
+rpcport=38332
+# Address your bitcoin node will listen for incoming requests
+rpcbind=0.0.0.0
+# Optional: Needed for remote node connectivity
+rpcallowip=0.0.0.0/0
 ```
 
-Save and close the file.
+Notes:
+- Instead of hardcoding the RPC server password (`rpcpassword`) in the config, it is recommended to generate its salted hash and use the rpcauth field instead. To generate the salted hash, you can use this [platform](https://jlopp.github.io/bitcoin-core-rpc-auth-generator/) as reference - however, the salting operation should be executed locally. The resulting config value will look like this:
+
+```
+rpcauth=<rpc-password-salted-hash>
+```
+
+- In case you will be connecting to BTC Mainnet network, ensure to remove the following config skeleton lines:
+
+```
+signet=1
+[signet]
+```
+
 
 ## 3. Start bitcoind
 

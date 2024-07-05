@@ -4,8 +4,8 @@ sidebar_label: Phase-1
 hide_table_of_contents: true
 
 ---
-# Overview of Phase-1 deployment
-![Overview of Phase-1 deployment](images/phase-1-overview.png)
+# Overview of BTC Staking backend deployment
+![Overview of BTC Staking backend deployment](images/phase-1-overview.png)
 
 The Babylon's Phase-1 system comprises the following components:
 - BTC Staking Indexer: Parses BTC blocks and forwards BTC Staking transactions to a queueing system, while also persisting them to an on-disk key-value storage

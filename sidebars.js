@@ -80,7 +80,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Infra setup',
+              label: 'Required infrastructure',
               link: {
                 type: 'doc',
                 id: 'user-guides/phase-1/infra/overview',
@@ -93,7 +93,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'BTC staking services',
+              label: 'BTC staking backend services',
               link: {
                 type: 'doc',
                 id: 'user-guides/phase-1/services/overview',

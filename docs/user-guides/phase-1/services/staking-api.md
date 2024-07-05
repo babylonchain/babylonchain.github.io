@@ -29,10 +29,10 @@ make install
 mkdir -p ~/.staking-api-service/
 ```
 
-### 2.2 Download the default configuration:
+### 2.2 Copy the default configuration:
 
 ```
-wget https://raw.githubusercontent.com/babylonchain/staking-api-service/dev/config/config-local.yml -O ~/.staking-api-service/config.yml
+cp ~/staking-api-service/config/config-local.yml ~/.staking-api-service/config.yml
 ```
 
 ### 2.3 Update default configurations:
