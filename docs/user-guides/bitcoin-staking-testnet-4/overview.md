@@ -1,5 +1,5 @@
 ---
-id: testnet4
+id: overview
 sidebar_label: Bitcoin Staking Testnet-4
 hide_table_of_contents: true
 pagination_prev: null

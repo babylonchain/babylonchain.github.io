@@ -59,3 +59,9 @@ sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
 Open your web browser and navigate to: `http://localhost:15672/`
 
 Log in with the username `admin` and the password `password`.
+
+## 3. Monitoring
+
+The RabbitMQ server availability can be polled through Prometheus Blackbox Exporter.
+
+RabbitMQ-specific Prometheus metrics can also be exposed by utilizing any open-source Prometheus RabbitMQ exporter [example](https://github.com/kbudde/rabbitmq_exporter).

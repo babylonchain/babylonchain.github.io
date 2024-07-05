@@ -56,3 +56,9 @@ rs.initiate()
 ```
 rs.status()
 ```
+
+## 3. Monitoring
+
+The MongoDB server availability can be polled through Prometheus Blackbox Exporter.
+
+MongoDB-specific Prometheus metrics can also be exposed by utilizing any open-source Prometheus MongoDB exporter [example](https://github.com/percona/mongodb_exporter).

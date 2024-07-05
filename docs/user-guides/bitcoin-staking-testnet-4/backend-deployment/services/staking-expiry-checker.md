@@ -1,7 +1,6 @@
 ---
 id: staking-expiry-checker
 sidebar_label: Staking Expiry Checker
-hide_table_of_contents: true
 ---
 # Staking Expiry Checker
 
@@ -112,3 +111,7 @@ sudo systemctl enable staking-expiry-checker.service
 ```
 sudo systemctl start staking-expiry-checker.service
 ```
+
+## 5. Monitoring
+
+The service exposes Prometheus metrics through a Prometheus server. By default, the server is reachable under `127.0.0.1:2112`.

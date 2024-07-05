@@ -1,7 +1,6 @@
 ---
 id: staking-indexer
 sidebar_label: Staking Indexer
-hide_table_of_contents: true
 ---
 # Staking Indexer
 The staking indexer is a tool that extracts BTC staking relevant data from the Bitcoin blockchain, ensures that it follows the pre-requisites for a valid staking transaction, and determines whether the transaction should be active or not. All valid staking transactions are transformed into a structured form, stored in a database, and published as events in a RabbitMQ messaging queue for consumption by consumers. The staking indexer is the enforcer of the Bitcoin Staking protocol and serves as the ground truth for the Bitcoin Staking system.
@@ -141,3 +140,7 @@ Expected log:
 Jul 04 06:49:54 your_username sid[839944]: 2024-07-04T06:49:54.798273Z        info        Starting Prometheus server        {"address": "127.0.0.1:2114"}
 Jul 04 06:49:54 your_username sid[839944]: 2024-07-04T06:49:54.805957Z        info        Starting Staking Indexer App        {"module": "staking indexer"}
 ```
+
+## 6. Monitoring
+
+The service exposes Prometheus metrics through a Prometheus server. By default, the server is reachable under `127.0.0.1:2112`.

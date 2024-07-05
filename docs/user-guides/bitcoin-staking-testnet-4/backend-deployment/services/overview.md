@@ -3,7 +3,7 @@ id: overview
 hide_table_of_contents: true
 
 ---
-# BTC Staking backend services setup
+# Bitcoin Staking backend services setup
 
 ## 1. Prerequisite
 

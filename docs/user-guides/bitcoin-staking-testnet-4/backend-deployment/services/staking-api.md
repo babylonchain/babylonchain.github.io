@@ -1,7 +1,6 @@
 ---
 id: staking-api
 sidebar_label: Staking Api
-hide_table_of_contents: true
 ---
 # Staking Api
 The Staking API Service is a critical component of the Babylon Phase-1 system, focused on serving information about the state of the network and receiving unbonding requests for further processing. The API can be utilised by user facing applications, such as staking dApps.
@@ -141,3 +140,7 @@ Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","queu
 Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","time":"2024-07-04T03:36:05Z","message":"Initiated Health Check Cron"}
 Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","time":"2024-07-04T03:36:05Z","message":"Starting server on 0.0.0.0:8092"}
 ```
+
+## 7. Monitoring
+
+The service exposes Prometheus metrics through a Prometheus server. By default, the server is reachable under `127.0.0.1:2112`.
