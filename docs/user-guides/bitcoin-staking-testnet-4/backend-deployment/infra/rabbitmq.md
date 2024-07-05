@@ -13,24 +13,7 @@ For a production system, we recommend a multi-node RabbitMQ cluster with quorum 
 
 ## 1. Install RabbitMQ
  
-### 1.1 Update the package list
-
-```
-sudo apt update
-```
-
-### 1.2 Install RabbitMQ server
-
-```
-sudo apt install -y rabbitmq-server
-```
-
-### 1.3 Enable and start RabbitMQ service
-
-```
-sudo systemctl enable rabbitmq-server
-sudo systemctl start rabbitmq-server
-```
+According to your operating system, follow the official instructions to install [RabbitMQ]( https://www.rabbitmq.com/docs/download#installation-guides)
 
 ## 2. Add RabbitMQ credentials
 
