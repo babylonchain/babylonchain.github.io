@@ -49,7 +49,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Bitcoin Staking backend deployment',
+              label: 'Backend Deployment',
               link: {
                 type: 'doc',
                 id: 'user-guides/bitcoin-staking-testnet-4/backend-deployment/overview',

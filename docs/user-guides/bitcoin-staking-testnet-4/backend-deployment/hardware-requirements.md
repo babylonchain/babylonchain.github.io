@@ -6,11 +6,17 @@ hide_table_of_contents: true
 ---
 # Hardware requirements
 
-## Required Infrastructure services:
+## Required Infrastructure services
 
 ### MongoDB
 
-A replica set cluster with at least `3 nodes` is required to ensure data redundancy and high availability.
+:::info Note
+
+For the most accurate and up-to-date hardware recommendations, please refer to the official [documentation](https://www.mongodb.com/docs/cloud-manager/tutorial/provisioning-prep/#deployment-prerequisites)
+
+:::
+
+A replica set cluster with at least 3 nodes is required to ensure data redundancy and high availability.
 
 Hardware Requirements: 
 
@@ -22,7 +28,14 @@ The MongoDB Agent must be installed only on 64-bit architectures.
 
 ### RabbitMQ
 
-For RabbitMQ, a multi-node cluster with at least `3 nodes` is required to ensure message durability and high availability.
+:::info Note
+
+For the most accurate and up-to-date hardware recommendations, please refer to the official [documentation](https://www.rabbitmq.com/docs/production-checklist)
+
+:::
+
+
+For RabbitMQ, a multi-node cluster with at least 3 nodes is required to ensure message durability and high availability.
 
 Hardware Requirements:
 - CPU: Multi-core processors.
@@ -37,7 +50,7 @@ Hardware Requirements:
 - Memory: Minimum 8GB RAM.
 - Storage: SSDs with at least 800GB of space to accommodate the full Bitcoin blockchain.
 
-## BTC Staking Backend Servicess: 
+## BTC Staking Backend Servicess
 
 Each of the backend services should be hosted on separate servers to ensure optimal performance and isolation. Below are the suggested hardware requirements:
 
