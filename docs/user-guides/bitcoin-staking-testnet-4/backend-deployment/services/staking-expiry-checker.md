@@ -53,7 +53,7 @@ btc:
   rpc-pass: rpcpass
 ```
 
-- [Rabbitmq cluster](../infra/rabbitmq.md) to connect to
+- [RabbitMQ cluster](../infra/rabbitmq.md) to connect to
 
 ```
 queue:

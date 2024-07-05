@@ -56,7 +56,7 @@ RPCUser = user
 ; Password for RPC connections.
 RPCPass = pass
 ```
-- [Rabbitmq cluster](../infra/rabbitmq) to connect to
+- [RabbitMQ cluster](../infra/rabbitmq) to connect to
 
 ```
 [queueconfig]

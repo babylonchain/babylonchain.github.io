@@ -43,7 +43,7 @@ db:
   address: "mongodb://localhost:27017/?directConnection=true"
 ```
 
-- [Rabbitmq cluster](../infra/rabbitmq.md) to connect to
+- [RabbitMQ cluster](../infra/rabbitmq.md) to connect to
 
 ```
 queue:
