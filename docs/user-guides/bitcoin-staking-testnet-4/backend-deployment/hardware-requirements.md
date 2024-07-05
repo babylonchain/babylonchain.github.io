@@ -6,7 +6,7 @@ hide_table_of_contents: true
 ---
 # Hardware requirements
 
-## Required Infrastructure services
+## Required Infrastructure Services
 
 ### MongoDB
 
@@ -50,7 +50,7 @@ Hardware Requirements:
 - Memory: Minimum 8GB RAM.
 - Storage: SSDs with at least 800GB of space to accommodate the full Bitcoin blockchain.
 
-## BTC Staking Backend Servicess
+## BTC Staking Backend Services
 
 Each of the backend services should be hosted on separate servers to ensure optimal performance and isolation. Below are the suggested hardware requirements:
 

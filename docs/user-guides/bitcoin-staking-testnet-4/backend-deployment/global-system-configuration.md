@@ -3,9 +3,9 @@ id: global-params
 sidebar_label: Global Params
 hide_table_of_contents: true
 ---
-# Global system configuration
+# Global System Configuration
 
-## Staking parameters
+## Staking Parameters
 
 The Global Configuration includes a series of versioned governance parameters that greatly affect the behaviour of the system. Detailed information can be found [here](https://github.com/babylonchain/networks/tree/main/bbn-test-4/parameters).
 
