@@ -15,7 +15,7 @@ This guide is structured as follows:
 
 The Babylon's Bitcoin Staking system comprises the following components:
 
-- BTC Staking Indexer: Parses BTC blocks and forwards BTC Staking transactions to a queueing system, while also persisting them to an on-disk key-value storage
+- BTC Staking Indexer: Parses BTC blocks for valid staking, unbonding, and withdrawal transactions, and forwards relevant events to a queueing system, while also persisting them to an on-disk key-value storage
 - RabbitMQ: Houses a set of queues containing BTC Staking transactions
 - Staking API Service: Consumes BTC Staking transactions from the RabbitMQ queues and stores them in a central data store, additionally accepting unbonding requests
 - MongoDB: Stores BTC Staking transaction data

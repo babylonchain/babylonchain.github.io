@@ -83,6 +83,8 @@ In case you are using the default home directory, you can start the staking-inde
 sid start
 ```
 
+Note: If the indexer fails to start due to re-org, please rerun the command to start it.
+
 ## 5. Create systemd service (Optional)
 
 ### 5.1 Create systemd service definition
