@@ -72,7 +72,7 @@ Url = localhost:5672
 
 ## 3. Download global params
 
-Download the [global-params.json](https://github.com/babylonchain/networks/tree/main/bbn-test-4/parameters) and put into the default home directory
+To download the global parameters, follow [this](../global-system-configuration.md#staking-parameters) instructions.
 
 
 ## 4. Start Staking Indexer

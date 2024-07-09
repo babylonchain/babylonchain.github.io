@@ -54,11 +54,11 @@ queue:
 
 ## 3. Download global params
 
-Download the [global-params.json](https://github.com/babylonchain/networks/tree/main/bbn-test-4/parameters) and put into the default home directory
+To download the global parameters, follow [this](../global-system-configuration.md#staking-parameters) instructions. 
 
 ## 4. Download finality providers
 
-Download the [finality-providers.json](https://github.com/babylonchain/networks/tree/main/bbn-test-4/finality-providers) and put into the default home directory
+To download the finality providers information, follow [this](../global-system-configuration.md#finality-providers) instructions. 
 
 ## 5. Start Staking Api
 You can start the Staking Api by running:

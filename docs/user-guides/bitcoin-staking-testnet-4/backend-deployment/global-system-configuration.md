@@ -1,6 +1,6 @@
 ---
 id: global-params
-sidebar_label: Global Params
+sidebar_label: Global System Configuration
 hide_table_of_contents: true
 ---
 # Global System Configuration
@@ -9,5 +9,11 @@ hide_table_of_contents: true
 
 The Global Configuration includes a series of versioned governance parameters that greatly affect the behaviour of the system. Detailed information can be found [here](https://github.com/babylonchain/networks/tree/main/bbn-test-4/parameters).
 
+Depending on the network, you can download the corresponding version:
+- [testnet](https://github.com/babylonchain/networks/blob/main/bbn-test-4/parameters/global-params.json)
+
 ## Finality Providers
-Bitcoin holders that stake their Bitcoin can use Babylon's staking web application to select the finality provider they want to delegate their attestation of power to. They do so by including the finality provider's BTC public key in the self-custodial Bitcoin Staking script.
+Finality providers can accept delegations from BTC stakers. For more details, please visit [this link](https://docs.babylonchain.io/docs/user-guides/btc-staking-testnet/finality-providers/overview).
+
+Finality provider information registry stores additional inforamiton such as the finality provider's moniker, website, and identity. Depending on the network, you can find the corresponding registry:
+- [testnet](https://github.com/babylonchain/networks/tree/main/bbn-test-4/finality-providers)
