@@ -8,7 +8,7 @@ custom_edit_url: null
 
 # Developer Guides
 
-💡 Deep dive into Babylon's theoretical foundations and technical details.
+💡 Deep dive into the theoretical foundations and technical details of Babylon.
 
 ---
 

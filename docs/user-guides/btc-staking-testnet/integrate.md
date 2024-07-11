@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 # BTC timestamping integration
 
-Learn how to integrate a Cosmos Zone with Babylon's BTC timestamping protocol.
+Learn how to integrate a Cosmos Zone with the Babylon BTC timestamping protocol.
 
 ---
 
@@ -203,10 +203,10 @@ After the above steps, the Cosmos zone has been integrated to Babylon.
 You can do the following things to check the status of the integration:
 - Check the Babylon node API
   `http://lcd.testnet3.babylonchain.io/babylon/zoneconcierge/v1/chain_info/<your_chain_id>`
-  that shows the information of the Cosmos zone in Babylon's view.
+  that shows the information of the Cosmos zone in the Babylon blockchain's view.
 - Check whether [BabylonScan](https://babylonscan.io) shows
   the information of the Cosmos zone or not.
-  - NOTE: one needs to submit a PR to Babylon's chain registry in order to be shown on BabylonScan
+  - NOTE: one needs to submit a PR to a chain registry in order to be shown on BabylonScan
 
 ## Future Integration Phases
 

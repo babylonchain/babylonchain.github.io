@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 # Babylon Modules
 
-🕵️‍♂️ Find out about the Babylon's vigilante programs and how they function.
+🕵️‍♂️ Find out about the vigilante programs of Babylon and how they function.
 
 ---
 

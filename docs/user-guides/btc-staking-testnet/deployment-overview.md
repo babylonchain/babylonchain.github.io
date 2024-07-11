@@ -8,7 +8,7 @@ hide_table_of_contents: true
 
 ![Overview of validator deployment](images/validator-deployment-overview.png)
 
-In this testnet, Babylon's Bitcoin staking protocol secures the Babylon blockchain
+In this testnet, the Babylon Bitcoin staking protocol secures the Babylon blockchain
 via an extra round of voting on top of the CometBFT consensus, called the
 *finality round*. This round is conducted by *finality providers*, which are the
 "validators" that accept Bitcoin as stake delegations. Finality providers use
