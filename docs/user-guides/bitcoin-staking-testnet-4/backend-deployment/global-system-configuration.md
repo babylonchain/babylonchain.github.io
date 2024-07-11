@@ -22,23 +22,16 @@ please visit [this link](https://docs.babylonchain.io/docs/user-guides/btc-staki
 Finality provider information registry stores additional information 
 such as the finality provider's moniker, website, and identity.
 
-To generate concatenated Finality provider information:
-
-### 2.1 Clone the repository to your local machine from Github
-
-```
-git clone git@github.com:babylonchain/networks.git
-```
-
-### 2.2 Generate finality-providers.json
-
-Depending on the network, you can change the corresponding directory `DIR` in the below script:
-- testnet: `DIR="./networks/bbn-test-4/finality-providers/registry"`
+To generate concatenated Finality provider information,
+set the directory containing Finality provider information JSON file
+and run the following command. 
+Depending on the network, you can change the corresponding directory DIR:
+- testnet: `export DIR="./networks/bbn-test-4/finality-providers/registry"`
 
 ```
 echo '
-# Directory containing JSON files for the testnet
-DIR="./networks/bbn-test-4/finality-providers/registry"
+# Clone the repository
+git clone git@github.com:babylonchain/networks.git
 
 # Output files
 OUTPUT="temp.json"
