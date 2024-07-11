@@ -8,7 +8,7 @@ import Paperclip from "/img/paperclip.svg";
 
 # Bitcoin Staking
 
-Babylon's Bitcoin staking protocol allows bitcoin holders to stake their bitcoin for PoS blockchains, without needing any third-party custody/bridge/wrapping.
+The Babylon Bitcoin staking protocol allows bitcoin holders to stake their bitcoin for PoS blockchains, without needing any third-party custody/bridge/wrapping.
 It provides slashable economic security guarantees to the PoS chains while ensuring efficient stake unbonding to enhance liquidity for Bitcoin holders.
 This protocol is designed as a modular plug-in compatible with various PoS consensus protocols and serves as a foundational component for building restaking protocols.
 
@@ -37,7 +37,7 @@ This protocol is designed as a modular plug-in compatible with various PoS conse
 
 ## Security guarantees
 
-Babylon's Bitcoin staking protocol achieves the following security properties:
+The Babylon Bitcoin staking protocol achieves the following security properties:
 
 - **Fully Slashable PoS Security:** In the event of a safety violation, 1/3 of the Bitcoin stake is guaranteed to be slashed.
 - **Staker Security:** Staked bitcoins are guaranteed to be safe and withdrawable, as long as the staker (or the validator it delegates to) follows the protocol honestly.

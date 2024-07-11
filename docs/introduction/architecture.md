@@ -103,7 +103,7 @@ vigilantes.
 
 The vigilante suite of programs acts as a
 relayer of data between Babylon and Bitcoin.
-Babylon's secure operation requires
+The secure operation of Babylon requires
 that at least one honest
 operator of each of the programs exist.
 Otherwise,
@@ -125,7 +125,7 @@ and reports them back to Babylon using Babylon transactions.
 ## Monitors
 
 The monitor programs suite is responsible for
-monitoring the consistency between Babylon's state and
+monitoring the consistency between the state of Babylon and
 Bitcoin.
 
 ### [Checkpointing Monitor](../developer-guides/modules/monitor)
@@ -134,8 +134,8 @@ A standalone program that monitors:
 
 - The consistency between the Bitcoin canonical chain and
   the Bitcoin header chain maintained by
-  Babylon's BTC Light client module.
-- The timely inclusion of Babylon's Bitcoin checkpoints
+  the BTC Light client module.
+- The timely inclusion of the Bitcoin checkpoints
   information in the Babylon ledger.
 
 ### [BTC Staking Monitor](https://github.com/babylonchain/vigilante)

@@ -8,7 +8,7 @@ import Paperclip from "/img/paperclip.svg";
 
 # Bitcoin Timestamping
 
-Babylon's BTC timestamping protocol allows any arbitrary
+The Babylon BTC timestamping protocol allows any arbitrary
 data submitted to Babylon to obtain Bitcoin timestamps.
 The security level of these timestamps in terms of immutability
 increases over time because more works are added on top of them over time.
