@@ -1,7 +1,7 @@
 ---
 id: bitcoind
 sidebar_label: Bitcoind
-hide_table_of_contents: true
+hide_table_of_contents: false
 ---
 # Bitcoin Node Setup
 

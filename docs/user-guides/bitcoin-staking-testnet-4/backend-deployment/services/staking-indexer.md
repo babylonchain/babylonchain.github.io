@@ -7,13 +7,13 @@ The staking indexer is a tool that extracts BTC staking relevant data from the B
 
 ## 1. Install Staking Indexer
 
-### 1.1 Clone the repository to your local machine from Github:
+### 1.1 Clone the repository to your local machine from Github
 
 ```
 git clone https://github.com/babylonchain/staking-indexer.git
 ```
 
-### 1.2 Install the sid daemon binary by running:
+### 1.2 Install the sid daemon binary by running
 
 ```
 cd staking-indexer # cd into the project directory
@@ -22,7 +22,7 @@ make install
 
 ## 2. Configuration
 
-### 2.1 Generate the default configuration:
+### 2.1 Generate the default configuration
 
 ```
 sid init
@@ -33,7 +33,7 @@ This will create a sid.conf file in the default home directory. The default home
 - Linux: `~/.Sid`
 - Windows: `C:\Users\<username>\AppData\Local\Sid`
 
-### 2.2 Update default configurations:
+### 2.2 Update default configurations
 
 - [Bitcoin network](../infra/bitcoind) to run on
 

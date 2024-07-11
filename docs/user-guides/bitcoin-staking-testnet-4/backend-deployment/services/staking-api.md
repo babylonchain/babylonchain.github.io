@@ -7,13 +7,13 @@ The Staking API Service is a critical component of the Babylon Phase-1 system, f
 
 ## 1. Install Staking Api
 
-### 1.1 Clone the repository to your local machine from Github:
+### 1.1 Clone the repository to your local machine from Github
 
 ```
 git clone git@github.com:babylonchain/staking-api-service.git
 ```
 
-### 1.2 Install the binary by running:
+### 1.2 Install the binary by running
 
 ```
 cd staking-api-service
@@ -22,19 +22,19 @@ make install
 
 ## 2. Configuration
 
-### 2.1 Create home directory:
+### 2.1 Create home directory
 
 ```
 mkdir -p ~/.staking-api-service/
 ```
 
-### 2.2 Copy the default configuration:
+### 2.2 Copy the default configuration
 
 ```
 cp ~/staking-api-service/config/config-local.yml ~/.staking-api-service/config.yml
 ```
 
-### 2.3 Update default configurations:
+### 2.3 Update default configurations
 
 - [MongoDB](../infra/mongodb.md) cluster to connect to
 

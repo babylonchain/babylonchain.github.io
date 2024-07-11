@@ -12,7 +12,7 @@ sidebar_label: Staking Expiry Checker
 git clone https://github.com/babylonchain/staking-expiry-checker.git
 ```
 
-### 1.2 Install the binary by running:
+### 1.2 Install the binary by running
 
 ```
 cd staking-expiry-checker
@@ -21,19 +21,19 @@ make install
 
 ## 2. Configuration
 
-### 2.1 Create home directory:
+### 2.1 Create home directory
 
 ```
 mkdir -p ~/.staking-expiry-checker/
 ```
 
-### 2.2 Copy the default configuration:
+### 2.2 Copy the default configuration
 
 ```
 cp ~/staking-expiry-checker/config/config-local.yml ~/.staking-expiry-checker/config.yml
 ```
 
-### 2.3 Update default configurations:
+### 2.3 Update default configurations
 
 - [MongoDB](../infra/mongodb.md) cluster to connect to
 

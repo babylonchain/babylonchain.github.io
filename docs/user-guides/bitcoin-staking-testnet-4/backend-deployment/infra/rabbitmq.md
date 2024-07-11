@@ -1,7 +1,7 @@
 ---
 id: rabbitmq
 sidebar_label: RabbitMQ
-hide_table_of_contents: true
+hide_table_of_contents: false
 ---
 # RabbitMQ Setup
 

@@ -1,7 +1,7 @@
 ---
 id: mongodb
 sidebar_label: MongoDB
-hide_table_of_contents: true
+hide_table_of_contents: false
 ---
 # Mongodb Setup
 

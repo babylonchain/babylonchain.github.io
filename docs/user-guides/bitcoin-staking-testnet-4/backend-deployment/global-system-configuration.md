@@ -1,11 +1,11 @@
 ---
 id: global-params
 sidebar_label: Global System Configuration
-hide_table_of_contents: true
+hide_table_of_contents: false
 ---
 # Global System Configuration
 
-## Staking Parameters
+## 1. Staking Parameters
 
 The Global Configuration includes a series of versioned governance parameters that greatly affect the behaviour of the system.
 
@@ -15,11 +15,53 @@ can be found [here](https://github.com/babylonchain/networks/tree/main/bbn-test-
 Depending on the network, you can download the corresponding version:
 - [testnet](https://github.com/babylonchain/networks/blob/main/bbn-test-4/parameters/global-params.json)
 
-## Finality Providers
+## 2. Finality Providers
 Finality providers can accept delegations from BTC stakers. For more details,
 please visit [this link](https://docs.babylonchain.io/docs/user-guides/btc-staking-testnet/finality-providers/overview).
 
 Finality provider information registry stores additional information 
 such as the finality provider's moniker, website, and identity.
-Depending on the network, you can find the corresponding registry:
-- [testnet](https://github.com/babylonchain/networks/tree/main/bbn-test-4/finality-providers)
+
+To generate concatenated Finality provider information:
+
+### 2.1 Clone the repository to your local machine from Github
+
+```
+git clone git@github.com:babylonchain/networks.git
+```
+
+### 2.2 Generate finality-providers.json
+
+Depending on the network, you can change the corresponding directory `DIR` in the below script:
+- testnet: `DIR="./networks/bbn-test-4/finality-providers/registry"`
+
+```
+echo '
+# Directory containing JSON files for the testnet
+DIR="./networks/bbn-test-4/finality-providers/registry"
+
+# Output files
+OUTPUT="temp.json"
+FINAL="finality-providers.json"
+
+# Start the JSON object and array
+echo "{" > $OUTPUT
+echo "\"finality_providers\": [" >> $OUTPUT
+
+# Iterate over JSON files and append them to the output file
+for file in "$DIR"/*.json; do
+    cat "$file" >> $OUTPUT
+    echo "," >> $OUTPUT
+done
+
+# Remove the last comma and close the JSON array and object
+truncate -s-2 $OUTPUT
+echo "]" >> $OUTPUT
+echo "}" >> $OUTPUT
+
+# Beautify the final JSON output
+cat $OUTPUT | jq . > $FINAL
+' > generate_finality_providers.sh && bash generate_finality_providers.sh
+```
+
+This process will create a formatted JSON file that consolidates all Finality provider information.
