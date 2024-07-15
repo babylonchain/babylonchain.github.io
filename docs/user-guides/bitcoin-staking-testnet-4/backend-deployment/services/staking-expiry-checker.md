@@ -37,14 +37,14 @@ cp ~/staking-expiry-checker/config/config-local.yml ~/.staking-expiry-checker/co
 
 - [MongoDB](../infra/mongodb.md) cluster to connect to
 
-```bash
+```yml
 db:
   address: "mongodb://localhost:27017/?directConnection=true"
 ```
 
 - [Bitcoin node](../infra/bitcoind.md) to connect to
 
-```bash
+```yml
 btc:
   endpoint: localhost:18332
   disable-tls: false
@@ -55,7 +55,7 @@ btc:
 
 - [RabbitMQ cluster](../infra/rabbitmq.md) to connect to
 
-```bash
+```yml
 queue:
   queue_user: admin
   queue_password: password

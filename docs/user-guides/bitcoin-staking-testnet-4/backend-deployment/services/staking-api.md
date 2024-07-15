@@ -42,14 +42,14 @@ cp ~/staking-api-service/config/config-local.yml ~/.staking-api-service/config.y
 
 - [MongoDB](../infra/mongodb.md) cluster to connect to
 
-```bash
+```yml
 db:
   address: "mongodb://localhost:27017/?directConnection=true"
 ```
 
 - [RabbitMQ cluster](../infra/rabbitmq.md) to connect to
 
-```bash
+```yml
 queue:
   queue_user: admin
   queue_password: password
@@ -72,10 +72,9 @@ instructions.
 You can start the Staking Api by running:
 
 ```bash
-staking-api-service --config ~/.staking-api-service/config.yml --params ~/.
-staking-api-service/global-params.json --finality-providers ~/.
-staking-api-service/finality-providers.json
-
+staking-api-service --config ~/.staking-api-service/config.yml \
+--params ~/.staking-api-service/global-params.json \
+--finality-providers ~/.staking-api-service/finality-providers.json
 ```
 
 ## 6. Create systemd service (Optional)

@@ -50,7 +50,7 @@ The default home directories for different operating systems are:
 
 - [Bitcoin network](../infra/bitcoind) to run on
 
-```bash
+```text
 [Application Options]
 ; Bitcoin network to run on
 BitcoinNetwork = signet
@@ -58,7 +58,7 @@ BitcoinNetwork = signet
 
 - Bitcoin node to connect to
 
-```bash
+```text
 [btcconfig]
 ; The daemon's rpc listening address.
 RPCHost = 127.0.0.1:38332
@@ -72,7 +72,7 @@ RPCPass = pass
 
 - [RabbitMQ cluster](../infra/rabbitmq) to connect to
 
-```bash
+```text
 [queueconfig]
 ; the user name of the queue
 User = user
