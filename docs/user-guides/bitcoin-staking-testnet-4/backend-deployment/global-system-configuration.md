@@ -10,8 +10,8 @@ hide_table_of_contents: false
 The Global Configuration includes a series of versioned governance parameters
 that greatly affect the behaviour of the system.
 
-Detailed information
-can be found [here](https://github.com/babylonchain/networks/tree/main/bbn-test-4/parameters).
+Detailed information can be found
+[here](https://github.com/babylonchain/networks/tree/main/bbn-test-4/parameters).
 
 Depending on the network, you can download the corresponding version:
 
@@ -19,8 +19,9 @@ Depending on the network, you can download the corresponding version:
 
 ## 2. Finality Providers
 
-Finality providers can accept delegations from BTC stakers. For more details,
-please visit [this link](https://docs.babylonchain.io/docs/user-guides/btc-staking-testnet/finality-providers/overview).
+Finality providers can accept delegations from BTC stakers.
+For more details, please visit
+[this link](https://docs.babylonchain.io/docs/user-guides/btc-staking-testnet/finality-providers/overview).
 
 Finality provider information registry stores additional information
 such as the finality provider's moniker, website, and identity.
@@ -61,5 +62,5 @@ cat $OUTPUT | jq . > $FINAL
 ' > generate_finality_providers.sh && bash generate_finality_providers.sh
 ```
 
-This process will create a formatted JSON file that
-consolidates all Finality provider information.
+This process will create a formatted JSON file
+that consolidates all Finality provider information.

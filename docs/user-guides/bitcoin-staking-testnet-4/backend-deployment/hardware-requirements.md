@@ -12,9 +12,9 @@ hide_table_of_contents: true
 
 :::info Note
 
-For the most accurate and up-to-date hardware recommendations, please
-refer to
-the official [documentation](https://www.mongodb.com/docs/cloud-manager/tutorial/provisioning-prep/#deployment-prerequisites)
+For the most accurate and up-to-date hardware recommendations,
+please refer to the official
+[documentation](https://www.mongodb.com/docs/cloud-manager/tutorial/provisioning-prep/#deployment-prerequisites)
 
 :::
 
