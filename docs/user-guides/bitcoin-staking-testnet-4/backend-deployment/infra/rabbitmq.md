@@ -7,19 +7,23 @@ hide_table_of_contents: false
 
 :::info Note
 
-For a production system, we recommend a multi-node RabbitMQ cluster with quorum queues to ensure message durability and high availability. This setup enhances fault tolerance and performance for reliable messaging infrastructure.
+For a production system, we recommend a multi-node RabbitMQ cluster
+with quorum queues to ensure message durability and high availability.
+This setup enhances fault tolerance and performance for reliable messaging infrastructure.
 
 :::
 
 ## 1. Install RabbitMQ
- 
-According to your operating system, follow the official instructions to install [RabbitMQ]( https://www.rabbitmq.com/docs/download#installation-guides)
+
+According to your operating system,
+follow the official instructions to install
+[RabbitMQ]( https://www.rabbitmq.com/docs/download#installation-guides)
 
 ## 2. Add RabbitMQ credentials
 
 ### 2.1 Enable RabbitMQ Management Dashboard
 
-```
+```bash
 sudo rabbitmq-plugins enable rabbitmq_management
 ```
 
@@ -31,7 +35,7 @@ The exact credentials will later be used by the services to connect to the queue
 
 :::
 
-```
+```bash
 sudo rabbitmqctl add_user admin password
 sudo rabbitmqctl set_user_tags admin administrator
 sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
@@ -47,4 +51,6 @@ Log in with the username `admin` and the password `password`.
 
 The RabbitMQ server availability can be polled through Prometheus Blackbox Exporter.
 
-RabbitMQ-specific Prometheus metrics can also be exposed by utilizing any open-source Prometheus RabbitMQ exporter [example](https://github.com/kbudde/rabbitmq_exporter).
+RabbitMQ-specific Prometheus metrics can also be exposed
+by utilizing any open-source Prometheus RabbitMQ exporter
+[example](https://github.com/kbudde/rabbitmq_exporter).

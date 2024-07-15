@@ -7,10 +7,12 @@ hide_table_of_contents: false
 
 :::info Note
 
-The system requires a MongoDB replica set cluster for data redundancy and high availability. For production deployments, we strongly recommend a multi-node cluster to ensure optimal performance and reliability.
+The system requires a MongoDB replica set cluster
+for data redundancy and high availability.
+For production deployments, we strongly recommend a multi-node cluster
+to ensure optimal performance and reliability.
 
 :::
-
 
 ## 1. Install MongoDB
 
@@ -20,7 +22,7 @@ According to your operating system, follow the official instructions to install 
 
 ### 2.1 Edit MongoDB configuration file
 
-```
+```bash
 sudo vi /etc/mongod.conf
 ```
 
@@ -28,32 +30,32 @@ sudo vi /etc/mongod.conf
 
 Find the `replication` section and add the following:
 
-```
+```bash
 replication:
    replSetName: "rs0"
 ```
 
 ### 2.3 Restart MongoDB to apply changes
 
-```
+```bash
 sudo systemctl restart mongod
 ```
 
 ### 2.4 Initialize the replica set
 
-```
+```bash
 mongosh
 ```
 
 Inside the MongoDB shell, run:
 
-```
+```bash
 rs.initiate()
 ```
 
 ### 2.5 Verify the replica set configuration
 
-```
+```bash
 rs.status()
 ```
 
@@ -61,4 +63,6 @@ rs.status()
 
 The MongoDB server availability can be polled through Prometheus Blackbox Exporter.
 
-MongoDB-specific Prometheus metrics can also be exposed by utilizing any open-source Prometheus MongoDB exporter [example](https://github.com/percona/mongodb_exporter).
+MongoDB-specific Prometheus metrics can also be exposed
+by utilizing any open-source Prometheus MongoDB exporter
+[example](https://github.com/percona/mongodb_exporter).

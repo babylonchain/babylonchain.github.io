@@ -6,15 +6,15 @@ sidebar_label: Staking Expiry Checker
 
 ## 1. Install Staking Expiry Checker
 
-### 1.1 Clone the repository to your local machine from Github:
+### 1.1 Clone the repository to your local machine from Github
 
-```
+```bash
 git clone https://github.com/babylonchain/staking-expiry-checker.git
 ```
 
 ### 1.2 Install the binary by running
 
-```
+```bash
 cd staking-expiry-checker
 make install
 ```
@@ -23,13 +23,13 @@ make install
 
 ### 2.1 Create home directory
 
-```
+```bash
 mkdir -p ~/.staking-expiry-checker/
 ```
 
 ### 2.2 Copy the default configuration
 
-```
+```bash
 cp ~/staking-expiry-checker/config/config-local.yml ~/.staking-expiry-checker/config.yml
 ```
 
@@ -37,14 +37,14 @@ cp ~/staking-expiry-checker/config/config-local.yml ~/.staking-expiry-checker/co
 
 - [MongoDB](../infra/mongodb.md) cluster to connect to
 
-```
+```bash
 db:
   address: "mongodb://localhost:27017/?directConnection=true"
 ```
 
 - [Bitcoin node](../infra/bitcoind.md) to connect to
 
-```
+```bash
 btc:
   endpoint: localhost:18332
   disable-tls: false
@@ -55,19 +55,18 @@ btc:
 
 - [RabbitMQ cluster](../infra/rabbitmq.md) to connect to
 
-```
+```bash
 queue:
   queue_user: admin
   queue_password: password
   url: "localhost:5672"
 ```
 
-
 ## 3. Start Staking Expiry Checker
 
 You can start the staking-expiry-checker by running:
 
-```
+```bash
 staking-expiry-checker --config ~/.staking-expiry-checker/config.yml
 ```
 
@@ -77,7 +76,7 @@ staking-expiry-checker --config ~/.staking-expiry-checker/config.yml
 
 Run the following command, replacing `your_username` with your actual username:
 
-```
+```bash
 cat <<EOF | sudo tee /etc/systemd/system/staking-expiry-checker.service
 [Unit]
 Description=Staking Expiry Checker service
@@ -96,22 +95,23 @@ EOF
 
 ### 4.2 Reload systemd manager configuration
 
-```
+```bash
 sudo systemctl daemon-reload
 ```
 
 ### 4.3 Enable the service to start on boot
 
-```
+```bash
 sudo systemctl enable staking-expiry-checker.service
 ```
 
 ### 4.4 Start the service
 
-```
+```bash
 sudo systemctl start staking-expiry-checker.service
 ```
 
 ## 5. Monitoring
 
-The service exposes Prometheus metrics through a Prometheus server. By default, the server is reachable under `127.0.0.1:2112`.
+The service exposes Prometheus metrics through a Prometheus server.
+By default, the server is reachable under `127.0.0.1:2112`.
