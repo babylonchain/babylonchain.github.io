@@ -8,11 +8,11 @@ hide_table_of_contents: true
 
 This guide is structured as follows:
 
-1. Deployment Overview: a high-level overview of the deployment procesis,
+1. Deployment Overview: a high-level overview of the deployment processes,
 including the main components and their roles within the system.
 It gives a brief introduction to what will be covered
 and the overall flow of the deployment steps.
-2. [Hardware-requirements](./hardware-requirements.md):  Details the hardware requirements.
+2. [Hardware-requirements](./hardware-requirements.md): Details the hardware requirements.
 3. [Required Infrastructure Services Setup](./infra/overview.md):
 This section covers the installation and configuration of essential services
 4. [BTC Staking Backend Services Setup](./services/overview.md):
