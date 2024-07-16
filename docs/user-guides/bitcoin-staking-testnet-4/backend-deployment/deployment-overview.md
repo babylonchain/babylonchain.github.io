@@ -6,21 +6,7 @@ hide_table_of_contents: true
 ---
 # Overview of Bitcoin Staking backend deployment
 
-This guide is structured as follows:
-
-1. Deployment Overview: a high-level overview of the deployment processes,
-including the main components and their roles within the system.
-It gives a brief introduction to what will be covered
-and the overall flow of the deployment steps.
-2. [Hardware-requirements](./hardware-requirements.md):
-Details the hardware requirements.
-3. [Required Infrastructure Services Setup](./infra/overview.md):
-This section covers the installation and configuration of essential services
-4. [BTC Staking Backend Services Setup](./services/overview.md):
-After setting up the required infrastructure,
-proceed with the installation and configuration of the BTC staking backend services.
-5. [Global System Configuration](./global-system-configuration.md):
-Includes system-wide Staking parameters.
+![Overview of Bitcoin Staking backend deployment](images/phase-1-overview.png)
 
 The Babylon's Bitcoin Staking system comprises the following components:
 
@@ -47,5 +33,3 @@ and signs unbonding transactions forwarded by the Covenant Signer
 to the processed Staking transactions
 - A Finality Provider config file that contains information
 about finality providers participating in the system
-
-![Overview of Bitcoin Staking backend deployment](images/phase-1-overview.png)

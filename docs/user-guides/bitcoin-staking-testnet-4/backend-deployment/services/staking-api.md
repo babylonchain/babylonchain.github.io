@@ -1,15 +1,15 @@
 ---
 id: staking-api
-sidebar_label: Staking Api
+sidebar_label: Staking API
 ---
-# Staking Api
+# Staking API
 
 The Staking API Service is a critical component of the Babylon Phase-1 system,
 focused on serving information about the state of the network
 and receiving unbonding requests for further processing.
 The API can be utilised by user facing applications, such as staking dApps.
 
-## 1. Install Staking Api
+## 1. Install Staking API
 
 ### 1.1 Clone the repository to your local machine from Github
 
@@ -64,12 +64,12 @@ follow [this](../global-system-configuration.md#staking-parameters) instructions
 ## 4. Download finality providers
 
 To download the finality providers information,
-follow [this](../global-system-configuration.md#finality-providers)
+follow [this](../global-system-configuration.md#2-finality-providers)
 instructions.
 
-## 5. Start Staking Api
+## 5. Start Staking API
 
-You can start the Staking Api by running:
+You can start the Staking API by running:
 
 ```bash
 staking-api-service --config ~/.staking-api-service/config.yml \
@@ -121,7 +121,7 @@ sudo systemctl enable staking-api.service
 sudo systemctl start staking-api.service
 ```
 
-### 6.5. Verify Staking Api is running
+### 6.5. Verify Staking API is running
 
 Check staking-api service status:
 

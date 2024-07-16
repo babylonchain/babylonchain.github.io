@@ -15,8 +15,7 @@ This setup enhances fault tolerance and performance for reliable messaging infra
 
 ## 1. Install RabbitMQ
 
-According to your operating system,
-follow the official instructions to install
+According to your operating system, follow the official instructions to install
 [RabbitMQ]( https://www.rabbitmq.com/docs/download#installation-guides)
 
 ## 2. Add RabbitMQ credentials
@@ -53,4 +52,4 @@ The RabbitMQ server availability can be polled through Prometheus Blackbox Expor
 
 RabbitMQ-specific Prometheus metrics can also be exposed
 by utilizing any open-source Prometheus RabbitMQ exporter
-[example](https://github.com/kbudde/rabbitmq_exporter).
+([example](https://github.com/kbudde/rabbitmq_exporter)).

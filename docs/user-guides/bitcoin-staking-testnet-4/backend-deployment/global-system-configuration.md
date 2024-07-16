@@ -27,9 +27,8 @@ Finality provider information registry stores additional information
 such as the finality provider's moniker, website, and identity.
 
 To generate concatenated Finality provider information,
-set the directory containing Finality provider information JSON file
-and run the following command.
-Depending on the network, you can change the corresponding directory DIR:
+we provide the following reference script for Linux.
+Depending on the network, you can change the corresponding directory `DIR`:
 
 - testnet: `export DIR="./networks/bbn-test-4/finality-providers/registry"`
 

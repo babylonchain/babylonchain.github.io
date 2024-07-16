@@ -136,4 +136,4 @@ The bitcoind server availability can be polled through Prometheus Blackbox Expor
 
 Bitcoin-specific Prometheus metrics can also be exposed
 by utilizing any open-source Prometheus bitcoind exporter
-[example](https://github.com/jvstein/bitcoin-prometheus-exporter?tab=readme-ov-file).
+([example](https://github.com/jvstein/bitcoin-prometheus-exporter?tab=readme-ov-file)).
