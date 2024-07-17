@@ -7,26 +7,26 @@ hide_table_of_contents: false
 
 ## 1. Staking Parameters
 
-The Global Configuration includes a series of versioned governance parameters
+The Global Configuration includes versioned governance parameters
 that greatly affect the behaviour of the system.
 
 Detailed information can be found
-[here](https://github.com/babylonchain/networks/tree/main/bbn-test-4/parameters).
+[here](https://github.com/babylonchain/networks/tree/391cecff2569a57a26317e93484c5690b6ce6540/bbn-test-4/parameters).
 
 Depending on the network, you can download the corresponding version:
 
-- [testnet](https://github.com/babylonchain/networks/blob/main/bbn-test-4/parameters/global-params.json)
+- [testnet](https://github.com/babylonchain/networks/blob/391cecff2569a57a26317e93484c5690b6ce6540/bbn-test-4/parameters/global-params.json)
 
 ## 2. Finality Providers
 
 Finality providers can accept delegations from BTC stakers.
 For more details, please visit
-[this link](https://docs.babylonchain.io/docs/user-guides/btc-staking-testnet/finality-providers/overview).
+[this link](https://github.com/babylonchain/networks/tree/524247c418af07beb99a291a1686413c23d22553/bbn-test-4/finality-providers).
 
 Finality provider information registry stores additional information
 such as the finality provider's moniker, website, and identity.
 
-To generate concatenated Finality provider information,
+To generate the concatenated Finality provider information,
 we provide the following reference script for Linux.
 Depending on the network, you can change the corresponding directory `DIR`:
 
@@ -61,5 +61,12 @@ cat $OUTPUT | jq . > $FINAL
 ' > generate_finality_providers.sh && bash generate_finality_providers.sh
 ```
 
-This process will create a formatted JSON file
-that consolidates all Finality provider information.
+This script clones the Babylon networks repository,
+navigates to the specified directory,
+iterate over JSON files and
+append them to the output filecontaining Finality provider information.
+
+This script only uses the registry information maintained by Babylon.
+Other such registries might exist,
+and it is up to the staking provider to utilize a source of information
+that best fits their requirements.

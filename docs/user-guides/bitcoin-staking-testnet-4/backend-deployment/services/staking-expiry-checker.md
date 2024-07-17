@@ -35,14 +35,26 @@ cp ~/staking-expiry-checker/config/config-local.yml ~/.staking-expiry-checker/co
 
 ### 2.3 Update default configurations
 
-- [MongoDB](../infra/mongodb.md) cluster to connect to
+- MongoDB cluster to connect to
+
+Set the MongoDB connection address (`address`)
+and credentials (`username` and `password`) to match
+the information from the
+[installed MongoDB cluster](../infra/mongodb.md).
 
 ```yml
 db:
+  username: "<admin>"
+  password: "<password>"
   address: "mongodb://localhost:27017/?directConnection=true"
 ```
 
-- [Bitcoin node](../infra/bitcoind.md) to connect to
+- Bitcoin node to connect to
+
+Set the Bitcoin node connection address (`url`)
+and credentials (`rpc-user` and `rpc-pass`)
+to match the information from the
+[installed Bitcoin node](../infra/bitcoind.md).
 
 ```yml
 btc:
@@ -53,7 +65,12 @@ btc:
   rpc-pass: rpcpass
 ```
 
-- [RabbitMQ cluster](../infra/rabbitmq.md) to connect to
+- RabbitMQ cluster to connect to
+
+Set the RabbitMQ connection address (`url`)
+and credentials (`queue_user` and `queue_password`)
+to match the information from the
+[installed RabbitMQ cluster](../infra/rabbitmq.md).
 
 ```yml
 queue:

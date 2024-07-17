@@ -132,7 +132,8 @@ sudo systemctl start bitcoind.service
 
 ## 5. Monitoring
 
-The bitcoind server availability can be polled through Prometheus Blackbox Exporter.
+The bitcoind server availability can be polled through
+[Prometheus Blackbox Exporter](https://github.com/prometheus/blackbox_exporter).
 
 Bitcoin-specific Prometheus metrics can also be exposed
 by utilizing any open-source Prometheus bitcoind exporter

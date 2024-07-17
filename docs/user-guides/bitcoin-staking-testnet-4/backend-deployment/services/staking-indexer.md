@@ -48,7 +48,10 @@ The default home directories for different operating systems are:
 
 ### 2.2 Update default configurations
 
-- [Bitcoin network](../infra/bitcoind) to run on
+- Bitcoin network to run on
+
+Set the `BitcoinNetwork` to match with the information from the
+[installed Bitcoin node](../infra/bitcoind.md).
 
 ```text
 [Application Options]
@@ -57,6 +60,11 @@ BitcoinNetwork = signet
 ```
 
 - Bitcoin node to connect to
+
+Set the Bitcoin node connection address (`RPCHost`)
+and credentials (`RPCUser` and `RPCUser`)
+to match the information from the
+[installed Bitcoin node](../infra/bitcoind.md).
 
 ```text
 [btcconfig]
@@ -70,7 +78,12 @@ RPCUser = user
 RPCPass = pass
 ```
 
-- [RabbitMQ cluster](../infra/rabbitmq) to connect to
+- RabbitMQ cluster to connect to
+
+Set the RabbitMQ connection address (`Url`)
+and credentials (`User` and `Password`)
+to match the information from the
+[installed RabbitMQ cluster](../infra/rabbitmq.md).
 
 ```text
 [queueconfig]

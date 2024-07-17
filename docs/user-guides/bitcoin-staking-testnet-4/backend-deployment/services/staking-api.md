@@ -40,14 +40,26 @@ cp ~/staking-api-service/config/config-local.yml ~/.staking-api-service/config.y
 
 ### 2.3 Update default configurations
 
-- [MongoDB](../infra/mongodb.md) cluster to connect to
+- MongoDB cluster to connect to
+
+Set the MongoDB connection address (`address`)
+and credentials (`username` and `password`) to match
+the information from the
+[installed MongoDB cluster](../infra/mongodb.md).
 
 ```yml
 db:
   address: "mongodb://localhost:27017/?directConnection=true"
+  username: "<admin>"
+  password: "<password>"
 ```
 
-- [RabbitMQ cluster](../infra/rabbitmq.md) to connect to
+- RabbitMQ cluster to connect to
+
+Set the RabbitMQ connection address (`url`)
+and credentials (`queue_user` and `queue_password`)
+to match the information from the
+[installed RabbitMQ cluster](../infra/rabbitmq.md).
 
 ```yml
 queue:
@@ -58,13 +70,21 @@ queue:
 
 ## 3. Download global params
 
+To run the Staking API, a `global-params.json` file
+which defines all the staking parameters is needed.
+
 To download the global parameters,
-follow [this](../global-system-configuration.md#staking-parameters) instructions.
+follow [these](../global-system-configuration.md#staking-parameters) instructions.
 
 ## 4. Download finality providers
 
+To run the Staking API, a `finality-provider.json` file
+that associates finality provider
+BTC public keys with additional information about them such
+as their moniker, commission is needed.
+
 To download the finality providers information,
-follow [this](../global-system-configuration.md#2-finality-providers)
+follow [these](../global-system-configuration.md#2-finality-providers)
 instructions.
 
 ## 5. Start Staking API

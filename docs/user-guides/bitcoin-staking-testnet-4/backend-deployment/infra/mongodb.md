@@ -16,7 +16,8 @@ to ensure optimal performance and reliability.
 
 ## 1. Install MongoDB
 
-According to your operating system, follow the official instructions to install [MongoDB](https://www.mongodb.com/docs/manual/administration/install-community/)
+According to your operating system, follow the official instructions to install
+[MongoDB](https://www.mongodb.com/docs/manual/administration/install-community/)
 
 ## 2. Configure MongoDB Replica Set
 
@@ -61,7 +62,8 @@ rs.status()
 
 ## 3. Monitoring
 
-The MongoDB server availability can be polled through Prometheus Blackbox Exporter.
+The MongoDB server availability can be polled through
+[Prometheus Blackbox Exporter](https://github.com/prometheus/blackbox_exporter).
 
 MongoDB-specific Prometheus metrics can also be exposed
 by utilizing any open-source Prometheus MongoDB exporter

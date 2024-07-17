@@ -35,20 +35,24 @@ The exact credentials will later be used by the services to connect to the queue
 :::
 
 ```bash
-sudo rabbitmqctl add_user admin password
-sudo rabbitmqctl set_user_tags admin administrator
-sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
+sudo rabbitmqctl add_user <admin> <password>
+sudo rabbitmqctl set_user_tags <admin> <administrator>
+sudo rabbitmqctl set_permissions -p / <admin> ".*" ".*" ".*"
 ```
+
+Replace `<admin>` with your desired username and `<password>` with your desired password.
 
 ### 2.3 Access the RabbitMQ Management Dashboard
 
 Open your web browser and navigate to: `http://localhost:15672/`
 
-Log in with the username `admin` and the password `password`.
+Log in with the username `<admin>` and the password `<password>`
+that is set from the above step.
 
 ## 3. Monitoring
 
-The RabbitMQ server availability can be polled through Prometheus Blackbox Exporter.
+The RabbitMQ server availability can be polled through
+[Prometheus Blackbox Exporter](https://github.com/prometheus/blackbox_exporter).
 
 RabbitMQ-specific Prometheus metrics can also be exposed
 by utilizing any open-source Prometheus RabbitMQ exporter
