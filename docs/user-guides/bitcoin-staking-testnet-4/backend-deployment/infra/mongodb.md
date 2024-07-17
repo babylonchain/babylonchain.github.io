@@ -78,7 +78,6 @@ with details such as `hostname`, `state` (stateStr), `health` (health),
 
 Here’s a simplified example of how the output look like:
 
-
 ```json
   set: 'rs0',
   members: [
@@ -135,7 +134,7 @@ db.createUser({
 })
 ```
 
-Replace `"<username>"`, `"<password>"`, and `"<database>"`
+Replace `<username>`, `<password>`, and `<database>`
 with your desired username, password, and database name respectively.
 
 ## 4. Monitoring
