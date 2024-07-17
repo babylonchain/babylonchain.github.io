@@ -50,4 +50,4 @@ use our backend.
 
 ## Staking via CLI
 
-- [Instructions of staking via CLI](https://github.com/babylonchain/btc-staker/blob/9be9838ca1124b64660dd1bdd57790bd7cc74e11/docs/create-phase1-staking.md).
+- [Instructions of staking via CLI](https://github.com/babylonchain/btc-staker/blob/v0.4.0/docs/create-phase1-staking.md).
