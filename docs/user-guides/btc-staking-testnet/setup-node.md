@@ -136,3 +136,9 @@ You can check the status of the node by running
 ```console
 systemctl status babylond
 ```
+
+## 5. Running node in production environment
+
+When running the Babylon node in a production setting, operators should adhere to 
+[CometBFT Guidelines](https://docs.cometbft.com/v0.38/core/running-in-production)
+
