@@ -43,15 +43,16 @@ cp ~/staking-api-service/config/config-local.yml ~/.staking-api-service/config.y
 - MongoDB cluster to connect to
 
 Set the MongoDB connection address (`address`)
-and credentials (`username` and `password`) to match
+and credentials (`username`, `password`, and `db-name`) to match
 the information from the
 [installed MongoDB cluster](../infra/mongodb.md).
 
 ```yml
 db:
   address: "mongodb://localhost:27017/?directConnection=true"
-  username: "<admin>"
+  username: "<username>"
   password: "<password>"
+  db-name: "<db-name>"
 ```
 
 - RabbitMQ cluster to connect to
@@ -66,6 +67,16 @@ queue:
   queue_user: admin
   queue_password: password
   url: "localhost:5672"
+```
+
+- Prometheus metrics configuration:
+
+Set the `host` and `port` to customize how the metrics are exposed
+
+```yml
+metrics:
+  host: 0.0.0.0
+  port: 2112
 ```
 
 ## 3. Download global params

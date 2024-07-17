@@ -38,7 +38,7 @@ cp ~/staking-expiry-checker/config/config-local.yml ~/.staking-expiry-checker/co
 - MongoDB cluster to connect to
 
 Set the MongoDB connection address (`address`)
-and credentials (`username` and `password`) to match
+and credentials (`username`, `password`, and `db-name`) to match
 the information from the
 [installed MongoDB cluster](../infra/mongodb.md).
 
@@ -47,6 +47,7 @@ db:
   username: "<admin>"
   password: "<password>"
   address: "mongodb://localhost:27017/?directConnection=true"
+  db-name: "<db-name>"
 ```
 
 - Bitcoin node to connect to
@@ -77,6 +78,16 @@ queue:
   queue_user: admin
   queue_password: password
   url: "localhost:5672"
+```
+
+- Prometheus metrics configuration:
+
+Set the `host` and `port` to customize how the metrics are exposed
+
+```yml
+metrics:
+  host: 0.0.0.0
+  port: 2112
 ```
 
 ## 3. Start Staking Expiry Checker

@@ -64,7 +64,7 @@ cat $OUTPUT | jq . > $FINAL
 This script clones the Babylon networks repository,
 navigates to the specified directory,
 iterate over JSON files and
-append them to the output filecontaining Finality provider information.
+append them to the output file containing all Finality provider information.
 
 This script only uses the registry information maintained by Babylon.
 Other such registries might exist,

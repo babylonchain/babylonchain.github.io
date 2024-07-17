@@ -97,6 +97,19 @@ Password = password
 Url = localhost:5672
 ```
 
+- Prometheus metrics configuration:
+
+Set the `Host` and `Port` to customize how the metrics are exposed
+
+```text
+[metricsconfig]
+; IP of the Prometheus server
+Host = 127.0.0.1
+
+; Port of the Prometheus server
+Port = 2112
+```
+
 ## 3. Download global params
 
 To download the global parameters,

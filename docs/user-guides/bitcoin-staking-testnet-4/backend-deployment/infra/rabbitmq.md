@@ -44,7 +44,9 @@ Replace `<admin>` with your desired username and `<password>` with your desired 
 
 ### 2.3 Access the RabbitMQ Management Dashboard
 
-Open your web browser and navigate to: `http://localhost:15672/`
+Open your web browser and navigate to
+the `default` RabbitMQ Management Dashboard
+: `http://localhost:15672/`
 
 Log in with the username `<admin>` and the password `<password>`
 that is set from the above step.
