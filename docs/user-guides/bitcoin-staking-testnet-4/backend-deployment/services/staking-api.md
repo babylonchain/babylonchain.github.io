@@ -17,10 +17,19 @@ The API can be utilised by user facing applications, such as staking dApps.
 git clone git@github.com:babylonchain/staking-api-service.git
 ```
 
-### 1.2 Install the binary by running
+### 1.2 Check out the desired version
+
+You can find the latest release
+[here](https://github.com/babylonchain/staking-api-service/releases).
 
 ```bash
 cd staking-api-service
+git checkout tags/{VERSION}
+```
+
+### 1.3 Install the binary by running
+
+```bash
 make install
 ```
 

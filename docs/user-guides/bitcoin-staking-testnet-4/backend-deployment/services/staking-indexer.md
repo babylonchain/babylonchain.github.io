@@ -24,10 +24,19 @@ and serves as the ground truth for the Bitcoin Staking system.
 git clone https://github.com/babylonchain/staking-indexer.git
 ```
 
-### 1.2 Install the sid daemon binary by running
+### 1.2 Check out the desired version
+
+You can find the latest release
+[here](https://github.com/babylonchain/staking-indexer/releases).
 
 ```bash
-cd staking-indexer # cd into the project directory
+cd staking-indexer
+git checkout tags/{VERSION}
+```
+
+### 1.3 Install the sid daemon binary by running
+
+```bash
 make install
 ```
 

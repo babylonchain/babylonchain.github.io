@@ -12,10 +12,19 @@ sidebar_label: Staking Expiry Checker
 git clone https://github.com/babylonchain/staking-expiry-checker.git
 ```
 
-### 1.2 Install the binary by running
+### 1.2 Check out the desired version
+
+You can find the latest release
+[here](https://github.com/babylonchain/staking-expiry-checker/releases).
 
 ```bash
 cd staking-expiry-checker
+git checkout tags/{VERSION}
+```
+
+### 1.3 Install the binary by running
+
+```bash
 make install
 ```
 
