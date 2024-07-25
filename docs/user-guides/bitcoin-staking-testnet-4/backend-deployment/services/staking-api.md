@@ -103,8 +103,9 @@ that associates finality provider
 BTC public keys with additional information about them such
 as their moniker, commission is needed.
 
-To download the finality providers information,
-follow [these](../global-system-configuration.md#2-finality-providers)
+To generate the concatenated finality providers information
+from Babylon registry,
+follow [these](../global-system-configuration.md#22-generating-concatenated-finality-provider-information)
 instructions.
 
 ## 5. Start Staking API

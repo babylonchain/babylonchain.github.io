@@ -15,7 +15,7 @@ Detailed information can be found
 
 Depending on the network, you can download the corresponding version:
 
-- [testnet](https://github.com/babylonchain/networks/blob/391cecff2569a57a26317e93484c5690b6ce6540/bbn-test-4/parameters/global-params.json)
+- [Testnet](https://github.com/babylonchain/networks/blob/391cecff2569a57a26317e93484c5690b6ce6540/bbn-test-4/parameters/global-params.json)
 
 ## 2. Finality Providers
 
@@ -26,8 +26,25 @@ For more details, please visit
 Finality provider information registry stores additional information
 such as the finality provider's moniker, website, and identity.
 
-To generate the concatenated Finality provider information,
-we provide the following reference script for Linux.
+There are many registries that might exist, and it is up to the staking provider
+to utilize a source of information that best fits their requirements.
+This document uses the registry information maintained by Babylon.
+
+### 2.1 Accessing Individual Finality Provider Information
+
+Finality provider information is available in individual JSON files within the
+finality provider registry. You can find these files in the following directory,
+depending on the network:
+
+- [Testnet](https://github.com/babylonchain/networks/tree/524247c418af07beb99a291a1686413c23d22553/bbn-test-4/finality-providers/registry)
+
+### 2.2 Generating Concatenated Finality Provider Information
+
+The concatenated Finality Provider information file is essential for backend
+services that require a unified view of all finality provider information.
+
+To generate a concatenated JSON file from the individual JSON files,
+use the following reference script.
 Depending on the network, you can change the corresponding directory `DIR`:
 
 - testnet: `export DIR="./networks/bbn-test-4/finality-providers/registry"`
@@ -65,8 +82,3 @@ This script clones the Babylon networks repository,
 navigates to the specified directory,
 iterate over JSON files and
 append them to the output file containing all Finality provider information.
-
-This script only uses the registry information maintained by Babylon.
-Other such registries might exist,
-and it is up to the staking provider to utilize a source of information
-that best fits their requirements.
