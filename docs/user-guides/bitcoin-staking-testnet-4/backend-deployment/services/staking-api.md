@@ -118,11 +118,12 @@ staking-api-service --config ~/.staking-api-service/config.yml \
 --finality-providers ~/.staking-api-service/finality-providers.json
 ```
 
-## 6. Create systemd service (Optional)
+## 6. Create systemd service (Optional - Linux Only)
 
 ### 6.1 Create systemd service definition
 
-Run the following command, replacing `your_username` with your actual username:
+Run the following command, replacing `system_username`
+with the appropriate system user or service account name:
 
 ```bash
 cat <<EOF | sudo tee /etc/systemd/system/staking-api.service
@@ -133,11 +134,11 @@ After=network.target
 [Service]
 Type=simple
 ExecStart=$(which staking-api-service)  \
-          --config /home/your_username/.staking-api-service/config.yml \
-          --params /home/your_username/.staking-api-service/global-params.json \
-          --finality-providers /home/your_username/.staking-api-service/finality-providers.json
+          --config /home/system_username/.staking-api-service/config.yml \
+          --params /home/system_username/.staking-api-service/global-params.json \
+          --finality-providers /home/system_username/.staking-api-service/finality-providers.json
 Restart=on-failure
-User=your_username
+User=system_username
 
 [Install]
 WantedBy=multi-user.target
@@ -173,16 +174,16 @@ sudo systemctl status staking-api
 Expected log:
 
 ```accesslog
-Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"debug","time":"2024-07-04T03:36:05Z","message":"Index created successfully on collection: unbonding_queue"}
-Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","time":"2024-07-04T03:36:05Z","message":"Collections and Indexes created successfully."}
-Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","queueName":"active_staking_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
-Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","queueName":"expired_staking_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
-Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","queueName":"unbonding_staking_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
-Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","queueName":"withdraw_staking_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
-Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","queueName":"staking_stats_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
-Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","queueName":"btc_info_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
-Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","time":"2024-07-04T03:36:05Z","message":"Initiated Health Check Cron"}
-Jul 04 03:36:05 your_username staking-api-service[824224]: {"level":"info","time":"2024-07-04T03:36:05Z","message":"Starting server on 0.0.0.0:8092"}
+Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"debug","time":"2024-07-04T03:36:05Z","message":"Index created successfully on collection: unbonding_queue"}
+Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"info","time":"2024-07-04T03:36:05Z","message":"Collections and Indexes created successfully."}
+Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"info","queueName":"active_staking_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
+Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"info","queueName":"expired_staking_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
+Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"info","queueName":"unbonding_staking_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
+Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"info","queueName":"withdraw_staking_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
+Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"info","queueName":"staking_stats_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
+Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"info","queueName":"btc_info_queue","time":"2024-07-04T03:36:05Z","message":"start receiving messages from queue"}
+Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"info","time":"2024-07-04T03:36:05Z","message":"Initiated Health Check Cron"}
+Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"info","time":"2024-07-04T03:36:05Z","message":"Starting server on 0.0.0.0:8092"}
 ```
 
 ## 7. Monitoring

@@ -107,11 +107,12 @@ You can start the staking-expiry-checker by running:
 staking-expiry-checker --config ~/.staking-expiry-checker/config.yml
 ```
 
-## 4. Create systemd service (Optional)
+## 4. Create systemd service (Optional - Linux Only)
 
 ### 4.1 Create systemd service definition
 
-Run the following command, replacing `your_username` with your actual username:
+Run the following command, replacing `system_username`
+with the appropriate system user or service account name:
 
 ```bash
 cat <<EOF | sudo tee /etc/systemd/system/staking-expiry-checker.service
@@ -121,9 +122,9 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=$(which staking-expiry-checker) --config /home/your_username/.staking-expiry-checker/config.yml
+ExecStart=$(which staking-expiry-checker) --config /home/system_username/.staking-expiry-checker/config.yml
 Restart=on-failure
-User=your_username
+User=system_username
 
 [Install]
 WantedBy=multi-user.target

@@ -38,6 +38,26 @@ depending on the network:
 
 - [Testnet](https://github.com/babylonchain/networks/tree/524247c418af07beb99a291a1686413c23d22553/bbn-test-4/finality-providers/registry)
 
+Each JSON file contains information in the following format:
+
+```JSON
+{
+  "description": {
+    "moniker": "<moniker>",
+    "identity": "<identity>",
+    "website": "<website>",
+    "security_contact": "<security_contact>",
+    "details": "<details>"
+  },
+  "btc_pk": "<eots_btc_pk>",
+  "commission": "<commission_decimal>",
+  "deposit": {
+    "tx_hash": "tx_hash",
+    "signed_tx": "signed_tx_hex"
+  }
+}
+```
+
 ### 2.2 Generating Concatenated Finality Provider Information
 
 The concatenated Finality Provider information file is essential for backend

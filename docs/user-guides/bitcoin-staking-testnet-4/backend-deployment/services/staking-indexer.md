@@ -137,11 +137,12 @@ sid start
 Note: If the indexer fails to start due to re-org,
 please rerun the command to start it.
 
-## 5. Create systemd service (Optional)
+## 5. Create systemd service (Optional - Linux Only)
 
 ### 5.1 Create systemd service definition
 
-Run the following command, replacing `your_username` with your actual username:
+Run the following command, replacing `system_username`
+with the appropriate system user or service account name:
 
 ```bash
 cat <<EOF | sudo tee /etc/systemd/system/sid.service
@@ -153,7 +154,7 @@ After=network.target
 Type=simple
 ExecStart=$(which sid) start
 Restart=on-failure
-User=your_username
+User=system_username
 
 [Install]
 WantedBy=multi-user.target
@@ -189,8 +190,8 @@ sudo systemctl status sid
 Expected log:
 
 ```accesslog
-Jul 04 06:49:54 your_username sid[839944]: 2024-07-04T06:49:54.798273Z        info        Starting Prometheus server        {"address": "127.0.0.1:2114"}
-Jul 04 06:49:54 your_username sid[839944]: 2024-07-04T06:49:54.805957Z        info        Starting Staking Indexer App        {"module": "staking indexer"}
+Jul 04 06:49:54 system_username sid[839944]: 2024-07-04T06:49:54.798273Z        info        Starting Prometheus server        {"address": "127.0.0.1:2114"}
+Jul 04 06:49:54 system_username sid[839944]: 2024-07-04T06:49:54.805957Z        info        Starting Staking Indexer App        {"module": "staking indexer"}
 ```
 
 ## 6. Monitoring
