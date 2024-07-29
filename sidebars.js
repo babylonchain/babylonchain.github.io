@@ -39,7 +39,54 @@ const sidebars = {
       collapsed: false,
       items: [
         'user-guides/installation',
-        'user-guides/testnet4',
+        {
+          type: 'category',
+          label: 'Bitcoin Staking Testnet-4',
+          link: {
+            type: 'doc',
+            id: 'user-guides/bitcoin-staking-testnet-4/overview',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Backend Deployment',
+              link: {
+                type: 'doc',
+                id: 'user-guides/bitcoin-staking-testnet-4/backend-deployment/overview',
+              },
+              items: [
+                'user-guides/bitcoin-staking-testnet-4/backend-deployment/deployment-overview',
+                {
+                  type: 'category',
+                  label: 'Required Infrastructure Services',
+                  link: {
+                    type: 'doc',
+                    id: 'user-guides/bitcoin-staking-testnet-4/backend-deployment/infra/overview',
+                  },
+                  items: [
+                    'user-guides/bitcoin-staking-testnet-4/backend-deployment/infra/mongodb',
+                    'user-guides/bitcoin-staking-testnet-4/backend-deployment/infra/rabbitmq',
+                    'user-guides/bitcoin-staking-testnet-4/backend-deployment/infra/bitcoind',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Backend Services',
+                  link: {
+                    type: 'doc',
+                    id: 'user-guides/bitcoin-staking-testnet-4/backend-deployment/services/overview',
+                  },
+                  items: [
+                    'user-guides/bitcoin-staking-testnet-4/backend-deployment/services/staking-indexer',
+                    'user-guides/bitcoin-staking-testnet-4/backend-deployment/services/staking-api',
+                    'user-guides/bitcoin-staking-testnet-4/backend-deployment/services/staking-expiry-checker',
+                  ],
+                },
+                'user-guides/bitcoin-staking-testnet-4/backend-deployment/global-params',
+              ]
+            }
+          ]
+        },
         {
           type: 'category',
           label: 'Bitcoin Staking Testnet-3 (Sunset)',
@@ -69,7 +116,7 @@ const sidebars = {
             'user-guides/btc-staking-testnet/become-vigilante',
             'user-guides/btc-staking-testnet/czintegrate',
           ]
-        },
+        }
       ]
     },
     {

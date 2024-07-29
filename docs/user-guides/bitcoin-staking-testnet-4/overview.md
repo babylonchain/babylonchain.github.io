@@ -1,5 +1,5 @@
 ---
-id: testnet4
+id: overview
 sidebar_label: Bitcoin Staking Testnet-4
 hide_table_of_contents: true
 pagination_prev: null
@@ -51,3 +51,7 @@ use our backend.
 ## Staking via CLI
 
 - [Instructions of staking via CLI](https://github.com/babylonchain/btc-staker/blob/v0.4.0/docs/create-phase1-staking.md).
+
+## Babylon lock-only Bitcoin Staking Backend Deployment
+
+- [Instructions of how to deploy the Babylon lock-only Bitcoin Staking Backend](./backend-deployment/overview.md)
