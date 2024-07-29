@@ -40,6 +40,9 @@ and has the required amount of BTC confirmations.
 - [**Bitcoin Offline Wallet**](https://github.com/babylonchain/covenant-signer/blob/dev/docs/deployment.md#3-bitcoind-offline-wallet-operations):
 Stores the Covenant Signer member keys
 and signs unbonding transactions forwarded by the Covenant Signer.
+Covenant signer needs to operate a Bitcoin wallet,
+and connect to a Bitcoin node.
+For a detailed setup guide, visit [Covenant Signer Setup Deployment](https://github.com/babylonchain/covenant-signer/blob/dev/docs/deployment.md)
 - [**A Global Configuration file**](./global-system-configuration.md)
 that contains system-wide parameters pertinent
 to the processed Staking transactions.

@@ -8,7 +8,8 @@ hide_table_of_contents: false
 ## 1. Staking Parameters
 
 The Global Configuration includes versioned governance parameters
-that greatly affect the behaviour of the system.
+that specify what constitutes a valid staking transaction
+that should be considered as an active one for the lock-only system.
 
 Detailed information can be found
 [here](https://github.com/babylonchain/networks/tree/391cecff2569a57a26317e93484c5690b6ce6540/bbn-test-4/parameters).

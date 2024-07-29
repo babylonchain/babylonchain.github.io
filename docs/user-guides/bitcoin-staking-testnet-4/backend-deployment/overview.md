@@ -6,6 +6,11 @@ hide_table_of_contents: true
 ---
 # Backend deployment
 
+The Babylon Bitcoin staking will be launched in phases. The first phase
+will only involve Bitcoin holders submitting Bitcoin staking transactions to
+the Bitcoin chain to lock their Bitcoins, **without** any Proof of Stake (PoS)
+chain operating to be secured by the stake.
+
 The aim of this document is to demonstrate how to deploy
 the Babylon lock-only Bitcoin Staking Backend System.
 
