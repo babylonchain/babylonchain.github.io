@@ -5,29 +5,44 @@ hide_table_of_contents: false
 ---
 # Mongodb Setup
 
+## 1. Hardware Requirements
+
 :::info Note
 
-The system requires a MongoDB replica set cluster
-for data redundancy and high availability.
-For production deployments, we strongly recommend a multi-node cluster
-to ensure optimal performance and reliability.
+For the most accurate and up-to-date hardware recommendations,
+please refer to the official
+[documentation](https://www.mongodb.com/docs/cloud-manager/tutorial/provisioning-prep/#deployment-prerequisites)
 
 :::
 
-## 1. Install MongoDB
+The system requires a MongoDB replica set cluster
+for data redundancy and high availability.
+
+For production deployments, we strongly recommend a multi-node cluster
+to ensure optimal performance and reliability.
+
+Hardware Specifications:
+
+- CPU: Multi-core processors.
+- Memory: Minimum 4GB RAM per node.
+- Storage: SSDs recommended for better performance.
+
+The MongoDB Agent must be installed only on 64-bit architectures.
+
+## 2. Install MongoDB
 
 According to your operating system, follow the official instructions to install
 [MongoDB](https://www.mongodb.com/docs/manual/administration/install-community/)
 
-## 2. Configure MongoDB Replica Set
+## 3. Configure MongoDB Replica Set
 
-### 2.1 Edit MongoDB configuration file
+### 3.1 Edit MongoDB configuration file
 
 ```bash
 sudo vi /etc/mongod.conf
 ```
 
-### 2.2 Add the replica set configuration
+### 3.2 Add the replica set configuration
 
 Find the `replication` section and add the following:
 
@@ -39,13 +54,13 @@ replication:
 This process instructs MongoDB to start up
 as part of the specified replica set (`rs0` in this case).
 
-### 2.3 Restart MongoDB to apply changes
+### 3.3 Restart MongoDB to apply changes
 
 ```bash
 sudo systemctl restart mongod
 ```
 
-### 2.4 Initialize the replica set
+### 3.4 Initialize the replica set
 
 Start the MongoDB shell and connect to the installed MongoDB instance
 running on `localhost` at port `27017`
@@ -63,7 +78,7 @@ Inside the MongoDB shell, run:
 rs.initiate()
 ```
 
-### 2.5 Verify the replica set configuration
+### 3.5 Verify the replica set configuration
 
 ```bash
 rs.status()
@@ -105,7 +120,7 @@ Here’s a simplified example of how the output look like:
   ]
 ```
 
-## 3. Create MongoDB credentials
+## 4. Create MongoDB credentials
 
 :::info Note
 
@@ -137,7 +152,7 @@ db.createUser({
 Replace `<username>`, `<password>`, and `<database>`
 with your desired username, password, and database name respectively.
 
-## 4. Monitoring
+## 5. Monitoring
 
 The MongoDB server availability can be polled through
 [Prometheus Blackbox Exporter](https://github.com/prometheus/blackbox_exporter).

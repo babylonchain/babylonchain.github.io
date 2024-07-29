@@ -9,15 +9,20 @@ focused on serving information about the state of the network
 and receiving unbonding requests for further processing.
 The API can be utilised by user facing applications, such as staking dApps.
 
-## 1. Install Staking API
+## 1. Hardware Requirements
 
-### 1.1 Clone the repository to your local machine from Github
+- CPU: Multi-core processor (4 cores minimum)
+- Memory: Minimum 4GB RAM, recommended 8GB RAM
+
+## 2. Install Staking API
+
+### 2.1 Clone the repository to your local machine from Github
 
 ```bash
 git clone git@github.com:babylonchain/staking-api-service.git
 ```
 
-### 1.2 Check out the desired version
+### 2.2 Check out the desired version
 
 You can find the latest release
 [here](https://github.com/babylonchain/staking-api-service/releases).
@@ -27,27 +32,27 @@ cd staking-api-service
 git checkout tags/{VERSION}
 ```
 
-### 1.3 Install the binary by running
+### 2.3 Install the binary by running
 
 ```bash
 make install
 ```
 
-## 2. Configuration
+## 3. Configuration
 
-### 2.1 Create home directory
+### 3.1 Create home directory
 
 ```bash
 mkdir -p ~/.staking-api-service/
 ```
 
-### 2.2 Copy the default configuration
+### 3.2 Copy the default configuration
 
 ```bash
 cp ~/staking-api-service/config/config-local.yml ~/.staking-api-service/config.yml
 ```
 
-### 2.3 Update default configurations
+### 3.3 Update default configurations
 
 - MongoDB cluster to connect to
 
@@ -88,7 +93,7 @@ metrics:
   port: 2112
 ```
 
-## 3. Download global params
+## 4. Download global params
 
 To run the Staking API, a `global-params.json` file
 which defines all the staking parameters is needed.
@@ -96,7 +101,7 @@ which defines all the staking parameters is needed.
 To download the global parameters,
 follow [these](../global-system-configuration.md#staking-parameters) instructions.
 
-## 4. Download finality providers
+## 5. Download finality providers
 
 To run the Staking API, a `finality-provider.json` file
 that associates finality provider
@@ -108,7 +113,7 @@ from Babylon registry,
 follow [these](../global-system-configuration.md#22-generating-concatenated-finality-provider-information)
 instructions.
 
-## 5. Start Staking API
+## 6. Start Staking API
 
 You can start the Staking API by running:
 
@@ -118,9 +123,9 @@ staking-api-service --config ~/.staking-api-service/config.yml \
 --finality-providers ~/.staking-api-service/finality-providers.json
 ```
 
-## 6. Create systemd service (Optional - Linux Only)
+## 7. Create systemd service (Optional - Linux Only)
 
-### 6.1 Create systemd service definition
+### 7.1 Create systemd service definition
 
 Run the following command, replacing `system_username`
 with the appropriate system user or service account name:
@@ -145,25 +150,25 @@ WantedBy=multi-user.target
 EOF
 ```
 
-### 6.2 Reload systemd manager configuration
+### 7.2 Reload systemd manager configuration
 
 ```bash
 sudo systemctl daemon-reload
 ```
 
-### 6.3 Enable the service to start on boot
+### 7.3 Enable the service to start on boot
 
 ```bash
 sudo systemctl enable staking-api.service
 ```
 
-### 6.4 Start the service
+### 7.4 Start the service
 
 ```bash
 sudo systemctl start staking-api.service
 ```
 
-### 6.5. Verify Staking API is running
+### 7.5. Verify Staking API is running
 
 Check staking-api service status:
 
@@ -186,7 +191,7 @@ Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"info","ti
 Jul 04 03:36:05 system_username staking-api-service[824224]: {"level":"info","time":"2024-07-04T03:36:05Z","message":"Starting server on 0.0.0.0:8092"}
 ```
 
-## 7. Monitoring
+## 8. Monitoring
 
 The service exposes Prometheus metrics through a Prometheus server.
 By default, the server is reachable under `127.0.0.1:2112`.

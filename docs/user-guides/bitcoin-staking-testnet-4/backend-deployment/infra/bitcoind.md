@@ -5,14 +5,20 @@ hide_table_of_contents: false
 ---
 # Bitcoin Node Setup
 
-## 1. Bitcoin Core Setup
+## 1. Hardware Requirements
+
+- CPU: Multi-core processor.
+- Memory: Minimum 8GB RAM.
+- Storage: SSDs with at least 800GB of space to accommodate the full Bitcoin blockchain.
+
+## 2. Bitcoin Core Setup
 
 Download and install the bitcoin binaries according to your operating system
 from the official
 [Bitcoind Core registry](https://bitcoincore.org/bin/bitcoin-core-26.0/).
 All programs in this guide are compatible with version 26.0.
 
-## 2. Configuration
+## 3. Configuration
 
 bitcoind is configured through a main configuration file named bitcoin.conf.
 
@@ -70,15 +76,15 @@ signet=1
 [signet]
 ```
 
-## 3. Start bitcoind
+## 4. Start bitcoind
 
-### 3.1 Start the Bitcoin daemon
+### 4.1 Start the Bitcoin daemon
 
 ```bash
 bitcoind
 ```
 
-### 3.2 Verify bitcoind is Running
+### 4.2 Verify bitcoind is Running
 
 Check the status of bitcoind.
 
@@ -89,9 +95,9 @@ bitcoin-cli getblockchaininfo
 You should see information about the blockchain,
 indicating that `bitcoind` is running correctly.
 
-## 4. Create a systemd Service for bitcoind (Optional)
+## 5. Create a systemd Service for bitcoind (Optional)
 
-### 4.1 Create systemd service definition
+### 5.1 Create systemd service definition
 
 Run the following command, replacing `your_username` with your actual username:
 
@@ -112,25 +118,25 @@ WantedBy=multi-user.target
 EOF
 ```
 
-### 4.2 Reload systemd manager configuration
+### 5.2 Reload systemd manager configuration
 
 ```bash
 sudo systemctl daemon-reload
 ```
 
-### 4.3 Enable the service to start on boot
+### 5.3 Enable the service to start on boot
 
 ```bash
 sudo systemctl enable bitcoind.service
 ```
 
-### 4.4 Start the service
+### 5.4 Start the service
 
 ```bash
 sudo systemctl start bitcoind.service
 ```
 
-## 5. Monitoring
+## 6. Monitoring
 
 The bitcoind server availability can be polled through
 [Prometheus Blackbox Exporter](https://github.com/prometheus/blackbox_exporter).

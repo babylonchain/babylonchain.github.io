@@ -56,7 +56,6 @@ const sidebars = {
               },
               items: [
                 'user-guides/bitcoin-staking-testnet-4/backend-deployment/deployment-overview',
-                'user-guides/bitcoin-staking-testnet-4/backend-deployment/hardware-requirements',
                 {
                   type: 'category',
                   label: 'Required Infrastructure Services',

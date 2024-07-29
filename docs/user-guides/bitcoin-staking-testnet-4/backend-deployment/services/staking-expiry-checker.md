@@ -4,15 +4,20 @@ sidebar_label: Staking Expiry Checker
 ---
 # Staking Expiry Checker
 
-## 1. Install Staking Expiry Checker
+## 1. Hardware Requirements
 
-### 1.1 Clone the repository to your local machine from Github
+- CPU: Multi-core processor (4 cores minimum)
+- Memory: Minimum 4GB RAM, recommended 8GB RAM
+
+## 2. Install Staking Expiry Checker
+
+### 2.1 Clone the repository to your local machine from Github
 
 ```bash
 git clone https://github.com/babylonchain/staking-expiry-checker.git
 ```
 
-### 1.2 Check out the desired version
+### 2.2 Check out the desired version
 
 You can find the latest release
 [here](https://github.com/babylonchain/staking-expiry-checker/releases).
@@ -22,27 +27,27 @@ cd staking-expiry-checker
 git checkout tags/{VERSION}
 ```
 
-### 1.3 Install the binary by running
+### 2.3 Install the binary by running
 
 ```bash
 make install
 ```
 
-## 2. Configuration
+## 3. Configuration
 
-### 2.1 Create home directory
+### 3.1 Create home directory
 
 ```bash
 mkdir -p ~/.staking-expiry-checker/
 ```
 
-### 2.2 Copy the default configuration
+### 3.2 Copy the default configuration
 
 ```bash
 cp ~/staking-expiry-checker/config/config-local.yml ~/.staking-expiry-checker/config.yml
 ```
 
-### 2.3 Update default configurations
+### 3.3 Update default configurations
 
 - MongoDB cluster to connect to
 
@@ -99,7 +104,7 @@ metrics:
   port: 2112
 ```
 
-## 3. Start Staking Expiry Checker
+## 4. Start Staking Expiry Checker
 
 You can start the staking-expiry-checker by running:
 
@@ -107,9 +112,9 @@ You can start the staking-expiry-checker by running:
 staking-expiry-checker --config ~/.staking-expiry-checker/config.yml
 ```
 
-## 4. Create systemd service (Optional - Linux Only)
+## 5. Create systemd service (Optional - Linux Only)
 
-### 4.1 Create systemd service definition
+### 5.1 Create systemd service definition
 
 Run the following command, replacing `system_username`
 with the appropriate system user or service account name:
@@ -131,25 +136,25 @@ WantedBy=multi-user.target
 EOF
 ```
 
-### 4.2 Reload systemd manager configuration
+### 5.2 Reload systemd manager configuration
 
 ```bash
 sudo systemctl daemon-reload
 ```
 
-### 4.3 Enable the service to start on boot
+### 5.3 Enable the service to start on boot
 
 ```bash
 sudo systemctl enable staking-expiry-checker.service
 ```
 
-### 4.4 Start the service
+### 5.4 Start the service
 
 ```bash
 sudo systemctl start staking-expiry-checker.service
 ```
 
-## 5. Monitoring
+## 6. Monitoring
 
 The service exposes Prometheus metrics through a Prometheus server.
 By default, the server is reachable under `127.0.0.1:2112`.

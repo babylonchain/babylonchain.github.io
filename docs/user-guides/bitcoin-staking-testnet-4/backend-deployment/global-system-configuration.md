@@ -13,7 +13,7 @@ that greatly affect the behaviour of the system.
 Detailed information can be found
 [here](https://github.com/babylonchain/networks/tree/391cecff2569a57a26317e93484c5690b6ce6540/bbn-test-4/parameters).
 
-Depending on the network, you can download the corresponding version:
+Each lock-only network maintains its own set of versioned global parameters:
 
 - [Testnet](https://github.com/babylonchain/networks/blob/391cecff2569a57a26317e93484c5690b6ce6540/bbn-test-4/parameters/global-params.json)
 
@@ -23,7 +23,7 @@ Finality providers can accept delegations from BTC stakers.
 For more details, please visit
 [this link](https://github.com/babylonchain/networks/tree/524247c418af07beb99a291a1686413c23d22553/bbn-test-4/finality-providers).
 
-Finality provider information registry stores additional information
+The Finality provider information registry stores additional information
 such as the finality provider's moniker, website, and identity.
 
 There are many registries that might exist, and it is up to the staking provider
